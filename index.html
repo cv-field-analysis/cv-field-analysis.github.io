@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CVPR · ICCV Field Analysis — Video Anomaly Detection</title>
+<meta name="description" content="A 2-year analysis of Video Anomaly Detection papers across CVPR and ICCV (2025–2026): counts, sub-topics and trends from the accepted proceedings."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#080a11; --panel:#0e121c; --ink:#eceadf; --muted:#8c93a4; --dim:#565d70;
+  --line:rgba(255,255,255,.10); --accent:#ff8a5b;
+  --c0:#ff8a5b; --c1:#52d3c3; --c2:#ffd166; --c3:#ad8cff; --c4:#5fb8ff; --c5:#c2e06a; --c6:#f78fb3; --c7:#7ee0b8;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"JetBrains Mono",ui-monospace,monospace;-webkit-font-smoothing:antialiased}
+body{background:
+  radial-gradient(1100px 700px at 12% -5%, rgba(255,138,91,.10), transparent 60%),
+  radial-gradient(1000px 720px at 100% 0%, rgba(95,184,255,.08), transparent 55%),
+  var(--bg);min-height:100vh}
+.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+a{color:inherit}
+
+/* hero */
+.hero{padding:64px 0 30px}
+.eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--c2);
+  display:flex;align-items:center;gap:12px;margin:0 0 18px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--c2);opacity:.8}
+h1{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(34px,6vw,64px);line-height:.98;
+  margin:0;letter-spacing:-.02em;font-variation-settings:"opsz" 120,"WONK" 1}
+h1 em{font-style:italic;font-weight:300;color:var(--c1)}
+.tagline{margin:16px 0 0;color:var(--muted);font-size:13.5px;letter-spacing:.01em;max-width:62ch;line-height:1.6}
+.statrow{display:flex;flex-wrap:wrap;gap:30px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
+.stat .v{font-family:"Fraunces",serif;font-size:34px;line-height:1;font-variation-settings:"opsz" 60}
+.stat .l{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:7px}
+.stat .v.accent{color:var(--c0)}
+
+/* sections */
+section{padding:36px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 22px}
+.sec-num{font-size:11px;color:var(--dim);letter-spacing:.2em}
+.sec-title{font-family:"Fraunces",serif;font-size:25px;font-weight:400;font-variation-settings:"opsz" 50,"WONK" 1}
+.sec-note{margin-left:auto;font-size:10.5px;color:var(--dim);letter-spacing:.04em;text-align:right;max-width:40ch}
+
+/* trend chart */
+.trend{display:flex;align-items:flex-end;gap:26px;height:230px;padding:0 6px;
+  border-bottom:1px solid var(--line);position:relative}
+.tbar{flex:1;max-width:130px;display:flex;flex-direction:column;align-items:center;gap:0;height:100%;justify-content:flex-end}
+.tbar .barwrap{width:100%;display:flex;align-items:flex-end;justify-content:center;flex:1}
+.tbar .bar{width:62%;min-width:34px;border-radius:5px 5px 0 0;position:relative;
+  background:linear-gradient(180deg,var(--bc),color-mix(in srgb,var(--bc) 55%,transparent));
+  box-shadow:0 0 22px -4px var(--bc);transition:height .9s cubic-bezier(.2,.8,.2,1)}
+.tbar .cnt{position:absolute;top:-26px;left:50%;transform:translateX(-50%);
+  font-family:"Fraunces",serif;font-size:22px;color:var(--ink)}
+.tbar .pct{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:9px;color:rgba(8,10,17,.7);font-weight:700}
+.tbar .lab{margin-top:12px;font-size:11px;color:var(--muted);letter-spacing:.04em;text-align:center;white-space:nowrap}
+.tbar .lab b{color:var(--ink);font-weight:500}
+
+/* subtopic bars */
+.subs{display:flex;flex-direction:column;gap:11px}
+.sub{display:grid;grid-template-columns:160px 1fr 38px;align-items:center;gap:14px}
+.sub .sn{font-size:12px;color:var(--ink);text-align:right;letter-spacing:.01em}
+.sub .track{height:13px;background:rgba(255,255,255,.04);border-radius:7px;overflow:hidden}
+.sub .fill{height:100%;border-radius:7px;transition:width 1s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 14px -3px currentColor}
+.sub .sc{font-size:12px;color:var(--muted);font-family:"Fraunces",serif}
+
+/* filter chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.chip{cursor:pointer;font-size:11px;letter-spacing:.02em;color:var(--muted);background:rgba(255,255,255,.02);
+  border:1px solid var(--line);border-radius:20px;padding:6px 13px;transition:.16s;display:inline-flex;gap:7px;align-items:center}
+.chip:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
+.chip.on{color:var(--bg);background:var(--c2);border-color:var(--c2);font-weight:600}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
+
+/* paper cards */
+.papers{display:flex;flex-direction:column;gap:12px}
+.pc{border:1px solid var(--line);border-radius:9px;padding:16px 18px;background:var(--panel);
+  display:flex;gap:16px;transition:.18s;break-inside:avoid}
+.pc:hover{border-color:rgba(255,255,255,.26);transform:translateY(-1px)}
+.pc .yr{flex:0 0 auto;text-align:center;min-width:54px}
+.pc .yr .vn{font-size:11px;font-weight:700;letter-spacing:.06em}
+.pc .yr .yy{font-family:"Fraunces",serif;font-size:23px;line-height:1;margin-top:3px}
+.pc .body{flex:1;min-width:0}
+.pc .ti{font-size:14px;line-height:1.4;letter-spacing:.005em}
+.pc .ti a{text-decoration:none;color:var(--ink);transition:.15s}
+.pc .ti a:hover{color:var(--c1)}
+.pc .au{margin-top:6px;font-size:10.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pc .tg{font-size:9px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px 2px;border-radius:4px;
+  border:1px solid;opacity:.85}
+.pc .meta{flex:0 0 auto;text-align:right;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.pc .cit{font-family:"Fraunces",serif;font-size:20px;line-height:1}
+.pc .cit small{display:block;font-family:"JetBrains Mono";font-size:8.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--dim);margin-top:3px}
+.pc .lnk{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:4px 8px;transition:.15s}
+.pc .lnk:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
+
+/* download + footer */
+.dl{position:fixed;right:24px;bottom:24px;z-index:20;font-family:inherit;font-size:11px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--bg);background:var(--c2);border:none;border-radius:24px;
+  padding:13px 20px;cursor:pointer;box-shadow:0 8px 28px -6px var(--c2);transition:.18s}
+.dl:hover{transform:translateY(-2px)}
+.foot{padding:40px 0 60px;border-top:1px solid var(--line);margin-top:24px;
+  font-size:10.5px;color:var(--dim);letter-spacing:.03em;line-height:1.8}
+.foot a{color:var(--muted);text-decoration:none}.foot a:hover{color:var(--ink)}
+.foot .un{border-bottom:1px dotted var(--dim);cursor:help}
+
+@media(max-width:680px){
+  .hero{padding:42px 0 20px}
+  .trend{gap:14px;height:190px}
+  .sub{grid-template-columns:110px 1fr 30px;gap:9px}.sub .sn{font-size:10.5px}
+  .pc{flex-wrap:wrap}.pc .meta{flex-direction:row;width:100%;justify-content:space-between;margin-top:6px}
+  .sec-note{display:none}
+}
+
+/* print → clean PDF */
+@media print{
+  @page{margin:14mm}
+  body{background:#fff;color:#111}
+  .dl{display:none}
+  .wrap{max-width:none;padding:0}
+  .pc{background:#fff;border-color:#ddd;break-inside:avoid}
+  .pc .ti a,.pc .yr,.sec-title,h1,.stat .v{color:#111!important}
+  .tagline,.au,.foot,.sec-note,.muted{color:#555!important}
+  .trend .bar{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sub .fill,.chip,.pc .tg{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:18px 0;break-inside:avoid}
+  .chips{display:none}
+  h1{font-size:40px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <p class="eyebrow" id="eyebrow">CVPR · ICCV 2025–2026 · Field Analysis</p>
+    <h1 id="title">—</h1>
+    <p class="tagline" id="tagline"></p>
+    <div class="statrow" id="statrow"></div>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Publication trend</span>
+      <span class="sec-note">Accepted main-conference papers (workshops &amp; findings excluded). ICCV runs in odd years; ECCV is biennial.</span></div>
+    <div class="trend" id="trend"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Sub-topic distribution</span>
+      <span class="sec-note">Title + abstract tagging; papers may span multiple sub-topics.</span></div>
+    <div class="subs" id="subs"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title" id="papers-title">Papers</span>
+      <span class="sec-note" id="papers-note"></span></div>
+    <div class="chips" id="chips"></div>
+    <div class="papers" id="papers"></div>
+  </section>
+
+  <footer class="foot" id="foot"></footer>
+</div>
+
+<button class="dl" id="dl">⤓ Download PDF</button>
+
+<script>
+const PAL=["#ff8a5b","#52d3c3","#ffd166","#ad8cff","#5fb8ff","#c2e06a","#f78fb3","#7ee0b8"];
+const VENUE_C={CVPR:"#ff8a5b",ICCV:"#5fb8ff",ECCV:"#ad8cff",WACV:"#c2e06a",BMVC:"#52d3c3"};
+const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+fetch("data.json").then(r=>r.json()).then(D=>{
+  // hero
+  document.title=`Field Analysis — ${D.field}`;
+  document.getElementById("title").innerHTML=D.field.replace(/(\s\S+)$/,' <em>$1</em>');
+  document.getElementById("tagline").textContent=D.tagline||"";
+  const totCit=D.papers.reduce((a,p)=>a+(p.citations||0),0);
+  const stats=[["v accent",D.total,"papers"],
+    ["v",D.trend.length,"venue editions"],
+    ["v",D.subtopics.length,"sub-topics"],
+    ["v",totCit.toLocaleString(),"citations"]];
+  document.getElementById("statrow").innerHTML=stats.map(([c,v,l])=>
+    `<div class="stat"><div class="${c}">${v}</div><div class="l">${l}</div></div>`).join("");
+
+  // trend
+  const tmax=Math.max(...D.trend.map(t=>t.count),1);
+  document.getElementById("trend").innerHTML=D.trend.map(t=>{
+    const h=Math.round(t.count/tmax*100), bc=VENUE_C[t.venue]||"#ff8a5b";
+    const pct=(t.count/t.total*100).toFixed(2);
+    return `<div class="tbar"><div class="barwrap"><div class="bar" style="--bc:${bc};height:0"
+      data-h="${h}"><span class="cnt">${t.count}</span><span class="pct">${pct}%</span></div></div>
+      <div class="lab"><b>${t.venue}</b> ${t.year}<br><span style="color:var(--dim)">of ${t.total.toLocaleString()}</span></div></div>`;
+  }).join("");
+  requestAnimationFrame(()=>document.querySelectorAll(".tbar .bar").forEach(b=>b.style.height=b.dataset.h+"%"));
+
+  // subtopics
+  const smax=Math.max(...D.subtopics.map(s=>s.count),1);
+  document.getElementById("subs").innerHTML=D.subtopics.map((s,i)=>{
+    const col=PAL[i%PAL.length];
+    return `<div class="sub"><div class="sn">${esc(s.name)}</div>
+      <div class="track"><div class="fill" style="width:0;background:${col};color:${col}" data-w="${s.count/smax*100}"></div></div>
+      <div class="sc">${s.count}</div></div>`;
+  }).join("");
+  requestAnimationFrame(()=>document.querySelectorAll(".sub .fill").forEach(f=>f.style.width=f.dataset.w+"%"));
+
+  // subtopic colour map (for chips + tags)
+  const SC={}; D.subtopics.forEach((s,i)=>SC[s.name]=PAL[i%PAL.length]);
+
+  // papers
+  document.getElementById("papers-title").textContent=`${D.total} papers`;
+  document.getElementById("papers-note").textContent=`${D.venues.join(" · ")} · ${D.years[0]}–${D.years[D.years.length-1]}`;
+  const papersEl=document.getElementById("papers");
+  function render(filter){
+    const list=filter?D.papers.filter(p=>p.subtopics.includes(filter)):D.papers;
+    papersEl.innerHTML=list.map(p=>{
+      const vc=VENUE_C[p.venue]||"#ff8a5b";
+      const tags=p.subtopics.map(s=>`<span class="tg" style="color:${SC[s]};border-color:${SC[s]}55">${esc(s)}</span>`).join("");
+      const ax=p.arxiv?`<a class="lnk" href="https://arxiv.org/abs/${p.arxiv}" target="_blank" rel="noopener">arXiv</a>`:"";
+      return `<div class="pc"><div class="yr"><div class="vn" style="color:${vc}">${p.venue}</div><div class="yy">${String(p.year).slice(2)}</div></div>
+        <div class="body"><div class="ti"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></div>
+        <div class="au">${esc(p.authors)}</div>${tags?`<div class="tags">${tags}</div>`:""}</div>
+        <div class="meta"><div class="cit">${p.citations}<small>citations</small></div>
+        <a class="lnk" href="${esc(p.url)}" target="_blank" rel="noopener">CVF</a>${ax}</div></div>`;
+    }).join("");
+  }
+  render(null);
+
+  // filter chips
+  const chips=document.getElementById("chips");
+  chips.innerHTML=`<span class="chip on" data-f="">all</span>`+D.subtopics.map(s=>
+    `<span class="chip" data-f="${esc(s.name)}"><span class="dot" style="color:${SC[s.name]}"></span>${esc(s.name)} ${s.count}</span>`).join("");
+  chips.addEventListener("click",e=>{const c=e.target.closest(".chip");if(!c)return;
+    chips.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===c));
+    render(c.dataset.f||null);});
+
+  // footer
+  document.getElementById("foot").innerHTML=
+    `Sources: ${D.sources.join(" · ")}. Counts cover accepted main-conference papers; workshop and findings tracks are excluded.<br>
+     This is an <span class="un" title="Not affiliated with or endorsed by CVPR, ICCV, CVF or IEEE. Bibliographic metadata only.">unofficial</span> research-field analysis · built by
+     <a href="https://deo-ahn.github.io" target="_blank" rel="noopener">Deokhyun Ahn</a> ·
+     <a href="https://github.com/cv-field-analysis/cv-field-analysis.github.io" target="_blank" rel="noopener">GitHub</a>`;
+}).catch(e=>{document.getElementById("title").textContent="Failed to load data.";});
+
+document.getElementById("dl").onclick=()=>window.print();
+</script>
+</body>
+</html>
