@@ -392,7 +392,8 @@ fetch("data.json").then(r=>r.json()).then(D=>{
   };
   let curFilter=null,curSort="recent";
   function render(){
-    const list=(curFilter?D.papers.filter(p=>(p[curFilter.ax]||[]).includes(curFilter.l)):D.papers.slice()).sort(SORTS[curSort]);
+    const match=p=>curFilter.ax==="venue"?p.venue===curFilter.l:(p[curFilter.ax]||[]).includes(curFilter.l);
+    const list=(curFilter?D.papers.filter(match):D.papers.slice()).sort(SORTS[curSort]);
     papersEl.innerHTML=list.map(p=>{
       const vc=VENUE_C[p.venue]||"#ff8a5b";
       const ax=p.arxiv?`<a class="lnk" href="https://arxiv.org/abs/${p.arxiv}" target="_blank" rel="noopener">arXiv</a>`:"";
@@ -421,7 +422,13 @@ fetch("data.json").then(r=>r.json()).then(D=>{
     render();});
 
   const chips=document.getElementById("chips");
+  const chipCol=(ax,l)=>ax==="venue"?(VENUE_C[l]||"#ff8a5b"):AXIS_C[ax];
   let ch=`<span class="chip on" data-ax="" data-l="">all</span>`;
+  // venue group — view one conference / journal at a time
+  const vcount={}; D.papers.forEach(p=>vcount[p.venue]=(vcount[p.venue]||0)+1);
+  ch+=`<span class="axlabel" style="color:var(--muted)">Venue</span>`;
+  ch+=D.venues.slice().filter(v=>vcount[v]).sort((a,b)=>vrank(a)-vrank(b)).map(v=>
+    `<span class="chip" data-ax="venue" data-l="${esc(v)}"><span class="dot" style="color:${chipCol("venue",v)}"></span>${esc(v)} ${vcount[v]}</span>`).join("");
   FILT_AX.forEach(ax=>{
     const lbl=(D.axis_order.find(a=>a.key===ax)||{}).label||ax;
     ch+=`<span class="axlabel" style="color:${AXIS_C[ax]}">${lbl}</span>`;
@@ -429,9 +436,9 @@ fetch("data.json").then(r=>r.json()).then(D=>{
   });
   chips.innerHTML=ch;
   chips.addEventListener("click",e=>{const c=e.target.closest(".chip");if(!c)return;
+    const col=c.dataset.ax?chipCol(c.dataset.ax,c.dataset.l):"var(--c2)";
     chips.querySelectorAll(".chip").forEach(x=>{const on=x===c;x.classList.toggle("on",on);
-      x.style.background=on&&c.dataset.ax?AXIS_C[c.dataset.ax]:(on?"var(--c2)":"");
-      x.style.borderColor=on&&c.dataset.ax?AXIS_C[c.dataset.ax]:"";});
+      x.style.background=on?col:"";x.style.borderColor=on?col:"";});
     curFilter=c.dataset.l?{ax:c.dataset.ax,l:c.dataset.l}:null;render();});
 
   /* ---- footer ---- */
