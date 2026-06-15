@@ -1,11 +1,15 @@
 {
  "NeurIPS2024": {
   "total_rows": 4830,
-  "accepted": 4518
+  "accepted": 4562
  },
  "NeurIPS2025": {
   "total_rows": 6212,
   "accepted": 5812
+ },
+ "ICLR2024": {
+  "total_rows": 7407,
+  "accepted": 2260
  },
  "ICLR2025": {
   "total_rows": 11677,
@@ -15,8 +19,20 @@
   "total_rows": 19814,
   "accepted": 5358
  },
+ "ICML2024": {
+  "total_rows": 2610,
+  "accepted": 2610
+ },
  "ICML2025": {
   "total_rows": 3527,
   "accepted": 3342
+ },
+ "CVPR2024": {
+  "total_rows": 2716,
+  "accepted": 2716
+ },
+ "AAAI2024": {
+  "total_rows": 2865,
+  "accepted": 2865
  }
 }

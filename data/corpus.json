@@ -1,0 +1,485 @@
+[
+ {
+  "id": "aaai2026-refinevad-semantic-guided-feature-recalibratio",
+  "title": "RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection",
+  "venue": "AAAI",
+  "year": 2026,
+  "abstract": "Weakly-Supervised Video Anomaly Detection aims to identify anomalous events using only video-level labels, balancing annotation efficiency with practical applicability. However, existing methods often oversimplify the anomaly space by treating all abnormal events as a single category, overlooking the diverse semantic and temporal characteristics intrinsic to real-world anomalies. Inspired by how humans perceive anomalies, by jointly interpreting temporal motion patterns and semantic structures underlying different anomaly types, we propose RefineVAD, a novel framework that mimics this dual-process reasoning. Our framework integrates two core modules. The first, Motion-aware Temporal Attention and Recalibration (MoTAR), estimates motion salience and dynamically adjusts temporal focus via shift-based attention and global Transformer-based modeling. The second, Category-Oriented Refinement (CORE), injects soft anomaly category priors into the representation space by aligning segment-level features with learnable category prototypes through cross-attention. By jointly leveraging temporal dynamics and semantic structure, explicitly models both ``how'' motion evolves and ``what'' semantic category it resembles. Extensive experiments on WVAD benchmark validate the effectiveness of RefineVAD and highlight the importance of integrating semantic context to guide feature refinement toward anomaly-relevant patterns."
+ },
+ {
+  "id": "aaai2026-learning-to-tell-apart-weakly-supervised-video",
+  "title": "Learning to Tell Apart: Weakly Supervised Video Anomaly Detection via Disentangled Semantic Alignment",
+  "venue": "AAAI",
+  "year": 2026,
+  "abstract": "Recent advancements in weakly-supervised video anomaly detection have achieved remarkable performance by applying the multiple instance learning paradigm based on multimodal foundation models such as CLIP to highlight anomalous instances and classify categories. However, their objectives may tend to detect the most salient response segments, while neglecting to mine diverse normal patterns separated from anomalies, and are prone to category confusion due to similar appearance, leading to unsatisfactory fine-grained classification results. Therefore, we propose a novel Disentangled Semantic Alignment Network (DSANet) to explicitly separate abnormal and normal features from coarse-grained and fine-grained aspects, enhancing the distinguishability. Specifically, at the coarse-grained level, we introduce a self-guided normality modeling branch that reconstructs input video features under the guidance of learned normal prototypes, encouraging the model to exploit normality cues inherent in the video, thereby improving the temporal separation of normal patterns and anomalous events. At the fine-grained level, we present a decoupled contrastive semantic alignment mechanism, which first temporally decomposes each video into event-centric and background-centric components using frame-level anomaly scores and then applies visual-language contrastive learning to enhance class-discriminative representations. Comprehensive experiments on two standard benchmarks, namely XD-Violence and UCF-Crime, demonstrate that DSANet outperforms existing state-of-the-art methods."
+ },
+ {
+  "id": "aaai2026-headhunt-vad-hunting-robust-anomaly-sensitive",
+  "title": "HeadHunt-VAD: Hunting Robust Anomaly-Sensitive Heads in MLLM for Tuning-Free Video Anomaly Detection",
+  "venue": "AAAI",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "aaai2026-vagu-amp-gts-llm-based-benchmark-and-framework",
+  "title": "VAGU & GtS: LLM-Based Benchmark and Framework for Joint Video Anomaly Grounding and Understanding",
+  "venue": "AAAI",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "aaai2026-finevau-a-novel-human-aligned-benchmark-for-fi",
+  "title": "FineVAU: A Novel Human-Aligned Benchmark for Fine-Grained Video Anomaly Understanding",
+  "venue": "AAAI",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2026-no-need-for-real-anomaly-mllm-empowered-zero-s",
+  "title": "No Need For Real Anomaly: MLLM Empowered Zero-Shot Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": "The collection and detection of video anomaly data has long been a challenging problem due to its rare occurrence and spatio-temporal scarcity. Existing video anomaly detection (VAD) methods under perform in open-world scenarios. Key contributing factors include limited dataset diversity, and inadequate understanding of context-dependent anomalous semantics. To address these issues, i) we propose LAVIDA, an end-to-end zero-shot video anomaly detection framework. ii) LAVIDA employs an Anomaly Exposure Sampler that transforms segmented objects into pseudo-anomalies to enhance model adaptability to unseen anomaly categories. It further integrates a Multimodal Large Language Model (MLLM) to bolster semantic comprehension capabilities. Additionally, iii) we design a token compression approach based on reverse attention to handle the spatio-temporal scarcity of anomalous patterns and decrease computational cost. The training process is conducted solely on pseudo anomalies without any VAD data. Evaluations across four benchmark VAD datasets demonstrate that LAVIDA achieves SOTA performance in both frame-level and pixel-level anomaly detection under the zero-shot setting. Our code is available in https://github.com/VitaminCreed/LAVIDA."
+ },
+ {
+  "id": "cvpr2026-weakly-supervised-video-anomaly-detection-with",
+  "title": "Weakly Supervised Video Anomaly Detection with Anomaly-Connected Components and Intention Reasoning",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": "Weakly supervised video anomaly detection (WS-VAD) involves identifying the temporal intervals that contain anomalous events in untrimmed videos, where only video-level annotations are provided as supervisory signals. However, a key limitation persists in WS-VAD, as dense frame-level annotations are absent, which often leaves existing methods struggling to learn anomaly semantics effectively. To address this issue, we propose a novel framework named LAS-VAD, short for Learning Anomaly Semantics for WS-VAD, which integrates anomaly-connected component mechanism and intention awareness mechanism. The former is designed to assign video frames into distinct semantic groups within a video, and frame segments within the same group are deemed to share identical semantic information. The latter leverages an intention-aware strategy to distinguish between similar normal and abnormal behaviors (e.g., taking items and stealing). To further model the semantic information of anomalies, as anomaly occurrence is accompanied by distinct characteristic attributes (i.e., explosions are characterized by flames and thick smoke), we additionally incorporate anomaly attribute information to guide accurate detection. Extensive experiments on two benchmark datasets, XD-Violence and UCF-Crime, demonstrate that our LAS-VAD outperforms current state-of-the-art methods with remarkable gains."
+ },
+ {
+  "id": "cvpr2026-fine-vad-towards-fine-grained-video-anomaly-de",
+  "title": "Fine-VAD: Towards Fine-Grained Video Anomaly Detection via Progressive Cross-Granularity Learning",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2026-learning-from-noisy-supervision-a-denoising-de",
+  "title": "Learning from Noisy Supervision: A Denoising-Debiasing Framework for Weakly Supervised Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2026-tlma-mitigating-the-impact-of-weakly-labeled-i",
+  "title": "TLMA: Mitigating the Impact of Weakly Labeled Information for Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2026-the-road-less-seen-segment-exploration-for-wea",
+  "title": "The Road Less Seen: Segment Exploration for Weakly Supervised Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2026-joint-learning-of-general-and-diverse-patterns",
+  "title": "Joint Learning of General and Diverse Patterns with Mixture of Memory Experts for Weakly-Supervised Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2026-alert-clip-abnormality-aware-latent-enhanced-r",
+  "title": "Alert-CLIP: Abnormality-aware Latent-Enhanced Representation Tuning of CLIP for Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "iclr2026-language-guided-open-world-video-anomaly-detec",
+  "title": "Language-guided Open-world Video Anomaly Detection under Weak Supervision",
+  "venue": "ICLR",
+  "year": 2026,
+  "abstract": "Video anomaly detection (VAD) aims to detect anomalies that deviate from what is expected. In open-world scenarios, the expected events may change as requirements change. For example, not wearing a mask may be considered abnormal during a flu outbreak but normal otherwise. However, existing methods assume that the definition of anomalies is invariable, and thus are not applicable to the open world. To address this, we propose a novel open-world VAD paradigm with variable definitions, allowing guided detection through user-provided natural language at inference time. This paradigm necessitates establishing a robust mapping from video and textual definition to anomaly scores. Therefore, we propose LaGoVAD (**La**nguage-**g**uided **O**pen-world **V**ideo **A**nomaly **D**etector), a model that dynamically adapts anomaly definitions under weak supervision with two regularization strategies: diversifying the relative durations of anomalies via dynamic video synthesis, and enhancing feature robustness through contrastive learning with negative mining. Training such adaptable models requires diverse anomaly definitions, but existing datasets typically provide labels without semantic descriptions. To bridge this gap, we collect PreVAD (**Pre**-training **V**ideo **A**nomaly **D**ataset), the largest and most diverse video anomaly dataset to date, featuring 35,279 annotated videos with multi-level category labels and descriptions that explicitly define anomalies. Zero-shot experiments on seven datasets demonstrate LaGoVAD's SOTA performance. Our dataset and code are released at https://github.com/Kamino666/LaGoVAD-PreVAD."
+ },
+ {
+  "id": "iclr2026-steering-and-rectifying-latent-representation",
+  "title": "Steering and Rectifying Latent representation manifolds in Frozen Multi-modal LLMs for Video Anomaly Detection",
+  "venue": "ICLR",
+  "year": 2026,
+  "abstract": "Video anomaly detection (VAD) aims to identify abnormal events in videos. Traditional VAD methods generally suffer from the high costs of labeled data and full training, thus some recent works have explored leveraging frozen multi-modal large language models (MLLMs) in a tuning-free manner to perform VAD. However, their performance is limited as they directly inherit pre-training biases and cannot adapt internal representations to specific video contexts, leading to difficulties in handling subtle or ambiguous anomalies. To address these limitations, we propose a novel intervention framework, termed SteerVAD, which advances MLLM-based VAD by shifting from passively reading to actively steering and rectifying internal representations. Our approach first leverages the gradient-free representational separability analysis (RSA) to identify top attention heads as latent anomaly experts (LAEs) which are most discriminative for VAD. Then a hierarchical meta-controller (HMC) generates dynamic rectification signals by jointly conditioning on global context and these LAE outputs. The signals execute targeted, anisotropic scaling directly upon the LAE representation manifolds, amplifying anomaly-relevant dimensions while suppressing inherent biases. Extensive experiments on mainstream benchmarks demonstrate our method achieves state-of-the-art performance among tuning-free approaches requiring only 1\\% of training data, establishing it as a powerful new direction for video anomaly detection. The code will be released upon the publication."
+ },
+ {
+  "id": "tpami2026-piercingeye-dual-space-video-violence-detectio",
+  "title": "PiercingEye: Dual-Space Video Violence Detection With Hyperbolic Vision-Language Guidance",
+  "venue": "TPAMI",
+  "year": 2026,
+  "abstract": ""
+ },
+ {
+  "id": "aaai2025-federated-weakly-supervised-video-anomaly-dete",
+  "title": "Federated Weakly Supervised Video Anomaly Detection with Multimodal Prompt",
+  "venue": "AAAI",
+  "year": 2025,
+  "abstract": "Video anomaly detection (VAD) aims at locating the abnormal events in videos. Recently, the Weakly Supervised VAD has made great progress, which only requires video-level annotations when training. In practical applications, different institutions may have different types of abnormal videos. However, the abnormal videos cannot be circulated on the internet due to privacy protection. To train a more generalized anomaly detector that can identify various anomalies, it is reasonable to introduce federated learning into WSVAD. In this paper, we propose Global and Local Context-driven Federated Learning, a new paradigm for privacy protected weakly supervised video anomaly detection. Specifically, we utilize the vision-language association of CLIP to detect whether the video frame is abnormal. Instead of leveraging handcrafted text prompts for CLIP, we propose a text prompt generator. The generated prompt is simultaneously influenced by text and visual. On the one hand, the text provides global context related to anomaly, which improves the model's ability of generalization. On the other hand, the visual provides personalized local context because different clients may have videos with different types of anomalies or scenes. The generated prompt ensures global generalization while processing personalized data from different clients. Extensive experiments show that the proposed method achieves remarkable performance."
+ },
+ {
+  "id": "aaai2025-video-anomaly-detection-with-motion-and-appear",
+  "title": "Video Anomaly Detection with Motion and Appearance Guided Patch Diffusion Model",
+  "venue": "AAAI",
+  "year": 2025,
+  "abstract": "A recent endeavor in one class of video anomaly detection is to leverage diffusion models and posit the task as a generation problem, where the diffusion model is trained to recover normal patterns exclusively, thus reporting abnormal patterns as outliers. Yet, existing attempts neglect the various formations of anomaly and predict normal samples at the feature level regardless that abnormal objects in surveillance videos are often relatively small. To address this, a novel patch-based diffusion model is proposed, specifically engineered to capture fine-grained local information. We further observe that anomalies in videos manifest themselves as deviations in both appearance and motion. Therefore, we argue that a comprehensive solution must consider both of these aspects simultaneously to achieve accurate frame prediction. To address this, we introduce innovative motion and appearance conditions that are seamlessly integrated into our patch diffusion model. These conditions are designed to guide the model in generating coherent and contextually appropriate predictions for both semantic content and motion relations. Experimental results on four challenging video anomaly detection datasets empirically substantiate the efficacy of our proposed approach, demonstrating that it consistently outperforms most existing methods in detecting abnormal behaviors."
+ },
+ {
+  "id": "aaai2025-ucf-crime-dvs-a-novel-event-based-dataset-for",
+  "title": "UCF-Crime-DVS: A Novel Event-Based Dataset for Video Anomaly Detection with Spiking Neural Networks",
+  "venue": "AAAI",
+  "year": 2025,
+  "abstract": "Video anomaly detection plays a significant role in intelligent surveillance systems. To enhance model's anomaly recognition ability, previous works have typically involved RGB, optical flow, and text features. Recently, dynamic vision sensors (DVS) have emerged as a promising technology, which capture visual information as discrete events with a very high dynamic range and temporal resolution. It reduces data redundancy and enhances the capture capacity of moving objects compared to conventional camera. To introduce this rich dynamic information into the surveillance field, we created the first DVS video anomaly detection benchmark, namely UCF-Crime-DVS. To fully utilize this new data modality, a multi-scale spiking fusion network (MSF) is designed based on spiking neural networks (SNNs). This work explores the potential application of dynamic information from event data in video anomaly detection. Our experiments demonstrate the effectiveness of our framework on UCF-Crime-DVS and its superior performance compared to other models, establishing a new baseline for SNN-based weakly supervised video anomaly detection."
+ },
+ {
+  "id": "aaai2025-dual-conditioned-motion-diffusion-for-pose-bas",
+  "title": "Dual Conditioned Motion Diffusion for Pose-Based Video Anomaly Detection",
+  "venue": "AAAI",
+  "year": 2025,
+  "abstract": "Video Anomaly Detection (VAD) is essential for computer vision and multimedia research. Existing VAD methods utilize either reconstruction-based or prediction-based frameworks. The former excels at detecting irregular patterns or structures, whereas the latter is capable of spotting abnormal deviations or trends. We address pose-based video anomaly detection and introduce a novel framework called Dual Conditioned Motion Diffusion (DCMD), which enjoys the advantages of both approaches. The DCMD integrates conditioned motion and conditioned embedding to comprehensively utilize the pose characteristics and latent semantics of observed movements, respectively. In the reverse diffusion process, a motion transformer is proposed to capture potential correlations from multi-layered characteristics within the spectrum space of human motion. To enhance the discriminability between normal and abnormal instances, we design a novel United Association Discrepancy (UAD) regularization that primarily relies on a Gaussian kernel-based time association and a self-attention-based global association. Finally, a mask completion strategy is introduced during the inference stage of the reverse diffusion process to enhance the utilization of conditioned motion for the prediction branch of anomaly detection. Extensive experiments conducted on four datasets demonstrate that our method dramatically outperforms state-of-the-art methods and exhibits superior generalization performance."
+ },
+ {
+  "id": "aaai2025-varcmp-adapting-cross-modal-pre-training-model",
+  "title": "VarCMP: Adapting Cross-Modal Pre-Training Models for Video Anomaly Retrieval",
+  "venue": "AAAI",
+  "year": 2025,
+  "abstract": "Video anomaly retrieval (VAR) aims to retrieve pertinent abnormal or normal videos from collections of untrimmed and long videos through cross-modal requires such as textual descriptions and synchronized audios. Cross-modal pre-training (CMP) models, by pre-training on large-scale cross-modal pairs, e.g., image and text, can learn the rich associations between different modalities, and this cross-modal association capability gives CMP an advantage in conventional retrieval tasks. Inspired by this, how to utilize the robust cross-modal association capabilities of CMP in VAR to search crucial visual component from these untrimmed and long videos becomes a critical research problem. Therefore, this paper proposes a VAR method based on CMP models, named VarCMP. First, a unified hierarchical alignment strategy is proposed to constrain the semantic and spatial consistency between video and text, as well as the semantic, temporal, and spatial consistency between video and audio. It fully leverages the efficient cross-modal association capabilities of CMP models by considering cross-modal similarities at multiple granularities, enabling VarCMP to achieve effective all-round information matching for both video-text and video-audio VAR tasks. Moreover, to further solve the problem of untrimmed and long video alignment, an anomaly-biased weighting is devised in the fine-grained alignment, which identifies key segments in untrimmed long videos using anomaly priors, giving them more attention, thereby discarding irrelevant segment information, and achieving more accurate matching with cross-modal queries. Extensive experiments demonstrates high efficacy of VarCMP in both video-text and video-audio VAR tasks, achieving significant improvements on both text-video (UCFCrime-AR) and audio-video (XDViolence-AR) datasets against the best competitors by 5.0% and 5.3% R@1."
+ },
+ {
+  "id": "cvpr2025-holmes-vau-towards-long-term-video-anomaly-und",
+  "title": "Holmes-VAU: Towards Long-term Video Anomaly Understanding at Any Granularity",
+  "venue": "CVPR",
+  "year": 2025,
+  "abstract": "How can we enable models to comprehend video anomalies occurring over varying temporal scales and contexts? Traditional Video Anomaly Understanding (VAU) methods focus on frame-level anomaly prediction, often missing the interpretability of complex and diverse real-world anomalies. Recent multimodal approaches leverage visual and textual data but lack hierarchical annotations that capture both short-term and long-term anomalies. To address this challenge, we introduce HIVAU-70k, a large-scale benchmark for hierarchical video anomaly understanding across any granularity. We develop a semi-automated annotation engine that efficiently scales high-quality annotations by combining manual video segmentation with recursive free-text annotation using large language models (LLMs). This results in over 70,000 multi-granular annotations organized at clip-level, event-level, and video-level segments. For efficient anomaly detection in long videos, we propose the Anomaly-focused Temporal Sampler (ATS). ATS integrates an anomaly scorer with a density-aware sampler to adaptively select frames based on anomaly scores, ensuring that the multimodal LLM concentrates on anomaly-rich regions, which significantly enhances both efficiency and accuracy. Extensive experiments demonstrate that our hierarchical instruction data markedly improves anomaly comprehension. The integrated ATS and visual-language model outperform traditional methods in processing long videos. Our benchmark and model are publicly available at https://github.com/pipixin321/HolmesVAU."
+ },
+ {
+  "id": "cvpr2025-vera-explainable-video-anomaly-detection-via-v",
+  "title": "VERA: Explainable Video Anomaly Detection via Verbalized Learning of Vision-Language Models",
+  "venue": "CVPR",
+  "year": 2025,
+  "abstract": "The rapid advancement of vision-language models (VLMs) has established a new paradigm in video anomaly detection (VAD): leveraging VLMs to simultaneously detect anomalies and provide comprehendible explanations for the decisions. Existing work in this direction often assumes the complex reasoning required for VAD exceeds the capabilities of pretrained VLMs. Consequently, these approaches either incorporate specialized reasoning modules during inference or rely on instruction tuning datasets through additional training to adapt VLMs for VAD. However, such strategies often incur substantial computational costs or data annotation overhead. To address these challenges in explainable VAD, we introduce a verbalized learning framework named VERA that enables VLMs to perform VAD without model parameter modifications. Specifically, VERA automatically decomposes the complex reasoning required for VAD into reflections on simpler, more focused guiding questions capturing distinct abnormal patterns. It treats these reflective questions as learnable parameters and optimizes them through data-driven verbal interactions between learner and optimizer VLMs, using coarsely labeled training data. During inference, VERA embeds the learned questions into model prompts to guide VLMs in generating segment-level anomaly scores, which are then refined into frame-level scores via the fusion of scene and temporal contexts. Experimental results on challenging benchmarks demonstrate that the learned questions of VERA are highly adaptable, significantly improving both detection performance and explainability of VLMs for VAD."
+ },
+ {
+  "id": "cvpr2025-anomize-better-open-vocabulary-video-anomaly-d",
+  "title": "Anomize: Better Open Vocabulary Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2025,
+  "abstract": "Open Vocabulary Video Anomaly Detection (OVVAD) seeks to detect and classify both base and novel anomalies. However, existing methods face two specific challenges related to novel anomalies. The first challenge is detection ambiguity, where the model struggles to assign accurate anomaly scores to unfamiliar anomalies. The second challenge is categorization confusion, where novel anomalies are often misclassified as visually similar base instances. To address these challenges, we explore supplementary information from multiple sources to mitigate detection ambiguity by leveraging multiple levels of visual data alongside matching textual information. Furthermore, we propose incorporating label relations to guide the encoding of new labels, thereby improving alignment between novel videos and their corresponding labels, which helps reduce categorization confusion. The resulting Anomize framework effectively tackles these issues, achieving superior performance on UCF-Crime and XD-Violence datasets, demonstrating its effectiveness in OVVAD."
+ },
+ {
+  "id": "cvpr2025-noise-resistant-video-anomaly-detection-via-rg",
+  "title": "Noise-Resistant Video Anomaly Detection via RGB Error-Guided Multiscale Predictive Coding and Dynamic Memory",
+  "venue": "CVPR",
+  "year": 2025,
+  "abstract": "Due to the interference of background noise, existing video anomaly detection methods are prone to detect some normal events in complex scenes as anomalies. Meanwhile, we note that the diversity of normal patterns has not been adequately considered, i.e., the normal events that are worthy of reference in the test data have not been properly utilized, which raises the risk of missed and false detections. In this work, we combine the tasks of next-frame prediction and predicted-frame reconstruction to propose a noise-resistant video anomaly detection method. For the prediction task, we develop an RGB Error-Guided Multiscale Predictive Coding (EG-MPC) framework to overcome the interference of background noise on the learning of appearance and motion features of objects at various scales, thus achieving high-quality frame prediction. For the reconstruction task, we introduce the Dynamic Memory Modules (DMMs) into the reconstruction network, and design sparse aggregation and selective update strategies for the memory items in the DMMs to effectively represent diverse normal patterns while increasing the difficulty of reconstructing anomalies, thus making it easier to distinguish between normal and abnormal frames. Extensive experiments on four benchmark datasets demonstrate that our proposed method outperforms state-of-the-art approaches, especially in complex scenarios."
+ },
+ {
+  "id": "cvpr2025-echotraffic-enhancing-traffic-anomaly-understa",
+  "title": "EchoTraffic: Enhancing Traffic Anomaly Understanding with Audio-Visual Insights",
+  "venue": "CVPR",
+  "year": 2025,
+  "abstract": "Traffic Anomaly Understanding (TAU) is essential for improving public safety and transportation efficiency by enabling timely detection and response to incidents. Beyond existing methods, which rely largely on visual data, we propose to consider audio cues, a valuable source that offers strong hints to anomaly scenarios such as crashes and honking. Our contributions are twofold. First, we compile AV-TAU, the first large-scale audio-visual dataset for TAU, providing 29,865 traffic anomaly videos and 149,325 Q&A pairs, while supporting five essential TAU tasks. Second, we develop EchoTraffic, a multimodal LLM that integrates audio and visual data for TAU, through our audio-insight frame selector and dynamic connector to effectively extract crucial audio cues for anomaly understanding with a two-phase training framework. Experimental results on AV-TAU manifest that EchoTraffic sets a new SOTA performance in TAU, outperforming the existing multimodal LLMs. Our contributions, including AV-TAU and EchoTraffic, pave a new direction for multimodal TAU."
+ },
+ {
+  "id": "cvpr2025-track-any-anomalous-object-a-granular-video-an",
+  "title": "Track Any Anomalous Object:A Granular Video Anomaly Detection Pipeline",
+  "venue": "CVPR",
+  "year": 2025,
+  "abstract": "Video anomaly detection (VAD) is crucial in scenarios such as surveillance and autonomous driving, where timely detection of unexpected activities is essential. Albeit existing methods have primarily focused on detecting anomalous objects in videos—either by identifying anomalous frames or objects—they often neglect finer-grained analysis, such as anomalous pixels, which limits their ability to capture a broader range of anomalies. To address this challenge, we propose an innovative VAD framework called Track Any Anomalous Object (TAO), which introduces a Granular Video Anomaly Detection Framework that, for the first time, integrates the detection of multiple fine-grained anomalous objects into a unified framework. Unlike methods that assign anomaly scores to every pixel at each moment, our approach transforms the problem into pixel-level tracking of anomalous objects. By linking anomaly scores to subsequent tasks such as image segmentation and video tracking, our method eliminates the need for threshold selection and achieves more precise anomaly localization, even in long and challenging video sequences. Experiments on extensive datasets demonstrate that TAO achieves state-of-the-art performance, setting a new progress for VAD by providing a practical, granular, and holistic solution. For more information, visit the project page at: https://tao-25.github.io/"
+ },
+ {
+  "id": "cvpr2025-just-dance-with-pi-a-poly-modal-inductor-for-w",
+  "title": "Just Dance with pi! A Poly-modal Inductor for Weakly-supervised Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2025,
+  "abstract": "Weakly-supervised methods for video anomaly detection (VAD) are conventionally based merely on RGB spatio-temporal features, which continues to limit their reliability in real-world scenarios. This is due to the fact that RGB-features are not sufficiently distinctive in setting apart categories such as shoplifting from visually similar events. Therefore, towards robust complex real-world VAD, it is essential to augment RGB spatio-temporal features by additional modalities. Motivated by this, we introduce the Poly-modal Induced framework for VAD: \"PI-VAD\" (or π-VAD), a novel approach that augments RGB representations by five additional modalities. Specifically, the modalities include sensitivity to fine-grained motion (Pose), three dimensional scene and entity representation (Depth), surrounding objects (Panoptic masks), global motion (optical flow), as well as language cues (VLM). Each modality represents an axis of a polygon, streamlined to add salient cues to RGB. π-VAD includes two plug-in modules, namely Pseudo-modality Generation module and Cross Modal Induction module, which generate modality-specific prototypical representation and, thereby, induce multi-modal information into RGB cues. These modules operate by performing anomaly-aware auxiliary tasks and necessitate five modality backbones – only during training. Notably, π-VAD achieves state-of-the-art accuracy on three prominent VAD datasets encompassing real-world scenarios, without requiring the computational overhead of five modality backbones at inference."
+ },
+ {
+  "id": "iccv2025-mixture-of-experts-guided-by-gaussian-splatter",
+  "title": "Mixture of Experts Guided by Gaussian Splatters Matters: A new Approach to Weakly-Supervised Video Anomaly Detection",
+  "venue": "ICCV",
+  "year": 2025,
+  "abstract": "Video Anomaly Detection (VAD) is a challenging task due to the variability of anomalous events and the limited availability of labeled data. Under the Weakly-Supervised VAD (WSVAD) paradigm, only video-level labels are provided during training, while predictions are made at the frame level. Although state-of-the-art models perform well on simple anomalies (e.g., explosions), they struggle with complex real-world events (e.g., shoplifting). This difficulty stems from two key issues: (1) the inability of current models to address the diversity of anomaly types, as they process all categories with a shared model, overlooking categoryspecific features; and (2) the weak supervision signal, which lacks precise temporal information, limiting the ability to capture nuanced anomalous patterns blended with normal events. To address these challenges, we propose Gaussian Splatting-guided Mixture of Experts (GS-MoE), a novel framework that employs a set of expert models, each specialized in capturing specific anomaly types. These experts are guided by a temporal Gaussian splatting loss, enabling the model to leverage temporal consistency and enhance weak supervision. The Gaussian splatting approach encourages a more precise and comprehensive representation of anomalies by focusing on temporal segments most likely to contain abnormal events. The predictions from these specialized experts are integrated through a mixture-of-experts mechanism to model complex relationships across diverse anomaly patterns. Our approach achieves state-of-theart performance, with a 91.58% AUC on the UCF-Crime dataset, and demonstrates superior results on XD-Violence and MSAD datasets. By leveraging category-specific expertise and temporal guidance, GS-MoE sets a new benchmark for VAD under weak supervision."
+ },
+ {
+  "id": "iccv2025-sequential-keypoint-density-estimator-an-overl",
+  "title": "Sequential keypoint density estimator: an overlooked baseline of skeleton-based video anomaly detection",
+  "venue": "ICCV",
+  "year": 2025,
+  "abstract": "Detecting anomalous human behaviour is an important visual task in safety-critical applications such as healthcare monitoring, workplace safety, or public surveillance. In these contexts, abnormalities are often reflected with unusual human poses. Thus, we propose SeeKer, a method for detecting anomalies in sequences of human skeletons. Our method formulates the skeleton sequence density through autoregressive factorization at the keypoint level. The corresponding conditional distributions represent probable keypoint locations given prior skeletal motion. We formulate the joint distribution of the considered skeleton as causal prediction of conditional Gaussians across its constituent keypoints. A skeleton is flagged as anomalous if its keypoint locations surprise our model (i.e. receive a low density). In practice, our anomaly score is a weighted sum of per-keypoint log-conditionals, where the weights account for the confidence of the underlying keypoint detector. Despite its conceptual simplicity, SeeKer surpasses all previous methods on the UBnormal and MSAD-HR datasets while delivering competitive performance on the ShanghaiTech dataset."
+ },
+ {
+  "id": "iccv2025-aligning-effective-tokens-with-video-anomaly-i",
+  "title": "Aligning Effective Tokens with Video Anomaly in Large Language Models",
+  "venue": "ICCV",
+  "year": 2025,
+  "abstract": "Understanding abnormal events in videos is a vital and challenging task that has garnered significant attention in a wide range of applications. Although current video understanding Multi-modal Large Language Models (MLLMs) are capable of analyzing general videos, they often struggle to handle anomalies due to the spatial and temporal sparsity of abnormal events, where the redundant information always leads to suboptimal outcomes. To address these challenges, exploiting the representation and generalization capabilities of Vison Language Models (VLMs) and Large Language Models (LLMs), we propose VA-GPT, a novel MLLM designed for summarizing and localizing abnormal events in various videos. Our approach efficiently aligns effective tokens between visual encoders and LLMs through two key proposed modules: Spatial Effective Token Selection (SETS) and Temporal Effective Token Generation (TETG). These modules enable our model to effectively capture and analyze both spatial and temporal information associated with abnormal events, resulting in more accurate responses and interactions. Furthermore, we construct an instruction-following dataset specifically for fine-tuning video-anomaly-aware MLLMs, and introduce a cross-domain evaluation benchmark based on XD-Violence dataset. Our proposed method outperforms existing state-of-the-art methods on various benchmarks."
+ },
+ {
+  "id": "iccv2025-autoregressive-denoising-score-matching-is-a-g",
+  "title": "Autoregressive Denoising Score Matching is a Good Video Anomaly Detector",
+  "venue": "ICCV",
+  "year": 2025,
+  "abstract": "Video anomaly detection (VAD) is an important computer vision problem. Thanks to the mode coverage capabilities of generative models, the likelihood-based paradigm is catching growing interest, as it can model normal distribution and detect out-of-distribution anomalies. However, these likelihood-based methods are blind to the anomalies located in local modes near the learned distribution. To handle these “unseen” anomalies, we dive into three gaps uniquely existing in VAD regarding scene, motion and appearance. Specifically, we first build a noise-conditioned score transformer for denoising score matching. Then, we introduce a scene-dependent and motion-aware score function by embedding the scene condition of input sequences into our model and assigning motion weights based on the difference between key frames of input sequences. Next, to solve the problem of blindness in principle, we integrate unaffected visual information via a novel autoregressive denoising score matching mechanism for inference. Through autoregressively injecting intensifying Gaussian noise into the denoised data and estimating the corresponding score function, we compare the denoised data with the original data to get a difference and aggregate it with the score function for an enhanced appearance perception and accumulate the abnormal context. With all three gaps considered, we can compute a more comprehensive anomaly indicator. Experiments on three popular VAD benchmarks demonstrate the state-of-the-art performance of our method. Code is available at https://github.com/Bbeholder/ADSM."
+ },
+ {
+  "id": "icml2025-learning-event-completeness-for-weakly-supervi",
+  "title": "Learning Event Completeness for Weakly Supervised Video Anomaly Detection",
+  "venue": "ICML",
+  "year": 2025,
+  "abstract": "Weakly supervised video anomaly detection (WS-VAD) is tasked with pinpointing temporal intervals containing anomalous events within untrimmed videos, utilizing only video-level annotations. However, a significant challenge arises due to the absence of dense frame-level annotations, often leading to incomplete localization in existing WS-VAD methods. To address this issue, we present a novel LEC-VAD, Learning Event Completeness for Weakly Supervised Video Anomaly Detection, which features a dual structure designed to encode both category-aware and category-agnostic semantics between vision and language. Within LEC-VAD, we devise semantic regularities that leverage an anomaly-aware Gaussian mixture to learn precise event boundaries, thereby yielding more complete event instances. Besides, we develop a novel memory bank-based prototype learning mechanism to enrich concise text descriptions associated with anomaly-event categories. This innovation bolsters the text's expressiveness, which is crucial for advancing WS-VAD. Our LEC-VAD demonstrates remarkable advancements over the current state-of-the-art methods on two benchmark datasets XD-Violence and UCF-Crime."
+ },
+ {
+  "id": "icml2025-ex-vad-explainable-fine-grained-video-anomaly",
+  "title": "Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models",
+  "venue": "ICML",
+  "year": 2025,
+  "abstract": "With advancements in visual language models (VLMs) and large language models (LLMs), video anomaly detection (VAD) has progressed beyond binary classification to fine-grained categorization and multidimensional analysis. However, existing methods focus mainly on coarse-grained detection, lacking anomaly explanations. To address these challenges, we propose Ex-VAD, an Explainable Fine-grained Video Anomaly Detection approach that combines fine-grained classification with detailed explanations of anomalies. First, we use a VLM to extract frame-level captions, and an LLM converts them to video-level explanations, enhancing the model's explainability. Second, integrating textual explanations of anomalies with visual information greatly enhances the model's anomaly detection capability. Finally, we apply label-enhanced alignment to optimize feature fusion, enabling precise fine-grained detection. Extensive experimental results on the UCF-Crime and XD-Violence datasets demonstrate that Ex-VAD significantly outperforms existing State-of-The-Art methods."
+ },
+ {
+  "id": "neurips2025-monitor-exploiting-large-language-models-with",
+  "title": "MoniTor: Exploiting Large Language Models with Instruction for Online Video Anomaly Detection",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Video Anomaly Detection (VAD) aims to locate unusual activities or behaviors within videos. Recently, offline VAD has garnered substantial research attention, which has been invigorated by the progress in large language models (LLMs) and vision-language models (VLMs), offering the potential for a more nuanced understanding of anomalies. \nHowever, online VAD has seldom received attention due to real-time constraints and computational intensity. \nIn this paper, we introduce a novel **M**emory-based online scoring queue scheme for **T**raining-free VAD (MoniTor), to address the inherent complexities in online VAD. \nSpecifically, MoniTor applies a streaming input to VLMs, leveraging the capabilities of pre-trained large-scale models. \nTo capture temporal dependencies more effectively, we incorporate a novel prediction mechanism inspired by Long Short-Term Memory (LSTM) networks. This ensures the model can effectively model past states and leverage previous predictions to identify anomalous behaviors. Thereby, it better understands the current frame. \nMoreover, we design a scoring queue and an anomaly prior to dynamically store recent scores and cover all anomalies in the monitoring scenario, providing guidance for LLMs to distinguish between normal and abnormal behaviors over time.\nWe evaluate MoniTor on two large datasets (i.e., UCF-Crime and XD-Violence) containing various surveillance and real-world scenarios. \nThe results demonstrate that MoniTor outperforms state-of-the-art methods and is competitive with weakly supervised methods without training. Code is available at https://github.com/YsTvT/MoniTor."
+ },
+ {
+  "id": "neurips2025-vad-r1-towards-video-anomaly-reasoning-via-per",
+  "title": "Vad-R1: Towards Video Anomaly Reasoning via Perception-to-Cognition Chain-of-Thought",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Recent advancements in reasoning capability of Multimodal Large Language Models (MLLMs) demonstrate its effectiveness in tackling complex visual tasks. However, existing MLLM-based Video Anomaly Detection (VAD) methods remain limited to shallow anomaly descriptions without deep reasoning. In this paper, we propose a new task named Video Anomaly Reasoning (VAR), which aims to enable deep analysis and understanding of anomalies in the video by requiring MLLMs to think explicitly before answering. To this end, we propose Vad-R1, an end-to-end MLLM-based framework for VAR. Specifically, we design a Perception-to-Cognition Chain-of-Thought (P2C-CoT) that simulates the human process of recognizing anomalies, guiding the MLLMs to reason about anomalies step-by-step. Based on the structured P2C-CoT, we construct Vad-Reasoning, a dedicated dataset for VAR. Furthermore, we propose an improved reinforcement learning algorithm AVA-GRPO, which explicitly incentivizes the anomaly reasoning capability of MLLMs through a self-verification mechanism with limited annotations. Experimental results demonstrate that Vad-R1 achieves superior performance, outperforming both open-source and proprietary models on VAD and VAR tasks."
+ },
+ {
+  "id": "neurips2025-frameshield-adversarially-robust-video-anomaly",
+  "title": "FrameShield: Adversarially Robust Video Anomaly Detection",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Weakly Supervised Video Anomaly Detection (WSVAD) has achieved notable advancements, yet existing models remain vulnerable to adversarial attacks, limiting their reliability. Due to the inherent constraints of weak supervision—where only video-level labels are provided despite the need for frame-level predictions—traditional adversarial defense mechanisms, such as adversarial training, are not effective since video-level adversarial perturbations are typically weak and inadequate. To address this limitation, pseudo-labels generated directly from the model can enable frame-level adversarial training; however, these pseudo-labels are inherently noisy, significantly degrading performance. We therefore introduce a novel Pseudo-Anomaly Generation method called Spatiotemporal Region Distortion (SRD), which creates synthetic anomalies by applying severe augmentations to localized regions in normal videos while preserving temporal consistency. Integrating these precisely annotated synthetic anomalies with the noisy pseudo-labels substantially reduces label noise, enabling effective adversarial training. Extensive experiments demonstrate that our method significantly enhances the robustness of WSVAD models against adversarial attacks, outperforming state-of-the-art methods by an average of 71.0\\% in overall AUROC performance across multiple benchmarks. The implementation and code are publicly available at [FrameShield (GitHub)](https://github.com/rohban-lab/FrameShield)."
+ },
+ {
+  "id": "neurips2025-a-unified-reasoning-framework-for-holistic-zer",
+  "title": "A Unified Reasoning Framework for Holistic Zero-Shot Video Anomaly Analysis",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Most video-anomaly research stops at frame-wise detection, offering little insight into why an event is abnormal, typically outputting only frame-wise anomaly scores without spatial or semantic context. Recent video anomaly localization and video anomaly understanding methods improve explainability but remain data-dependent and task-specific. We propose a unified reasoning framework that bridges the gap between temporal detection, spatial localization, and textual explanation. Our approach is built upon a chained test-time reasoning process that sequentially connects these tasks, enabling holistic zero-shot anomaly analysis without any additional training. Specifically, our approach leverages intra-task reasoning to refine temporal detections and inter-task chaining for spatial and semantic understanding, yielding improved interpretability and generalization in a fully zero-shot manner. Without any additional data or gradients, our method achieves state-of-the-art zero-shot performance across multiple video anomaly detection, localization, and explanation benchmarks. The results demonstrate that careful prompt design with task-wise chaining can unlock the reasoning power of foundation models, enabling practical, interpretable video anomaly analysis in a fully zero-shot manner. Project Page: https://rathgrith.github.io/Unified_Frame_VAA/."
+ },
+ {
+  "id": "neurips2025-do-lvlms-truly-understand-video-anomalies-reve",
+  "title": "Do LVLMs Truly Understand Video Anomalies? Revealing Hallucination via Co-Occurrence Patterns",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Large Vision-Language Models (LVLMs) pretrained on large-scale multimodal data have shown promising capabilities in Video Anomaly Detection (VAD). However, their ability to reason about abnormal events based on scene semantics remains underexplored. In this paper, we investigate LVLMs’ behavior in VAD from a visual-textual co-occurrence perspective, focusing on whether their decisions are driven by statistical shortcuts between visual instances and textual phrases. By analyzing visual-textual co-occurrence in pretraining data and conducting experiments under different data settings, we reveal a hallucination phenomenon: LVLMs tend to rely on co-occurrence patterns between visual instances and textual phrases associated with either normality or abnormality, leading to incorrect predictions when these high-frequency objects appear in semantically mismatched contexts. To address this issue, we propose VAD-DPO, a direct preference optimization method supervised with counter-example pairs. By constructing visually similar but semantically contrasting video clips, VAD-DPO encourages the model to align its predictions with the semantics of scene rather than relying on co-occurrence patterns. Extensive experiments on six benchmark datasets demonstrate the effectiveness of VAD-DPO in enhancing both anomaly detection and reasoning performance, particularly in scene-dependent scenarios."
+ },
+ {
+  "id": "neurips2025-vadtree-explainable-training-free-video-anomal",
+  "title": "VADTree: Explainable Training-Free Video Anomaly Detection via Hierarchical Granularity-Aware Tree",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Video anomaly detection (VAD) focuses on identifying anomalies in videos. Su-\npervised methods demand substantial in-domain training data and fail to deliver\nclear explanations for anomalies. In contrast, training-free methods leverage\nthe knowledge reserves and language interactivity of large pre-trained models\nto detect anomalies. However, the current fixed-length temporal window sam-\npling approaches struggle to accurately capture anomalies with varying temporal\nspans. Therefore, we propose VADTree that utilizes a Hierarchical Granularity-\naware Tree (HGTree) structure for flexible sampling in VAD. VADTree leverages\nthe knowledge embedded in a pre-trained Generic Event Boundary Detection\n(GEBD) model to characterize potential anomaly event boundaries. Specifically,\nVADTree decomposes the video into generic event nodes based on boundary\nconfidence, and performs adaptive coarse-fine hierarchical structuring and re-\ndundancy removal to construct the HGTree. Then, the multi-dimensional priors\nare injected into the visual language models (VLMs) to enhance the node-wise\nanomaly perception, and anomaly reasoning for generic event nodes is achieved\nvia large language models (LLMs). Finally, an inter-cluster node correlation\nmethod is used to integrate the multi-granularity anomaly scores. Extensive\nexperiments on three challenging datasets demonstrate that VADTree achieves\nstate-of-the-art performance in training-free settings while drastically reducing\nthe number of sampled video segments. The code will be available at https:\n//github.com/wenlongli10/VADTree."
+ },
+ {
+  "id": "neurips2025-generalizing-single-frame-supervision-to-event",
+  "title": "Generalizing Single-Frame Supervision to Event-Level Understanding for Video Anomaly Detection",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Video Anomaly Detection (VAD) aims to identify abnormal frames from discrete events within video sequences. Existing VAD methods suffer from heavy annotation burdens in fully-supervised paradigm, insensitivity to subtle anomalies in semi-supervised paradigm, and vulnerability to noise in weakly-supervised paradigm. To address these limitations, we propose a novel paradigm: Single-Frame supervised VAD (SF-VAD), which uses a single annotated abnormal frame per abnormal video. SF-VAD ensures annotation efficiency while offering precise anomaly reference, facilitating robust anomaly modeling, and enhancing the detection of subtle anomalies in complex visual contexts. To validate its effectiveness, we construct three SF-VAD benchmarks by manually re-annotating the ShanghaiTech, UCF-Crime, and XD-Violence datasets in a practical procedure. Further, we devise Frame-guided Progressive Learning (FPL), to generalize sparse frame supervision to event-level anomaly understanding. FPL first leverages evidential learning to estimate anomaly relevance guided by annotated frames. Then it extends anomaly supervision by mining discrete abnormal events based on anomaly relevance and feature similarity. Meanwhile, FPL decouples normal patterns by isolating distinct normal frames outside abnormal events, reducing false alarms.  Extensive experiments show SF-VAD achieves state-of-the-art detection results while offering a favorable trade-off between performance and annotation cost."
+ },
+ {
+  "id": "neurips2025-panda-towards-generalist-video-anomaly-detecti",
+  "title": "PANDA: Towards Generalist Video Anomaly Detection via Agentic AI Engineer",
+  "venue": "NeurIPS",
+  "year": 2025,
+  "abstract": "Video anomaly detection (VAD) is a critical yet challenging task due to the complex and diverse nature of real-world scenarios. Previous methods typically rely on domain-specific training data and manual adjustments when applying to new scenarios and unseen anomaly types, suffering from high labor costs and limited generalization. Therefore, we aim to achieve generalist VAD, \\ie, automatically handle any scene and any anomaly types without training data or human involvement. In this work, we propose PANDA, an agentic AI engineer based on MLLMs. Specifically, we achieve PANDA by comprehensively devising four key capabilities: (1) self-adaptive scene-aware strategy planning, (2) goal-driven heuristic reasoning, (3) tool-augmented self-reflection, and (4) self-improving chain-of-memory. Concretely, we develop a self-adaptive scene-aware RAG mechanism, enabling PANDA to retrieve anomaly-specific knowledge for anomaly detection strategy planning. Next, we introduce a latent anomaly-guided heuristic prompt strategy to enhance reasoning precision. Furthermore, PANDA employs a progressive reflection mechanism alongside a suite of context-aware tools to iteratively refine decision-making in complex scenarios. Finally, a chain-of-memory mechanism enables PANDA to leverage historical experiences for continual performance improvement. Extensive experiments demonstrate that PANDA achieves state-of-the-art performance in multi-scenario, open-set, and complex scenario settings without training and manual involvement, validating its generalizable and robust anomaly detection capability. Code is released at https://github.com/showlab/PANDA."
+ },
+ {
+  "id": "tip2025-crcl-causal-representation-consistency-learnin",
+  "title": "CRCL: Causal Representation Consistency Learning for Anomaly Detection in Surveillance Videos",
+  "venue": "TIP",
+  "year": 2025,
+  "abstract": "Video Anomaly Detection (VAD) remains a fundamental yet formidable task in the video understanding community, with promising applications in areas such as information forensics and public safety protection. Due to the rarity and diversity of anomalies, existing methods only use easily collected regular events to model the inherent normality of normal spatial-temporal patterns in an unsupervised manner. Although such methods have made significant progress benefiting from the development of deep learning, they attempt to model the statistical dependency between observable videos and semantic labels, which is a crude description of normality and lacks a systematic exploration of its underlying causal relationships. Previous studies have shown that existing unsupervised VAD models are incapable of label-independent data offsets (e.g., scene changes) in real-world scenarios and may fail to respond to light anomalies due to the overgeneralization of deep neural networks. Inspired by causality learning, we argue that there exist causal factors that can adequately generalize the prototypical patterns of regular events and present significant deviations when anomalous instances occur. In this regard, we propose Causal Representation Consistency Learning (CRCL) to implicitly mine potential scene-robust causal variable in unsupervised video normality learning. Specifically, building on the structural causal models, we propose scene-debiasing learning and causality-inspired normality learning to strip away entangled scene bias in deep representations and learn causal video normality, respectively. Extensive experiments on benchmarks validate the superiority of our method over conventional deep representation learning. Moreover, ablation studies and extension validation show that the CRCL can cope with label-independent biases in multi-scene settings and maintain stable performance with only limited training data available."
+ },
+ {
+  "id": "tip2025-dual-space-normalizing-flow-for-unsupervised-v",
+  "title": "Dual-Space Normalizing Flow for Unsupervised Video Anomaly Detection",
+  "venue": "TIP",
+  "year": 2025,
+  "abstract": "Conventional reconstruction-based video anomaly detection (VAD) methods implicitly model normality in latent spaces, which is limited by the generalization ability of latent features. Normalizing Flow (NF)-based methods have been introduced to address this issue, as they explicitly model the distribution of input data and achieve significant performance in VAD. However, existing NF-based methods are confined to Euclidean space, limiting their ability to model action hierarchies. While effective at capturing local joint dynamics and short-term temporal variations, they fail to encode kinematic dependencies and long-term pose evolution, ultimately struggling to discern ambiguous anomalies that deviate minimally from normal motion. In contrast, hyperbolic representation learning, with its ability to model hierarchical and complex relationships among actions, offers a promising solution to enhance the discriminative power between similar skeletal actions. Motivated by this, we propose a novel Dual-Space Normalizing Flow (DSNF) method. Specifically, we design a Dual-Space Parallel Graph Convolutional Network (DSPGCN) that synergistically integrates the strengths of both Euclidean and hyperbolic geometries to simultaneously capture local detail features of poses and intrinsic hierarchical relationships of actions. To enhance the model’s focus on discriminative features, we design an Adaptive Weighted Approximation Mass (AWAM) loss that dynamically adjusts weights to impose stronger constraints on regions with low discriminability in the dual space, encouraging the model to focus more on key discriminative features in hyperbolic space that reflect complex relationships between actions. Extensive experiments on public datasets demonstrate the effectiveness and robustness of our method in various VAD scenarios."
+ },
+ {
+  "id": "tip2025-where-and-what-contextual-dynamics-aware-anoma",
+  "title": "Where and What: Contextual Dynamics-Aware Anomaly Detection in Surveillance Videos",
+  "venue": "TIP",
+  "year": 2025,
+  "abstract": "In surveillance environments, detecting anomalies requires understanding the contextual dynamics of the environment, human behaviors, and movements within a scene. Effective anomaly detection must address both the where and what of events, but existing approaches such as unimodal action-based methods or LLM-integrated multimodal frameworks have limitations. These methods either rely on implicit scene information, making it difficult to localize where anomalies occur, or fail to adapt to surveillance specific challenges such as view changes, subtle actions, low light conditions, and crowded scenes. As a result, these challenges hinder accurate detection of what occurs. To overcome these limitations, our system takes advantage of features from a lightweight scene classification model to discern where an event occurs, acquiring explicit location-based context. To identify what events occur, it focuses on atomic actions, which remain underexplored in this field and are better suited to interpreting intricate abnormal behaviors than conventional abstract action features. To achieve robust anomaly detection, the proposed Temporal-Semantic Relationship Network (TSRN) models spatio-temporal relationships among multimodal features and employs a Segment-selective Focal Margin loss (SFML) to effectively address class imbalance, outperforming conventional MIL-based methods. Experimental results on public datasets demonstrate that the proposed system effectively reduces false alarms while maintaining robustness and practicality for real-world surveillance applications."
+ },
+ {
+  "id": "tpami2025-scene-dependent-prediction-in-latent-space-for",
+  "title": "Scene-Dependent Prediction in Latent Space for Video Anomaly Detection and Anticipation",
+  "venue": "TPAMI",
+  "year": 2025,
+  "abstract": "Video anomaly detection (VAD) plays a crucial role in intelligent surveillance. However, an essential type of anomaly named scene-dependent anomaly is overlooked. Moreover, the task of video anomaly anticipation (VAA) also deserves attention. To fill these gaps, we build a comprehensive dataset named NWPU Campus, which is the largest semi-supervised VAD dataset and the first dataset for scene-dependent VAD and VAA. Meanwhile, we introduce a novel forward-backward framework for scene-dependent VAD and VAA, in which the forward network individually solves the VAD and jointly solves the VAA with the backward network. Particularly, we propose a scene-dependent generative model in latent space for the forward and backward networks. First, we propose a hierarchical variational auto-encoder to extract scene-generic features. Next, we design a score-based diffusion model in latent space to refine these features more compact for the task and generate scene-dependent features with a scene information auto-encoder, modeling the relationships between video events and scenes. Finally, we develop a temporal loss from key frames to constrain the motion consistency of video clips. Extensive experiments demonstrate that our method can handle both scene-dependent anomaly detection and anticipation well, achieving state-of-the-art performance on ShanghaiTech, CUHK Avenue, and the proposed NWPU Campus datasets."
+ },
+ {
+  "id": "tpami2025-multilingual-prompt-guided-directional-feature",
+  "title": "Multilingual-Prompt-Guided Directional Feature Learning for Weakly Supervised Video Anomaly Detection",
+  "venue": "TPAMI",
+  "year": 2025,
+  "abstract": ""
+ },
+ {
+  "id": "aaai2024-vadclip-adapting-vision-language-models-for-we",
+  "title": "VadCLIP: Adapting Vision-Language Models for Weakly Supervised Video Anomaly Detection",
+  "venue": "AAAI",
+  "year": 2024,
+  "abstract": "The recent contrastive language-image pre-training (CLIP) model has shown great success in a wide range of image-level tasks, revealing remarkable ability for learning powerful visual representations with rich semantics. An open and worthwhile problem is efficiently adapting such a strong model to the video domain and designing a robust video anomaly detector. In this work, we propose VadCLIP, a new paradigm for weakly supervised video anomaly detection (WSVAD) by leveraging the frozen CLIP model directly without any pre-training and fine-tuning process. Unlike current works that directly feed extracted features into the weakly supervised classifier for frame-level binary classification, VadCLIP makes full use of fine-grained associations between vision and language on the strength of CLIP and involves dual branch. One branch simply utilizes visual features for coarse-grained binary classification, while the other fully leverages the fine-grained language-image alignment. With the benefit of dual branch, VadCLIP achieves both coarse-grained and fine-grained video anomaly detection by transferring pre-trained knowledge from CLIP to WSVAD task. We conduct extensive experiments on two commonly-used benchmarks, demonstrating that VadCLIP achieves the best performance on both coarse-grained and fine-grained WSVAD, surpassing the state-of-the-art methods by a large margin. Specifically, VadCLIP achieves 84.51% AP and 88.02% AUC on XD-Violence and UCF-Crime, respectively. Code and features are released at https://github.com/nwpu-zxr/VadCLIP."
+ },
+ {
+  "id": "bmvc2024-hybrid-video-anomaly-detection-for-autonomous",
+  "title": "Hybrid Video Anomaly Detection for Autonomous Driving",
+  "venue": "BMVC",
+  "year": 2024,
+  "abstract": "In autonomous driving, the most challenging scenarios can only be detected within their temporal context. Most video anomaly detection approaches focus either on surveillance or traffic accidents, which are only a subfield of autonomous driving. We present HF$^2$-VAD$_{AD}$, a variation of the HF$^2$-VAD surveillance video anomaly detection method for autonomous driving. We learn a representation of normality from a vehicle's ego perspective and evaluate pixel-wise anomaly detections in rare and critical scenarios."
+ },
+ {
+  "id": "bmvc2024-vlavad-vision-language-models-assisted-unsuper",
+  "title": "VLAVAD: Vision-Language Models Assisted Unsupervised Video Anomaly Detection",
+  "venue": "BMVC",
+  "year": 2024,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2024-harnessing-large-language-models-for-training",
+  "title": "Harnessing Large Language Models for Training-free Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "Video anomaly detection (VAD) aims to temporally locate abnormal events in a video. Existing works mostly rely on training deep models to learn the distribution of normality with either video-level supervision one-class supervision or in an unsupervised setting. Training-based methods are prone to be domain-specific thus being costly for practical deployment as any domain change will involve data collection and model training. In this paper we radically depart from previous efforts and propose LAnguage-based VAD (LAVAD) a method tackling VAD in a novel training-free paradigm exploiting the capabilities of pre-trained large language models (LLMs) and existing vision-language models (VLMs). We leverage VLM-based captioning models to generate textual descriptions for each frame of any test video. With the textual scene description we then devise a prompting mechanism to unlock the capability of LLMs in terms of temporal aggregation and anomaly score estimation turning LLMs into an effective video anomaly detector. We further leverage modality-aligned VLMs and propose effective techniques based on cross-modal similarity for cleaning noisy captions and refining the LLM-based anomaly scores. We evaluate LAVAD on two large datasets featuring real-world surveillance scenarios (UCF-Crime and XD-Violence) showing that it outperforms both unsupervised and one-class methods without requiring any training or data collection."
+ },
+ {
+  "id": "cvpr2024-self-distilled-masked-auto-encoders-are-effici",
+  "title": "Self-Distilled Masked Auto-Encoders are Efficient Video Anomaly Detectors",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "We propose an efficient abnormal event detection model based on a lightweight masked auto-encoder (AE) applied at the video frame level. The novelty of the proposed model is threefold. First we introduce an approach to weight tokens based on motion gradients thus shifting the focus from the static background scene to the foreground objects. Second we integrate a teacher decoder and a student decoder into our architecture leveraging the discrepancy between the outputs given by the two decoders to improve anomaly detection. Third we generate synthetic abnormal events to augment the training videos and task the masked AE model to jointly reconstruct the original frames (without anomalies) and the corresponding pixel-level anomaly maps. Our design leads to an efficient and effective model as demonstrated by the extensive experiments carried out on four benchmarks: Avenue ShanghaiTech UBnormal and UCSD Ped2. The empirical results show that our model achieves an excellent trade-off between speed and accuracy obtaining competitive AUC scores while processing 1655 FPS. Hence our model is between 8 and 70 times faster than competing methods. We also conduct an ablation study to justify our design. Our code is freely available at: https://github.com/ristea/aed-mae."
+ },
+ {
+  "id": "cvpr2024-text-prompt-with-normality-guidance-for-weakly",
+  "title": "Text Prompt with Normality Guidance for Weakly Supervised Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "Weakly supervised video anomaly detection (WSVAD) is a challenging task. Generating fine-grained pseudo-labels based on weak-label and then self-training a classifier is currently a promising solution. However since the existing methods use only RGB visual modality and the utilization of category text information is neglected thus limiting the generation of more accurate pseudo-labels and affecting the performance of self-training. Inspired by the manual labeling process based on the event description in this paper we propose a novel pseudo-label generation and self-training framework based on Text Prompt with Normality Guidance (TPWNG) for WSVAD. Our idea is to transfer the rich language-visual knowledge of the contrastive language-image pre-training (CLIP) model for aligning the video event description text and corresponding video frames to generate pseudo-labels. Specifically We first fine-tune the CLIP for domain adaptation by designing two ranking losses and a distributional inconsistency loss. Further we propose a learnable text prompt mechanism with the assist of a normality visual prompt to further improve the matching accuracy of video event description text and video frames. Then we design a pseudo-label generation module based on the normality guidance to infer reliable frame-level pseudo-labels. Finally we introduce a temporal context self-adaptive learning module to learn the temporal dependencies of different video events more flexibly and accurately. Extensive experiments show that our method achieves state-of-the-art performance on two benchmark datasets UCF-Crime and XD-Violence demonstrating the effectiveness of our proposed method."
+ },
+ {
+  "id": "cvpr2024-open-vocabulary-video-anomaly-detection",
+  "title": "Open-Vocabulary Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "Current video anomaly detection (VAD) approaches with weak supervisions are inherently limited to a closed-set setting and may struggle in open-world applications where there can be anomaly categories in the test data unseen during training. A few recent studies attempt to tackle a more realistic setting open-set VAD which aims to detect unseen anomalies given seen anomalies and normal videos. However such a setting focuses on predicting frame anomaly scores having no ability to recognize the specific categories of anomalies despite the fact that this ability is essential for building more informed video surveillance systems. This paper takes a step further and explores open-vocabulary video anomaly detection (OVVAD) in which we aim to leverage pre-trained large models to detect and categorize seen and unseen anomalies. To this end we propose a model that decouples OVVAD into two mutually complementary tasks - class-agnostic detection and class-specific classification - and jointly optimizes both tasks. Particularly we devise a semantic knowledge injection module to introduce semantic knowledge from large language models for the detection task and design a novel anomaly synthesis module to generate pseudo unseen anomaly videos with the help of large vision generation models for the classification task. These semantic knowledge and synthesis anomalies substantially extend our model's capability in detecting and categorizing a variety of seen and unseen anomalies. Extensive experiments on three widely-used benchmarks demonstrate our model achieves state-of-the-art performance on OVVAD task."
+ },
+ {
+  "id": "cvpr2024-multi-scale-video-anomaly-detection-by-multi-g",
+  "title": "Multi-Scale Video Anomaly Detection by Multi-Grained Spatio-Temporal Representation Learning",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "ecent progress in video anomaly detection suggests that the features of appearance and motion play crucial roles in distinguishing abnormal patterns from normal ones. However we note that the effect of spatial scales of anomalies is ignored. The fact that many abnormal events occur in limited localized regions and severe background noise interferes with the learning of anomalous changes. Meanwhile most existing methods are limited by coarse-grained modeling approaches which are inadequate for learning highly discriminative features to discriminate subtle differences between small-scale anomalies and normal patterns. To this end this paper address multi-scale video anomaly detection by multi-grained spatio-temporal representation learning. We utilize video continuity to design three proxy tasks to perform feature learning at both coarse-grained and fine-grained levels i.e. continuity judgment discontinuity localization and missing frame estimation. In particular we formulate missing frame estimation as a contrastive learning task in feature space instead of a reconstruction task in RGB space to learn highly discriminative features. Experiments show that our proposed method outperforms state-of-the-art methods on four datasets especially in scenes with small-scale anomalies."
+ },
+ {
+  "id": "cvpr2024-uncovering-what-why-and-how-a-comprehensive-be",
+  "title": "Uncovering What Why and How: A Comprehensive Benchmark for Causation Understanding of Video Anomaly",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": ""
+ },
+ {
+  "id": "cvpr2024-prompt-enhanced-multiple-instance-learning-for",
+  "title": "Prompt-Enhanced Multiple Instance Learning for Weakly Supervised Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "Weakly-supervised Video Anomaly Detection (wVAD) aims to detect frame-level anomalies using only video-level labels in training. Due to the limitation of coarse-grained labels Multi-Instance Learning (MIL) is prevailing in wVAD. However MIL suffers from insufficiency of binary supervision to model diverse abnormal patterns. Besides the coupling between abnormality and its context hinders the learning of clear abnormal event boundary. In this paper we propose prompt-enhanced MIL to detect various abnormal events while ensuring clear event boundaries. Concretely we design the abnormal-aware prompts by using abnormal class annotations together with learnable prompt which can incorporate semantic priors into video features dynamically. The detector can utilize the semantic-rich features to capture diverse abnormal patterns. In addition normal context prompt is introduced to amplify the distinction between abnormality and its context facilitating the generation of clear boundary. With the mutual enhancement of abnormal-aware and normal context prompt the model can construct discriminative representations to detect divergent anomalies without ambiguous event boundaries. Extensive experiments demonstrate our method achieves SOTA performance on three public benchmarks. The code is available at https://github.com/Junxi-Chen/PE-MIL."
+ },
+ {
+  "id": "cvpr2024-mulde-multiscale-log-density-estimation-via-de",
+  "title": "MULDE: Multiscale Log-Density Estimation via Denoising Score Matching for Video Anomaly Detection",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "We propose a novel approach to video anomaly detection: we treat feature vectors extracted from videos as realizations of a random variable with a fixed distribution and model this distribution with a neural network. This lets us estimate the likelihood of test videos and detect video anomalies by thresholding the likelihood estimates. We train our video anomaly detector using a modification of denoising score matching a method that injects training data with noise to facilitate modeling its distribution. To eliminate hyperparameter selection we model the distribution of noisy video features across a range of noise levels and introduce a regularizer that tends to align the models for different levels of noise. At test time we combine anomaly indications at multiple noise scales with a Gaussian mixture model. Running our video anomaly detector induces minimal delays as inference requires merely extracting the features and forward-propagating them through a shallow neural network and a Gaussian mixture model. Our experiments on five popular video anomaly detection benchmarks demonstrate state-of-the-art performance both in the object-centric and in the frame-centric setup."
+ },
+ {
+  "id": "cvpr2024-collaborative-learning-of-anomalies-with-priva",
+  "title": "Collaborative Learning of Anomalies with Privacy (CLAP) for Unsupervised Video Anomaly Detection: A New Baseline",
+  "venue": "CVPR",
+  "year": 2024,
+  "abstract": "nsupervised (US) video anomaly detection (VAD) in surveillance applications is gaining more popularity lately due to its practical real-world applications. Due to the extremely challenging nature of this task where learning is carried out without any annotations privacy-critical collaborative learning of US-VAD systems has not been studied yet. As surveillance videos are privacy sensitive and the availability of large-scale video data may enable better US-VAD systems collaborative learning can be highly rewarding in this setting. In this paper we propose a new baseline for anomaly detection capable of localizing anomalous events in complex surveillance scenarios in a fully unsupervised fashion without any labels on a privacy-retaining participant-based distributed training configuration. Additionally we propose three new evaluation protocols to extensively evaluate anomaly detection approaches on various scenarios of collaborations and data availability. Moreover based on these protocols we modify existing VAD datasets to extensively evaluate our approach as well as existing US SOTA methods on two large-scale datasets including UCF-Crime and XD-Violence. All proposed evaluation protocols dataset splits and codes are available here: \\href https://github.com/AnasEmad11/CLAP  https://github.com/AnasEmad11/CLAP ."
+ },
+ {
+  "id": "eccv2024-follow-the-rules-reasoning-for-video-anomaly-d",
+  "title": "Follow the Rules: Reasoning for Video Anomaly Detection with Large Language Models",
+  "venue": "ECCV",
+  "year": 2024,
+  "abstract": "Video Anomaly Detection (VAD) is crucial for applications such as security surveillance and autonomous driving. However, existing VAD methods provide little rationale behind detection, hindering public trust in real-world deployments. In this paper, we approach VAD with a reasoning framework. Although Large Language Models (LLMs) have shown revolutionary reasoning ability, we find that their direct use falls short of VAD. Specifically, the implicit knowledge pre-trained in LLMs focuses on general context and thus may not apply to every specific real-world VAD scenario, leading to inflexibility and inaccuracy. To address this, we propose AnomalyRuler, a novel rule-based reasoning framework for VAD with LLMs. AnomalyRuler comprises two main stages: induction and deduction. In the induction stage, the LLM is fed with few-shot normal reference samples and then summarizes these normal patterns to induce a set of rules for detecting anomalies. The deduction stage follows the induced rules to spot anomalous frames in test videos. Additionally, we design rule aggregation, perception smoothing, and robust reasoning strategies to further enhance AnomalyRuler's robustness. AnomalyRuler is the first reasoning approach for the one-class VAD task, which requires only few-normal-shot prompting without the need for full-shot training, thereby enabling fast adaption to various VAD scenarios. Comprehensive experiments across four VAD benchmarks demonstrate AnomalyRuler's state-of-the-art detection performance and reasoning ability. AnomalyRuler is open-source and available at: https://github.com/Yuchen413/AnomalyRuler"
+ },
+ {
+  "id": "eccv2024-cross-domain-learning-for-video-anomaly-detect",
+  "title": "Cross-Domain Learning for Video Anomaly Detection with Limited Supervision",
+  "venue": "ECCV",
+  "year": 2024,
+  "abstract": "Video Anomaly Detection (VAD) automates the identification of unusual events, such as security threats in surveillance videos. In real-world applications, VAD models must effectively operate in cross-domain settings, identifying rare anomalies and scenarios not well-represented in the training data. However, existing cross-domain VAD methods focus on unsupervised learning, resulting in performance that falls short of real-world expectations. Since acquiring weak supervision, i.e., video-level labels, for the source domain is cost-effective, we conjecture that combining it with external unlabeled data has notable potential to enhance cross-domain performance. To this end, we introduce a novel weakly-supervised framework for Cross-Domain Learning (CDL) in VAD that incorporates external data during training by estimating its prediction bias and adaptively minimizing that using the predicted uncertainty. We demonstrate the effectiveness of the proposed CDL framework through comprehensive experiments conducted in various configurations on two large-scale VAD datasets: UCF-Crime and XD-Violence. Our method significantly surpasses the state-of-the-art works in cross-domain evaluations, achieving an average absolute improvement of 19.6% on UCF-Crime and 12.87% on XD-Violence."
+ },
+ {
+  "id": "eccv2024-interleaving-one-class-and-weakly-supervised-m",
+  "title": "Interleaving One-Class and Weakly-Supervised Models with Adaptive Thresholding for Unsupervised Video Anomaly Detection",
+  "venue": "ECCV",
+  "year": 2024,
+  "abstract": "Video Anomaly Detection (VAD) has been extensively studied under the settings of One-Class Classification (OCC) and Weakly-Supervised learning (WS), which however both require laborious human-annotated normal/abnormal labels. In this paper, we study Unsupervised VAD (UVAD) that does not depend on any label by combining OCC and WS into a unified training framework. Specifically, we extend OCC to weighted OCC (wOCC) and propose a wOCC-WS interleaving training module, where the two models automatically generate pseudo-labels for each other. We face two challenges to make the combination effective: (1) Models' performance fluctuates occasionally during the training process due to the inevitable randomness of the pseudo labels. (2) Thresholds are needed to divide pseudo labels, making the training depend on the accuracy of user intervention. For the first problem, we propose to use wOCC requiring soft labels instead of OCC trained with hard zero/one labels, as soft labels exhibit high consistency throughout different training cycles while hard labels are prone to sudden changes. For the second problem, we repeat the interleaving training module multiple times, during which we propose an adaptive thresholding strategy that can progressively refine a rough threshold to a relatively optimal threshold, which reduces the influence of user interaction. A benefit of employing OCC and WS methods to compose a UVAD method is that we can incorporate the most recent OCC or WS model into our framework. Experiments demonstrate the effectiveness of the proposed UVAD framework."
+ },
+ {
+  "id": "eccv2024-learning-anomalies-with-normality-prior-for-un",
+  "title": "Learning Anomalies with Normality Prior for Unsupervised Video Anomaly Detection",
+  "venue": "ECCV",
+  "year": 2024,
+  "abstract": ""
+ },
+ {
+  "id": "eccv2024-fedvad-enhancing-federated-video-anomaly-detec",
+  "title": "FedVAD: Enhancing Federated Video Anomaly Detection with GPT-Driven Semantic Distillation",
+  "venue": "ECCV",
+  "year": 2024,
+  "abstract": ""
+ },
+ {
+  "id": "neurips2024-advancing-video-anomaly-detection-a-concise-re",
+  "title": "Advancing Video Anomaly Detection: A Concise Review and a New Dataset",
+  "venue": "NeurIPS",
+  "year": 2024,
+  "abstract": "Video Anomaly Detection (VAD) finds widespread applications in security surveillance, traffic monitoring, industrial monitoring, and healthcare. Despite extensive research efforts, there remains a lack of concise reviews that provide insightful guidance for researchers. Such reviews would serve as quick references to grasp current challenges, research trends, and future directions. In this paper, we present such a review, examining models and datasets from various perspectives. We emphasize the critical relationship between model and dataset, where the quality and diversity of datasets profoundly influence model performance, and dataset development adapts to the evolving needs of emerging approaches. Our review identifies practical issues, including the absence of comprehensive datasets with diverse scenarios. To address this, we introduce a new dataset, Multi-Scenario Anomaly Detection (MSAD), comprising 14 distinct scenarios captured from various camera views. Our dataset has diverse motion patterns and challenging variations, such as different lighting and weather conditions, providing a robust foundation for training superior models. We conduct an in-depth analysis of recent representative models using MSAD and highlight its potential in addressing the challenges of detecting anomalies across diverse and evolving surveillance scenarios."
+ },
+ {
+  "id": "neurips2024-hawk-learning-to-understand-open-world-video-a",
+  "title": "HAWK: Learning to Understand Open-World Video Anomalies",
+  "venue": "NeurIPS",
+  "year": 2024,
+  "abstract": "Video Anomaly Detection (VAD) systems can autonomously monitor and identify disturbances, reducing the need for manual labor and associated costs. However, current VAD systems are often limited by their superficial semantic understanding of scenes and minimal user interaction. Additionally, the prevalent data scarcity in existing datasets restricts their applicability in open-world scenarios.\nIn this paper, we introduce HAWK, a novel framework that leverages interactive large Visual Language Models (VLM) to interpret video anomalies precisely. Recognizing the difference in motion information between abnormal and normal videos, HAWK explicitly integrates motion modality to enhance anomaly identification. To reinforce motion attention, we construct an auxiliary consistency loss within the motion and video space, guiding the video branch to focus on the motion modality. Moreover, to improve the interpretation of motion-to-language, we establish a clear supervisory relationship between motion and its linguistic representation. Furthermore, we have annotated over 8,000 anomaly videos with language descriptions, enabling effective training across diverse open-world scenarios, and also created 8,000 question-answering pairs for users' open-world questions. The final results demonstrate that HAWK achieves SOTA performance, surpassing existing baselines in both video description generation and question-answering. Our codes/dataset/demo will be released at https://github.com/jqtangust/hawk."
+ },
+ {
+  "id": "neurips2024-ft-aed-benchmark-dataset-for-early-freeway-tra",
+  "title": "FT-AED: Benchmark Dataset for Early Freeway Traffic Anomalous Event Detection",
+  "venue": "NeurIPS",
+  "year": 2024,
+  "abstract": "Early and accurate detection of anomalous events on the freeway, such as accidents, can improve emergency response and clearance. However, existing delays and mistakes from manual crash reporting records make it a difficult problem to solve. Current large-scale freeway traffic datasets are not designed for anomaly detection and ignore these challenges. In this paper, we introduce the first large-scale lane-level freeway traffic dataset for anomaly detection. Our dataset consists of a month of weekday radar detection sensor data collected in 4 lanes along an 18-mile stretch of Interstate 24 heading toward Nashville, TN, comprising over 3.7 million sensor measurements. We also collect official crash reports from the Tennessee Department of Transportation Traffic Management Center and manually label all other potential anomalies in the dataset. To show the potential for our dataset to be used in future machine learning and traffic research, we benchmark numerous deep learning anomaly detection models on our dataset. We find that unsupervised graph neural network autoencoders are a promising solution for this problem and that ignoring spatial relationships leads to decreased performance. We demonstrate that our methods can reduce reporting delays by over 10 minutes on average while detecting 75% of crashes. Our dataset and all preprocessing code needed to get started are publicly released at https://vu.edu/ft-aed/ to facilitate future research."
+ },
+ {
+  "id": "neurips2024-beyond-euclidean-dual-space-representation-lea",
+  "title": "Beyond Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection",
+  "venue": "NeurIPS",
+  "year": 2024,
+  "abstract": "While numerous Video Violence Detection (VVD) methods have focused on representation learning in Euclidean space, they struggle to learn sufficiently discriminative features, leading to weaknesses in recognizing normal events that are visually similar to violent events (i.e., ambiguous violence). In contrast, hyperbolic representation learning, renowned for its ability to model hierarchical and complex relationships between events, has the potential to amplify the discrimination between visually similar events. Inspired by these, we develop a novel Dual-Space Representation Learning (DSRL) method for weakly supervised VVD to utilize the strength of both Euclidean and hyperbolic geometries, capturing the visual features of events while also exploring the intrinsic relations between events, thereby enhancing the discriminative capacity of the features. DSRL employs a novel information aggregation strategy to progressively learn event context in hyperbolic spaces, which selects aggregation nodes through layer-sensitive hyperbolic association degrees constrained by hyperbolic Dirichlet energy. Furthermore, DSRL attempts to break the cyber-balkanization of different spaces, utilizing cross-space attention to facilitate information interactions between Euclidean and hyperbolic space to capture better discriminative features for final violence detection.  Comprehensive experiments demonstrate the effectiveness of our proposed DSRL."
+ },
+ {
+  "id": "neurips2024-towards-multi-domain-learning-for-generalizabl",
+  "title": "Towards Multi-Domain Learning for Generalizable Video Anomaly Detection",
+  "venue": "NeurIPS",
+  "year": 2024,
+  "abstract": "Most of the existing Video Anomaly Detection (VAD) studies have been conducted within single-domain learning, where training and evaluation are performed on a single dataset. However, the criteria for abnormal events differ across VAD datasets, making it problematic to apply a single-domain model to other domains. In this paper, we propose a new task called Multi-Domain learning forVAD (MDVAD) to explore various real-world abnormal events using multiple datasets for a general model. MDVAD involves training on datasets from multiple domains simultaneously, and we experimentally observe that Abnormal Conflicts between domains hinder learning and generalization. The task aims to address two key objectives: (i) better distinguishing between general normal and abnormal events across multiple domains, and (ii) being aware of ambiguous abnormal conflicts. This paper is the first to tackle abnormal conflict issue and introduces a new benchmark, baselines, and evaluation protocols for MDVAD. As baselines, we propose a framework with Null(Angular)-Multiple Instance Learning and an Abnormal Conflict classifier. Through experiments on a MDVAD benchmark composed of six VAD datasets and using four different evaluation protocols, we reveal abnormal conflicts and demonstrate that the proposed baseline effectively handles these conflicts, showing robustness and adaptability across multiple domains."
+ }
+]

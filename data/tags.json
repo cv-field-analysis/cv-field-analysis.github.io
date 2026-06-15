@@ -1,0 +1,417 @@
+{
+ "aaai2026-refinevad-semantic-guided-feature-recalibratio": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance", "Violence"], "method": ["attention", "prototype"], "contribution": "method",
+  "confidence": 0.82, "needs_review": false,
+  "evidence": "Semantic-Guided Feature Recalibration for WSVAD; category prototypes + temporal attention on WVAD" },
+
+ "aaai2026-learning-to-tell-apart-weakly-supervised-video": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["CLIP", "MIL"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["MIL", "contrastive"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "MIL on CLIP foundation; disentangled semantic alignment on XD-Violence + UCF-Crime" },
+
+ "aaai2026-headhunt-vad-hunting-robust-anomaly-sensitive": {
+  "task": ["Detection"], "supervision": ["Training-free", "Zero-shot"], "model_family": ["MLLM"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["attention-heads", "training-free"], "contribution": "method",
+  "confidence": 0.6, "needs_review": true,
+  "evidence": "title: anomaly-sensitive heads in MLLM for tuning-free VAD" },
+
+ "aaai2026-vagu-amp-gts-llm-based-benchmark-and-framework": {
+  "task": ["Localization/Grounding", "Understanding"], "supervision": [], "model_family": ["LLM", "MLLM"],
+  "modality": ["RGB", "Text"], "domain": ["Surveillance"], "method": ["benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.62, "needs_review": true,
+  "evidence": "title: LLM-based benchmark & framework for joint anomaly grounding and understanding" },
+
+ "aaai2026-finevau-a-novel-human-aligned-benchmark-for-fi": {
+  "task": ["Understanding"], "supervision": [], "model_family": [], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.62, "needs_review": true,
+  "evidence": "title: human-aligned benchmark for fine-grained video anomaly understanding" },
+
+ "cvpr2026-no-need-for-real-anomaly-mllm-empowered-zero-s": {
+  "task": ["Detection", "Localization/Grounding"], "supervision": ["Zero-shot"], "model_family": ["MLLM"],
+  "modality": ["RGB"], "domain": ["Surveillance"], "method": ["pseudo-anomaly", "token-compression"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "LAVIDA: zero-shot VAD, MLLM + anomaly-exposure pseudo-anomalies, frame & pixel level" },
+
+ "cvpr2026-weakly-supervised-video-anomaly-detection-with": {
+  "task": ["Detection", "Reasoning"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["intention-reasoning", "semantic-grouping"], "contribution": "method",
+  "confidence": 0.82, "needs_review": false,
+  "evidence": "LAS-VAD: anomaly-connected components + intention-aware reasoning on XD-Violence/UCF" },
+
+ "cvpr2026-fine-vad-towards-fine-grained-video-anomaly-de": {
+  "task": ["Detection", "Understanding"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["cross-granularity"], "contribution": "method",
+  "confidence": 0.55, "needs_review": true,
+  "evidence": "title: fine-grained VAD via progressive cross-granularity learning" },
+
+ "cvpr2026-learning-from-noisy-supervision-a-denoising-de": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["denoising"], "contribution": "method",
+  "confidence": 0.55, "needs_review": true,
+  "evidence": "title: denoising-debiasing framework for WSVAD" },
+
+ "cvpr2026-tlma-mitigating-the-impact-of-weakly-labeled-i": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["label-refinement"], "contribution": "method",
+  "confidence": 0.5, "needs_review": true,
+  "evidence": "title: mitigating weakly labeled information for VAD" },
+
+ "cvpr2026-the-road-less-seen-segment-exploration-for-wea": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["MIL"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["segment-exploration"], "contribution": "method",
+  "confidence": 0.5, "needs_review": true,
+  "evidence": "title: segment exploration for WSVAD" },
+
+ "cvpr2026-joint-learning-of-general-and-diverse-patterns": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["MoE"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["memory-bank", "mixture-of-experts"], "contribution": "method",
+  "confidence": 0.55, "needs_review": true,
+  "evidence": "title: mixture of memory experts for WSVAD" },
+
+ "cvpr2026-alert-clip-abnormality-aware-latent-enhanced-r": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["CLIP", "VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["prompting", "fine-tuning"], "contribution": "method",
+  "confidence": 0.58, "needs_review": true,
+  "evidence": "title: abnormality-aware latent-enhanced representation tuning of CLIP for VAD" },
+
+ "iclr2026-language-guided-open-world-video-anomaly-detec": {
+  "task": ["Detection"], "supervision": ["Weakly-sup", "Open-vocab", "Zero-shot"], "model_family": ["VLM"],
+  "modality": ["RGB", "Text"], "domain": ["Surveillance"], "method": ["contrastive", "dataset-construction"], "contribution": "dataset",
+  "confidence": 0.86, "needs_review": false,
+  "evidence": "LaGoVAD + PreVAD (35,279 videos, largest); user NL definitions at inference, zero-shot on 7 datasets" },
+
+ "iclr2026-steering-and-rectifying-latent-representation": {
+  "task": ["Detection"], "supervision": ["Training-free", "Zero-shot"], "model_family": ["MLLM"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["representation-steering", "attention-heads"], "contribution": "method",
+  "confidence": 0.83, "needs_review": false,
+  "evidence": "SteerVAD: frozen MLLM, tuning-free; steer latent-anomaly-expert heads, 1% training data" },
+
+ "tpami2026-piercingeye-dual-space-video-violence-detectio": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Violence"], "method": ["hyperbolic", "vision-language"], "contribution": "method",
+  "confidence": 0.58, "needs_review": true,
+  "evidence": "title: dual-space violence detection with hyperbolic vision-language guidance" },
+
+ "aaai2025-federated-weakly-supervised-video-anomaly-dete": {
+  "task": ["Detection"], "supervision": ["Weakly-sup", "Federated"], "model_family": ["CLIP", "VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["prompting", "federated"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "Federated WSVAD with CLIP + global/local text-prompt generator for privacy" },
+
+ "aaai2025-video-anomaly-detection-with-motion-and-appear": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": ["Diffusion", "Reconstruction"],
+  "modality": ["RGB", "Optical-flow"], "domain": ["Surveillance"], "method": ["diffusion", "prediction"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "patch diffusion model recovers normal patterns; motion+appearance conditions for frame prediction" },
+
+ "aaai2025-ucf-crime-dvs-a-novel-event-based-dataset-for": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["SNN"], "modality": ["Event"],
+  "domain": ["Surveillance"], "method": ["benchmark-construction", "spiking"], "contribution": "dataset",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "first DVS/event-based VAD benchmark UCF-Crime-DVS + multi-scale spiking fusion net" },
+
+ "aaai2025-dual-conditioned-motion-diffusion-for-pose-bas": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": ["Diffusion", "Reconstruction"],
+  "modality": ["Pose/Skeleton"], "domain": ["Surveillance"], "method": ["diffusion"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "DCMD: dual-conditioned motion diffusion for pose-based VAD, reconstruction+prediction" },
+
+ "aaai2025-varcmp-adapting-cross-modal-pre-training-model": {
+  "task": ["Retrieval/QA"], "supervision": [], "model_family": ["VLM"], "modality": ["RGB", "Text", "Audio"],
+  "domain": ["Surveillance", "Violence"], "method": ["cross-modal-alignment"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "VarCMP: video anomaly retrieval via cross-modal pretraining; text-video & audio-video (UCFCrime-AR, XDViolence-AR)" },
+
+ "cvpr2025-holmes-vau-towards-long-term-video-anomaly-und": {
+  "task": ["Understanding", "Detection"], "supervision": [], "model_family": ["MLLM", "LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["instruction-tuning", "benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.9, "needs_review": false,
+  "evidence": "HIVAU-70k hierarchical VAU benchmark + Anomaly-focused Temporal Sampler with multimodal LLM" },
+
+ "cvpr2025-vera-explainable-video-anomaly-detection-via-v": {
+  "task": ["Detection", "Understanding"], "supervision": ["Training-free"], "model_family": ["VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["prompting", "verbalized-learning"], "contribution": "method",
+  "confidence": 0.87, "needs_review": false,
+  "evidence": "VERA: explainable VAD via verbalized learning, no VLM parameter modification" },
+
+ "cvpr2025-anomize-better-open-vocabulary-video-anomaly-d": {
+  "task": ["Detection", "Understanding"], "supervision": ["Open-vocab"], "model_family": ["VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["label-relation"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "Anomize: OVVAD detect+classify base & novel anomalies via label relations (UCF-Crime, XD-Violence)" },
+
+ "cvpr2025-noise-resistant-video-anomaly-detection-via-rg": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": ["Reconstruction"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["prediction", "memory-bank"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "EG-MPC: next-frame prediction + reconstruction with dynamic memory, noise-resistant" },
+
+ "cvpr2025-echotraffic-enhancing-traffic-anomaly-understa": {
+  "task": ["Understanding", "Retrieval/QA"], "supervision": [], "model_family": ["MLLM"], "modality": ["RGB", "Audio", "Text"],
+  "domain": ["Traffic/Driving"], "method": ["instruction-tuning", "benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "EchoTraffic + AV-TAU (29,865 videos, 149,325 Q&A): audio-visual MLLM for traffic anomaly understanding" },
+
+ "cvpr2025-track-any-anomalous-object-a-granular-video-an": {
+  "task": ["Detection", "Localization/Grounding"], "supervision": [], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance", "Traffic/Driving"], "method": ["tracking", "segmentation"], "contribution": "method",
+  "confidence": 0.83, "needs_review": false,
+  "evidence": "TAO: granular VAD as pixel-level tracking of anomalous objects, precise localization" },
+
+ "cvpr2025-just-dance-with-pi-a-poly-modal-inductor-for-w": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["VLM"],
+  "modality": ["RGB", "Pose/Skeleton", "Optical-flow", "Depth"], "domain": ["Surveillance"],
+  "method": ["multimodal-fusion"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "PI-VAD augments RGB with pose, depth, panoptic, optical flow, VLM cues (training-only)" },
+
+ "iccv2025-mixture-of-experts-guided-by-gaussian-splatter": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["MoE"], "modality": ["RGB"],
+  "domain": ["Surveillance", "Violence"], "method": ["mixture-of-experts", "gaussian-splatting"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "GS-MoE: experts per anomaly type guided by temporal Gaussian-splatting loss (UCF 91.58 AUC)" },
+
+ "iccv2025-sequential-keypoint-density-estimator-an-overl": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": [], "modality": ["Pose/Skeleton"],
+  "domain": ["Surveillance"], "method": ["density-estimation", "autoregressive"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "SeeKer: autoregressive keypoint density over skeletons; UBnormal/MSAD-HR/ShanghaiTech" },
+
+ "iccv2025-aligning-effective-tokens-with-video-anomaly-i": {
+  "task": ["Understanding", "Localization/Grounding"], "supervision": [], "model_family": ["MLLM", "VLM", "LLM"],
+  "modality": ["RGB", "Text"], "domain": ["Surveillance", "Violence"], "method": ["instruction-tuning", "token-selection"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "VA-GPT: MLLM summarizes & localizes abnormal events via spatial/temporal token selection" },
+
+ "iccv2025-autoregressive-denoising-score-matching-is-a-g": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": ["Diffusion"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["score-matching", "autoregressive"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "ADSM: noise-conditioned score transformer, autoregressive denoising score matching, likelihood-based" },
+
+ "icml2025-learning-event-completeness-for-weakly-supervi": {
+  "task": ["Detection", "Localization/Grounding"], "supervision": ["Weakly-sup"], "model_family": ["VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["memory-bank", "prototype"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "LEC-VAD: event completeness via anomaly-aware Gaussian mixture + memory-bank prototypes" },
+
+ "icml2025-ex-vad-explainable-fine-grained-video-anomaly": {
+  "task": ["Detection", "Understanding"], "supervision": [], "model_family": ["VLM", "LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["captioning", "label-alignment"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "Ex-VAD: VLM frame captions -> LLM video-level explanations + fine-grained classification" },
+
+ "neurips2025-monitor-exploiting-large-language-models-with": {
+  "task": ["Detection"], "supervision": ["Training-free"], "model_family": ["VLM", "LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["prompting", "memory-bank", "online"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "MoniTor: online/streaming training-free VAD, VLM + LSTM-inspired scoring queue" },
+
+ "neurips2025-vad-r1-towards-video-anomaly-reasoning-via-per": {
+  "task": ["Reasoning", "Understanding"], "supervision": [], "model_family": ["MLLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["chain-of-thought", "RL", "benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "Vad-R1: Video Anomaly Reasoning, Perception-to-Cognition CoT + AVA-GRPO RL + Vad-Reasoning dataset" },
+
+ "neurips2025-frameshield-adversarially-robust-video-anomaly": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["adversarial", "pseudo-anomaly"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "FrameShield: adversarially robust WSVAD via spatiotemporal-region-distortion pseudo-anomalies" },
+
+ "neurips2025-a-unified-reasoning-framework-for-holistic-zer": {
+  "task": ["Detection", "Localization/Grounding", "Understanding", "Reasoning"], "supervision": ["Zero-shot", "Training-free"],
+  "model_family": ["VLM", "LLM"], "modality": ["RGB", "Text"], "domain": ["Surveillance"],
+  "method": ["chain-of-thought", "prompting"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "chained test-time reasoning links detection->localization->explanation, fully zero-shot" },
+
+ "neurips2025-do-lvlms-truly-understand-video-anomalies-reve": {
+  "task": ["Understanding", "Reasoning", "Detection"], "supervision": [], "model_family": ["MLLM", "VLM"],
+  "modality": ["RGB", "Text"], "domain": ["Surveillance"], "method": ["preference-optimization", "hallucination-analysis"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "reveals LVLM hallucination via visual-textual co-occurrence; VAD-DPO counter-example DPO" },
+
+ "neurips2025-vadtree-explainable-training-free-video-anomal": {
+  "task": ["Detection", "Reasoning"], "supervision": ["Training-free", "Zero-shot"], "model_family": ["VLM", "LLM"],
+  "modality": ["RGB", "Text"], "domain": ["Surveillance"], "method": ["hierarchical-tree", "prompting"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "VADTree: hierarchical granularity-aware tree from event boundaries; VLM node perception + LLM reasoning" },
+
+ "neurips2025-generalizing-single-frame-supervision-to-event": {
+  "task": ["Detection", "Understanding"], "supervision": ["Single-frame"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance", "Violence"], "method": ["evidential-learning", "benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "SF-VAD: single annotated abnormal frame per video; re-annotated ShanghaiTech/UCF/XD benchmarks" },
+
+ "neurips2025-panda-towards-generalist-video-anomaly-detecti": {
+  "task": ["Detection", "Reasoning"], "supervision": ["Training-free", "Zero-shot"], "model_family": ["MLLM", "Agentic"],
+  "modality": ["RGB", "Text"], "domain": ["Surveillance"], "method": ["agent", "RAG", "chain-of-thought"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "PANDA: agentic MLLM engineer, scene-aware RAG + heuristic reasoning + chain-of-memory, no training" },
+
+ "tip2025-crcl-causal-representation-consistency-learnin": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["causal-learning", "scene-debiasing"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "CRCL: causal representation consistency, scene-debiasing for unsupervised surveillance VAD" },
+
+ "tip2025-dual-space-normalizing-flow-for-unsupervised-v": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": ["Normalizing-flow"], "modality": ["Pose/Skeleton"],
+  "domain": ["Surveillance"], "method": ["normalizing-flow", "hyperbolic", "graph"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "DSNF: dual-space (Euclidean+hyperbolic) normalizing flow over skeletons, unsupervised" },
+
+ "tip2025-where-and-what-contextual-dynamics-aware-anoma": {
+  "task": ["Detection", "Localization/Grounding"], "supervision": ["Weakly-sup"], "model_family": ["VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["scene-context", "atomic-action"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "TSRN: where (scene classification) + what (atomic actions), Segment-selective Focal Margin loss vs MIL" },
+
+ "tpami2025-scene-dependent-prediction-in-latent-space-for": {
+  "task": ["Detection", "Anticipation"], "supervision": ["Semi-supervised"], "model_family": ["Diffusion", "Reconstruction"],
+  "modality": ["RGB"], "domain": ["Surveillance"], "method": ["prediction", "diffusion", "benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "NWPU Campus dataset; scene-dependent VAD + video anomaly anticipation (VAA), latent diffusion" },
+
+ "tpami2025-multilingual-prompt-guided-directional-feature": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["VLM", "CLIP"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["prompting"], "contribution": "method",
+  "confidence": 0.55, "needs_review": true,
+  "evidence": "title: multilingual-prompt-guided directional feature learning for WSVAD" },
+
+ "aaai2024-vadclip-adapting-vision-language-models-for-we": {
+  "task": ["Detection", "Understanding"], "supervision": ["Weakly-sup"], "model_family": ["CLIP", "VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["prompting", "dual-branch"], "contribution": "method",
+  "confidence": 0.9, "needs_review": false,
+  "evidence": "VadCLIP: frozen CLIP dual-branch for coarse+fine WSVAD (84.51 AP XD-Violence, 88.02 AUC UCF)" },
+
+ "bmvc2024-hybrid-video-anomaly-detection-for-autonomous": {
+  "task": ["Detection", "Localization/Grounding"], "supervision": ["Unsupervised"], "model_family": ["Reconstruction"],
+  "modality": ["RGB", "Optical-flow"], "domain": ["Traffic/Driving"], "method": ["reconstruction", "prediction"], "contribution": "application",
+  "confidence": 0.8, "needs_review": false,
+  "evidence": "HF2-VAD-AD: ego-perspective normality, pixel-wise anomaly for autonomous driving" },
+
+ "bmvc2024-vlavad-vision-language-models-assisted-unsuper": {
+  "task": ["Detection"], "supervision": ["Unsupervised", "Training-free"], "model_family": ["VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["vision-language"], "contribution": "method",
+  "confidence": 0.58, "needs_review": true,
+  "evidence": "title: vision-language models assisted unsupervised VAD" },
+
+ "cvpr2024-harnessing-large-language-models-for-training": {
+  "task": ["Detection"], "supervision": ["Training-free", "Unsupervised"], "model_family": ["LLM", "VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["captioning", "prompting"], "contribution": "method",
+  "confidence": 0.9, "needs_review": false,
+  "evidence": "LAVAD: training-free; VLM captions per frame + LLM temporal aggregation & scoring (UCF, XD)" },
+
+ "cvpr2024-self-distilled-masked-auto-encoders-are-effici": {
+  "task": ["Detection", "Localization/Grounding"], "supervision": ["Unsupervised"], "model_family": ["Reconstruction"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["reconstruction", "distillation"], "contribution": "method",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "AED-MAE: lightweight masked auto-encoder, teacher-student distillation, 1655 FPS (Avenue/ShanghaiTech/UBnormal/Ped2)" },
+
+ "cvpr2024-text-prompt-with-normality-guidance-for-weakly": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["CLIP", "VLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["prompting", "pseudo-label"], "contribution": "method",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "TPWNG: CLIP text-prompt with normality guidance to generate frame-level pseudo-labels (UCF, XD)" },
+
+ "cvpr2024-open-vocabulary-video-anomaly-detection": {
+  "task": ["Detection", "Understanding"], "supervision": ["Open-vocab"], "model_family": ["VLM", "LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["semantic-injection", "anomaly-synthesis"], "contribution": "method",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "OVVAD: decouple class-agnostic detection + class-specific classification; LLM semantics + generated anomalies" },
+
+ "cvpr2024-multi-scale-video-anomaly-detection-by-multi-g": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": ["Reconstruction"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["contrastive", "multi-scale"], "contribution": "method",
+  "confidence": 0.83, "needs_review": false,
+  "evidence": "multi-grained spatio-temporal proxy tasks; contrastive missing-frame estimation, small-scale anomalies" },
+
+ "cvpr2024-uncovering-what-why-and-how-a-comprehensive-be": {
+  "task": ["Understanding", "Reasoning"], "supervision": [], "model_family": ["MLLM", "LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.7, "needs_review": true,
+  "evidence": "title (CUVA): comprehensive benchmark for causation understanding (what/why/how) of video anomaly" },
+
+ "cvpr2024-prompt-enhanced-multiple-instance-learning-for": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["MIL"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance", "Violence"], "method": ["MIL", "prompting"], "contribution": "method",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "PE-MIL: prompt-enhanced MIL with abnormal-aware + normal-context prompts for clear boundaries" },
+
+ "cvpr2024-mulde-multiscale-log-density-estimation-via-de": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": ["Diffusion"], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["score-matching", "density-estimation"], "contribution": "method",
+  "confidence": 0.87, "needs_review": false,
+  "evidence": "MULDE: multiscale log-density via denoising score matching + GMM, object- and frame-centric" },
+
+ "cvpr2024-collaborative-learning-of-anomalies-with-priva": {
+  "task": ["Detection", "Localization/Grounding"], "supervision": ["Unsupervised", "Federated"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance", "Violence"], "method": ["collaborative-learning", "benchmark-construction"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "CLAP: fully-unsupervised privacy-preserving distributed VAD baseline + new protocols (UCF, XD)" },
+
+ "eccv2024-follow-the-rules-reasoning-for-video-anomaly-d": {
+  "task": ["Detection", "Reasoning"], "supervision": ["Unsupervised", "Training-free"], "model_family": ["LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["rule-reasoning", "prompting"], "contribution": "method",
+  "confidence": 0.9, "needs_review": false,
+  "evidence": "AnomalyRuler: LLM induction (normal rules) + deduction; first reasoning approach for one-class VAD" },
+
+ "eccv2024-cross-domain-learning-for-video-anomaly-detect": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance", "Violence"], "method": ["cross-domain", "uncertainty"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "CDL: weakly-supervised cross-domain VAD using external unlabeled data + uncertainty (UCF, XD)" },
+
+ "eccv2024-interleaving-one-class-and-weakly-supervised-m": {
+  "task": ["Detection"], "supervision": ["Unsupervised", "Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["pseudo-label", "interleaving"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "UVAD: interleave weighted-OCC and WS models generating pseudo-labels for each other, no labels" },
+
+ "eccv2024-learning-anomalies-with-normality-prior-for-un": {
+  "task": ["Detection"], "supervision": ["Unsupervised"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance"], "method": ["normality-prior"], "contribution": "method",
+  "confidence": 0.55, "needs_review": true,
+  "evidence": "title: learning anomalies with normality prior for unsupervised VAD" },
+
+ "eccv2024-fedvad-enhancing-federated-video-anomaly-detec": {
+  "task": ["Detection"], "supervision": ["Weakly-sup", "Federated"], "model_family": ["LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Surveillance"], "method": ["federated", "distillation"], "contribution": "method",
+  "confidence": 0.58, "needs_review": true,
+  "evidence": "title: federated VAD with GPT-driven semantic distillation" },
+
+ "neurips2024-advancing-video-anomaly-detection-a-concise-re": {
+  "task": ["Detection"], "supervision": [], "model_family": [], "modality": ["RGB"],
+  "domain": ["Surveillance", "Traffic/Driving"], "method": ["survey", "benchmark-construction"], "contribution": "survey",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "concise review of VAD models/datasets + new MSAD dataset (14 scenarios)" },
+
+ "neurips2024-hawk-learning-to-understand-open-world-video-a": {
+  "task": ["Understanding", "Retrieval/QA"], "supervision": ["Open-vocab"], "model_family": ["VLM"],
+  "modality": ["RGB", "Optical-flow", "Text"], "domain": ["Surveillance"], "method": ["instruction-tuning", "benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "HAWK: interactive VLM for open-world video anomaly understanding; 8k annotated videos + 8k QA pairs" },
+
+ "neurips2024-ft-aed-benchmark-dataset-for-early-freeway-tra": {
+  "task": ["Detection", "Anticipation"], "supervision": ["Unsupervised"], "model_family": ["GNN", "Reconstruction"], "modality": [],
+  "domain": ["Traffic/Driving"], "method": ["benchmark-construction", "graph"], "contribution": "dataset",
+  "confidence": 0.65, "needs_review": true,
+  "evidence": "FT-AED: lane-level freeway radar-sensor anomaly dataset (note: sensor time-series, not RGB video); GNN autoencoder" },
+
+ "neurips2024-beyond-euclidean-dual-space-representation-lea": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": [], "modality": ["RGB"],
+  "domain": ["Violence"], "method": ["hyperbolic", "graph"], "contribution": "method",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "DSRL: dual-space (Euclidean+hyperbolic) representation for weakly-supervised video violence detection" },
+
+ "neurips2024-towards-multi-domain-learning-for-generalizabl": {
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["MIL"], "modality": ["RGB"],
+  "domain": ["Surveillance", "Violence"], "method": ["multi-domain", "MIL", "benchmark-construction"], "contribution": "benchmark",
+  "confidence": 0.85, "needs_review": false,
+  "evidence": "MDVAD: multi-domain WSVAD across six datasets; Null-angular MIL + abnormal-conflict classifier" }
+}

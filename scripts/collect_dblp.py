@@ -8,7 +8,7 @@ CTX=ssl.create_default_context();CTX.check_hostname=False;CTX.verify_mode=ssl.CE
 SOURCES=[("ECCV","conf/eccv",[2024,2026]),("BMVC","conf/bmvc",[2024,2025]),
          ("AAAI","conf/aaai",[2025,2026]),("NeurIPS","conf/nips",[2024,2025]),
          ("ICLR","conf/iclr",[2025,2026]),("ICML","conf/icml",[2025,2026]),
-         ("TPAMI","journals/pami",[2025,2026]),("TIP","journals/tip",[2025,2026])]
+         ("TPAMI","journals/pami",[2024,2025,2026]),("TIP","journals/tip",[2024,2025,2026])]
 QUERIES=["anomaly","violence","abnormal event"]   # union catches most VAD titles
 PAUSE=5.0
 

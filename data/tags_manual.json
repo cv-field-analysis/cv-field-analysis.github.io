@@ -1,0 +1,3 @@
+{
+ "_comment": "Manual overrides keyed by paper id (ids are in data/corpus.json). Any axis set here wins over the abstract-based tags.json and clears needs_review. Example -> \"cvpr2025-vera-explainable-video-anomaly-detection-via-v\": {\"task\": [\"Detection\", \"Understanding\"]}"
+}

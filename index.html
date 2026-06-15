@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>CVPR · ICCV Field Analysis — Video Anomaly Detection</title>
-<meta name="description" content="A 2-year analysis of Video Anomaly Detection papers across CVPR and ICCV (2025–2026): counts, sub-topics and trends from the accepted proceedings."/>
+<title>Field Analysis — Video Anomaly Detection / Understanding</title>
+<meta name="description" content="A 2024–2026 analysis of Video Anomaly Detection / Understanding across 10 top venues: publication trend, multi-axis taxonomy (task · supervision · model · modality · domain), task evolution, normalized citation impact and co-occurrence — from the accepted proceedings."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
@@ -12,7 +12,9 @@
 :root{
   --bg:#080a11; --panel:#0e121c; --ink:#eceadf; --muted:#8c93a4; --dim:#565d70;
   --line:rgba(255,255,255,.10); --accent:#ff8a5b;
+  --task:#ff8a5b; --supervision:#52d3c3; --model:#ad8cff; --modality:#5fb8ff; --domain:#c2e06a; --method:#8c93a4;
   --c0:#ff8a5b; --c1:#52d3c3; --c2:#ffd166; --c3:#ad8cff; --c4:#5fb8ff; --c5:#c2e06a; --c6:#f78fb3; --c7:#7ee0b8;
+  --amber:#ffd166;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);
@@ -21,31 +23,31 @@ body{background:
   radial-gradient(1100px 700px at 12% -5%, rgba(255,138,91,.10), transparent 60%),
   radial-gradient(1000px 720px at 100% 0%, rgba(95,184,255,.08), transparent 55%),
   var(--bg);min-height:100vh}
-.wrap{max-width:1060px;margin:0 auto;padding:0 26px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
 a{color:inherit}
 
 /* hero */
-.hero{padding:64px 0 30px}
+.hero{padding:60px 0 28px}
 .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--c2);
   display:flex;align-items:center;gap:12px;margin:0 0 18px}
 .eyebrow::before{content:"";width:30px;height:1px;background:var(--c2);opacity:.8}
-h1{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(34px,6vw,64px);line-height:.98;
+h1{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(32px,6vw,60px);line-height:.98;
   margin:0;letter-spacing:-.02em;font-variation-settings:"opsz" 120,"WONK" 1}
 h1 em{font-style:italic;font-weight:300;color:var(--c1)}
-.tagline{margin:16px 0 0;color:var(--muted);font-size:13.5px;letter-spacing:.01em;max-width:62ch;line-height:1.6}
-.statrow{display:flex;flex-wrap:wrap;gap:30px;margin-top:30px;padding-top:24px;border-top:1px solid var(--line)}
-.stat .v{font-family:"Fraunces",serif;font-size:34px;line-height:1;font-variation-settings:"opsz" 60}
-.stat .l{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:7px}
+.tagline{margin:16px 0 0;color:var(--muted);font-size:13.5px;letter-spacing:.01em;max-width:64ch;line-height:1.6}
+.statrow{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.stat .v{font-family:"Fraunces",serif;font-size:32px;line-height:1;font-variation-settings:"opsz" 60}
+.stat .l{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:7px}
 .stat .v.accent{color:var(--c0)}
 
 /* sections */
-section{padding:36px 0}
-.sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 22px}
+section{padding:34px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 20px}
 .sec-num{font-size:11px;color:var(--dim);letter-spacing:.2em}
-.sec-title{font-family:"Fraunces",serif;font-size:25px;font-weight:400;font-variation-settings:"opsz" 50,"WONK" 1}
-.sec-note{margin-left:auto;font-size:10.5px;color:var(--dim);letter-spacing:.04em;text-align:right;max-width:40ch}
+.sec-title{font-family:"Fraunces",serif;font-size:24px;font-weight:400;font-variation-settings:"opsz" 50,"WONK" 1}
+.sec-note{margin-left:auto;font-size:10.5px;color:var(--dim);letter-spacing:.04em;text-align:right;max-width:42ch;line-height:1.5}
 
-/* trend matrix (venue × year heatmap) */
+/* trend matrix */
 .matrix{display:grid;gap:5px;align-items:stretch}
 .mx-h{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
   display:flex;align-items:center;justify-content:center;padding-bottom:4px}
@@ -55,93 +57,152 @@ section{padding:36px 0}
 .mx-c{display:flex;align-items:center;justify-content:center;border-radius:6px;min-height:38px;
   font-family:"Fraunces",serif;font-size:18px;position:relative;
   background:rgba(255,255,255,.03);border:1px solid var(--line);transition:.6s}
-.mx-c.na{color:var(--dim);font-family:"JetBrains Mono";font-size:12px;opacity:.4}
+.mx-c.na{color:var(--dim);font-family:"JetBrains Mono";font-size:12px;opacity:.35}
 .mx-c.z{color:var(--dim)}
+.mx-c.soon,.mx-c.pending{font-family:"JetBrains Mono";font-size:9px;letter-spacing:.08em;text-transform:uppercase}
+.mx-c.soon{color:var(--c4);border-style:dashed;border-color:color-mix(in srgb,var(--c4) 35%,transparent)}
+.mx-c.pending{color:var(--dim);border-style:dotted}
 .mx-c.tot{background:none;border:none;color:var(--muted);font-size:19px}
 .mx-c.tot b{color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:10px;color:var(--dim);letter-spacing:.04em}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:18px;height:11px;border-radius:3px;display:inline-block}
 
-/* subtopic bars */
-.subs{display:flex;flex-direction:column;gap:11px}
-.sub{display:grid;grid-template-columns:160px 1fr 38px;align-items:center;gap:14px}
-.sub .sn{font-size:12px;color:var(--ink);text-align:right;letter-spacing:.01em}
-.sub .track{height:13px;background:rgba(255,255,255,.04);border-radius:7px;overflow:hidden}
-.sub .fill{height:100%;border-radius:7px;transition:width 1s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 14px -3px currentColor}
-.sub .sc{font-size:12px;color:var(--muted);font-family:"Fraunces",serif}
+/* segmented control */
+.seg{display:inline-flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+.seg button{cursor:pointer;font-family:inherit;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:18px;padding:6px 13px;transition:.15s}
+.seg button:hover{color:var(--ink);border-color:rgba(255,255,255,.28)}
+.seg button.on{color:var(--bg);font-weight:600}
+
+/* topic-by-year stacked */
+.tby{display:flex;flex-direction:column;gap:13px}
+.tby-row{display:grid;grid-template-columns:48px 1fr;align-items:center;gap:14px}
+.tby-row .yl{font-family:"Fraunces",serif;font-size:20px;color:var(--muted)}
+.tby-bar{display:flex;height:26px;border-radius:6px;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.tby-seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#0a0c12;
+  font-weight:600;min-width:0;transition:flex-basis .8s cubic-bezier(.2,.8,.2,1);overflow:hidden;white-space:nowrap}
+.tby-legend{display:flex;flex-wrap:wrap;gap:13px;margin-top:14px;font-size:10.5px;color:var(--muted)}
+.tby-legend span{display:inline-flex;align-items:center;gap:6px}
+.tby-legend i{width:10px;height:10px;border-radius:3px}
+
+/* axis taxonomy cards */
+.axgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.axcard{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--panel)}
+.axcard h3{margin:0 0 13px;font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.18em;
+  text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.axcard h3 i{width:9px;height:9px;border-radius:2px}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:118px 1fr 26px;align-items:center;gap:11px}
+.bar .bn{font-size:11px;color:var(--ink);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .track{height:11px;background:rgba(255,255,255,.04);border-radius:6px;overflow:hidden}
+.bar .fill{height:100%;border-radius:6px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.bar .bc{font-size:11px;color:var(--muted);font-family:"Fraunces",serif;text-align:right}
+
+/* impact ranking */
+.rank{display:flex;flex-direction:column;gap:9px}
+.rk{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:14px;
+  border:1px solid var(--line);border-radius:8px;padding:10px 15px;background:var(--panel)}
+.rk .ri{font-family:"Fraunces",serif;font-size:18px;color:var(--dim);text-align:center}
+.rk .rt{font-size:12.5px;line-height:1.35;min-width:0}
+.rk .rt a{text-decoration:none;color:var(--ink)}.rk .rt a:hover{color:var(--c1)}
+.rk .rt .rm{font-size:10px;color:var(--dim);margin-top:3px}
+.rk .rv{text-align:right;flex:0 0 auto}
+.rk .rv .pm{font-family:"Fraunces",serif;font-size:19px;color:var(--c0)}
+.rk .rv .pmL{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.rk .rv .raw{font-size:9.5px;color:var(--muted);margin-top:3px}
+
+/* heatmap matrices */
+.heatwrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.heat{overflow-x:auto}
+.heat h3{margin:0 0 12px;font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+table.hm{border-collapse:collapse;font-size:10.5px}
+table.hm th{font-weight:400;color:var(--dim);padding:5px 7px;text-align:left;letter-spacing:.02em;white-space:nowrap}
+table.hm th.col{writing-mode:vertical-rl;transform:rotate(180deg);text-align:right;height:74px;vertical-align:bottom}
+table.hm td{width:30px;height:30px;text-align:center;border-radius:5px;font-family:"Fraunces",serif;font-size:13px;
+  color:var(--ink);border:1px solid rgba(255,255,255,.05)}
+table.hm td.zero{color:var(--dim);opacity:.4}
 
 /* filter chips */
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
-.chip{cursor:pointer;font-size:11px;letter-spacing:.02em;color:var(--muted);background:rgba(255,255,255,.02);
-  border:1px solid var(--line);border-radius:20px;padding:6px 13px;transition:.16s;display:inline-flex;gap:7px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 14px;align-items:center}
+.chips .axlabel{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin:0 2px 0 8px}
+.chip{cursor:pointer;font-size:10.5px;letter-spacing:.02em;color:var(--muted);background:rgba(255,255,255,.02);
+  border:1px solid var(--line);border-radius:18px;padding:5px 11px;transition:.15s;display:inline-flex;gap:6px;align-items:center}
 .chip:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
-.chip.on{color:var(--bg);background:var(--c2);border-color:var(--c2);font-weight:600}
+.chip.on{color:var(--bg);font-weight:600}
 .chip .dot{width:7px;height:7px;border-radius:50%;background:currentColor}
 
 /* paper cards */
-.papers{display:flex;flex-direction:column;gap:12px}
-.pc{border:1px solid var(--line);border-radius:9px;padding:16px 18px;background:var(--panel);
-  display:flex;gap:16px;transition:.18s;break-inside:avoid}
+.papers{display:flex;flex-direction:column;gap:11px}
+.pc{border:1px solid var(--line);border-radius:9px;padding:15px 17px;background:var(--panel);
+  display:flex;gap:15px;transition:.18s;break-inside:avoid}
 .pc:hover{border-color:rgba(255,255,255,.26);transform:translateY(-1px)}
-.pc .yr{flex:0 0 auto;text-align:center;min-width:54px}
-.pc .yr .vn{font-size:11px;font-weight:700;letter-spacing:.06em}
-.pc .yr .yy{font-family:"Fraunces",serif;font-size:23px;line-height:1;margin-top:3px}
+.pc .yr{flex:0 0 auto;text-align:center;min-width:52px}
+.pc .yr .vn{font-size:11px;font-weight:700;letter-spacing:.05em}
+.pc .yr .yy{font-family:"Fraunces",serif;font-size:22px;line-height:1;margin-top:3px}
 .pc .body{flex:1;min-width:0}
-.pc .ti{font-size:14px;line-height:1.4;letter-spacing:.005em}
+.pc .ti{font-size:13.5px;line-height:1.4}
 .pc .ti a{text-decoration:none;color:var(--ink);transition:.15s}
 .pc .ti a:hover{color:var(--c1)}
-.pc .au{margin-top:6px;font-size:10.5px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pc .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.pc .tg{font-size:9px;letter-spacing:.05em;text-transform:uppercase;padding:3px 8px 2px;border-radius:4px;
-  border:1px solid;opacity:.85}
-.pc .meta{flex:0 0 auto;text-align:right;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
-.pc .cit{font-family:"Fraunces",serif;font-size:20px;line-height:1}
-.pc .cit small{display:block;font-family:"JetBrains Mono";font-size:8.5px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--dim);margin-top:3px}
-.pc .lnk{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
-  text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:4px 8px;transition:.15s}
+.pc .rv-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-left:7px;vertical-align:middle;cursor:help}
+.pc .au{margin-top:5px;font-size:10px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pc .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+.pc .tg{font-size:8.5px;letter-spacing:.04em;text-transform:uppercase;padding:3px 7px 2px;border-radius:4px;border:1px solid;opacity:.9}
+.pc .meta{flex:0 0 auto;text-align:right;display:flex;flex-direction:column;gap:7px;align-items:flex-end}
+.pc .cit{font-family:"Fraunces",serif;font-size:19px;line-height:1}
+.pc .cit small{display:block;font-family:"JetBrains Mono";font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:2px}
+.pc .pm{font-size:9.5px;color:var(--c0);letter-spacing:.02em}
+.pc .lnk{font-size:9px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;
+  border:1px solid var(--line);border-radius:5px;padding:4px 7px;transition:.15s}
 .pc .lnk:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
 .pc .lnk.rev{color:var(--c1);border-color:color-mix(in srgb,var(--c1) 40%,transparent)}
-.pc .lnk.rev:hover{background:color-mix(in srgb,var(--c1) 12%,transparent);color:var(--c1)}
+.pc .lnk.rev:hover{background:color-mix(in srgb,var(--c1) 12%,transparent)}
 
 /* download + footer */
 .dl{position:fixed;right:24px;bottom:24px;z-index:20;font-family:inherit;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--bg);background:var(--c2);border:none;border-radius:24px;
   padding:13px 20px;cursor:pointer;box-shadow:0 8px 28px -6px var(--c2);transition:.18s}
 .dl:hover{transform:translateY(-2px)}
-.foot{padding:40px 0 60px;border-top:1px solid var(--line);margin-top:24px;
-  font-size:10.5px;color:var(--dim);letter-spacing:.03em;line-height:1.8}
+.foot{padding:38px 0 60px;border-top:1px solid var(--line);margin-top:22px;
+  font-size:10.5px;color:var(--dim);letter-spacing:.03em;line-height:1.85}
 .foot a{color:var(--muted);text-decoration:none}.foot a:hover{color:var(--ink)}
 .foot .un{border-bottom:1px dotted var(--dim);cursor:help}
+.foot .crit{margin:14px 0;padding:13px 16px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.015);color:var(--muted);line-height:1.7}
+.foot .crit b{color:var(--ink);font-weight:500}
 
-@media(max-width:680px){
-  .hero{padding:42px 0 20px}
-  .matrix{gap:3px}.mx-v{font-size:10.5px;gap:6px}.mx-c{min-height:32px;font-size:15px}
-  .mx-h{font-size:8.5px;letter-spacing:.08em}
-  .sub{grid-template-columns:110px 1fr 30px;gap:9px}.sub .sn{font-size:10.5px}
-  .pc{flex-wrap:wrap}.pc .meta{flex-direction:row;width:100%;justify-content:space-between;margin-top:6px}
+@media(max-width:760px){
+  .axgrid,.heatwrap{grid-template-columns:1fr}
   .sec-note{display:none}
+}
+@media(max-width:680px){
+  .hero{padding:40px 0 18px}
+  .matrix{gap:3px}.mx-v{font-size:10.5px;gap:6px}.mx-c{min-height:32px;font-size:15px}
+  .mx-h{font-size:8.5px;letter-spacing:.06em}
+  .bar{grid-template-columns:92px 1fr 24px;gap:8px}.bar .bn{font-size:10px}
+  .tby-row{grid-template-columns:36px 1fr}
+  .pc{flex-wrap:wrap}.pc .meta{flex-direction:row;width:100%;justify-content:space-between;margin-top:6px}
 }
 
 /* print → clean PDF */
 @media print{
-  @page{margin:14mm}
+  @page{margin:13mm}
   body{background:#fff;color:#111}
-  .dl{display:none}
+  .dl,.chips,.seg{display:none}
   .wrap{max-width:none;padding:0}
-  .pc{background:#fff;border-color:#ddd;break-inside:avoid}
-  .pc .ti a,.pc .yr,.sec-title,h1,.stat .v{color:#111!important}
-  .tagline,.au,.foot,.sec-note,.muted{color:#555!important}
-  .mx-c,.sub .fill,.chip,.pc .tg{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .axcard,.pc,.rk,.tby-bar{background:#fff;border-color:#ddd;break-inside:avoid}
+  .pc .ti a,.pc .yr,.sec-title,h1,.stat .v,.rk .rt a,.axcard h3,table.hm td{color:#111!important}
+  .tagline,.au,.foot,.sec-note,.muted,.rk .rm{color:#555!important}
+  .mx-c,.bar .fill,.tby-seg,.pc .tg,table.hm td,.heat{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .mx-c{border-color:#ddd}.mx-v,.mx-c.tot b{color:#111!important}.mx-h{color:#555!important}
-  section{padding:18px 0;break-inside:avoid}
-  .chips{display:none}
-  h1{font-size:40px}
+  section{padding:16px 0;break-inside:avoid}
+  h1{font-size:38px}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="hero">
-    <p class="eyebrow" id="eyebrow">CVPR · ICCV 2025–2026 · Field Analysis</p>
+    <p class="eyebrow" id="eyebrow">Field Analysis</p>
     <h1 id="title">—</h1>
     <p class="tagline" id="tagline"></p>
     <div class="statrow" id="statrow"></div>
@@ -149,18 +210,42 @@ section{padding:36px 0}
 
   <section>
     <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Publication trend</span>
-      <span class="sec-note">Accepted main-conference &amp; journal papers (workshops/findings excluded). Blank = venue not held that year or not yet indexed. ICCV: odd years; ECCV: biennial.</span></div>
+      <span class="sec-note">Accepted main-conference &amp; journal papers (workshops/findings excluded). <b style="color:var(--c4)">soon</b> = venue runs in 2026 but the list isn't released yet; <b>pending</b> = released, awaiting collection. Blank = not held (ICCV odd years · ECCV biennial).</span></div>
     <div class="matrix" id="trend"></div>
+    <div class="legend" id="trend-legend"></div>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Sub-topic distribution</span>
-      <span class="sec-note">Title + abstract tagging; papers may span multiple sub-topics.</span></div>
-    <div class="subs" id="subs"></div>
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Task evolution &amp; topic-by-year</span>
+      <span class="sec-note">Abstract-based tags per year. The field is shifting from anomaly <em>detection</em> toward <em>grounding</em>, <em>understanding</em> and <em>reasoning</em>. 2026 is partial (only released venues).</span></div>
+    <div class="seg" id="axis-seg"></div>
+    <div class="tby" id="tby"></div>
+    <div class="tby-legend" id="tby-legend"></div>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title" id="papers-title">Papers</span>
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Multi-axis taxonomy</span>
+      <span class="sec-note">Each paper is tagged on six independent axes from its title + abstract. A paper can carry several labels per axis.</span></div>
+    <div class="axgrid" id="axgrid"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Normalized impact</span>
+      <span class="sec-note">Citations ÷ months since the venue's typical publication date — surfaces fast-rising recent work that raw citation counts under-credit.</span></div>
+    <div class="rank" id="rank"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">05</span><span class="sec-title">Where the axes meet</span>
+      <span class="sec-note">Left: which venues host which tasks. Right: how supervision settings pair with model families.</span></div>
+    <div class="heatwrap">
+      <div class="heat"><h3>Venue × Task</h3><div id="vt"></div></div>
+      <div class="heat"><h3>Supervision × Model family</h3><div id="cooc"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">06</span><span class="sec-title" id="papers-title">Papers</span>
       <span class="sec-note" id="papers-note"></span></div>
     <div class="chips" id="chips"></div>
     <div class="papers" id="papers"></div>
@@ -172,35 +257,32 @@ section{padding:36px 0}
 <button class="dl" id="dl">⤓ Download PDF</button>
 
 <script>
-const PAL=["#ff8a5b","#52d3c3","#ffd166","#ad8cff","#5fb8ff","#c2e06a","#f78fb3","#7ee0b8"];
-const VENUE_C={CVPR:"#ff8a5b",ICCV:"#5fb8ff",ECCV:"#ad8cff",WACV:"#c2e06a",BMVC:"#52d3c3"};
+const PAL=["#ff8a5b","#52d3c3","#ffd166","#ad8cff","#5fb8ff","#c2e06a","#f78fb3","#7ee0b8","#ff6f91","#9be3c8"];
+const VENUE_C={CVPR:"#ff8a5b",ICCV:"#5fb8ff",ECCV:"#ad8cff",WACV:"#c2e06a",BMVC:"#52d3c3",AAAI:"#ffd166",NeurIPS:"#f78fb3",ICLR:"#7ee0b8",ICML:"#ff6f91",TPAMI:"#9be3c8",TIP:"#52d3c3"};
+const AXIS_C={task:"#ff8a5b",supervision:"#52d3c3",model_family:"#ad8cff",modality:"#5fb8ff",domain:"#c2e06a",method:"#8c93a4"};
 const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mix=(c,p)=>`color-mix(in srgb, ${c} ${p}%, transparent)`;
 
 fetch("data.json").then(r=>r.json()).then(D=>{
-  // hero
+  const yspan=`${D.years[0]}–${D.years[D.years.length-1]}`;
   document.title=`Field Analysis — ${D.field}`;
-  const yspan=D.years.length>1?`${D.years[0]}–${D.years[D.years.length-1]}`:`${D.years[0]}`;
   document.getElementById("eyebrow").textContent=`${D.venues.length} venues · ${yspan} · Field Analysis`;
   document.getElementById("title").innerHTML=D.field.replace(/(\s\S+)$/,' <em>$1</em>');
   document.getElementById("tagline").textContent=D.tagline||"";
   const totCit=D.papers.reduce((a,p)=>a+(p.citations||0),0);
-  const stats=[["v accent",D.total,"papers"],
-    ["v",D.trend.length,"venue editions"],
-    ["v",D.subtopics.length,"sub-topics"],
+  const editions=D.trend.filter(t=>t.status==="ok").length;
+  const stats=[["v accent",D.total,"papers"],["v",editions,"venue editions"],
+    ["v",D.axis_order.length,"taxonomy axes"],["v",D.tagged,"abstract-tagged"],
     ["v",totCit.toLocaleString(),"citations"]];
   document.getElementById("statrow").innerHTML=stats.map(([c,v,l])=>
     `<div class="stat"><div class="${c}">${v}</div><div class="l">${l}</div></div>`).join("");
 
-  // trend matrix (venue × year heatmap)
-  const VORDER=["CVPR","ICCV","ECCV","WACV","BMVC","AAAI","NeurIPS","ICLR","ICML","TPAMI","TIP"];
-  const rank=x=>{const i=VORDER.indexOf(x);return i<0?99:i;};
-  const venues=D.venues.slice().sort((a,b)=>rank(a)-rank(b));
-  const years=D.years.slice().sort();
+  /* ---- 01 trend matrix ---- */
+  const venues=D.venues, years=D.years.slice().sort();
   const at=(v,y)=>D.trend.find(t=>t.venue===v&&t.year===y);
-  const tmax=Math.max(...D.trend.map(t=>t.count),1);
-  const cols=`200px repeat(${years.length},1fr) 64px`;
+  const tmax=Math.max(...D.trend.filter(t=>t.status==="ok").map(t=>t.count||0),1);
   const mx=document.getElementById("trend");
-  mx.style.gridTemplateColumns=cols;
+  mx.style.gridTemplateColumns=`190px repeat(${years.length},1fr) 60px`;
   let h=`<div class="mx-h vh">Venue</div>`+years.map(y=>`<div class="mx-h">${y}</div>`).join("")+`<div class="mx-h">Total</div>`;
   venues.forEach(v=>{
     const vc=VENUE_C[v]||"#ff8a5b";
@@ -208,69 +290,138 @@ fetch("data.json").then(r=>r.json()).then(D=>{
     let vt=0,seen=false;
     years.forEach(y=>{
       const c=at(v,y);
-      if(!c){h+=`<div class="mx-c na">·</div>`;return;}
+      if(!c){h+=`<div class="mx-c na" title="${v} ${y}: not held">·</div>`;return;}
+      if(c.status==="soon"){h+=`<div class="mx-c soon" title="${v} ${y}: not released yet (as of ${D.build_date})">soon</div>`;return;}
+      if(c.status==="pending"){h+=`<div class="mx-c pending" title="${v} ${y}: released, awaiting DBLP collection">n/c</div>`;return;}
       seen=true;vt+=c.count;
-      const k=c.count/tmax, bg=`color-mix(in srgb, ${vc} ${Math.round(18+k*72)}%, transparent)`;
+      const k=c.count/tmax, bg=c.count?mix(vc,Math.round(16+k*74)):"";
       const cls=c.count===0?"mx-c z":"mx-c";
-      h+=`<div class="${cls}" data-bg="${c.count?bg:''}" title="${v} ${y}: ${c.count} papers${c.total?` of ${c.total.toLocaleString()}`:''}">${c.count}</div>`;
+      h+=`<div class="${cls}" data-bg="${bg}" title="${v} ${y}: ${c.count} papers${c.total?` of ${c.total.toLocaleString()} accepted`:''}">${c.count}</div>`;
     });
     h+=`<div class="mx-c tot">${seen?`<b>${vt}</b>`:'·'}</div>`;
   });
   mx.innerHTML=h;
   requestAnimationFrame(()=>mx.querySelectorAll(".mx-c[data-bg]").forEach(c=>{if(c.dataset.bg)c.style.background=c.dataset.bg;}));
+  document.getElementById("trend-legend").innerHTML=
+    `<span><i style="background:${mix('#ff8a5b',70)}"></i>papers (heat ∝ count)</span>`+
+    `<span><i style="border:1px dashed ${mix('#5fb8ff',50)};background:none"></i>soon — not released yet</span>`+
+    `<span><i style="border:1px dotted var(--dim);background:none"></i>n/c — awaiting collection</span>`+
+    `<span><i style="background:none"></i>· not held that year</span>`;
 
-  // subtopics
-  const smax=Math.max(...D.subtopics.map(s=>s.count),1);
-  document.getElementById("subs").innerHTML=D.subtopics.map((s,i)=>{
-    const col=PAL[i%PAL.length];
-    return `<div class="sub"><div class="sn">${esc(s.name)}</div>
-      <div class="track"><div class="fill" style="width:0;background:${col};color:${col}" data-w="${s.count/smax*100}"></div></div>
-      <div class="sc">${s.count}</div></div>`;
+  /* ---- 02 task evolution / topic-by-year ---- */
+  const AX=D.axis_order;
+  const labelColor={}; // axisKey -> {label:color}
+  AX.forEach(a=>{labelColor[a.key]={}; (D.axes[a.key]||[]).forEach((d,i)=>labelColor[a.key][d.name]=PAL[i%PAL.length]);});
+  let curAxis="task";
+  const seg=document.getElementById("axis-seg");
+  seg.innerHTML=AX.map(a=>`<button data-k="${a.key}" class="${a.key===curAxis?'on':''}" style="${a.key===curAxis?`background:${AXIS_C[a.key]};border-color:${AXIS_C[a.key]}`:''}">${a.label}</button>`).join("");
+  function renderTBY(){
+    const order=(D.axes[curAxis]||[]).map(d=>d.name);
+    const tot=years.map(y=>order.reduce((s,l)=>s+((D.by_year[curAxis][y]||{})[l]||0),0));
+    const scaleMax=Math.max(...tot,1);
+    document.getElementById("tby").innerHTML=years.map((y,yi)=>{
+      const m=D.by_year[curAxis][y]||{};
+      const segs=order.filter(l=>m[l]).map(l=>{
+        const w=m[l]/scaleMax*100, col=labelColor[curAxis][l];
+        return `<div class="tby-seg" title="${esc(l)} · ${y}: ${m[l]}" style="flex:0 0 ${w}%;background:${col}">${w>7?m[l]:''}</div>`;
+      }).join("");
+      return `<div class="tby-row"><div class="yl">${y}</div><div class="tby-bar">${segs||''}</div></div>`;
+    }).join("");
+    document.getElementById("tby-legend").innerHTML=order.map(l=>
+      `<span><i style="background:${labelColor[curAxis][l]}"></i>${esc(l)}</span>`).join("");
+  }
+  seg.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;curAxis=b.dataset.k;
+    seg.querySelectorAll("button").forEach(x=>{const on=x===b;x.classList.toggle("on",on);
+      x.style.background=on?AXIS_C[curAxis]:'';x.style.borderColor=on?AXIS_C[curAxis]:'';});
+    renderTBY();});
+  renderTBY();
+
+  /* ---- 03 multi-axis taxonomy ---- */
+  document.getElementById("axgrid").innerHTML=AX.filter(a=>a.key!=="method").map(a=>{
+    const col=AXIS_C[a.key], items=D.axes[a.key]||[], mx2=Math.max(...items.map(d=>d.count),1);
+    const bars=items.map(d=>`<div class="bar"><div class="bn">${esc(d.name)}</div>
+      <div class="track"><div class="fill" data-w="${d.count/mx2*100}" style="background:${col}"></div></div>
+      <div class="bc">${d.count}</div></div>`).join("");
+    return `<div class="axcard"><h3><i style="background:${col}"></i>${a.label}</h3><div class="bars">${bars}</div></div>`;
   }).join("");
-  requestAnimationFrame(()=>document.querySelectorAll(".sub .fill").forEach(f=>f.style.width=f.dataset.w+"%"));
+  requestAnimationFrame(()=>document.querySelectorAll(".axcard .fill").forEach(f=>f.style.width=f.dataset.w+"%"));
 
-  // subtopic colour map (for chips + tags)
-  const SC={}; D.subtopics.forEach((s,i)=>SC[s.name]=PAL[i%PAL.length]);
+  /* ---- 04 normalized impact ---- */
+  const top=D.papers.slice().sort((a,b)=>b.cit_per_month-a.cit_per_month).slice(0,12);
+  document.getElementById("rank").innerHTML=top.map((p,i)=>{
+    const vc=VENUE_C[p.venue]||"#ff8a5b";
+    return `<div class="rk"><div class="ri">${i+1}</div>
+      <div class="rt"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>
+        <div class="rm"><span style="color:${vc}">${p.venue} ${p.year}</span> · ${p.task.join(", ")||"—"}</div></div>
+      <div class="rv"><div class="pm">${p.cit_per_month.toFixed(1)}</div><div class="pmL">cit / month</div>
+        <div class="raw">${p.citations} total · ${p.months} mo</div></div></div>`;
+  }).join("");
 
-  // papers
+  /* ---- 05 heatmaps ---- */
+  function heat(el,M,baseCol){
+    const flat=M.cells.flat(), hi=Math.max(...flat,1);
+    let t=`<table class="hm"><tr><th></th>${M.cols.map(c=>`<th class="col">${esc(c)}</th>`).join("")}</tr>`;
+    M.rows.forEach((r,ri)=>{
+      t+=`<tr><th>${esc(r)}</th>`+M.cols.map((c,ci)=>{const v=M.cells[ri][ci];
+        return `<td class="${v?'':'zero'}" style="background:${v?mix(baseCol,Math.round(12+v/hi*78)):'transparent'}" title="${esc(r)} × ${esc(c)}: ${v}">${v||'·'}</td>`;}).join("")+`</tr>`;
+    });
+    document.getElementById(el).innerHTML=t+`</table>`;
+  }
+  heat("vt",D.venue_topic,"#ff8a5b");
+  heat("cooc",D.cooc,"#ad8cff");
+
+  /* ---- 06 papers + multi-axis filter ---- */
+  const FILT_AX=["task","supervision","model_family","domain"];
+  const cardAxes=["task","supervision","model_family","modality","domain"];
   document.getElementById("papers-title").textContent=`${D.total} papers`;
-  document.getElementById("papers-note").textContent=`${D.venues.join(" · ")} · ${D.years[0]}–${D.years[D.years.length-1]}`;
+  document.getElementById("papers-note").textContent=`${D.venues.join(" · ")} · ${yspan}`;
   const papersEl=document.getElementById("papers");
-  function render(filter){
-    const list=filter?D.papers.filter(p=>p.subtopics.includes(filter)):D.papers;
+  function tagsFor(p){
+    return cardAxes.flatMap(ax=>(p[ax]||[]).filter(l=>!(ax==="modality"&&l==="RGB")&&!(ax==="domain"&&l==="Surveillance"))
+      .map(l=>{const c=AXIS_C[ax];return `<span class="tg" style="color:${c};border-color:${mix(c,45)}">${esc(l)}</span>`;})).join("");
+  }
+  function render(f){
+    const list=f?D.papers.filter(p=>(p[f.ax]||[]).includes(f.l)):D.papers;
     papersEl.innerHTML=list.map(p=>{
       const vc=VENUE_C[p.venue]||"#ff8a5b";
-      const tags=p.subtopics.map(s=>`<span class="tg" style="color:${SC[s]};border-color:${SC[s]}55">${esc(s)}</span>`).join("");
       const ax=p.arxiv?`<a class="lnk" href="https://arxiv.org/abs/${p.arxiv}" target="_blank" rel="noopener">arXiv</a>`:"";
       const isOR=(p.url||"").includes("openreview.net");
-      const main=isOR?`<a class="lnk" href="${esc(p.url)}" target="_blank" rel="noopener">paper</a>`
-                     :`<a class="lnk" href="${esc(p.url)}" target="_blank" rel="noopener">CVF</a>`;
+      const main=p.url?`<a class="lnk" href="${esc(p.url)}" target="_blank" rel="noopener">${isOR?"paper":"link"}</a>`:"";
       const rev=(p.review_url&&p.review_url.includes("openreview"))
         ?`<a class="lnk rev" href="${esc(p.review_url)}" target="_blank" rel="noopener" title="Read the OpenReview peer reviews">reviews ↗</a>`:"";
+      const rdot=p.needs_review?`<span class="rv-dot" title="Tagged from title only or low confidence — needs review"></span>`:"";
+      const pm=p.cit_per_month?`<div class="pm">${p.cit_per_month.toFixed(1)} /mo</div>`:"";
       return `<div class="pc"><div class="yr"><div class="vn" style="color:${vc}">${p.venue}</div><div class="yy">${String(p.year).slice(2)}</div></div>
-        <div class="body"><div class="ti"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></div>
-        <div class="au">${esc(p.authors)}</div>${tags?`<div class="tags">${tags}</div>`:""}</div>
-        <div class="meta"><div class="cit">${p.citations}<small>citations</small></div>
-        ${main}${ax}${rev}</div></div>`;
+        <div class="body"><div class="ti"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a>${rdot}</div>
+        <div class="au">${esc(p.authors)}</div><div class="tags">${tagsFor(p)}</div></div>
+        <div class="meta"><div class="cit">${p.citations}<small>citations</small></div>${pm}${main}${ax}${rev}</div></div>`;
     }).join("");
   }
   render(null);
 
-  // filter chips
   const chips=document.getElementById("chips");
-  chips.innerHTML=`<span class="chip on" data-f="">all</span>`+D.subtopics.map(s=>
-    `<span class="chip" data-f="${esc(s.name)}"><span class="dot" style="color:${SC[s.name]}"></span>${esc(s.name)} ${s.count}</span>`).join("");
+  let ch=`<span class="chip on" data-ax="" data-l="">all</span>`;
+  FILT_AX.forEach(ax=>{
+    const lbl=(D.axis_order.find(a=>a.key===ax)||{}).label||ax;
+    ch+=`<span class="axlabel" style="color:${AXIS_C[ax]}">${lbl}</span>`;
+    ch+=(D.axes[ax]||[]).map(d=>`<span class="chip" data-ax="${ax}" data-l="${esc(d.name)}"><span class="dot" style="color:${AXIS_C[ax]}"></span>${esc(d.name)} ${d.count}</span>`).join("");
+  });
+  chips.innerHTML=ch;
   chips.addEventListener("click",e=>{const c=e.target.closest(".chip");if(!c)return;
-    chips.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x===c));
-    render(c.dataset.f||null);});
+    chips.querySelectorAll(".chip").forEach(x=>{const on=x===c;x.classList.toggle("on",on);
+      x.style.background=on&&c.dataset.ax?AXIS_C[c.dataset.ax]:(on?"var(--c2)":"");
+      x.style.borderColor=on&&c.dataset.ax?AXIS_C[c.dataset.ax]:"";});
+    render(c.dataset.l?{ax:c.dataset.ax,l:c.dataset.l}:null);});
 
-  // footer
+  /* ---- footer ---- */
   document.getElementById("foot").innerHTML=
-    `Sources: ${D.sources.join(" · ")}. Counts cover accepted main-conference papers; workshop and findings tracks are excluded.<br>
-     This is an <span class="un" title="Not affiliated with or endorsed by CVPR, ICCV, CVF or IEEE. Bibliographic metadata only.">unofficial</span> research-field analysis · built by
+    `<div class="crit"><b>Inclusion.</b> ${esc(D.criteria.include)}<br><b>Exclusion.</b> ${esc(D.criteria.exclude)}</div>
+     Sources: ${D.sources.join(" · ")}. Counts cover accepted main-conference &amp; journal papers; workshop and findings tracks are excluded.
+     Tags (task · supervision · model · modality · domain · method) are <b>abstract-based</b>: assigned from each paper's title + abstract with a confidence score; the <span style="color:var(--amber)">amber dot</span> marks papers tagged from the title alone or with low confidence (${D.total-D.tagged} of ${D.total}). Citations/month uses an estimated publication date per venue. PDF-based extraction (datasets · metrics · backbones · code) is a planned next stage.<br>
+     This is an <span class="un" title="Not affiliated with or endorsed by CVPR, ICCV, CVF, AAAI or IEEE. Bibliographic metadata only.">unofficial</span> research-field analysis · built by
      <a href="https://deo-ahn.github.io" target="_blank" rel="noopener">Deokhyun Ahn</a> ·
      <a href="https://github.com/cv-field-analysis/cv-field-analysis.github.io" target="_blank" rel="noopener">GitHub</a>`;
-}).catch(e=>{document.getElementById("title").textContent="Failed to load data.";});
+}).catch(e=>{document.getElementById("title").textContent="Failed to load data.";console.error(e);});
 
 document.getElementById("dl").onclick=()=>window.print();
 </script>

@@ -1,942 +1,3659 @@
 {
  "field": "Video Anomaly Detection",
  "field_key": "vad",
- "tagline": "VAD / VAU — anomalous event detection & understanding in video",
+ "tagline": "VAD / VAU — anomalous event detection, grounding, understanding & reasoning in video",
+ "build_date": "2026-06",
  "venues": [
-  "AAAI",
-  "BMVC",
   "CVPR",
-  "ECCV",
   "ICCV",
+  "ECCV",
+  "BMVC",
+  "AAAI",
+  "NeurIPS",
   "ICLR",
   "ICML",
-  "NeurIPS",
-  "TIP",
-  "TPAMI"
+  "TPAMI",
+  "TIP"
  ],
  "years": [
   2024,
   2025,
   2026
  ],
- "total": 59,
+ "total": 69,
+ "axis_order": [
+  {
+   "key": "task",
+   "label": "Task"
+  },
+  {
+   "key": "supervision",
+   "label": "Supervision"
+  },
+  {
+   "key": "model_family",
+   "label": "Model family"
+  },
+  {
+   "key": "modality",
+   "label": "Modality"
+  },
+  {
+   "key": "domain",
+   "label": "Domain"
+  },
+  {
+   "key": "method",
+   "label": "Method"
+  }
+ ],
  "trend": [
   {
    "venue": "CVPR",
+   "year": 2024,
+   "status": "ok",
+   "count": 9,
+   "total": 2716
+  },
+  {
+   "venue": "CVPR",
    "year": 2025,
+   "status": "ok",
    "count": 7,
    "total": 2871
   },
   {
    "venue": "CVPR",
    "year": 2026,
+   "status": "ok",
    "count": 8,
    "total": 4068
   },
   {
    "venue": "ICCV",
    "year": 2025,
+   "status": "ok",
    "count": 4,
    "total": 2701
   },
   {
+   "venue": "ECCV",
+   "year": 2024,
+   "status": "ok",
+   "count": 5,
+   "total": null
+  },
+  {
+   "venue": "ECCV",
+   "year": 2026,
+   "status": "soon",
+   "count": null,
+   "total": null
+  },
+  {
+   "venue": "BMVC",
+   "year": 2024,
+   "status": "ok",
+   "count": 2,
+   "total": null
+  },
+  {
+   "venue": "BMVC",
+   "year": 2025,
+   "status": "pending",
+   "count": null,
+   "total": null
+  },
+  {
+   "venue": "BMVC",
+   "year": 2026,
+   "status": "soon",
+   "count": null,
+   "total": null
+  },
+  {
+   "venue": "AAAI",
+   "year": 2024,
+   "status": "ok",
+   "count": 1,
+   "total": 2865
+  },
+  {
+   "venue": "AAAI",
+   "year": 2025,
+   "status": "ok",
+   "count": 5,
+   "total": null
+  },
+  {
+   "venue": "AAAI",
+   "year": 2026,
+   "status": "ok",
+   "count": 5,
+   "total": null
+  },
+  {
    "venue": "NeurIPS",
    "year": 2024,
+   "status": "ok",
    "count": 5,
-   "total": 4518
+   "total": 4562
   },
   {
    "venue": "NeurIPS",
    "year": 2025,
+   "status": "ok",
    "count": 8,
    "total": 5812
   },
   {
+   "venue": "NeurIPS",
+   "year": 2026,
+   "status": "soon",
+   "count": null,
+   "total": null
+  },
+  {
+   "venue": "ICLR",
+   "year": 2024,
+   "status": "ok",
+   "count": 0,
+   "total": 2260
+  },
+  {
    "venue": "ICLR",
    "year": 2025,
+   "status": "ok",
    "count": 0,
    "total": 3704
   },
   {
    "venue": "ICLR",
    "year": 2026,
+   "status": "ok",
    "count": 2,
    "total": 5358
   },
   {
    "venue": "ICML",
+   "year": 2024,
+   "status": "ok",
+   "count": 0,
+   "total": 2610
+  },
+  {
+   "venue": "ICML",
    "year": 2025,
+   "status": "ok",
    "count": 2,
    "total": 3342
   },
   {
-   "venue": "ECCV",
-   "year": 2024,
-   "count": 5,
-   "total": null
-  },
-  {
-   "venue": "BMVC",
-   "year": 2024,
-   "count": 2,
-   "total": null
-  },
-  {
-   "venue": "AAAI",
-   "year": 2025,
-   "count": 5,
-   "total": null
-  },
-  {
-   "venue": "AAAI",
+   "venue": "ICML",
    "year": 2026,
-   "count": 5,
+   "status": "soon",
+   "count": null,
+   "total": null
+  },
+  {
+   "venue": "TPAMI",
+   "year": 2024,
+   "status": "pending",
+   "count": null,
    "total": null
   },
   {
    "venue": "TPAMI",
    "year": 2025,
+   "status": "ok",
    "count": 2,
    "total": null
   },
   {
    "venue": "TPAMI",
    "year": 2026,
+   "status": "ok",
    "count": 1,
    "total": null
   },
   {
    "venue": "TIP",
+   "year": 2024,
+   "status": "pending",
+   "count": null,
+   "total": null
+  },
+  {
+   "venue": "TIP",
    "year": 2025,
+   "status": "ok",
    "count": 3,
    "total": null
   },
   {
    "venue": "TIP",
    "year": 2026,
+   "status": "ok",
    "count": 0,
    "total": null
   }
  ],
- "subtopics": [
-  {
-   "name": "VLM / LLM",
-   "count": 21
+ "axes": {
+  "task": [
+   {
+    "name": "Detection",
+    "count": 61
+   },
+   {
+    "name": "Understanding",
+    "count": 17
+   },
+   {
+    "name": "Localization/Grounding",
+    "count": 10
+   },
+   {
+    "name": "Reasoning",
+    "count": 8
+   },
+   {
+    "name": "Retrieval/QA",
+    "count": 3
+   },
+   {
+    "name": "Anticipation",
+    "count": 2
+   }
+  ],
+  "supervision": [
+   {
+    "name": "Weakly-sup",
+    "count": 27
+   },
+   {
+    "name": "Unsupervised",
+    "count": 18
+   },
+   {
+    "name": "Training-free",
+    "count": 10
+   },
+   {
+    "name": "Zero-shot",
+    "count": 7
+   },
+   {
+    "name": "Open-vocab",
+    "count": 4
+   },
+   {
+    "name": "Federated",
+    "count": 3
+   },
+   {
+    "name": "Semi-supervised",
+    "count": 1
+   },
+   {
+    "name": "Single-frame",
+    "count": 1
+   }
+  ],
+  "model_family": [
+   {
+    "name": "VLM",
+    "count": 23
+   },
+   {
+    "name": "LLM",
+    "count": 12
+   },
+   {
+    "name": "MLLM",
+    "count": 11
+   },
+   {
+    "name": "Reconstruction",
+    "count": 8
+   },
+   {
+    "name": "CLIP",
+    "count": 6
+   },
+   {
+    "name": "Diffusion",
+    "count": 5
+   },
+   {
+    "name": "MIL",
+    "count": 4
+   },
+   {
+    "name": "MoE",
+    "count": 2
+   },
+   {
+    "name": "Agentic",
+    "count": 1
+   },
+   {
+    "name": "GNN",
+    "count": 1
+   },
+   {
+    "name": "Normalizing-flow",
+    "count": 1
+   },
+   {
+    "name": "SNN",
+    "count": 1
+   }
+  ],
+  "modality": [
+   {
+    "name": "RGB",
+    "count": 64
+   },
+   {
+    "name": "Text",
+    "count": 33
+   },
+   {
+    "name": "Optical-flow",
+    "count": 4
+   },
+   {
+    "name": "Pose/Skeleton",
+    "count": 4
+   },
+   {
+    "name": "Audio",
+    "count": 2
+   },
+   {
+    "name": "Depth",
+    "count": 1
+   },
+   {
+    "name": "Event",
+    "count": 1
+   }
+  ],
+  "domain": [
+   {
+    "name": "Surveillance",
+    "count": 64
+   },
+   {
+    "name": "Violence",
+    "count": 20
+   },
+   {
+    "name": "Traffic/Driving",
+    "count": 5
+   }
+  ],
+  "method": [
+   {
+    "name": "benchmark-construction",
+    "count": 14
+   },
+   {
+    "name": "prompting",
+    "count": 12
+   },
+   {
+    "name": "instruction-tuning",
+    "count": 4
+   },
+   {
+    "name": "memory-bank",
+    "count": 4
+   },
+   {
+    "name": "prediction",
+    "count": 4
+   },
+   {
+    "name": "MIL",
+    "count": 3
+   },
+   {
+    "name": "chain-of-thought",
+    "count": 3
+   },
+   {
+    "name": "contrastive",
+    "count": 3
+   },
+   {
+    "name": "diffusion",
+    "count": 3
+   },
+   {
+    "name": "graph",
+    "count": 3
+   },
+   {
+    "name": "hyperbolic",
+    "count": 3
+   },
+   {
+    "name": "attention-heads",
+    "count": 2
+   },
+   {
+    "name": "autoregressive",
+    "count": 2
+   },
+   {
+    "name": "captioning",
+    "count": 2
+   },
+   {
+    "name": "density-estimation",
+    "count": 2
+   },
+   {
+    "name": "distillation",
+    "count": 2
+   },
+   {
+    "name": "federated",
+    "count": 2
+   },
+   {
+    "name": "mixture-of-experts",
+    "count": 2
+   },
+   {
+    "name": "prototype",
+    "count": 2
+   },
+   {
+    "name": "pseudo-anomaly",
+    "count": 2
+   },
+   {
+    "name": "pseudo-label",
+    "count": 2
+   },
+   {
+    "name": "reconstruction",
+    "count": 2
+   },
+   {
+    "name": "score-matching",
+    "count": 2
+   },
+   {
+    "name": "vision-language",
+    "count": 2
+   },
+   {
+    "name": "RAG",
+    "count": 1
+   },
+   {
+    "name": "RL",
+    "count": 1
+   },
+   {
+    "name": "adversarial",
+    "count": 1
+   },
+   {
+    "name": "agent",
+    "count": 1
+   },
+   {
+    "name": "anomaly-synthesis",
+    "count": 1
+   },
+   {
+    "name": "atomic-action",
+    "count": 1
+   },
+   {
+    "name": "attention",
+    "count": 1
+   },
+   {
+    "name": "causal-learning",
+    "count": 1
+   },
+   {
+    "name": "collaborative-learning",
+    "count": 1
+   },
+   {
+    "name": "cross-domain",
+    "count": 1
+   },
+   {
+    "name": "cross-granularity",
+    "count": 1
+   },
+   {
+    "name": "cross-modal-alignment",
+    "count": 1
+   },
+   {
+    "name": "dataset-construction",
+    "count": 1
+   },
+   {
+    "name": "denoising",
+    "count": 1
+   },
+   {
+    "name": "dual-branch",
+    "count": 1
+   },
+   {
+    "name": "evidential-learning",
+    "count": 1
+   },
+   {
+    "name": "fine-tuning",
+    "count": 1
+   },
+   {
+    "name": "gaussian-splatting",
+    "count": 1
+   },
+   {
+    "name": "hallucination-analysis",
+    "count": 1
+   },
+   {
+    "name": "hierarchical-tree",
+    "count": 1
+   },
+   {
+    "name": "intention-reasoning",
+    "count": 1
+   },
+   {
+    "name": "interleaving",
+    "count": 1
+   },
+   {
+    "name": "label-alignment",
+    "count": 1
+   },
+   {
+    "name": "label-refinement",
+    "count": 1
+   },
+   {
+    "name": "label-relation",
+    "count": 1
+   },
+   {
+    "name": "multi-domain",
+    "count": 1
+   },
+   {
+    "name": "multi-scale",
+    "count": 1
+   },
+   {
+    "name": "multimodal-fusion",
+    "count": 1
+   },
+   {
+    "name": "normality-prior",
+    "count": 1
+   },
+   {
+    "name": "normalizing-flow",
+    "count": 1
+   },
+   {
+    "name": "online",
+    "count": 1
+   },
+   {
+    "name": "preference-optimization",
+    "count": 1
+   },
+   {
+    "name": "representation-steering",
+    "count": 1
+   },
+   {
+    "name": "rule-reasoning",
+    "count": 1
+   },
+   {
+    "name": "scene-context",
+    "count": 1
+   },
+   {
+    "name": "scene-debiasing",
+    "count": 1
+   },
+   {
+    "name": "segment-exploration",
+    "count": 1
+   },
+   {
+    "name": "segmentation",
+    "count": 1
+   },
+   {
+    "name": "semantic-grouping",
+    "count": 1
+   },
+   {
+    "name": "semantic-injection",
+    "count": 1
+   },
+   {
+    "name": "spiking",
+    "count": 1
+   },
+   {
+    "name": "survey",
+    "count": 1
+   },
+   {
+    "name": "token-compression",
+    "count": 1
+   },
+   {
+    "name": "token-selection",
+    "count": 1
+   },
+   {
+    "name": "tracking",
+    "count": 1
+   },
+   {
+    "name": "training-free",
+    "count": 1
+   },
+   {
+    "name": "uncertainty",
+    "count": 1
+   },
+   {
+    "name": "verbalized-learning",
+    "count": 1
+   }
+  ],
+  "contribution": [
+   {
+    "name": "method",
+    "count": 54
+   },
+   {
+    "name": "benchmark",
+    "count": 10
+   },
+   {
+    "name": "dataset",
+    "count": 3
+   },
+   {
+    "name": "application",
+    "count": 1
+   },
+   {
+    "name": "survey",
+    "count": 1
+   }
+  ]
+ },
+ "by_year": {
+  "task": {
+   "2024": {
+    "Detection": 20,
+    "Understanding": 4,
+    "Localization/Grounding": 3,
+    "Reasoning": 2,
+    "Retrieval/QA": 1,
+    "Anticipation": 1
+   },
+   "2025": {
+    "Detection": 27,
+    "Retrieval/QA": 2,
+    "Understanding": 10,
+    "Localization/Grounding": 5,
+    "Reasoning": 5,
+    "Anticipation": 1
+   },
+   "2026": {
+    "Detection": 14,
+    "Localization/Grounding": 2,
+    "Understanding": 3,
+    "Reasoning": 1
+   }
   },
-  {
-   "name": "Weakly-supervised",
-   "count": 18
+  "supervision": {
+   "2024": {
+    "Weakly-sup": 8,
+    "Unsupervised": 11,
+    "Training-free": 3,
+    "Open-vocab": 2,
+    "Federated": 2
+   },
+   "2025": {
+    "Weakly-sup": 8,
+    "Federated": 1,
+    "Unsupervised": 7,
+    "Training-free": 5,
+    "Open-vocab": 1,
+    "Zero-shot": 3,
+    "Single-frame": 1,
+    "Semi-supervised": 1
+   },
+   "2026": {
+    "Weakly-sup": 11,
+    "Training-free": 2,
+    "Zero-shot": 4,
+    "Open-vocab": 1
+   }
   },
-  {
-   "name": "Multimodal / Audio",
-   "count": 12
+  "model_family": {
+   "2024": {
+    "CLIP": 2,
+    "VLM": 6,
+    "Reconstruction": 4,
+    "LLM": 5,
+    "MLLM": 1,
+    "MIL": 2,
+    "Diffusion": 1,
+    "GNN": 1
+   },
+   "2025": {
+    "CLIP": 2,
+    "VLM": 14,
+    "Diffusion": 4,
+    "Reconstruction": 4,
+    "SNN": 1,
+    "MLLM": 6,
+    "LLM": 6,
+    "MoE": 1,
+    "Agentic": 1,
+    "Normalizing-flow": 1
+   },
+   "2026": {
+    "CLIP": 2,
+    "MIL": 2,
+    "MLLM": 4,
+    "LLM": 1,
+    "MoE": 1,
+    "VLM": 3
+   }
   },
-  {
-   "name": "Reconstruction / Prediction",
-   "count": 11
+  "modality": {
+   "2024": {
+    "RGB": 21,
+    "Text": 10,
+    "Optical-flow": 2
+   },
+   "2025": {
+    "RGB": 27,
+    "Text": 17,
+    "Optical-flow": 2,
+    "Event": 1,
+    "Pose/Skeleton": 4,
+    "Audio": 2,
+    "Depth": 1
+   },
+   "2026": {
+    "RGB": 16,
+    "Text": 6
+   }
   },
-  {
-   "name": "Traffic / Driving",
-   "count": 7
+  "domain": {
+   "2024": {
+    "Surveillance": 19,
+    "Violence": 9,
+    "Traffic/Driving": 3
+   },
+   "2025": {
+    "Surveillance": 30,
+    "Violence": 8,
+    "Traffic/Driving": 2
+   },
+   "2026": {
+    "Surveillance": 15,
+    "Violence": 3
+   }
   },
-  {
-   "name": "Zero-/Open-vocab",
-   "count": 6
-  },
-  {
-   "name": "Diffusion / Flow",
-   "count": 4
-  },
-  {
-   "name": "Skeleton / Pose",
-   "count": 1
+  "method": {
+   "2024": {
+    "prompting": 5,
+    "dual-branch": 1,
+    "reconstruction": 2,
+    "prediction": 1,
+    "vision-language": 1,
+    "captioning": 1,
+    "distillation": 2,
+    "pseudo-label": 2,
+    "semantic-injection": 1,
+    "anomaly-synthesis": 1,
+    "contrastive": 1,
+    "multi-scale": 1,
+    "benchmark-construction": 6,
+    "MIL": 2,
+    "score-matching": 1,
+    "density-estimation": 1,
+    "collaborative-learning": 1,
+    "rule-reasoning": 1,
+    "cross-domain": 1,
+    "uncertainty": 1,
+    "interleaving": 1,
+    "normality-prior": 1,
+    "federated": 1,
+    "survey": 1,
+    "instruction-tuning": 1,
+    "graph": 2,
+    "hyperbolic": 1,
+    "multi-domain": 1
+   },
+   "2025": {
+    "prompting": 6,
+    "federated": 1,
+    "diffusion": 3,
+    "prediction": 3,
+    "benchmark-construction": 6,
+    "spiking": 1,
+    "cross-modal-alignment": 1,
+    "instruction-tuning": 3,
+    "verbalized-learning": 1,
+    "label-relation": 1,
+    "memory-bank": 3,
+    "tracking": 1,
+    "segmentation": 1,
+    "multimodal-fusion": 1,
+    "mixture-of-experts": 1,
+    "gaussian-splatting": 1,
+    "density-estimation": 1,
+    "autoregressive": 2,
+    "token-selection": 1,
+    "score-matching": 1,
+    "prototype": 1,
+    "captioning": 1,
+    "label-alignment": 1,
+    "online": 1,
+    "chain-of-thought": 3,
+    "RL": 1,
+    "adversarial": 1,
+    "pseudo-anomaly": 1,
+    "preference-optimization": 1,
+    "hallucination-analysis": 1,
+    "hierarchical-tree": 1,
+    "evidential-learning": 1,
+    "agent": 1,
+    "RAG": 1,
+    "causal-learning": 1,
+    "scene-debiasing": 1,
+    "normalizing-flow": 1,
+    "hyperbolic": 1,
+    "graph": 1,
+    "scene-context": 1,
+    "atomic-action": 1
+   },
+   "2026": {
+    "attention": 1,
+    "prototype": 1,
+    "MIL": 1,
+    "contrastive": 2,
+    "attention-heads": 2,
+    "training-free": 1,
+    "benchmark-construction": 2,
+    "pseudo-anomaly": 1,
+    "token-compression": 1,
+    "intention-reasoning": 1,
+    "semantic-grouping": 1,
+    "cross-granularity": 1,
+    "denoising": 1,
+    "label-refinement": 1,
+    "segment-exploration": 1,
+    "memory-bank": 1,
+    "mixture-of-experts": 1,
+    "prompting": 1,
+    "fine-tuning": 1,
+    "dataset-construction": 1,
+    "representation-steering": 1,
+    "hyperbolic": 1,
+    "vision-language": 1
+   }
   }
- ],
+ },
+ "venue_topic": {
+  "rows": [
+   "CVPR",
+   "ICCV",
+   "ECCV",
+   "BMVC",
+   "AAAI",
+   "NeurIPS",
+   "ICLR",
+   "ICML",
+   "TPAMI",
+   "TIP"
+  ],
+  "cols": [
+   "Detection",
+   "Understanding",
+   "Localization/Grounding",
+   "Reasoning",
+   "Retrieval/QA",
+   "Anticipation"
+  ],
+  "cells": [
+   [
+    22,
+    7,
+    4,
+    2,
+    1,
+    0
+   ],
+   [
+    3,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    5,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    8,
+    3,
+    1,
+    0,
+    1,
+    0
+   ],
+   [
+    11,
+    5,
+    1,
+    5,
+    1,
+    1
+   ],
+   [
+    2,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    2,
+    1,
+    1,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    3,
+    0,
+    1,
+    0,
+    0,
+    0
+   ]
+  ]
+ },
+ "cooc": {
+  "rows": [
+   "Weakly-sup",
+   "Unsupervised",
+   "Training-free",
+   "Zero-shot",
+   "Open-vocab",
+   "Federated"
+  ],
+  "cols": [
+   "VLM",
+   "LLM",
+   "MLLM",
+   "Reconstruction",
+   "CLIP",
+   "Diffusion"
+  ],
+  "cells": [
+   [
+    10,
+    1,
+    0,
+    0,
+    6,
+    0
+   ],
+   [
+    2,
+    2,
+    0,
+    7,
+    0,
+    4
+   ],
+   [
+    6,
+    5,
+    3,
+    0,
+    0,
+    0
+   ],
+   [
+    3,
+    2,
+    4,
+    0,
+    0,
+    0
+   ],
+   [
+    4,
+    1,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    1,
+    1,
+    0,
+    0,
+    1,
+    0
+   ]
+  ]
+ },
  "papers": [
   {
+   "id": "aaai2026-refinevad-semantic-guided-feature-recalibratio",
    "title": "RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection",
    "authors": "Junhee Lee, ChaeBeen Bang, MyoungChul Kim, MyeongAh Cho",
    "venue": "AAAI",
    "year": 2026,
    "url": "https://doi.org/10.1609/aaai.v40i7.37512",
    "arxiv": "2511.13204",
-   "citations": 1,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 1,
+   "months": 4,
+   "cit_per_month": 0.25,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "attention",
+    "prototype"
+   ],
+   "contribution": "method",
+   "confidence": 0.82,
+   "needs_review": false,
+   "evidence": "Semantic-Guided Feature Recalibration for WSVAD; category prototypes + temporal attention on WVAD"
   },
   {
+   "id": "aaai2026-learning-to-tell-apart-weakly-supervised-video",
    "title": "Learning to Tell Apart: Weakly Supervised Video Anomaly Detection via Disentangled Semantic Alignment",
    "authors": "Wenti Yin, Huaxin Zhang, Xiang Wang 0012, Yuqing Lu, Yicheng Zhang, Bingquan Gong, Jialong Zuo, Li Yu 0003, Changxin Gao, Nong Sang",
    "venue": "AAAI",
    "year": 2026,
    "url": "https://doi.org/10.1609/aaai.v40i14.38191",
    "arxiv": "2511.10334",
-   "citations": 1,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "Reconstruction / Prediction",
-    "Multimodal / Audio"
-   ]
+   "citations": 1,
+   "months": 4,
+   "cit_per_month": 0.25,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "CLIP",
+    "MIL"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "MIL",
+    "contrastive"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "MIL on CLIP foundation; disentangled semantic alignment on XD-Violence + UCF-Crime"
   },
   {
+   "id": "aaai2026-headhunt-vad-hunting-robust-anomaly-sensitive",
    "title": "HeadHunt-VAD: Hunting Robust Anomaly-Sensitive Heads in MLLM for Tuning-Free Video Anomaly Detection",
    "authors": "Zhaolin Cai, Fan Li 0003, Ziwei Zheng, Haixia Bi, Lijun He 0001",
    "venue": "AAAI",
    "year": 2026,
    "url": "https://doi.org/10.1609/aaai.v40i24.39066",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM"
-   ]
+   "citations": 0,
+   "months": 4,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Training-free",
+    "Zero-shot"
+   ],
+   "model_family": [
+    "MLLM"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "attention-heads",
+    "training-free"
+   ],
+   "contribution": "method",
+   "confidence": 0.6,
+   "needs_review": true,
+   "evidence": "title: anomaly-sensitive heads in MLLM for tuning-free VAD"
   },
   {
-   "title": "VAGU &amp; GtS: LLM-Based Benchmark and Framework for Joint Video Anomaly Grounding and Understanding",
+   "id": "aaai2026-vagu-amp-gts-llm-based-benchmark-and-framework",
+   "title": "VAGU & GtS: LLM-Based Benchmark and Framework for Joint Video Anomaly Grounding and Understanding",
    "authors": "Shibo Gao, Peipei Yang, Yangyang Liu, Yi Chen 0027, Han Zhu, Xu-Yao Zhang, Linlin Huang",
    "venue": "AAAI",
    "year": 2026,
    "url": "https://doi.org/10.1609/aaai.v40i6.42412",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM"
-   ]
+   "citations": 0,
+   "months": 4,
+   "cit_per_month": 0.0,
+   "task": [
+    "Localization/Grounding",
+    "Understanding"
+   ],
+   "supervision": [],
+   "model_family": [
+    "LLM",
+    "MLLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.62,
+   "needs_review": true,
+   "evidence": "title: LLM-based benchmark & framework for joint anomaly grounding and understanding"
   },
   {
+   "id": "aaai2026-finevau-a-novel-human-aligned-benchmark-for-fi",
    "title": "FineVAU: A Novel Human-Aligned Benchmark for Fine-Grained Video Anomaly Understanding",
    "authors": "João Alexandre Cardeira Pereira, Vasco Lopes, João Neves 0006, David Semedo",
    "venue": "AAAI",
    "year": 2026,
    "url": "https://doi.org/10.1609/aaai.v40i10.37790",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": []
+   "citations": 0,
+   "months": 4,
+   "cit_per_month": 0.0,
+   "task": [
+    "Understanding"
+   ],
+   "supervision": [],
+   "model_family": [],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.62,
+   "needs_review": true,
+   "evidence": "title: human-aligned benchmark for fine-grained video anomaly understanding"
   },
   {
+   "id": "cvpr2026-no-need-for-real-anomaly-mllm-empowered-zero-s",
    "title": "No Need For Real Anomaly: MLLM Empowered Zero-Shot Video Anomaly Detection",
    "authors": "Zunkai Dai, Ke Li, Jiajia Liu, Jie Yang, Yuanyuan Qiao",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Dai_No_Need_For_Real_Anomaly_MLLM_Empowered_Zero-Shot_Video_Anomaly_CVPR_2026_paper.html",
    "arxiv": "2602.19248",
-   "citations": 2,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM",
-    "Zero-/Open-vocab",
-    "Multimodal / Audio"
-   ]
+   "citations": 2,
+   "months": 1,
+   "cit_per_month": 2.0,
+   "task": [
+    "Detection",
+    "Localization/Grounding"
+   ],
+   "supervision": [
+    "Zero-shot"
+   ],
+   "model_family": [
+    "MLLM"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "pseudo-anomaly",
+    "token-compression"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "LAVIDA: zero-shot VAD, MLLM + anomaly-exposure pseudo-anomalies, frame & pixel level"
   },
   {
+   "id": "cvpr2026-weakly-supervised-video-anomaly-detection-with",
    "title": "Weakly Supervised Video Anomaly Detection with Anomaly-Connected Components and Intention Reasoning",
    "authors": "Yu Wang, Shengjie Zhao",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Weakly_Supervised_Video_Anomaly_Detection_with_Anomaly-Connected_Components_and_Intention_CVPR_2026_paper.html",
    "arxiv": "2603.00550",
-   "citations": 1,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 1,
+   "months": 1,
+   "cit_per_month": 1.0,
+   "task": [
+    "Detection",
+    "Reasoning"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "intention-reasoning",
+    "semantic-grouping"
+   ],
+   "contribution": "method",
+   "confidence": 0.82,
+   "needs_review": false,
+   "evidence": "LAS-VAD: anomaly-connected components + intention-aware reasoning on XD-Violence/UCF"
   },
   {
+   "id": "cvpr2026-fine-vad-towards-fine-grained-video-anomaly-de",
    "title": "Fine-VAD: Towards Fine-Grained Video Anomaly Detection via Progressive Cross-Granularity Learning",
    "authors": "Menghao Zhang, Yiyan Zhu, Pengfei Ren, Haifeng Sun, Qi Qi, Zirui Zhuang, Huazheng Wang, Lei Zhang, Jianxin Liao, Jingyu Wang",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Fine-VAD_Towards_Fine-Grained_Video_Anomaly_Detection_via_Progressive_Cross-Granularity_Learning_CVPR_2026_paper.html",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": []
+   "citations": 0,
+   "months": 1,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection",
+    "Understanding"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "cross-granularity"
+   ],
+   "contribution": "method",
+   "confidence": 0.55,
+   "needs_review": true,
+   "evidence": "title: fine-grained VAD via progressive cross-granularity learning"
   },
   {
+   "id": "cvpr2026-learning-from-noisy-supervision-a-denoising-de",
    "title": "Learning from Noisy Supervision: A Denoising-Debiasing Framework for Weakly Supervised Video Anomaly Detection",
    "authors": "Yaxin Zhao, Yang Wang, Wenya Guo, Sihan Xu, Xiangrui Cai, Xi Lin, Ying Zhang, Xiaojie Yuan",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.html",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 0,
+   "months": 1,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "denoising"
+   ],
+   "contribution": "method",
+   "confidence": 0.55,
+   "needs_review": true,
+   "evidence": "title: denoising-debiasing framework for WSVAD"
   },
   {
+   "id": "cvpr2026-tlma-mitigating-the-impact-of-weakly-labeled-i",
    "title": "TLMA: Mitigating the Impact of Weakly Labeled Information for Video Anomaly Detection",
    "authors": "Rong Xu, Runqi Wang, Yingjun Zhang, Tao Tao, Xiaomeng Li, Liping Jing",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xu_TLMA_Mitigating_the_Impact_of_Weakly_Labeled_Information_for_Video_CVPR_2026_paper.html",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": []
+   "citations": 0,
+   "months": 1,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "label-refinement"
+   ],
+   "contribution": "method",
+   "confidence": 0.5,
+   "needs_review": true,
+   "evidence": "title: mitigating weakly labeled information for VAD"
   },
   {
+   "id": "cvpr2026-the-road-less-seen-segment-exploration-for-wea",
    "title": "The Road Less Seen: Segment Exploration for Weakly Supervised Video Anomaly Detection",
    "authors": "Anusha Acharya, Hitesh Sapkota, Qi Yu, Xumin Liu",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Acharya_The_Road_Less_Seen_Segment_Exploration_for_Weakly_Supervised_Video_CVPR_2026_paper.html",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "Traffic / Driving"
-   ]
+   "citations": 0,
+   "months": 1,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "MIL"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "segment-exploration"
+   ],
+   "contribution": "method",
+   "confidence": 0.5,
+   "needs_review": true,
+   "evidence": "title: segment exploration for WSVAD"
   },
   {
+   "id": "cvpr2026-joint-learning-of-general-and-diverse-patterns",
    "title": "Joint Learning of General and Diverse Patterns with Mixture of Memory Experts for Weakly-Supervised Video Anomaly Detection",
    "authors": "Bo Sun, Junxi Chen, Zhe Wu, Feng Gao, Fan Yang, Li Su, Yaowei Wang",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sun_Joint_Learning_of_General_and_Diverse_Patterns_with_Mixture_of_CVPR_2026_paper.html",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 0,
+   "months": 1,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "MoE"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "memory-bank",
+    "mixture-of-experts"
+   ],
+   "contribution": "method",
+   "confidence": 0.55,
+   "needs_review": true,
+   "evidence": "title: mixture of memory experts for WSVAD"
   },
   {
+   "id": "cvpr2026-alert-clip-abnormality-aware-latent-enhanced-r",
    "title": "Alert-CLIP: Abnormality-aware Latent-Enhanced Representation Tuning of CLIP for Video Anomaly Detection",
    "authors": "Yiyan Zhu, Menghao Zhang, Haifeng Sun, Pengfei Ren, Xianao Chu, Chenye Xu, Hong Tan, Jinghan Wang, Qi Qi, Jingyu Wang",
    "venue": "CVPR",
    "year": 2026,
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_Alert-CLIP_Abnormality-aware_Latent-Enhanced_Representation_Tuning_of_CLIP_for_Video_Anomaly_CVPR_2026_paper.html",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": []
+   "citations": 0,
+   "months": 1,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "CLIP",
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "prompting",
+    "fine-tuning"
+   ],
+   "contribution": "method",
+   "confidence": 0.58,
+   "needs_review": true,
+   "evidence": "title: abnormality-aware latent-enhanced representation tuning of CLIP for VAD"
   },
   {
+   "id": "iclr2026-language-guided-open-world-video-anomaly-detec",
    "title": "Language-guided Open-world Video Anomaly Detection under Weak Supervision",
    "authors": "",
    "venue": "ICLR",
    "year": 2026,
    "url": "https://openreview.net/forum?id=70lFIQG5OB",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=70lFIQG5OB",
-   "subtopics": [
-    "Zero-/Open-vocab"
-   ]
+   "citations": 0,
+   "months": 2,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup",
+    "Open-vocab",
+    "Zero-shot"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "contrastive",
+    "dataset-construction"
+   ],
+   "contribution": "dataset",
+   "confidence": 0.86,
+   "needs_review": false,
+   "evidence": "LaGoVAD + PreVAD (35,279 videos, largest); user NL definitions at inference, zero-shot on 7 datasets"
   },
   {
+   "id": "iclr2026-steering-and-rectifying-latent-representation",
    "title": "Steering and Rectifying Latent representation manifolds in Frozen Multi-modal LLMs for Video Anomaly Detection",
    "authors": "",
    "venue": "ICLR",
    "year": 2026,
    "url": "https://openreview.net/forum?id=ol78tbpqyu",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=ol78tbpqyu",
-   "subtopics": [
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
+   "citations": 0,
+   "months": 2,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Training-free",
+    "Zero-shot"
+   ],
+   "model_family": [
+    "MLLM"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "representation-steering",
+    "attention-heads"
+   ],
+   "contribution": "method",
+   "confidence": 0.83,
+   "needs_review": false,
+   "evidence": "SteerVAD: frozen MLLM, tuning-free; steer latent-anomaly-expert heads, 1% training data"
   },
   {
+   "id": "tpami2026-piercingeye-dual-space-video-violence-detectio",
    "title": "PiercingEye: Dual-Space Video Violence Detection With Hyperbolic Vision-Language Guidance",
    "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Mengjingcheng Mo, Jiankang Zheng, Qingqing Li, Ji Gan, Xinbo Gao 0001",
    "venue": "TPAMI",
    "year": 2026,
    "url": "https://doi.org/10.1109/TPAMI.2025.3617460",
    "arxiv": "",
-   "citations": 0,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM"
-   ]
+   "citations": 0,
+   "months": 1,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Violence"
+   ],
+   "method": [
+    "hyperbolic",
+    "vision-language"
+   ],
+   "contribution": "method",
+   "confidence": 0.58,
+   "needs_review": true,
+   "evidence": "title: dual-space violence detection with hyperbolic vision-language guidance"
   },
   {
+   "id": "aaai2025-federated-weakly-supervised-video-anomaly-dete",
    "title": "Federated Weakly Supervised Video Anomaly Detection with Multimodal Prompt",
    "authors": "Benfeng Wang, Chao Huang 0008, Jie Wen 0001, Wei Wang 0169, Yabo Liu, Yong Xu 0001",
    "venue": "AAAI",
    "year": 2025,
    "url": "https://doi.org/10.1609/aaai.v39i20.35398",
    "arxiv": "",
-   "citations": 25,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
+   "citations": 25,
+   "months": 16,
+   "cit_per_month": 1.56,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup",
+    "Federated"
+   ],
+   "model_family": [
+    "CLIP",
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "prompting",
+    "federated"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "Federated WSVAD with CLIP + global/local text-prompt generator for privacy"
   },
   {
+   "id": "aaai2025-video-anomaly-detection-with-motion-and-appear",
    "title": "Video Anomaly Detection with Motion and Appearance Guided Patch Diffusion Model",
    "authors": "Hang Zhou 0010, Jiale Cai, Yuteng Ye, Yonghui Feng, Chenxing Gao, Junqing Yu, Zikai Song, Wei Yang 0034",
    "venue": "AAAI",
    "year": 2025,
    "url": "https://doi.org/10.1609/aaai.v39i10.33169",
    "arxiv": "2412.09026",
-   "citations": 24,
    "review_url": "",
-   "subtopics": [
-    "Reconstruction / Prediction",
-    "Diffusion / Flow"
-   ]
+   "citations": 24,
+   "months": 16,
+   "cit_per_month": 1.5,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Diffusion",
+    "Reconstruction"
+   ],
+   "modality": [
+    "RGB",
+    "Optical-flow"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "diffusion",
+    "prediction"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "patch diffusion model recovers normal patterns; motion+appearance conditions for frame prediction"
   },
   {
+   "id": "aaai2025-ucf-crime-dvs-a-novel-event-based-dataset-for",
    "title": "UCF-Crime-DVS: A Novel Event-Based Dataset for Video Anomaly Detection with Spiking Neural Networks",
    "authors": "Yuanbin Qian, Shuhan Ye, Chong Wang 0001, Xiaojie Cai, Jiangbo Qian, Jiafei Wu",
    "venue": "AAAI",
    "year": 2025,
    "url": "https://doi.org/10.1609/aaai.v39i6.32705",
    "arxiv": "2503.12905",
-   "citations": 22,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 22,
+   "months": 16,
+   "cit_per_month": 1.38,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "SNN"
+   ],
+   "modality": [
+    "Event"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "benchmark-construction",
+    "spiking"
+   ],
+   "contribution": "dataset",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "first DVS/event-based VAD benchmark UCF-Crime-DVS + multi-scale spiking fusion net"
   },
   {
+   "id": "aaai2025-dual-conditioned-motion-diffusion-for-pose-bas",
    "title": "Dual Conditioned Motion Diffusion for Pose-Based Video Anomaly Detection",
    "authors": "Hongsong Wang 0001, Andi Xu, Pinle Ding, Jie Gui",
    "venue": "AAAI",
    "year": 2025,
    "url": "https://doi.org/10.1609/aaai.v39i7.32829",
    "arxiv": "2412.17210",
-   "citations": 8,
    "review_url": "",
-   "subtopics": [
-    "Reconstruction / Prediction",
-    "Diffusion / Flow"
-   ]
+   "citations": 8,
+   "months": 16,
+   "cit_per_month": 0.5,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Diffusion",
+    "Reconstruction"
+   ],
+   "modality": [
+    "Pose/Skeleton"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "diffusion"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "DCMD: dual-conditioned motion diffusion for pose-based VAD, reconstruction+prediction"
   },
   {
+   "id": "aaai2025-varcmp-adapting-cross-modal-pre-training-model",
    "title": "VarCMP: Adapting Cross-Modal Pre-Training Models for Video Anomaly Retrieval",
    "authors": "Peng Wu 0015, Wanshun Su, Xiangteng He, Peng Wang 0015, Yanning Zhang 0001",
    "venue": "AAAI",
    "year": 2025,
    "url": "https://doi.org/10.1609/aaai.v39i8.32909",
    "arxiv": "",
-   "citations": 7,
    "review_url": "",
-   "subtopics": [
-    "Multimodal / Audio"
-   ]
+   "citations": 7,
+   "months": 16,
+   "cit_per_month": 0.44,
+   "task": [
+    "Retrieval/QA"
+   ],
+   "supervision": [],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text",
+    "Audio"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "cross-modal-alignment"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "VarCMP: video anomaly retrieval via cross-modal pretraining; text-video & audio-video (UCFCrime-AR, XDViolence-AR)"
   },
   {
+   "id": "cvpr2025-holmes-vau-towards-long-term-video-anomaly-und",
    "title": "Holmes-VAU: Towards Long-term Video Anomaly Understanding at Any Granularity",
    "authors": "Huaxin Zhang, Xiaohao Xu, Xiang Wang, Jialong Zuo, Xiaonan Huang, Changxin Gao, Shanjun Zhang, Li Yu, Nong Sang",
    "venue": "CVPR",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Holmes-VAU_Towards_Long-term_Video_Anomaly_Understanding_at_Any_Granularity_CVPR_2025_paper.html",
    "arxiv": "2412.06171",
-   "citations": 61,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM",
-    "Reconstruction / Prediction",
-    "Multimodal / Audio"
-   ]
+   "citations": 61,
+   "months": 12,
+   "cit_per_month": 5.08,
+   "task": [
+    "Understanding",
+    "Detection"
+   ],
+   "supervision": [],
+   "model_family": [
+    "MLLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "instruction-tuning",
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.9,
+   "needs_review": false,
+   "evidence": "HIVAU-70k hierarchical VAU benchmark + Anomaly-focused Temporal Sampler with multimodal LLM"
   },
   {
+   "id": "cvpr2025-vera-explainable-video-anomaly-detection-via-v",
    "title": "VERA: Explainable Video Anomaly Detection via Verbalized Learning of Vision-Language Models",
    "authors": "Muchao Ye, Weiyang Liu, Pan He",
    "venue": "CVPR",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Ye_VERA_Explainable_Video_Anomaly_Detection_via_Verbalized_Learning_of_Vision-Language_CVPR_2025_paper.html",
    "arxiv": "2412.01095",
-   "citations": 19,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM"
-   ]
+   "citations": 19,
+   "months": 12,
+   "cit_per_month": 1.58,
+   "task": [
+    "Detection",
+    "Understanding"
+   ],
+   "supervision": [
+    "Training-free"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "prompting",
+    "verbalized-learning"
+   ],
+   "contribution": "method",
+   "confidence": 0.87,
+   "needs_review": false,
+   "evidence": "VERA: explainable VAD via verbalized learning, no VLM parameter modification"
   },
   {
+   "id": "cvpr2025-anomize-better-open-vocabulary-video-anomaly-d",
    "title": "Anomize: Better Open Vocabulary Video Anomaly Detection",
    "authors": "Fei Li, Wenxuan Liu, Jingjing Chen, Ruixu Zhang, Yuran Wang, Xian Zhong, Zheng Wang",
    "venue": "CVPR",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_Anomize_Better_Open_Vocabulary_Video_Anomaly_Detection_CVPR_2025_paper.html",
    "arxiv": "2503.18094",
-   "citations": 17,
    "review_url": "",
-   "subtopics": [
-    "Zero-/Open-vocab"
-   ]
+   "citations": 17,
+   "months": 12,
+   "cit_per_month": 1.42,
+   "task": [
+    "Detection",
+    "Understanding"
+   ],
+   "supervision": [
+    "Open-vocab"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "label-relation"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "Anomize: OVVAD detect+classify base & novel anomalies via label relations (UCF-Crime, XD-Violence)"
   },
   {
+   "id": "cvpr2025-noise-resistant-video-anomaly-detection-via-rg",
    "title": "Noise-Resistant Video Anomaly Detection via RGB Error-Guided Multiscale Predictive Coding and Dynamic Memory",
    "authors": "Han Hu, Wenli Du, Peng Liao, Bing Wang, Siyuan Fan",
    "venue": "CVPR",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Hu_Noise-Resistant_Video_Anomaly_Detection_via_RGB_Error-Guided_Multiscale_Predictive_Coding_CVPR_2025_paper.html",
    "arxiv": "",
-   "citations": 10,
    "review_url": "",
-   "subtopics": [
-    "Reconstruction / Prediction"
-   ]
+   "citations": 10,
+   "months": 12,
+   "cit_per_month": 0.83,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Reconstruction"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "prediction",
+    "memory-bank"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "EG-MPC: next-frame prediction + reconstruction with dynamic memory, noise-resistant"
   },
   {
+   "id": "cvpr2025-echotraffic-enhancing-traffic-anomaly-understa",
    "title": "EchoTraffic: Enhancing Traffic Anomaly Understanding with Audio-Visual Insights",
    "authors": "Zhenghao Xing, Hao Chen, Binzhu Xie, Jiaqi Xu, Ziyu Guo, Xuemiao Xu, Jianye Hao, Chi-Wing Fu, Xiaowei Hu, Pheng-Ann Heng",
    "venue": "CVPR",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Xing_EchoTraffic_Enhancing_Traffic_Anomaly_Understanding_with_Audio-Visual_Insights_CVPR_2025_paper.html",
    "arxiv": "",
-   "citations": 9,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM",
-    "Multimodal / Audio",
-    "Traffic / Driving"
-   ]
+   "citations": 9,
+   "months": 12,
+   "cit_per_month": 0.75,
+   "task": [
+    "Understanding",
+    "Retrieval/QA"
+   ],
+   "supervision": [],
+   "model_family": [
+    "MLLM"
+   ],
+   "modality": [
+    "RGB",
+    "Audio",
+    "Text"
+   ],
+   "domain": [
+    "Traffic/Driving"
+   ],
+   "method": [
+    "instruction-tuning",
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "EchoTraffic + AV-TAU (29,865 videos, 149,325 Q&A): audio-visual MLLM for traffic anomaly understanding"
   },
   {
+   "id": "cvpr2025-track-any-anomalous-object-a-granular-video-an",
    "title": "Track Any Anomalous Object:A Granular Video Anomaly Detection Pipeline",
    "authors": "Yuzhi Huang, Chenxin Li, Haitao Zhang, Zixu Lin, Yunlong Lin, Hengyu Liu, Wuyang Li, Xinyu Liu, Jiechao Gao, Yue Huang, Xinghao Ding, Yixuan Yuan",
    "venue": "CVPR",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Huang_Track_Any_Anomalous_ObjectA_Granular_Video_Anomaly_Detection_Pipeline_CVPR_2025_paper.html",
    "arxiv": "2506.05175",
-   "citations": 5,
    "review_url": "",
-   "subtopics": [
-    "Traffic / Driving"
-   ]
+   "citations": 5,
+   "months": 12,
+   "cit_per_month": 0.42,
+   "task": [
+    "Detection",
+    "Localization/Grounding"
+   ],
+   "supervision": [],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Traffic/Driving"
+   ],
+   "method": [
+    "tracking",
+    "segmentation"
+   ],
+   "contribution": "method",
+   "confidence": 0.83,
+   "needs_review": false,
+   "evidence": "TAO: granular VAD as pixel-level tracking of anomalous objects, precise localization"
   },
   {
+   "id": "cvpr2025-just-dance-with-pi-a-poly-modal-inductor-for-w",
    "title": "Just Dance with pi! A Poly-modal Inductor for Weakly-supervised Video Anomaly Detection",
    "authors": "Snehashis Majhi, Giacomo D&#x27;Amicantonio, Antitza Dantcheva, Quan Kong, Lorenzo Garattoni, Gianpiero Francesca, Egor Bondarev, Francois Bremond",
    "venue": "CVPR",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Majhi_Just_Dance_with_pi_A_Poly-modal_Inductor_for_Weakly-supervised_Video_CVPR_2025_paper.html",
    "arxiv": "2505.13123",
-   "citations": 3,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
+   "citations": 3,
+   "months": 12,
+   "cit_per_month": 0.25,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Pose/Skeleton",
+    "Optical-flow",
+    "Depth"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "multimodal-fusion"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "PI-VAD augments RGB with pose, depth, panoptic, optical flow, VLM cues (training-only)"
   },
   {
+   "id": "iccv2025-mixture-of-experts-guided-by-gaussian-splatter",
    "title": "Mixture of Experts Guided by Gaussian Splatters Matters: A new Approach to Weakly-Supervised Video Anomaly Detection",
    "authors": "Giacomo D&#x27; Amicantonio, Snehashis Majhi, Quan Kong, Lorenzo Garattoni, Gianpiero Francesca, Francois Bremond, Egor Bondarev",
    "venue": "ICCV",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Amicantonio_Mixture_of_Experts_Guided_by_Gaussian_Splatters_Matters_A_new_ICCV_2025_paper.html",
    "arxiv": "2508.06318",
-   "citations": 9,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "Reconstruction / Prediction"
-   ]
+   "citations": 9,
+   "months": 8,
+   "cit_per_month": 1.12,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "MoE"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "mixture-of-experts",
+    "gaussian-splatting"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "GS-MoE: experts per anomaly type guided by temporal Gaussian-splatting loss (UCF 91.58 AUC)"
   },
   {
+   "id": "iccv2025-sequential-keypoint-density-estimator-an-overl",
    "title": "Sequential keypoint density estimator: an overlooked baseline of skeleton-based video anomaly detection",
    "authors": "Anja Delić, Matej Grcic, Siniša Šegvić",
    "venue": "ICCV",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Delic_Sequential_keypoint_density_estimator_an_overlooked_baseline_of_skeleton-based_video_ICCV_2025_paper.html",
    "arxiv": "2506.18368",
-   "citations": 5,
    "review_url": "",
-   "subtopics": [
-    "Skeleton / Pose",
-    "Reconstruction / Prediction"
-   ]
+   "citations": 5,
+   "months": 8,
+   "cit_per_month": 0.62,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [],
+   "modality": [
+    "Pose/Skeleton"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "density-estimation",
+    "autoregressive"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "SeeKer: autoregressive keypoint density over skeletons; UBnormal/MSAD-HR/ShanghaiTech"
   },
   {
+   "id": "iccv2025-aligning-effective-tokens-with-video-anomaly-i",
    "title": "Aligning Effective Tokens with Video Anomaly in Large Language Models",
    "authors": "Yingxian Chen, Jiahui Liu, Ruidi Fan, Yanwei Li, Chirui Chang, Shizhen Zhao, Wilton W. T. Fok, Xiaojuan Qi, Yik-Chung Wu",
    "venue": "ICCV",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Chen_Aligning_Effective_Tokens_with_Video_Anomaly_in_Large_Language_Models_ICCV_2025_paper.html",
    "arxiv": "2508.06350",
-   "citations": 5,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
+   "citations": 5,
+   "months": 8,
+   "cit_per_month": 0.62,
+   "task": [
+    "Understanding",
+    "Localization/Grounding"
+   ],
+   "supervision": [],
+   "model_family": [
+    "MLLM",
+    "VLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "instruction-tuning",
+    "token-selection"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "VA-GPT: MLLM summarizes & localizes abnormal events via spatial/temporal token selection"
   },
   {
+   "id": "iccv2025-autoregressive-denoising-score-matching-is-a-g",
    "title": "Autoregressive Denoising Score Matching is a Good Video Anomaly Detector",
    "authors": "Hanwen Zhang, Congqi Cao, Qinyi Lv, Lingtong Min, Yanning Zhang",
    "venue": "ICCV",
    "year": 2025,
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Autoregressive_Denoising_Score_Matching_is_a_Good_Video_Anomaly_Detector_ICCV_2025_paper.html",
    "arxiv": "2506.23282",
-   "citations": 4,
    "review_url": "",
-   "subtopics": [
-    "Diffusion / Flow"
-   ]
+   "citations": 4,
+   "months": 8,
+   "cit_per_month": 0.5,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Diffusion"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "score-matching",
+    "autoregressive"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "ADSM: noise-conditioned score transformer, autoregressive denoising score matching, likelihood-based"
   },
   {
+   "id": "icml2025-learning-event-completeness-for-weakly-supervi",
    "title": "Learning Event Completeness for Weakly Supervised Video Anomaly Detection",
    "authors": "Yu Wang, Shiwei Chen",
    "venue": "ICML",
    "year": 2025,
    "url": "https://icml.cc/virtual/2025/poster/45685",
    "arxiv": "",
+   "review_url": "",
    "citations": 0,
-   "review_url": "https://icml.cc/virtual/2025/poster/45685",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "months": 11,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection",
+    "Localization/Grounding"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "memory-bank",
+    "prototype"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "LEC-VAD: event completeness via anomaly-aware Gaussian mixture + memory-bank prototypes"
   },
   {
+   "id": "icml2025-ex-vad-explainable-fine-grained-video-anomaly",
    "title": "Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models",
    "authors": "Chao Huang, Yushu Shi, Jie Wen, Wei Wang, Yong Xu, Xiaochun Cao",
    "venue": "ICML",
    "year": 2025,
    "url": "https://icml.cc/virtual/2025/poster/43589",
    "arxiv": "",
+   "review_url": "",
    "citations": 0,
-   "review_url": "https://icml.cc/virtual/2025/poster/43589",
-   "subtopics": [
-    "VLM / LLM"
-   ]
+   "months": 11,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection",
+    "Understanding"
+   ],
+   "supervision": [],
+   "model_family": [
+    "VLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "captioning",
+    "label-alignment"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "Ex-VAD: VLM frame captions -> LLM video-level explanations + fine-grained classification"
   },
   {
+   "id": "neurips2025-monitor-exploiting-large-language-models-with",
    "title": "MoniTor: Exploiting Large Language Models with Instruction for Online Video Anomaly Detection",
    "authors": "Shengtian Yang, Yue Feng, Yingshi Liu, Jingrou Zhang, Jie Qin",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=6Had86RHix",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=6Had86RHix",
-   "subtopics": [
-    "VLM / LLM"
-   ]
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Training-free"
+   ],
+   "model_family": [
+    "VLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "prompting",
+    "memory-bank",
+    "online"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "MoniTor: online/streaming training-free VAD, VLM + LSTM-inspired scoring queue"
   },
   {
+   "id": "neurips2025-vad-r1-towards-video-anomaly-reasoning-via-per",
    "title": "Vad-R1: Towards Video Anomaly Reasoning via Perception-to-Cognition Chain-of-Thought",
    "authors": "Chao Huang, Benfeng Wang, Wei Wang, Jie Wen, Chengliang Liu, Li Shen, Xiaochun Cao",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=6eLlczxbrp",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=6eLlczxbrp",
-   "subtopics": [
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Reasoning",
+    "Understanding"
+   ],
+   "supervision": [],
+   "model_family": [
+    "MLLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "chain-of-thought",
+    "RL",
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "Vad-R1: Video Anomaly Reasoning, Perception-to-Cognition CoT + AVA-GRPO RL + Vad-Reasoning dataset"
   },
   {
+   "id": "neurips2025-frameshield-adversarially-robust-video-anomaly",
    "title": "FrameShield: Adversarially Robust Video Anomaly Detection",
    "authors": "Mojtaba Nafez, Mobina Poulaei, Nikan Vasei, Bardia soltani moakhar, Mohammad Sabokrou, Mohammad Hossein Rohban",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=7FLKzOqsKd",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=7FLKzOqsKd",
-   "subtopics": [
-    "Weakly-supervised",
-    "Reconstruction / Prediction"
-   ]
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "adversarial",
+    "pseudo-anomaly"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "FrameShield: adversarially robust WSVAD via spatiotemporal-region-distortion pseudo-anomalies"
   },
   {
+   "id": "neurips2025-a-unified-reasoning-framework-for-holistic-zer",
    "title": "A Unified Reasoning Framework for Holistic Zero-Shot Video Anomaly Analysis",
    "authors": "Dongheng Lin, Mengxue Qu, Kunyang Han, Jianbo Jiao, Xiaojie Jin, Yunchao Wei",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=Qla5PqFL0s",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=Qla5PqFL0s",
-   "subtopics": [
-    "Zero-/Open-vocab"
-   ]
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection",
+    "Localization/Grounding",
+    "Understanding",
+    "Reasoning"
+   ],
+   "supervision": [
+    "Zero-shot",
+    "Training-free"
+   ],
+   "model_family": [
+    "VLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "chain-of-thought",
+    "prompting"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "chained test-time reasoning links detection->localization->explanation, fully zero-shot"
   },
   {
+   "id": "neurips2025-do-lvlms-truly-understand-video-anomalies-reve",
    "title": "Do LVLMs Truly Understand Video Anomalies? Revealing Hallucination via Co-Occurrence Patterns",
    "authors": "Menghao Zhang, Huazheng Wang, Pengfei Ren, Kangheng Lin, Qi Qi, Haifeng Sun, Zirui Zhuang, Lei Zhang, Jianxin Liao, Jingyu Wang",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=crPlJvwHhS",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=crPlJvwHhS",
-   "subtopics": [
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Understanding",
+    "Reasoning",
+    "Detection"
+   ],
+   "supervision": [],
+   "model_family": [
+    "MLLM",
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "preference-optimization",
+    "hallucination-analysis"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "reveals LVLM hallucination via visual-textual co-occurrence; VAD-DPO counter-example DPO"
   },
   {
+   "id": "neurips2025-vadtree-explainable-training-free-video-anomal",
    "title": "VADTree: Explainable Training-Free Video Anomaly Detection via Hierarchical Granularity-Aware Tree",
    "authors": "Wenlong Li, Yifei Xu, Yuan Rao, Zhenhua Wang, Shuiguang Deng",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=fVgnP5WHXX",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=fVgnP5WHXX",
-   "subtopics": [
-    "VLM / LLM",
-    "Zero-/Open-vocab"
-   ]
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection",
+    "Reasoning"
+   ],
+   "supervision": [
+    "Training-free",
+    "Zero-shot"
+   ],
+   "model_family": [
+    "VLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "hierarchical-tree",
+    "prompting"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "VADTree: hierarchical granularity-aware tree from event boundaries; VLM node perception + LLM reasoning"
   },
   {
+   "id": "neurips2025-generalizing-single-frame-supervision-to-event",
    "title": "Generalizing Single-Frame Supervision to Event-Level Understanding for Video Anomaly Detection",
    "authors": "Junxi Chen, Liang Li, Yunbin Tu, Li Su, Zhe Xue, Qingming Huang",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=oPRNsj8AMk",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=oPRNsj8AMk",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection",
+    "Understanding"
+   ],
+   "supervision": [
+    "Single-frame"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "evidential-learning",
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "SF-VAD: single annotated abnormal frame per video; re-annotated ShanghaiTech/UCF/XD benchmarks"
   },
   {
+   "id": "neurips2025-panda-towards-generalist-video-anomaly-detecti",
    "title": "PANDA: Towards Generalist Video Anomaly Detection via Agentic AI Engineer",
    "authors": "Zhiwei Yang, Chen Gao, Mike Zheng Shou",
    "venue": "NeurIPS",
    "year": 2025,
    "url": "https://openreview.net/forum?id=qE3knKF1rz",
    "arxiv": "",
-   "citations": 0,
    "review_url": "https://openreview.net/forum?id=qE3knKF1rz",
-   "subtopics": []
+   "citations": 0,
+   "months": 6,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection",
+    "Reasoning"
+   ],
+   "supervision": [
+    "Training-free",
+    "Zero-shot"
+   ],
+   "model_family": [
+    "MLLM",
+    "Agentic"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "agent",
+    "RAG",
+    "chain-of-thought"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "PANDA: agentic MLLM engineer, scene-aware RAG + heuristic reasoning + chain-of-memory, no training"
   },
   {
+   "id": "tip2025-crcl-causal-representation-consistency-learnin",
    "title": "CRCL: Causal Representation Consistency Learning for Anomaly Detection in Surveillance Videos",
    "authors": "Yang Liu 0246, Hongjin Wang, Zepu Wang, Xiaoguang Zhu, Jing Liu 0050, Peng Sun 0007, Rui Tang, Jianwei Du, Victor C. M. Leung, Liang Song",
    "venue": "TIP",
    "year": 2025,
    "url": "https://doi.org/10.1109/TIP.2025.3558089",
    "arxiv": "",
-   "citations": 26,
    "review_url": "",
-   "subtopics": []
+   "citations": 26,
+   "months": 12,
+   "cit_per_month": 2.17,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "causal-learning",
+    "scene-debiasing"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "CRCL: causal representation consistency, scene-debiasing for unsupervised surveillance VAD"
   },
   {
+   "id": "tip2025-dual-space-normalizing-flow-for-unsupervised-v",
    "title": "Dual-Space Normalizing Flow for Unsupervised Video Anomaly Detection",
    "authors": "Jiaxu Leng, Yumeng Zhang, Mingpi Tan, Changjiang Kuang, Zhanjie Wu, Ji Gan, Xinbo Gao 0001",
    "venue": "TIP",
    "year": 2025,
    "url": "https://doi.org/10.1109/TIP.2025.3614006",
    "arxiv": "",
-   "citations": 4,
    "review_url": "",
-   "subtopics": [
-    "Reconstruction / Prediction"
-   ]
+   "citations": 4,
+   "months": 12,
+   "cit_per_month": 0.33,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Normalizing-flow"
+   ],
+   "modality": [
+    "Pose/Skeleton"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "normalizing-flow",
+    "hyperbolic",
+    "graph"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "DSNF: dual-space (Euclidean+hyperbolic) normalizing flow over skeletons, unsupervised"
   },
   {
+   "id": "tip2025-where-and-what-contextual-dynamics-aware-anoma",
    "title": "Where and What: Contextual Dynamics-Aware Anomaly Detection in Surveillance Videos",
    "authors": "Deok-Hyun Ahn, Yong-Jin Jo, Dong-Bum Kim, Gi Pyo Nam, Jae-Ho Han, Haksub Kim",
    "venue": "TIP",
    "year": 2025,
    "url": "https://doi.org/10.1109/TIP.2025.3623392",
    "arxiv": "",
-   "citations": 2,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
+   "citations": 2,
+   "months": 12,
+   "cit_per_month": 0.17,
+   "task": [
+    "Detection",
+    "Localization/Grounding"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "scene-context",
+    "atomic-action"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "TSRN: where (scene classification) + what (atomic actions), Segment-selective Focal Margin loss vs MIL"
   },
   {
+   "id": "tpami2025-scene-dependent-prediction-in-latent-space-for",
    "title": "Scene-Dependent Prediction in Latent Space for Video Anomaly Detection and Anticipation",
    "authors": "Congqi Cao, Hanwen Zhang 0017, Yue Lu 0008, Peng Wang 0015, Yanning Zhang 0001",
    "venue": "TPAMI",
    "year": 2025,
    "url": "https://doi.org/10.1109/TPAMI.2024.3461718",
    "arxiv": "",
-   "citations": 32,
    "review_url": "",
-   "subtopics": [
-    "Reconstruction / Prediction",
-    "Diffusion / Flow"
-   ]
+   "citations": 32,
+   "months": 12,
+   "cit_per_month": 2.67,
+   "task": [
+    "Detection",
+    "Anticipation"
+   ],
+   "supervision": [
+    "Semi-supervised"
+   ],
+   "model_family": [
+    "Diffusion",
+    "Reconstruction"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "prediction",
+    "diffusion",
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "NWPU Campus dataset; scene-dependent VAD + video anomaly anticipation (VAA), latent diffusion"
   },
   {
+   "id": "tpami2025-multilingual-prompt-guided-directional-feature",
    "title": "Multilingual-Prompt-Guided Directional Feature Learning for Weakly Supervised Video Anomaly Detection",
    "authors": "Chizhuo Xiao, Yang Xiao 0007, Joey Tianyi Zhou, Zhiwen Fang",
    "venue": "TPAMI",
    "year": 2025,
    "url": "https://doi.org/10.1109/TPAMI.2025.3590242",
    "arxiv": "",
-   "citations": 6,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "VLM / LLM"
-   ]
+   "citations": 6,
+   "months": 12,
+   "cit_per_month": 0.5,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "VLM",
+    "CLIP"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "prompting"
+   ],
+   "contribution": "method",
+   "confidence": 0.55,
+   "needs_review": true,
+   "evidence": "title: multilingual-prompt-guided directional feature learning for WSVAD"
   },
   {
+   "id": "aaai2024-vadclip-adapting-vision-language-models-for-we",
+   "title": "VadCLIP: Adapting Vision-Language Models for Weakly Supervised Video Anomaly Detection",
+   "authors": "Peng Wu,  Xuerong Zhou,  Guansong Pang,  Lingru Zhou,  Qingsen Yan,  Peng Wang,  Yanning Zhang",
+   "venue": "AAAI",
+   "year": 2024,
+   "url": "https://ojs.aaai.org/index.php/AAAI/article/view/28423",
+   "arxiv": "",
+   "review_url": "",
+   "citations": 90,
+   "months": 28,
+   "cit_per_month": 3.21,
+   "task": [
+    "Detection",
+    "Understanding"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "CLIP",
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "prompting",
+    "dual-branch"
+   ],
+   "contribution": "method",
+   "confidence": 0.9,
+   "needs_review": false,
+   "evidence": "VadCLIP: frozen CLIP dual-branch for coarse+fine WSVAD (84.51 AP XD-Violence, 88.02 AUC UCF)"
+  },
+  {
+   "id": "bmvc2024-hybrid-video-anomaly-detection-for-autonomous",
    "title": "Hybrid Video Anomaly Detection for Autonomous Driving",
    "authors": "Daniel Bogdoll, Jan Imhof, Tim Joseph, Svetlana Pavlitska, J. Marius Zöllner",
    "venue": "BMVC",
    "year": 2024,
    "url": "https://bmva-archive.org.uk/bmvc/2024/workshops/RROW/04_Hybrid_Video_Anomaly_Detecti.pdf",
    "arxiv": "2406.06423",
-   "citations": 3,
    "review_url": "",
-   "subtopics": [
-    "Traffic / Driving"
-   ]
+   "citations": 3,
+   "months": 19,
+   "cit_per_month": 0.16,
+   "task": [
+    "Detection",
+    "Localization/Grounding"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Reconstruction"
+   ],
+   "modality": [
+    "RGB",
+    "Optical-flow"
+   ],
+   "domain": [
+    "Traffic/Driving"
+   ],
+   "method": [
+    "reconstruction",
+    "prediction"
+   ],
+   "contribution": "application",
+   "confidence": 0.8,
+   "needs_review": false,
+   "evidence": "HF2-VAD-AD: ego-perspective normality, pixel-wise anomaly for autonomous driving"
   },
   {
+   "id": "bmvc2024-vlavad-vision-language-models-assisted-unsuper",
    "title": "VLAVAD: Vision-Language Models Assisted Unsupervised Video Anomaly Detection",
    "authors": "Changkang Li, Yalong Jiang",
    "venue": "BMVC",
    "year": 2024,
    "url": "https://bmvc2024.org/proceedings/599/",
    "arxiv": "",
-   "citations": 2,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM"
-   ]
+   "citations": 2,
+   "months": 19,
+   "cit_per_month": 0.11,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised",
+    "Training-free"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "vision-language"
+   ],
+   "contribution": "method",
+   "confidence": 0.58,
+   "needs_review": true,
+   "evidence": "title: vision-language models assisted unsupervised VAD"
   },
   {
+   "id": "cvpr2024-harnessing-large-language-models-for-training",
+   "title": "Harnessing Large Language Models for Training-free Video Anomaly Detection",
+   "authors": "Luca Zanella,  Willi Menapace,  Massimiliano Mancini,  Yiming Wang,  Elisa Ricci",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Zanella_Harnessing_Large_Language_Models_for_Training-free_Video_Anomaly_Detection_CVPR_2024_paper.html",
+   "arxiv": "2404.01014",
+   "review_url": "",
+   "citations": 40,
+   "months": 24,
+   "cit_per_month": 1.67,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Training-free",
+    "Unsupervised"
+   ],
+   "model_family": [
+    "LLM",
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "captioning",
+    "prompting"
+   ],
+   "contribution": "method",
+   "confidence": 0.9,
+   "needs_review": false,
+   "evidence": "LAVAD: training-free; VLM captions per frame + LLM temporal aggregation & scoring (UCF, XD)"
+  },
+  {
+   "id": "cvpr2024-self-distilled-masked-auto-encoders-are-effici",
+   "title": "Self-Distilled Masked Auto-Encoders are Efficient Video Anomaly Detectors",
+   "authors": "Nicolae-C?t?lin Ristea,  Florinel-Alin Croitoru,  Radu Tudor Ionescu,  Marius Popescu,  Fahad Shahbaz Khan,  Mubarak Shah",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Ristea_Self-Distilled_Masked_Auto-Encoders_are_Efficient_Video_Anomaly_Detectors_CVPR_2024_paper.html",
+   "arxiv": "2306.12041",
+   "review_url": "",
+   "citations": 37,
+   "months": 24,
+   "cit_per_month": 1.54,
+   "task": [
+    "Detection",
+    "Localization/Grounding"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Reconstruction"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "reconstruction",
+    "distillation"
+   ],
+   "contribution": "method",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "AED-MAE: lightweight masked auto-encoder, teacher-student distillation, 1655 FPS (Avenue/ShanghaiTech/UBnormal/Ped2)"
+  },
+  {
+   "id": "cvpr2024-text-prompt-with-normality-guidance-for-weakly",
+   "title": "Text Prompt with Normality Guidance for Weakly Supervised Video Anomaly Detection",
+   "authors": "Zhiwei Yang,  Jing Liu,  Peng Wu",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Yang_Text_Prompt_with_Normality_Guidance_for_Weakly_Supervised_Video_Anomaly_CVPR_2024_paper.html",
+   "arxiv": "2404.08531",
+   "review_url": "",
+   "citations": 35,
+   "months": 24,
+   "cit_per_month": 1.46,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "CLIP",
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "prompting",
+    "pseudo-label"
+   ],
+   "contribution": "method",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "TPWNG: CLIP text-prompt with normality guidance to generate frame-level pseudo-labels (UCF, XD)"
+  },
+  {
+   "id": "cvpr2024-open-vocabulary-video-anomaly-detection",
+   "title": "Open-Vocabulary Video Anomaly Detection",
+   "authors": "Peng Wu,  Xuerong Zhou,  Guansong Pang,  Yujia Sun,  Jing Liu,  Peng Wang,  Yanning Zhang",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Wu_Open-Vocabulary_Video_Anomaly_Detection_CVPR_2024_paper.html",
+   "arxiv": "2311.07042",
+   "review_url": "",
+   "citations": 34,
+   "months": 24,
+   "cit_per_month": 1.42,
+   "task": [
+    "Detection",
+    "Understanding"
+   ],
+   "supervision": [
+    "Open-vocab"
+   ],
+   "model_family": [
+    "VLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "semantic-injection",
+    "anomaly-synthesis"
+   ],
+   "contribution": "method",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "OVVAD: decouple class-agnostic detection + class-specific classification; LLM semantics + generated anomalies"
+  },
+  {
+   "id": "cvpr2024-multi-scale-video-anomaly-detection-by-multi-g",
+   "title": "Multi-Scale Video Anomaly Detection by Multi-Grained Spatio-Temporal Representation Learning",
+   "authors": "Menghao Zhang,  Jingyu Wang,  Qi Qi,  Haifeng Sun,  Zirui Zhuang,  Pengfei Ren,  Ruilong Ma,  Jianxin Liao",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Zhang_Multi-Scale_Video_Anomaly_Detection_by_Multi-Grained_Spatio-Temporal_Representation_Learning_CVPR_2024_paper.html",
+   "arxiv": "",
+   "review_url": "",
+   "citations": 20,
+   "months": 24,
+   "cit_per_month": 0.83,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Reconstruction"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "contrastive",
+    "multi-scale"
+   ],
+   "contribution": "method",
+   "confidence": 0.83,
+   "needs_review": false,
+   "evidence": "multi-grained spatio-temporal proxy tasks; contrastive missing-frame estimation, small-scale anomalies"
+  },
+  {
+   "id": "cvpr2024-uncovering-what-why-and-how-a-comprehensive-be",
+   "title": "Uncovering What Why and How: A Comprehensive Benchmark for Causation Understanding of Video Anomaly",
+   "authors": "",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Du_Uncovering_What_Why_and_How_A_Comprehensive_Benchmark_for_Causation_CVPR_2024_paper.html",
+   "arxiv": "",
+   "review_url": "",
+   "citations": 20,
+   "months": 24,
+   "cit_per_month": 0.83,
+   "task": [
+    "Understanding",
+    "Reasoning"
+   ],
+   "supervision": [],
+   "model_family": [
+    "MLLM",
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.7,
+   "needs_review": true,
+   "evidence": "title (CUVA): comprehensive benchmark for causation understanding (what/why/how) of video anomaly"
+  },
+  {
+   "id": "cvpr2024-prompt-enhanced-multiple-instance-learning-for",
+   "title": "Prompt-Enhanced Multiple Instance Learning for Weakly Supervised Video Anomaly Detection",
+   "authors": "Junxi Chen,  Liang Li,  Li Su,  Zheng-jun Zha,  Qingming Huang",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Chen_Prompt-Enhanced_Multiple_Instance_Learning_for_Weakly_Supervised_Video_Anomaly_Detection_CVPR_2024_paper.html",
+   "arxiv": "",
+   "review_url": "",
+   "citations": 16,
+   "months": 24,
+   "cit_per_month": 0.67,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "MIL"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "MIL",
+    "prompting"
+   ],
+   "contribution": "method",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "PE-MIL: prompt-enhanced MIL with abnormal-aware + normal-context prompts for clear boundaries"
+  },
+  {
+   "id": "cvpr2024-mulde-multiscale-log-density-estimation-via-de",
+   "title": "MULDE: Multiscale Log-Density Estimation via Denoising Score Matching for Video Anomaly Detection",
+   "authors": "Jakub Micorek,  Horst Possegger,  Dominik Narnhofer,  Horst Bischof,  Mateusz Kozinski",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Micorek_MULDE_Multiscale_Log-Density_Estimation_via_Denoising_Score_Matching_for_Video_CVPR_2024_paper.html",
+   "arxiv": "2403.14497",
+   "review_url": "",
+   "citations": 12,
+   "months": 24,
+   "cit_per_month": 0.5,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "Diffusion"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "score-matching",
+    "density-estimation"
+   ],
+   "contribution": "method",
+   "confidence": 0.87,
+   "needs_review": false,
+   "evidence": "MULDE: multiscale log-density via denoising score matching + GMM, object- and frame-centric"
+  },
+  {
+   "id": "cvpr2024-collaborative-learning-of-anomalies-with-priva",
+   "title": "Collaborative Learning of Anomalies with Privacy (CLAP) for Unsupervised Video Anomaly Detection: A New Baseline",
+   "authors": "Anas Al-lahham,  Muhammad Zaigham Zaheer,  Nurbek Tastan,  Karthik Nandakumar",
+   "venue": "CVPR",
+   "year": 2024,
+   "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Al-lahham_Collaborative_Learning_of_Anomalies_with_Privacy_CLAP_for_Unsupervised_Video_CVPR_2024_paper.html",
+   "arxiv": "2404.00847",
+   "review_url": "",
+   "citations": 8,
+   "months": 24,
+   "cit_per_month": 0.33,
+   "task": [
+    "Detection",
+    "Localization/Grounding"
+   ],
+   "supervision": [
+    "Unsupervised",
+    "Federated"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "collaborative-learning",
+    "benchmark-construction"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "CLAP: fully-unsupervised privacy-preserving distributed VAD baseline + new protocols (UCF, XD)"
+  },
+  {
+   "id": "eccv2024-follow-the-rules-reasoning-for-video-anomaly-d",
    "title": "Follow the Rules: Reasoning for Video Anomaly Detection with Large Language Models",
    "authors": "Yuchen Yang 0001, Kwonjoon Lee, Behzad Dariush, Yinzhi Cao, Shao-Yuan Lo",
    "venue": "ECCV",
    "year": 2024,
    "url": "https://doi.org/10.1007/978-3-031-73004-7_18",
    "arxiv": "2407.10299",
-   "citations": 84,
    "review_url": "",
-   "subtopics": [
-    "VLM / LLM",
-    "Traffic / Driving"
-   ]
+   "citations": 84,
+   "months": 20,
+   "cit_per_month": 4.2,
+   "task": [
+    "Detection",
+    "Reasoning"
+   ],
+   "supervision": [
+    "Unsupervised",
+    "Training-free"
+   ],
+   "model_family": [
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "rule-reasoning",
+    "prompting"
+   ],
+   "contribution": "method",
+   "confidence": 0.9,
+   "needs_review": false,
+   "evidence": "AnomalyRuler: LLM induction (normal rules) + deduction; first reasoning approach for one-class VAD"
   },
   {
+   "id": "eccv2024-cross-domain-learning-for-video-anomaly-detect",
    "title": "Cross-Domain Learning for Video Anomaly Detection with Limited Supervision",
    "authors": "Yashika Jain, Ali Dabouei, Min Xu",
    "venue": "ECCV",
    "year": 2024,
    "url": "https://doi.org/10.1007/978-3-031-73404-5_27",
    "arxiv": "2408.05191",
-   "citations": 8,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised",
-    "Reconstruction / Prediction"
-   ]
+   "citations": 8,
+   "months": 20,
+   "cit_per_month": 0.4,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "cross-domain",
+    "uncertainty"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "CDL: weakly-supervised cross-domain VAD using external unlabeled data + uncertainty (UCF, XD)"
   },
   {
+   "id": "eccv2024-interleaving-one-class-and-weakly-supervised-m",
    "title": "Interleaving One-Class and Weakly-Supervised Models with Adaptive Thresholding for Unsupervised Video Anomaly Detection",
    "authors": "Yongwei Nie, Hao Huang, Chengjiang Long, Qing Zhang 0006, Pradipta Maji, Hongmin Cai",
    "venue": "ECCV",
    "year": 2024,
    "url": "https://doi.org/10.1007/978-3-031-73404-5_26",
    "arxiv": "2401.13551",
-   "citations": 8,
    "review_url": "",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 8,
+   "months": 20,
+   "cit_per_month": 0.4,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised",
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "pseudo-label",
+    "interleaving"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "UVAD: interleave weighted-OCC and WS models generating pseudo-labels for each other, no labels"
   },
   {
+   "id": "eccv2024-learning-anomalies-with-normality-prior-for-un",
    "title": "Learning Anomalies with Normality Prior for Unsupervised Video Anomaly Detection",
    "authors": "Haoyue Shi 0002, Le Wang 0003, Sanping Zhou, Gang Hua 0001, Wei Tang 0016",
    "venue": "ECCV",
    "year": 2024,
    "url": "https://doi.org/10.1007/978-3-031-72658-3_10",
    "arxiv": "",
-   "citations": 7,
    "review_url": "",
-   "subtopics": []
+   "citations": 7,
+   "months": 20,
+   "cit_per_month": 0.35,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "normality-prior"
+   ],
+   "contribution": "method",
+   "confidence": 0.55,
+   "needs_review": true,
+   "evidence": "title: learning anomalies with normality prior for unsupervised VAD"
   },
   {
+   "id": "eccv2024-fedvad-enhancing-federated-video-anomaly-detec",
    "title": "FedVAD: Enhancing Federated Video Anomaly Detection with GPT-Driven Semantic Distillation",
    "authors": "Fan Qi, Ruijie Pan, Huaiwen Zhang, Changsheng Xu",
    "venue": "ECCV",
    "year": 2024,
    "url": "https://doi.org/10.1007/978-3-031-73668-1_14",
    "arxiv": "",
-   "citations": 5,
    "review_url": "",
-   "subtopics": []
+   "citations": 5,
+   "months": 20,
+   "cit_per_month": 0.25,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup",
+    "Federated"
+   ],
+   "model_family": [
+    "LLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "federated",
+    "distillation"
+   ],
+   "contribution": "method",
+   "confidence": 0.58,
+   "needs_review": true,
+   "evidence": "title: federated VAD with GPT-driven semantic distillation"
   },
   {
+   "id": "neurips2024-advancing-video-anomaly-detection-a-concise-re",
    "title": "Advancing Video Anomaly Detection: A Concise Review and a New Dataset",
    "authors": "Liyun Zhu, Lei Wang, Arjun Raj, Tom Gedeon, Chen Chen",
    "venue": "NeurIPS",
    "year": 2024,
    "url": "https://neurips.cc/virtual/2024/poster/97585",
    "arxiv": "",
+   "review_url": "",
    "citations": 14,
-   "review_url": "https://neurips.cc/virtual/2024/poster/97585",
-   "subtopics": [
-    "Traffic / Driving"
-   ]
+   "months": 18,
+   "cit_per_month": 0.78,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Traffic/Driving"
+   ],
+   "method": [
+    "survey",
+    "benchmark-construction"
+   ],
+   "contribution": "survey",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "concise review of VAD models/datasets + new MSAD dataset (14 scenarios)"
   },
   {
+   "id": "neurips2024-hawk-learning-to-understand-open-world-video-a",
    "title": "HAWK: Learning to Understand Open-World Video Anomalies",
    "authors": "Jiaqi Tang, Hao LU, RUIZHENG WU, Xiaogang Xu, Ke Ma, Cheng Fang, Bin Guo, Jiangbo Lu, Qifeng Chen, Ying-Cong Chen",
    "venue": "NeurIPS",
    "year": 2024,
    "url": "https://neurips.cc/virtual/2024/poster/93219",
    "arxiv": "",
+   "review_url": "",
    "citations": 11,
-   "review_url": "https://neurips.cc/virtual/2024/poster/93219",
-   "subtopics": [
-    "VLM / LLM",
-    "Zero-/Open-vocab"
-   ]
+   "months": 18,
+   "cit_per_month": 0.61,
+   "task": [
+    "Understanding",
+    "Retrieval/QA"
+   ],
+   "supervision": [
+    "Open-vocab"
+   ],
+   "model_family": [
+    "VLM"
+   ],
+   "modality": [
+    "RGB",
+    "Optical-flow",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "instruction-tuning",
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "HAWK: interactive VLM for open-world video anomaly understanding; 8k annotated videos + 8k QA pairs"
   },
   {
+   "id": "neurips2024-ft-aed-benchmark-dataset-for-early-freeway-tra",
    "title": "FT-AED: Benchmark Dataset for Early Freeway Traffic Anomalous Event Detection",
    "authors": "Austin Coursey, JUNYI JI, Marcos Quinones Grueiro, William Barbour, Yuhang Zhang, Tyler Derr, Gautam Biswas, Daniel Work",
    "venue": "NeurIPS",
    "year": 2024,
    "url": "https://neurips.cc/virtual/2024/poster/97562",
    "arxiv": "",
+   "review_url": "",
    "citations": 5,
-   "review_url": "https://neurips.cc/virtual/2024/poster/97562",
-   "subtopics": [
-    "Traffic / Driving"
-   ]
+   "months": 18,
+   "cit_per_month": 0.28,
+   "task": [
+    "Detection",
+    "Anticipation"
+   ],
+   "supervision": [
+    "Unsupervised"
+   ],
+   "model_family": [
+    "GNN",
+    "Reconstruction"
+   ],
+   "modality": [],
+   "domain": [
+    "Traffic/Driving"
+   ],
+   "method": [
+    "benchmark-construction",
+    "graph"
+   ],
+   "contribution": "dataset",
+   "confidence": 0.65,
+   "needs_review": true,
+   "evidence": "FT-AED: lane-level freeway radar-sensor anomaly dataset (note: sensor time-series, not RGB video); GNN autoencoder"
   },
   {
+   "id": "neurips2024-beyond-euclidean-dual-space-representation-lea",
    "title": "Beyond Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection",
    "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen, Xinbo Gao",
    "venue": "NeurIPS",
    "year": 2024,
    "url": "https://neurips.cc/virtual/2024/poster/95026",
    "arxiv": "",
+   "review_url": "",
    "citations": 3,
-   "review_url": "https://neurips.cc/virtual/2024/poster/95026",
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "months": 18,
+   "cit_per_month": 0.17,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Violence"
+   ],
+   "method": [
+    "hyperbolic",
+    "graph"
+   ],
+   "contribution": "method",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "DSRL: dual-space (Euclidean+hyperbolic) representation for weakly-supervised video violence detection"
   },
   {
+   "id": "neurips2024-towards-multi-domain-learning-for-generalizabl",
    "title": "Towards Multi-Domain Learning for Generalizable Video Anomaly Detection",
    "authors": "MyeongAh Cho, Taeoh Kim, Minho Shim, Dongyoon Wee, Sangyoun Lee",
    "venue": "NeurIPS",
    "year": 2024,
    "url": "https://neurips.cc/virtual/2024/poster/92985",
    "arxiv": "",
+   "review_url": "",
    "citations": 1,
-   "review_url": "https://neurips.cc/virtual/2024/poster/92985",
-   "subtopics": []
+   "months": 18,
+   "cit_per_month": 0.06,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Weakly-sup"
+   ],
+   "model_family": [
+    "MIL"
+   ],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance",
+    "Violence"
+   ],
+   "method": [
+    "multi-domain",
+    "MIL",
+    "benchmark-construction"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.85,
+   "needs_review": false,
+   "evidence": "MDVAD: multi-domain WSVAD across six datasets; Null-angular MIL + abnormal-conflict classifier"
   }
  ],
+ "criteria": {
+  "include": "Papers are included if their title/abstract explicitly targets video anomaly detection, understanding, grounding or reasoning, video violence detection, traffic/road anomaly detection, or closely related abnormal-event analysis in video.",
+  "exclude": "Generic image anomaly detection, industrial defect detection, medical-image anomaly, graph/tabular/time-series anomaly, and deepfake/forgery detection are excluded unless the paper explicitly addresses a video anomaly task."
+ },
  "sources": [
   "CVF Open Access",
   "Paper Copilot",
   "DBLP",
   "Semantic Scholar"
- ]
+ ],
+ "tagged": 53
 }
