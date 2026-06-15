@@ -386,9 +386,7 @@ fetch("data.json").then(r=>r.json()).then(D=>{
   const vrank=v=>{const i=VORDER.indexOf(v);return i<0?99:i;};
   const SORTS={
     recent:(a,b)=>b.year-a.year||vrank(a.venue)-vrank(b.venue)||b.citations-a.citations,
-    venue:(a,b)=>vrank(a.venue)-vrank(b.venue)||b.year-a.year||b.citations-a.citations,
     citations:(a,b)=>b.citations-a.citations||b.year-a.year,
-    permonth:(a,b)=>b.cit_per_month-a.cit_per_month||b.year-a.year,
   };
   let curFilter=null,curSort="recent";
   function render(){
@@ -411,15 +409,16 @@ fetch("data.json").then(r=>r.json()).then(D=>{
   }
   render();
 
-  /* sort control (Venue groups by the venue order used in the trend matrix) */
+  /* sort: a single toggle between most-recent and most-cited */
   const sortSeg=document.getElementById("sort-seg");
-  const SORTL=[["recent","Recent"],["venue","Venue"],["citations","Citations"],["permonth","Cit / month"]];
-  sortSeg.innerHTML=`<span class="seg-label">Sort</span>`+SORTL.map(([k,l])=>
-    `<button data-s="${k}" class="${k===curSort?'on':''}" style="${k===curSort?'background:var(--c2);border-color:var(--c2)':''}">${l}</button>`).join("");
-  sortSeg.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;curSort=b.dataset.s;
-    sortSeg.querySelectorAll("button").forEach(x=>{const on=x===b;x.classList.toggle("on",on);
-      x.style.background=on?'var(--c2)':'';x.style.borderColor=on?'var(--c2)':'';});
-    render();});
+  const SORTLBL={recent:"Most recent",citations:"Most cited"};
+  function paintSort(){
+    sortSeg.innerHTML=`<span class="seg-label">Sort</span>`+
+      `<button id="sortbtn" class="on" style="background:var(--c2);border-color:var(--c2)" title="Toggle sort order">⇄ ${SORTLBL[curSort]}</button>`;
+  }
+  sortSeg.addEventListener("click",e=>{if(!e.target.closest("#sortbtn"))return;
+    curSort=curSort==="recent"?"citations":"recent";paintSort();render();});
+  paintSort();
 
   const chips=document.getElementById("chips");
   const chipCol=(ax,l)=>ax==="venue"?(VENUE_C[l]||"#ff8a5b"):AXIS_C[ax];
