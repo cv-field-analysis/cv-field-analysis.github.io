@@ -20,7 +20,7 @@
   2025,
   2026
  ],
- "total": 69,
+ "total": 68,
  "axis_order": [
   {
    "key": "task",
@@ -136,7 +136,7 @@
    "venue": "NeurIPS",
    "year": 2024,
    "status": "ok",
-   "count": 5,
+   "count": 4,
    "total": 4562
   },
   {
@@ -242,7 +242,7 @@
   "task": [
    {
     "name": "Detection",
-    "count": 61
+    "count": 60
    },
    {
     "name": "Understanding",
@@ -250,7 +250,7 @@
    },
    {
     "name": "Localization/Grounding",
-    "count": 10
+    "count": 11
    },
    {
     "name": "Reasoning",
@@ -258,11 +258,11 @@
    },
    {
     "name": "Retrieval/QA",
-    "count": 3
+    "count": 4
    },
    {
     "name": "Anticipation",
-    "count": 2
+    "count": 1
    }
   ],
   "supervision": [
@@ -272,11 +272,11 @@
    },
    {
     "name": "Unsupervised",
-    "count": 18
+    "count": 17
    },
    {
     "name": "Training-free",
-    "count": 10
+    "count": 11
    },
    {
     "name": "Zero-shot",
@@ -306,15 +306,15 @@
    },
    {
     "name": "LLM",
-    "count": 12
+    "count": 13
    },
    {
     "name": "MLLM",
-    "count": 11
+    "count": 12
    },
    {
     "name": "Reconstruction",
-    "count": 8
+    "count": 7
    },
    {
     "name": "CLIP",
@@ -334,10 +334,6 @@
    },
    {
     "name": "Agentic",
-    "count": 1
-   },
-   {
-    "name": "GNN",
     "count": 1
    },
    {
@@ -390,17 +386,21 @@
    },
    {
     "name": "Traffic/Driving",
-    "count": 5
+    "count": 4
    }
   ],
   "method": [
    {
-    "name": "benchmark-construction",
+    "name": "prompting",
     "count": 14
    },
    {
-    "name": "prompting",
-    "count": 12
+    "name": "benchmark-construction",
+    "count": 13
+   },
+   {
+    "name": "contrastive",
+    "count": 4
    },
    {
     "name": "instruction-tuning",
@@ -423,15 +423,7 @@
     "count": 3
    },
    {
-    "name": "contrastive",
-    "count": 3
-   },
-   {
     "name": "diffusion",
-    "count": 3
-   },
-   {
-    "name": "graph",
     "count": 3
    },
    {
@@ -460,6 +452,10 @@
    },
    {
     "name": "federated",
+    "count": 2
+   },
+   {
+    "name": "graph",
     "count": 2
    },
    {
@@ -694,7 +690,7 @@
    },
    {
     "name": "dataset",
-    "count": 3
+    "count": 2
    },
    {
     "name": "application",
@@ -709,12 +705,11 @@
  "by_year": {
   "task": {
    "2024": {
-    "Detection": 20,
+    "Detection": 19,
     "Understanding": 4,
     "Localization/Grounding": 3,
     "Reasoning": 2,
-    "Retrieval/QA": 1,
-    "Anticipation": 1
+    "Retrieval/QA": 1
    },
    "2025": {
     "Detection": 27,
@@ -726,15 +721,16 @@
    },
    "2026": {
     "Detection": 14,
-    "Localization/Grounding": 2,
+    "Localization/Grounding": 3,
     "Understanding": 3,
+    "Retrieval/QA": 1,
     "Reasoning": 1
    }
   },
   "supervision": {
    "2024": {
     "Weakly-sup": 8,
-    "Unsupervised": 11,
+    "Unsupervised": 10,
     "Training-free": 3,
     "Open-vocab": 2,
     "Federated": 2
@@ -751,7 +747,7 @@
    },
    "2026": {
     "Weakly-sup": 11,
-    "Training-free": 2,
+    "Training-free": 3,
     "Zero-shot": 4,
     "Open-vocab": 1
    }
@@ -760,12 +756,11 @@
    "2024": {
     "CLIP": 2,
     "VLM": 6,
-    "Reconstruction": 4,
+    "Reconstruction": 3,
     "LLM": 5,
     "MLLM": 1,
     "MIL": 2,
-    "Diffusion": 1,
-    "GNN": 1
+    "Diffusion": 1
    },
    "2025": {
     "CLIP": 2,
@@ -782,8 +777,8 @@
    "2026": {
     "CLIP": 2,
     "MIL": 2,
-    "MLLM": 4,
-    "LLM": 1,
+    "MLLM": 5,
+    "LLM": 2,
     "MoE": 1,
     "VLM": 3
    }
@@ -812,7 +807,7 @@
    "2024": {
     "Surveillance": 19,
     "Violence": 9,
-    "Traffic/Driving": 3
+    "Traffic/Driving": 2
    },
    "2025": {
     "Surveillance": 30,
@@ -826,7 +821,7 @@
   },
   "method": {
    "2024": {
-    "prompting": 5,
+    "prompting": 6,
     "dual-branch": 1,
     "reconstruction": 2,
     "prediction": 1,
@@ -838,7 +833,7 @@
     "anomaly-synthesis": 1,
     "contrastive": 1,
     "multi-scale": 1,
-    "benchmark-construction": 6,
+    "benchmark-construction": 5,
     "MIL": 2,
     "score-matching": 1,
     "density-estimation": 1,
@@ -851,8 +846,8 @@
     "federated": 1,
     "survey": 1,
     "instruction-tuning": 1,
-    "graph": 2,
     "hyperbolic": 1,
+    "graph": 1,
     "multi-domain": 1
    },
    "2025": {
@@ -902,10 +897,11 @@
     "attention": 1,
     "prototype": 1,
     "MIL": 1,
-    "contrastive": 2,
+    "contrastive": 3,
     "attention-heads": 2,
     "training-free": 1,
     "benchmark-construction": 2,
+    "prompting": 2,
     "pseudo-anomaly": 1,
     "token-compression": 1,
     "intention-reasoning": 1,
@@ -916,7 +912,6 @@
     "segment-exploration": 1,
     "memory-bank": 1,
     "mixture-of-experts": 1,
-    "prompting": 1,
     "fine-tuning": 1,
     "dataset-construction": 1,
     "representation-steering": 1,
@@ -982,18 +977,18 @@
    [
     8,
     3,
-    1,
+    2,
     0,
-    1,
+    2,
     0
    ],
    [
-    11,
+    10,
     5,
     1,
     5,
     1,
-    1
+    0
    ],
    [
     2,
@@ -1049,7 +1044,7 @@
   "cells": [
    [
     10,
-    1,
+    2,
     0,
     0,
     6,
@@ -1059,14 +1054,14 @@
     2,
     2,
     0,
-    7,
+    6,
     0,
     4
    ],
    [
     6,
-    5,
-    3,
+    6,
+    4,
     0,
     0,
     0
@@ -1179,13 +1174,14 @@
    "venue": "AAAI",
    "year": 2026,
    "url": "https://doi.org/10.1609/aaai.v40i24.39066",
-   "arxiv": "",
+   "arxiv": "2512.17601",
    "review_url": "",
    "citations": 0,
    "months": 4,
    "cit_per_month": 0.0,
    "task": [
-    "Detection"
+    "Detection",
+    "Localization/Grounding"
    ],
    "supervision": [
     "Training-free",
@@ -1205,9 +1201,9 @@
     "training-free"
    ],
    "contribution": "method",
-   "confidence": 0.6,
-   "needs_review": true,
-   "evidence": "title: anomaly-sensitive heads in MLLM for tuning-free VAD"
+   "confidence": 0.86,
+   "needs_review": false,
+   "evidence": "tuning-free VAD probing robust anomaly-sensitive attention heads in a frozen MLLM + lightweight scorer/temporal locator"
   },
   {
    "id": "aaai2026-vagu-amp-gts-llm-based-benchmark-and-framework",
@@ -1216,18 +1212,56 @@
    "venue": "AAAI",
    "year": 2026,
    "url": "https://doi.org/10.1609/aaai.v40i6.42412",
-   "arxiv": "",
+   "arxiv": "2507.21507",
    "review_url": "",
    "citations": 0,
    "months": 4,
    "cit_per_month": 0.0,
    "task": [
     "Localization/Grounding",
+    "Understanding",
+    "Retrieval/QA"
+   ],
+   "supervision": [
+    "Training-free"
+   ],
+   "model_family": [
+    "LLM",
+    "MLLM"
+   ],
+   "modality": [
+    "RGB",
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [
+    "benchmark-construction",
+    "prompting"
+   ],
+   "contribution": "benchmark",
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "VAGU: first benchmark joining grounding+understanding+VideoQA; GtS training-free Glance-then-Scrutinize + JeAUG metric"
+  },
+  {
+   "id": "aaai2026-finevau-a-novel-human-aligned-benchmark-for-fi",
+   "title": "FineVAU: A Novel Human-Aligned Benchmark for Fine-Grained Video Anomaly Understanding",
+   "authors": "João Alexandre Cardeira Pereira, Vasco Lopes, João Neves 0006, David Semedo",
+   "venue": "AAAI",
+   "year": 2026,
+   "url": "https://doi.org/10.1609/aaai.v40i10.37790",
+   "arxiv": "2601.17258",
+   "review_url": "",
+   "citations": 0,
+   "months": 4,
+   "cit_per_month": 0.0,
+   "task": [
     "Understanding"
    ],
    "supervision": [],
    "model_family": [
-    "LLM",
     "MLLM"
    ],
    "modality": [
@@ -1241,41 +1275,9 @@
     "benchmark-construction"
    ],
    "contribution": "benchmark",
-   "confidence": 0.62,
-   "needs_review": true,
-   "evidence": "title: LLM-based benchmark & framework for joint anomaly grounding and understanding"
-  },
-  {
-   "id": "aaai2026-finevau-a-novel-human-aligned-benchmark-for-fi",
-   "title": "FineVAU: A Novel Human-Aligned Benchmark for Fine-Grained Video Anomaly Understanding",
-   "authors": "João Alexandre Cardeira Pereira, Vasco Lopes, João Neves 0006, David Semedo",
-   "venue": "AAAI",
-   "year": 2026,
-   "url": "https://doi.org/10.1609/aaai.v40i10.37790",
-   "arxiv": "",
-   "review_url": "",
-   "citations": 0,
-   "months": 4,
-   "cit_per_month": 0.0,
-   "task": [
-    "Understanding"
-   ],
-   "supervision": [],
-   "model_family": [],
-   "modality": [
-    "RGB",
-    "Text"
-   ],
-   "domain": [
-    "Surveillance"
-   ],
-   "method": [
-    "benchmark-construction"
-   ],
-   "contribution": "benchmark",
-   "confidence": 0.62,
-   "needs_review": true,
-   "evidence": "title: human-aligned benchmark for fine-grained video anomaly understanding"
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "FineVAU: fine-grained VAU benchmark (What/Who/Where) + FVScore human-aligned metric + FineW3 dataset; evaluates LVLMs"
   },
   {
    "id": "cvpr2026-no-need-for-real-anomaly-mllm-empowered-zero-s",
@@ -1641,7 +1643,7 @@
    "venue": "TPAMI",
    "year": 2026,
    "url": "https://doi.org/10.1109/TPAMI.2025.3617460",
-   "arxiv": "",
+   "arxiv": "2504.18866",
    "review_url": "",
    "citations": 0,
    "months": 1,
@@ -1653,7 +1655,8 @@
     "Weakly-sup"
    ],
    "model_family": [
-    "VLM"
+    "VLM",
+    "LLM"
    ],
    "modality": [
     "RGB",
@@ -1664,12 +1667,13 @@
    ],
    "method": [
     "hyperbolic",
+    "contrastive",
     "vision-language"
    ],
    "contribution": "method",
-   "confidence": 0.58,
-   "needs_review": true,
-   "evidence": "title: dual-space violence detection with hyperbolic vision-language guidance"
+   "confidence": 0.87,
+   "needs_review": false,
+   "evidence": "weakly-sup VVD; dual-space Euclidean+hyperbolic + LLM-generated ambiguous descriptions + hyperbolic VL contrastive (XD-Violence, UCF)"
   },
   {
    "id": "aaai2025-federated-weakly-supervised-video-anomaly-dete",
@@ -3144,7 +3148,7 @@
    "venue": "CVPR",
    "year": 2024,
    "url": "https://openaccess.thecvf.com/content/CVPR2024/html/Du_Uncovering_What_Why_and_How_A_Comprehensive_Benchmark_for_Causation_CVPR_2024_paper.html",
-   "arxiv": "",
+   "arxiv": "2405.00181",
    "review_url": "",
    "citations": 20,
    "months": 24,
@@ -3166,12 +3170,13 @@
     "Surveillance"
    ],
    "method": [
-    "benchmark-construction"
+    "benchmark-construction",
+    "prompting"
    ],
    "contribution": "benchmark",
-   "confidence": 0.7,
-   "needs_review": true,
-   "evidence": "title (CUVA): comprehensive benchmark for causation understanding (what/why/how) of video anomaly"
+   "confidence": 0.88,
+   "needs_review": false,
+   "evidence": "CUVA: causation-understanding benchmark (what anomaly / why / how severe) + MMEval metric + prompt-based baseline"
   },
   {
    "id": "cvpr2024-prompt-enhanced-multiple-instance-learning-for",
@@ -3537,42 +3542,6 @@
    "evidence": "HAWK: interactive VLM for open-world video anomaly understanding; 8k annotated videos + 8k QA pairs"
   },
   {
-   "id": "neurips2024-ft-aed-benchmark-dataset-for-early-freeway-tra",
-   "title": "FT-AED: Benchmark Dataset for Early Freeway Traffic Anomalous Event Detection",
-   "authors": "Austin Coursey, JUNYI JI, Marcos Quinones Grueiro, William Barbour, Yuhang Zhang, Tyler Derr, Gautam Biswas, Daniel Work",
-   "venue": "NeurIPS",
-   "year": 2024,
-   "url": "https://neurips.cc/virtual/2024/poster/97562",
-   "arxiv": "",
-   "review_url": "",
-   "citations": 5,
-   "months": 18,
-   "cit_per_month": 0.28,
-   "task": [
-    "Detection",
-    "Anticipation"
-   ],
-   "supervision": [
-    "Unsupervised"
-   ],
-   "model_family": [
-    "GNN",
-    "Reconstruction"
-   ],
-   "modality": [],
-   "domain": [
-    "Traffic/Driving"
-   ],
-   "method": [
-    "benchmark-construction",
-    "graph"
-   ],
-   "contribution": "dataset",
-   "confidence": 0.65,
-   "needs_review": true,
-   "evidence": "FT-AED: lane-level freeway radar-sensor anomaly dataset (note: sensor time-series, not RGB video); GNN autoencoder"
-  },
-  {
    "id": "neurips2024-beyond-euclidean-dual-space-representation-lea",
    "title": "Beyond Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection",
    "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen, Xinbo Gao",
@@ -3655,5 +3624,5 @@
   "DBLP",
   "Semantic Scholar"
  ],
- "tagged": 53
+ "tagged": 58
 }

@@ -1,0 +1,3 @@
+{
+ "neurips2024-ft-aed-benchmark-dataset-for-early-freeway-tra": "FT-AED is a freeway radar-sensor time-series dataset (no video frames) — excluded per the non-video exclusion criterion; it passed the keyword filter only via 'traffic anomalous event'."
+}

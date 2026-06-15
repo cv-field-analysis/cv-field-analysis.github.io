@@ -12,22 +12,22 @@
   "evidence": "MIL on CLIP foundation; disentangled semantic alignment on XD-Violence + UCF-Crime" },
 
  "aaai2026-headhunt-vad-hunting-robust-anomaly-sensitive": {
-  "task": ["Detection"], "supervision": ["Training-free", "Zero-shot"], "model_family": ["MLLM"], "modality": ["RGB"],
+  "task": ["Detection", "Localization/Grounding"], "supervision": ["Training-free", "Zero-shot"], "model_family": ["MLLM"], "modality": ["RGB"],
   "domain": ["Surveillance"], "method": ["attention-heads", "training-free"], "contribution": "method",
-  "confidence": 0.6, "needs_review": true,
-  "evidence": "title: anomaly-sensitive heads in MLLM for tuning-free VAD" },
+  "confidence": 0.86, "needs_review": false,
+  "evidence": "tuning-free VAD probing robust anomaly-sensitive attention heads in a frozen MLLM + lightweight scorer/temporal locator" },
 
  "aaai2026-vagu-amp-gts-llm-based-benchmark-and-framework": {
-  "task": ["Localization/Grounding", "Understanding"], "supervision": [], "model_family": ["LLM", "MLLM"],
-  "modality": ["RGB", "Text"], "domain": ["Surveillance"], "method": ["benchmark-construction"], "contribution": "benchmark",
-  "confidence": 0.62, "needs_review": true,
-  "evidence": "title: LLM-based benchmark & framework for joint anomaly grounding and understanding" },
+  "task": ["Localization/Grounding", "Understanding", "Retrieval/QA"], "supervision": ["Training-free"], "model_family": ["LLM", "MLLM"],
+  "modality": ["RGB", "Text"], "domain": ["Surveillance"], "method": ["benchmark-construction", "prompting"], "contribution": "benchmark",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "VAGU: first benchmark joining grounding+understanding+VideoQA; GtS training-free Glance-then-Scrutinize + JeAUG metric" },
 
  "aaai2026-finevau-a-novel-human-aligned-benchmark-for-fi": {
-  "task": ["Understanding"], "supervision": [], "model_family": [], "modality": ["RGB", "Text"],
+  "task": ["Understanding"], "supervision": [], "model_family": ["MLLM"], "modality": ["RGB", "Text"],
   "domain": ["Surveillance"], "method": ["benchmark-construction"], "contribution": "benchmark",
-  "confidence": 0.62, "needs_review": true,
-  "evidence": "title: human-aligned benchmark for fine-grained video anomaly understanding" },
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "FineVAU: fine-grained VAU benchmark (What/Who/Where) + FVScore human-aligned metric + FineW3 dataset; evaluates LVLMs" },
 
  "cvpr2026-no-need-for-real-anomaly-mllm-empowered-zero-s": {
   "task": ["Detection", "Localization/Grounding"], "supervision": ["Zero-shot"], "model_family": ["MLLM"],
@@ -90,10 +90,10 @@
   "evidence": "SteerVAD: frozen MLLM, tuning-free; steer latent-anomaly-expert heads, 1% training data" },
 
  "tpami2026-piercingeye-dual-space-video-violence-detectio": {
-  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["VLM"], "modality": ["RGB", "Text"],
-  "domain": ["Violence"], "method": ["hyperbolic", "vision-language"], "contribution": "method",
-  "confidence": 0.58, "needs_review": true,
-  "evidence": "title: dual-space violence detection with hyperbolic vision-language guidance" },
+  "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["VLM", "LLM"], "modality": ["RGB", "Text"],
+  "domain": ["Violence"], "method": ["hyperbolic", "contrastive", "vision-language"], "contribution": "method",
+  "confidence": 0.87, "needs_review": false,
+  "evidence": "weakly-sup VVD; dual-space Euclidean+hyperbolic + LLM-generated ambiguous descriptions + hyperbolic VL contrastive (XD-Violence, UCF)" },
 
  "aaai2025-federated-weakly-supervised-video-anomaly-dete": {
   "task": ["Detection"], "supervision": ["Weakly-sup", "Federated"], "model_family": ["CLIP", "VLM"], "modality": ["RGB", "Text"],
@@ -333,9 +333,9 @@
 
  "cvpr2024-uncovering-what-why-and-how-a-comprehensive-be": {
   "task": ["Understanding", "Reasoning"], "supervision": [], "model_family": ["MLLM", "LLM"], "modality": ["RGB", "Text"],
-  "domain": ["Surveillance"], "method": ["benchmark-construction"], "contribution": "benchmark",
-  "confidence": 0.7, "needs_review": true,
-  "evidence": "title (CUVA): comprehensive benchmark for causation understanding (what/why/how) of video anomaly" },
+  "domain": ["Surveillance"], "method": ["benchmark-construction", "prompting"], "contribution": "benchmark",
+  "confidence": 0.88, "needs_review": false,
+  "evidence": "CUVA: causation-understanding benchmark (what anomaly / why / how severe) + MMEval metric + prompt-based baseline" },
 
  "cvpr2024-prompt-enhanced-multiple-instance-learning-for": {
   "task": ["Detection"], "supervision": ["Weakly-sup"], "model_family": ["MIL"], "modality": ["RGB", "Text"],

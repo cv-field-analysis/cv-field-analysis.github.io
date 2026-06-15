@@ -43,6 +43,8 @@ So new labels carry confidence + evidence + a manual escape hatch, rather than b
 - **Paper Copilot** ([open data](https://github.com/papercopilot/paperlists)) — complete accepted-paper lists **with abstracts** for the OpenReview venues (NeurIPS, ICLR, ICML) and the proceedings venues it indexes (CVPR, AAAI), which backfills the 2024 editions and provides **OpenReview review links**.
 - **DBLP** — the remaining conferences/journals (ECCV, BMVC, TPAMI, TIP); no IEEE access needed, workshop tracks excluded by venue label.
 - **Semantic Scholar** — abstracts + citations for CVF/DBLP papers (cached in `data/s2_cache.json`).
+- **arXiv** — abstract backfill for papers the above miss, matched by a title-similarity guard (`scripts/fetch_arxiv_abs.py` → `data/arxiv_abs.json`).
+- `data/exclude.json` — manual exclusions (paper id → reason), e.g. a paper that slips through the keyword filter but is out of scope.
 
 ### Inclusion / exclusion criteria
 - **Include:** papers whose title/abstract explicitly target video anomaly detection, understanding, grounding or reasoning, video violence detection, traffic/road anomaly detection, or closely related abnormal-event analysis in video.
@@ -69,8 +71,9 @@ data/ (CVF listings) + Paper Copilot + DBLP
 ```bash
 bash scripts/fetch_listings.sh        # CVF listings into data/  (network permitting)
 python3 scripts/collect_papercopilot.py   # Paper Copilot candidate lists (+abstracts)
-python3 scripts/collect_dblp.py           # DBLP candidate lists (rate-limited; rerun to fill)
+python3 scripts/collect_dblp.py           # DBLP candidate lists (rate-limited; rerun to fill TPAMI/TIP 2024, BMVC 2025)
 python3 scripts/build.py                  # corpus.json + data.json
+python3 scripts/fetch_arxiv_abs.py        # backfill missing abstracts from arXiv → data/arxiv_abs.json
 # (read new abstracts in data/corpus.json → add entries to data/tags.json) → re-run build.py
 python3 -m http.server                    # open http://localhost:8000
 ```

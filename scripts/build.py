@@ -101,6 +101,14 @@ S2CACHE_PATH="data/s2_cache.json"
 try: S2CACHE=json.load(open(S2CACHE_PATH))
 except Exception: S2CACHE={}
 
+# arXiv-backfilled abstracts for papers Semantic Scholar missed (keyed by normalised title;
+# see scripts/fetch_arxiv_abs.py) + a manual exclude list (paper id -> reason).
+def _norm(s): return re.sub(r"[^a-z0-9]+"," ",html.unescape(s).lower()).strip()
+try: ARXIV_ABS=json.load(open("data/arxiv_abs.json"))
+except Exception: ARXIV_ABS={}
+try: EXCLUDE=json.load(open("data/exclude.json"))
+except Exception: EXCLUDE={}
+
 def s2(title):
     if title in S2CACHE: return S2CACHE[title]
     r=_s2_fetch(title); time.sleep(1.1)
@@ -230,6 +238,11 @@ def main():
     for p in cand:
         if p.get("_src")!="pc":
             p.update(s2(p["title"]))
+        if not (p.get("abstract") or "").strip():        # arXiv backfill for missing abstracts
+            a=ARXIV_ABS.get(_norm(p["title"]))
+            if a and a.get("abstract"):
+                p["abstract"]=a["abstract"]
+                if not p.get("arxiv"): p["arxiv"]=a.get("arxiv","")
         if confirm(p):
             kept.append(p)
             print(f"  KEEP {p['venue']}{p['year']} [{p.get('citations',0)}c] {p['title'][:56]}", file=sys.stderr)
@@ -241,9 +254,12 @@ def main():
             uniq[k]=p
     kept=sorted(uniq.values(),key=lambda p:(-p["year"],p["venue"],-max(0,int(p.get("citations") or 0))))
 
-    # stable ids + corpus dump (for the abstract-tagging step)
+    # stable ids, then drop manually-excluded (off-topic) papers
     used=set()
     for p in kept: p["id"]=make_id(p,used)
+    if EXCLUDE:
+        kept=[p for p in kept if p["id"] not in EXCLUDE]
+        for pid,why in EXCLUDE.items(): print(f"  EXCLUDE {pid}: {why}", file=sys.stderr)
     corpus=[{"id":p["id"],"title":html.unescape(p["title"]),"venue":p["venue"],"year":p["year"],
              "abstract":(p.get("abstract") or "")} for p in kept]
     json.dump(corpus,open("data/corpus.json","w"),ensure_ascii=False,indent=1)
