@@ -45,19 +45,20 @@ section{padding:36px 0}
 .sec-title{font-family:"Fraunces",serif;font-size:25px;font-weight:400;font-variation-settings:"opsz" 50,"WONK" 1}
 .sec-note{margin-left:auto;font-size:10.5px;color:var(--dim);letter-spacing:.04em;text-align:right;max-width:40ch}
 
-/* trend chart */
-.trend{display:flex;align-items:flex-end;gap:26px;height:230px;padding:0 6px;
-  border-bottom:1px solid var(--line);position:relative}
-.tbar{flex:1;max-width:130px;display:flex;flex-direction:column;align-items:center;gap:0;height:100%;justify-content:flex-end}
-.tbar .barwrap{width:100%;display:flex;align-items:flex-end;justify-content:center;flex:1}
-.tbar .bar{width:62%;min-width:34px;border-radius:5px 5px 0 0;position:relative;
-  background:linear-gradient(180deg,var(--bc),color-mix(in srgb,var(--bc) 55%,transparent));
-  box-shadow:0 0 22px -4px var(--bc);transition:height .9s cubic-bezier(.2,.8,.2,1)}
-.tbar .cnt{position:absolute;top:-26px;left:50%;transform:translateX(-50%);
-  font-family:"Fraunces",serif;font-size:22px;color:var(--ink)}
-.tbar .pct{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:9px;color:rgba(8,10,17,.7);font-weight:700}
-.tbar .lab{margin-top:12px;font-size:11px;color:var(--muted);letter-spacing:.04em;text-align:center;white-space:nowrap}
-.tbar .lab b{color:var(--ink);font-weight:500}
+/* trend matrix (venue × year heatmap) */
+.matrix{display:grid;gap:5px;align-items:stretch}
+.mx-h{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+  display:flex;align-items:center;justify-content:center;padding-bottom:4px}
+.mx-h.vh{justify-content:flex-start}
+.mx-v{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--ink);letter-spacing:.01em}
+.mx-v .vd{width:8px;height:8px;border-radius:2px;flex:0 0 auto}
+.mx-c{display:flex;align-items:center;justify-content:center;border-radius:6px;min-height:38px;
+  font-family:"Fraunces",serif;font-size:18px;position:relative;
+  background:rgba(255,255,255,.03);border:1px solid var(--line);transition:.6s}
+.mx-c.na{color:var(--dim);font-family:"JetBrains Mono";font-size:12px;opacity:.4}
+.mx-c.z{color:var(--dim)}
+.mx-c.tot{background:none;border:none;color:var(--muted);font-size:19px}
+.mx-c.tot b{color:var(--ink)}
 
 /* subtopic bars */
 .subs{display:flex;flex-direction:column;gap:11px}
@@ -111,7 +112,8 @@ section{padding:36px 0}
 
 @media(max-width:680px){
   .hero{padding:42px 0 20px}
-  .trend{gap:14px;height:190px}
+  .matrix{gap:3px}.mx-v{font-size:10.5px;gap:6px}.mx-c{min-height:32px;font-size:15px}
+  .mx-h{font-size:8.5px;letter-spacing:.08em}
   .sub{grid-template-columns:110px 1fr 30px;gap:9px}.sub .sn{font-size:10.5px}
   .pc{flex-wrap:wrap}.pc .meta{flex-direction:row;width:100%;justify-content:space-between;margin-top:6px}
   .sec-note{display:none}
@@ -126,8 +128,8 @@ section{padding:36px 0}
   .pc{background:#fff;border-color:#ddd;break-inside:avoid}
   .pc .ti a,.pc .yr,.sec-title,h1,.stat .v{color:#111!important}
   .tagline,.au,.foot,.sec-note,.muted{color:#555!important}
-  .trend .bar{box-shadow:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .sub .fill,.chip,.pc .tg{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .mx-c,.sub .fill,.chip,.pc .tg{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .mx-c{border-color:#ddd}.mx-v,.mx-c.tot b{color:#111!important}.mx-h{color:#555!important}
   section{padding:18px 0;break-inside:avoid}
   .chips{display:none}
   h1{font-size:40px}
@@ -145,8 +147,8 @@ section{padding:36px 0}
 
   <section>
     <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Publication trend</span>
-      <span class="sec-note">Accepted main-conference papers (workshops &amp; findings excluded). ICCV runs in odd years; ECCV is biennial.</span></div>
-    <div class="trend" id="trend"></div>
+      <span class="sec-note">Accepted main-conference &amp; journal papers (workshops/findings excluded). Blank = venue not held that year or not yet indexed. ICCV: odd years; ECCV: biennial.</span></div>
+    <div class="matrix" id="trend"></div>
   </section>
 
   <section>
@@ -175,6 +177,8 @@ const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"
 fetch("data.json").then(r=>r.json()).then(D=>{
   // hero
   document.title=`Field Analysis — ${D.field}`;
+  const yspan=D.years.length>1?`${D.years[0]}–${D.years[D.years.length-1]}`:`${D.years[0]}`;
+  document.getElementById("eyebrow").textContent=`${D.venues.length} venues · ${yspan} · Field Analysis`;
   document.getElementById("title").innerHTML=D.field.replace(/(\s\S+)$/,' <em>$1</em>');
   document.getElementById("tagline").textContent=D.tagline||"";
   const totCit=D.papers.reduce((a,p)=>a+(p.citations||0),0);
@@ -185,16 +189,33 @@ fetch("data.json").then(r=>r.json()).then(D=>{
   document.getElementById("statrow").innerHTML=stats.map(([c,v,l])=>
     `<div class="stat"><div class="${c}">${v}</div><div class="l">${l}</div></div>`).join("");
 
-  // trend
+  // trend matrix (venue × year heatmap)
+  const VORDER=["CVPR","ICCV","ECCV","WACV","BMVC","AAAI","NeurIPS","ICLR","ICML","TPAMI","TIP"];
+  const rank=x=>{const i=VORDER.indexOf(x);return i<0?99:i;};
+  const venues=D.venues.slice().sort((a,b)=>rank(a)-rank(b));
+  const years=D.years.slice().sort();
+  const at=(v,y)=>D.trend.find(t=>t.venue===v&&t.year===y);
   const tmax=Math.max(...D.trend.map(t=>t.count),1);
-  document.getElementById("trend").innerHTML=D.trend.map(t=>{
-    const h=Math.round(t.count/tmax*100), bc=VENUE_C[t.venue]||"#ff8a5b";
-    const pct=(t.count/t.total*100).toFixed(2);
-    return `<div class="tbar"><div class="barwrap"><div class="bar" style="--bc:${bc};height:0"
-      data-h="${h}"><span class="cnt">${t.count}</span><span class="pct">${pct}%</span></div></div>
-      <div class="lab"><b>${t.venue}</b> ${t.year}<br><span style="color:var(--dim)">of ${t.total.toLocaleString()}</span></div></div>`;
-  }).join("");
-  requestAnimationFrame(()=>document.querySelectorAll(".tbar .bar").forEach(b=>b.style.height=b.dataset.h+"%"));
+  const cols=`200px repeat(${years.length},1fr) 64px`;
+  const mx=document.getElementById("trend");
+  mx.style.gridTemplateColumns=cols;
+  let h=`<div class="mx-h vh">Venue</div>`+years.map(y=>`<div class="mx-h">${y}</div>`).join("")+`<div class="mx-h">Total</div>`;
+  venues.forEach(v=>{
+    const vc=VENUE_C[v]||"#ff8a5b";
+    h+=`<div class="mx-v"><span class="vd" style="background:${vc}"></span>${v}</div>`;
+    let vt=0,seen=false;
+    years.forEach(y=>{
+      const c=at(v,y);
+      if(!c){h+=`<div class="mx-c na">·</div>`;return;}
+      seen=true;vt+=c.count;
+      const k=c.count/tmax, bg=`color-mix(in srgb, ${vc} ${Math.round(18+k*72)}%, transparent)`;
+      const cls=c.count===0?"mx-c z":"mx-c";
+      h+=`<div class="${cls}" data-bg="${c.count?bg:''}" title="${v} ${y}: ${c.count} papers${c.total?` of ${c.total.toLocaleString()}`:''}">${c.count}</div>`;
+    });
+    h+=`<div class="mx-c tot">${seen?`<b>${vt}</b>`:'·'}</div>`;
+  });
+  mx.innerHTML=h;
+  requestAnimationFrame(()=>mx.querySelectorAll(".mx-c[data-bg]").forEach(c=>{if(c.dataset.bg)c.style.background=c.dataset.bg;}));
 
   // subtopics
   const smax=Math.max(...D.subtopics.map(s=>s.count),1);

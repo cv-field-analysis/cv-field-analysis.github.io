@@ -1,0 +1,1492 @@
+{
+ "ECCV2024": [
+  {
+   "title": "AnomalyFactory: Regard Anomaly Generation as Unsupervised Anomaly Localization",
+   "authors": "Ying Zhao 0009",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_8",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "A Unified Anomaly Synthesis Strategy with Gradient Ascent for Industrial Anomaly Detection and Localization",
+   "authors": "Qiyu Chen 0002, Huiyuan Luo, Chengkan Lv, Zhengtao Zhang",
+   "url": "https://doi.org/10.1007/978-3-031-72855-6_3",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Few-Shot Anomaly-Driven Generation for Anomaly Classification and Segmentation",
+   "authors": "Guan Gui 0003, Bin-Bin Gao, Jun Liu 0116, Chengjie Wang 0001, Yunsheng Wu",
+   "url": "https://doi.org/10.1007/978-3-031-73010-8_13",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "DAS3D: Dual-Modality Anomaly Synthesis for 3D Anomaly Detection",
+   "authors": "Kecen Li, Bingquan Dai, Jingjing Fu, Xinwen Hou",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_10",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Unsupervised Tomato Split Anomaly Detection Using Hyperspectral Imaging and Variational Autoencoders",
+   "authors": "Mahmoud Abdulsalam, Usman A. Zahidi, Bradley Hurst, Simon Pearson, Grzegorz Cielniak, James Brown",
+   "url": "https://doi.org/10.1007/978-3-031-91835-3_7",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Meta Learning-Driven Iterative Refinement for Robust Anomaly Detection in Industrial Inspection",
+   "authors": "Muhammad Aqeel, Shakiba Sharifi, Marco Cristani, Francesco Setti",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_28",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "AnoVox: A Benchmark for Multimodal Anomaly Detection in Autonomous Driving",
+   "authors": "Daniel Bogdoll, Iramm Hamdard, Lukas Namgyu Rößler, Felix Geisler, Muhammed Bayram, Felix Wang, Jan Imhof, Miguel de Campos, Anushervon Tabarov, Yitian Yang, Martin Gontscharow, Hanno Gottschalk, J. Marius Zöllner",
+   "url": "https://doi.org/10.1007/978-3-031-91767-7_15",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "AdaCLIP: Adapting CLIP with Hybrid Learnable Prompts for Zero-Shot Anomaly Detection",
+   "authors": "Yunkang Cao, Jiangning Zhang, Luca Frittoli, Yuqi Cheng, Weiming Shen 0001, Giacomo Boracchi",
+   "url": "https://doi.org/10.1007/978-3-031-72761-0_4",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "TransFusion - A Transparency-Based Diffusion Model for Anomaly Detection",
+   "authors": "Matic Fucka, Vitjan Zavrtanik, Danijel Skocaj",
+   "url": "https://doi.org/10.1007/978-3-031-72761-0_6",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Interactive Explainable Anomaly Detection for Industrial Settings",
+   "authors": "Daniel Gramelt, Timon Höfer, Ute Schmid",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_9",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Learning Unified Reference Representation for Unsupervised Multi-class Anomaly Detection",
+   "authors": "Liren He, Zhengkai Jiang 0001, Jinlong Peng, Wenbing Zhu, Liang Liu 0007, Qiangang Du, Xiaobin Hu, Mingmin Chi, Yabiao Wang, Chengjie Wang 0001",
+   "url": "https://doi.org/10.1007/978-3-031-72855-6_13",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "XAI-Guided Insulator Anomaly Detection for Imbalanced Datasets",
+   "authors": "Maximilian Andreas Hoefler, Karsten Müller 0001, Wojciech Samek",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_5",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Towards Open-World Object-Based Anomaly Detection via Self-Supervised Outlier Synthesis",
+   "authors": "Brian K. S. Isaac-Medina, Yona Falinie A. Gaus, Neelanjan Bhowmik, Toby P. Breckon",
+   "url": "https://doi.org/10.1007/978-3-031-73209-6_12",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Cross-Domain Learning for Video Anomaly Detection with Limited Supervision",
+   "authors": "Yashika Jain, Ali Dabouei, Min Xu",
+   "url": "https://doi.org/10.1007/978-3-031-73404-5_27",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "AnomalousPatchCore: Exploring the Use of Anomalous Samples in Industrial Anomaly Detection",
+   "authors": "Mykhailo Koshil, Tilman Wegener, Detlef Mentrup, Simone Frintrop, Christian Wilms",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_19",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Continuous Memory Representation for Anomaly Detection",
+   "authors": "Joo Chan Lee, Taejune Kim, Eunbyung Park, Simon S. Woo, Jong Hwan Ko",
+   "url": "https://doi.org/10.1007/978-3-031-72983-6_25",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "AD3: Introducing a Score for Anomaly Detection Dataset Difficulty Assessment Using VIADUCT Dataset",
+   "authors": "Jan Lehr, Jan Philipps, Alik Sargsyan, Martin Pape, Jörg Krüger",
+   "url": "https://doi.org/10.1007/978-3-031-73113-6_26",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "SQUAD: Scalar Quantized Representation Learning for Unsupervised Anomaly Detection and Localization",
+   "authors": "Shih-Chih Lin, Shang-Hong Lai",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_11",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Learning Diffusion Models for Multi-view Anomaly Detection",
+   "authors": "Chieh Liu, Yu-Min Chu, Ting-I Hsieh, Hwann-Tzong Chen, Tyng-Luh Liu",
+   "url": "https://doi.org/10.1007/978-3-031-73414-4_19",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "SplatPose+: Real-Time Image-Based Pose-Agnostic 3D Anomaly Detection",
+   "authors": "Yizhe Liu, Yan Song Hu, Yuhao Chen 0001, John S. Zelek",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_24",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Sequential PatchCore: Anomaly Detection for Surface Inspection Using Synthetic Impurities",
+   "authors": "Runzhou Mao, Juraj Fulir, Christoph Garth, Petra Gospodnetic",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_23",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Unsupervised, Online and On-The-Fly Anomaly Detection for Non-stationary Image Distributions",
+   "authors": "Declan McIntosh, Alexandra Branzan Albu",
+   "url": "https://doi.org/10.1007/978-3-031-73030-6_24",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Unsupervised Anomaly Segmentation at High Resolution with Patch-Divide-and-Conquer and Self-ensembling",
+   "authors": "Hendrik Meininger, Radu Timofte",
+   "url": "https://doi.org/10.1007/978-3-031-91856-8_4",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "MoEAD: A Parameter-Efficient Model for Multi-class Anomaly Detection",
+   "authors": "Shiyuan Meng, Wenchao Meng, Qihang Zhou, Shizhong Li, Weiye Hou, Shibo He",
+   "url": "https://doi.org/10.1007/978-3-031-73013-9_20",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Interleaving One-Class and Weakly-Supervised Models with Adaptive Thresholding for Unsupervised Video Anomaly Detection",
+   "authors": "Yongwei Nie, Hao Huang, Chengjiang Long, Qing Zhang 0006, Pradipta Maji, Hongmin Cai",
+   "url": "https://doi.org/10.1007/978-3-031-73404-5_26",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "FedVAD: Enhancing Federated Video Anomaly Detection with GPT-Driven Semantic Distillation",
+   "authors": "Fan Qi, Ruijie Pan, Huaiwen Zhang, Changsheng Xu",
+   "url": "https://doi.org/10.1007/978-3-031-73668-1_14",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "VCP-CLIP: A Visual Context Prompting Model for Zero-Shot Anomaly Segmentation",
+   "authors": "Zhen Qu, Xian Tao, Mukesh Prasad, Fei Shen 0002, Zhengtao Zhang, Xinyi Gong, Guiguang Ding",
+   "url": "https://doi.org/10.1007/978-3-031-72890-7_18",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "On The Relationship Between Visual Anomaly-Free and Anomalous Representations",
+   "authors": "Riya Sadrani, Ayush Bachan, Hrishikesh Sharma",
+   "url": "https://doi.org/10.1007/978-3-031-92805-5_16",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Learning Anomalies with Normality Prior for Unsupervised Video Anomaly Detection",
+   "authors": "Haoyue Shi 0002, Le Wang 0003, Sanping Zhou, Gang Hua 0001, Wei Tang 0016",
+   "url": "https://doi.org/10.1007/978-3-031-72658-3_10",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Dissolving is Amplifying: Towards Fine-Grained Anomaly Detection",
+   "authors": "Jian Shi, Pengyi Zhang, Ni Zhang, Hakim Ghazzai, Peter Wonka",
+   "url": "https://doi.org/10.1007/978-3-031-73202-7_22",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "GeneralAD: Anomaly Detection Across Domains by Attending to Distorted Features",
+   "authors": "Luc P. J. Sträter, Mohammadreza Salehi, Efstratios Gavves, Cees G. M. Snoek, Yuki M. Asano",
+   "url": "https://doi.org/10.1007/978-3-031-72913-3_25",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "What Matters in Autonomous Driving Anomaly Detection: A Weakly Supervised Horizon",
+   "authors": "Utkarsh Tiwari, Snehashis Majhi, Michal Balazia, François Brémond",
+   "url": "https://doi.org/10.1007/978-3-031-91767-7_11",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Self-supervised Feature Adaptation for 3D Industrial Anomaly Detection",
+   "authors": "Yuanpeng Tu, Boshen Zhang, Liang Liu 0007, Yuxi Li 0009, Jiangning Zhang, Yabiao Wang, Chengjie Wang 0001, Cairong Zhao",
+   "url": "https://doi.org/10.1007/978-3-031-72627-9_5",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Follow the Rules: Reasoning for Video Anomaly Detection with Large Language Models",
+   "authors": "Yuchen Yang 0001, Kwonjoon Lee, Behzad Dariush, Yinzhi Cao, Shao-Yuan Lo",
+   "url": "https://doi.org/10.1007/978-3-031-73004-7_18",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Hierarchical Gaussian Mixture Normalizing Flow Modeling for Unified Anomaly Detection",
+   "authors": "Xincheng Yao, Ruoqi Li, Zefeng Qian, Lu Wang, Chongyang Zhang",
+   "url": "https://doi.org/10.1007/978-3-031-73411-3_6",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "GLAD: Towards Better Reconstruction with Global and Local Adaptive Diffusion Models for Unsupervised Anomaly Detection",
+   "authors": "Hang Yao 0001, Ming Liu 0018, Zhicun Yin, Zifei Yan, Xiaopeng Hong, Wangmeng Zuo",
+   "url": "https://doi.org/10.1007/978-3-031-73209-6_1",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "Random Walk on Pixel Manifolds for Anomaly Segmentation of Complex Driving Scenes",
+   "authors": "Zelong Zeng, Kaname Tomite",
+   "url": "https://doi.org/10.1007/978-3-031-72646-0_18",
+   "venue": "ECCV",
+   "year": 2024
+  },
+  {
+   "title": "R3D-AD: Reconstruction via Diffusion for 3D Anomaly Detection",
+   "authors": "Zheyuan Zhou, Le Wang, Naiyu Fang, Zili Wang 0001, Lemiao Qiu, Shuyou Zhang 0001",
+   "url": "https://doi.org/10.1007/978-3-031-72764-1_6",
+   "venue": "ECCV",
+   "year": 2024
+  }
+ ],
+ "ECCV2026": [],
+ "BMVC2024": [
+  {
+   "title": "Anomaly Detection Based on Semi-Formula Driven Pre-training Dataset to Represent Subtle Difference and Anomaly Score",
+   "authors": "Hiroki Kobayashi, Naoki Murakami, Naoto Hiramatsu, Takahiro Suzuki, Manabu Hashimoto",
+   "url": "https://bmvc2024.org/proceedings/833/",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "AUPIMO: Redefining Anomaly Localization Benchmarks with High Speed and Low Tolerance",
+   "authors": "João P. C. Bertoldo, Dick Ameln, Ashwin Vaidya, Samet Akcay",
+   "url": "https://bmvc2024.org/proceedings/223/",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "Hybrid Video Anomaly Detection for Autonomous Driving",
+   "authors": "Daniel Bogdoll, Jan Imhof, Tim Joseph, Svetlana Pavlitska, J. Marius Zöllner",
+   "url": "https://bmva-archive.org.uk/bmvc/2024/workshops/RROW/04_Hybrid_Video_Anomaly_Detecti.pdf",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "UMAD: Unsupervised Mask-Level Anomaly Detection for Autonomous Driving",
+   "authors": "Daniel Bogdoll, Noël Ollick, Tim Joseph, Svetlana Pavlitska, J. Marius Zöllner",
+   "url": "https://bmva-archive.org.uk/bmvc/2024/workshops/RROW/03_UMAD_Unsupervised_Mask_Level.pdf",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "Towards Better Zero-Shot Anomaly Detection under Distribution Shift with CLIP",
+   "authors": "Jiyao Gao, Chengxin He, Lei Duan, Jie Zuo",
+   "url": "https://bmvc2024.org/proceedings/330/",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "When Text and Images Don&apos;t Mix: Bias-Correcting Language-Image Similarity Scores for Anomaly Detection",
+   "authors": "Adam Goodge, Bryan Hooi, Wee Siong Ng",
+   "url": "https://bmvc2024.org/proceedings/406/",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "CSAD: Unsupervised Component Segmentation for Logical Anomaly Detection",
+   "authors": "Yu Hsuan Hsieh, Shang-Hong Lai",
+   "url": "https://bmvc2024.org/proceedings/854/",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "FADE: Few-shot/zero-shot Anomaly Detection Engine using Large Vision-Language Model",
+   "authors": "Yuanwei Li, Elizaveta Ivanova, Martins Bruveris",
+   "url": "https://bmvc2024.org/proceedings/597/",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "VLAVAD: Vision-Language Models Assisted Unsupervised Video Anomaly Detection",
+   "authors": "Changkang Li, Yalong Jiang",
+   "url": "https://bmvc2024.org/proceedings/599/",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "Data generation via diffusion models for crowd anomaly detection",
+   "authors": "Giulia Orrù, Riccardo Lecca, Riccardo Puddu, Simone Maurizio La Cava, Marco Micheletto, Gian Luca Marcialis",
+   "url": "https://bmva-archive.org.uk/bmvc/2024/workshops/SRBS/0005.pdf",
+   "venue": "BMVC",
+   "year": 2024
+  },
+  {
+   "title": "Advancing Anomaly Detection: The IDW dataset and MC algorithm",
+   "authors": "Alexander D. J. Taylor, Jonathan James Morrison, Phillip Tregidgo, Neill D. F. Campbell",
+   "url": "https://bmvc2024.org/proceedings/70/",
+   "venue": "BMVC",
+   "year": 2024
+  }
+ ],
+ "BMVC2025": [],
+ "AAAI2025": [
+  {
+   "title": "Revisiting Graph Contrastive Learning on Anomaly Detection: A Structural Imbalance Perspective",
+   "authors": "Yiming Xu 0001, Zhen Peng 0005, Bin Shi, Xu Hua, Bo Dong 0001, Song Wang 0013, Chen Chen 0022",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33415",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Video Anomaly Detection with Motion and Appearance Guided Patch Diffusion Model",
+   "authors": "Hang Zhou 0010, Jiale Cai, Yuteng Ye, Yonghui Feng, Chenxing Gao, Junqing Yu, Zikai Song, Wei Yang 0034",
+   "url": "https://doi.org/10.1609/aaai.v39i10.33169",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Filter or Compensate: Towards Invariant Representation from Distribution Shift for Anomaly Detection",
+   "authors": "Zining Chen, Xingshuang Luo, Weiqiu Wang, Zhicheng Zhao 0001, Fei Su, Aidong Men",
+   "url": "https://doi.org/10.1609/aaai.v39i3.32243",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Efficient Anomaly Detection of Irregular Sequences in Ct-Echo Model Space",
+   "authors": "Ao Chen 0002, Xiren Zhou, Huanhuan Chen 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i15.33727",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Unsupervised Anomaly Detection for Tabular Data Using Deep Noise Evaluation",
+   "authors": "Wei Dai, Kai Hwang 0001, Jicong Fan 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i11.33257",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Boosting Fine-Grained Visual Anomaly Detection with Coarse-Knowledge-Aware Adversarial Learning",
+   "authors": "Qingqing Fang, Qinliang Su, Wenxi Lv, Wenchao Xu 0001, Jianxing Yu",
+   "url": "https://doi.org/10.1609/aaai.v39i16.33816",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Graph Mixture of Experts and Memory-augmented Routers for Multivariate Time Series Anomaly Detection",
+   "authors": "Xiaoyu Huang, Weidong Chen 0013, Bo Hu 0036, Zhendong Mao 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i16.33921",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "TAIL-MIL: Time-Aware and Instance-Learnable Multiple Instance Learning for Multivariate Time Series Anomaly Detection",
+   "authors": "Jaeseok Jang, Hyuk-Yoon Kwon",
+   "url": "https://doi.org/10.1609/aaai.v39i17.33933",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "LogicAD: Explainable Anomaly Detection via VLM-based Text Feature Extraction",
+   "authors": "Er Jin, Qihui Feng, Yongli Mou, Gerhard Lakemeyer, Stefan Decker, Oliver Simons, Johannes Stegmaier",
+   "url": "https://doi.org/10.1609/aaai.v39i4.32433",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Look Inside for More: Internal Spatial Modality Perception for 3D Anomaly Detection",
+   "authors": "Hanzhe Liang, Guoyang Xie, Chengbin Hou, Bingshu Wang, Can Gao, Jinbao Wang",
+   "url": "https://doi.org/10.1609/aaai.v39i5.32546",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "GCAD: Anomaly Detection in Multivariate Time Series from the Perspective of Granger Causality",
+   "authors": "Zehao Liu, Mengzhou Gao 0001, Pengfei Jiao",
+   "url": "https://doi.org/10.1609/aaai.v39i18.34096",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Unlocking the Potential of Reverse Distillation for Anomaly Detection",
+   "authors": "Xinyue Liu, Jianyuan Wang, Biao Leng, Shuo Zhang 0003",
+   "url": "https://doi.org/10.1609/aaai.v39i6.32601",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Revisiting Multimodal Fusion for 3D Anomaly Detection from an Architectural Perspective",
+   "authors": "Kaifang Long, Guoyang Xie, Lianbo Ma, Jiaqi Liu, Zhichao Lu",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33337",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Aligning and Prompting Anything for Zero-Shot Generalized Anomaly Detection",
+   "authors": "Jitao Ma, Weiying Xie, Hangyu Ye, Daixun Li, Leyuan Fang",
+   "url": "https://doi.org/10.1609/aaai.v39i6.32637",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "AD4CD: Causal-Guided Anomaly Detection for Enhancing Cognitive Diagnosis",
+   "authors": "Haiping Ma, Yue Yao, Changqian Wang, Siyu Song, Yong Yang",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33344",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Unveiling Multi-View Anomaly Detection: Intra-view Decoupling and Inter-view Fusion",
+   "authors": "Kai Mao, Yiyang Lian, Yangyang Wang, Meiqin Liu 0001, Nanning Zheng 0001, Ping Wei 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33349",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Qsco: A Quantum Scoring Module for Open-Set Supervised Anomaly Detection",
+   "authors": "Yifeng Peng, Xinyi Li, Zhiding Liang, Ying Wang",
+   "url": "https://doi.org/10.1609/aaai.v39i19.34190",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "UCF-Crime-DVS: A Novel Event-Based Dataset for Video Anomaly Detection with Spiking Neural Networks",
+   "authors": "Yuanbin Qian, Shuhan Ye, Chong Wang 0001, Xiaojie Cai, Jiangbo Qian, Jiafei Wu",
+   "url": "https://doi.org/10.1609/aaai.v39i6.32705",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "UniFORM: Towards Unified Framework for Anomaly Detection on Graphs",
+   "authors": "Chuancheng Song, Xixun Lin, Hanyang Shen, Yanmin Shang, Yanan Cao 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33369",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Kernel-Aware Graph Prompt Learning for Few-Shot Anomaly Detection",
+   "authors": "Fenfang Tao, Guo-Sen Xie, Fang Zhao 0006, Xiangbo Shu",
+   "url": "https://doi.org/10.1609/aaai.v39i7.32790",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Federated Weakly Supervised Video Anomaly Detection with Multimodal Prompt",
+   "authors": "Benfeng Wang, Chao Huang 0008, Jie Wen 0001, Wei Wang 0169, Yabo Liu, Yong Xu 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i20.35398",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "CNC: Cross-modal Normality Constraint for Unsupervised Multi-class Anomaly Detection",
+   "authors": "Xiaolei Wang, Xiaoyang Wang 0007, Huihui Bai 0001, Eng Gee Lim, Jimin Xiao",
+   "url": "https://doi.org/10.1609/aaai.v39i8.32856",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Dual Conditioned Motion Diffusion for Pose-Based Video Anomaly Detection",
+   "authors": "Hongsong Wang 0001, Andi Xu, Pinle Ding, Jie Gui",
+   "url": "https://doi.org/10.1609/aaai.v39i7.32829",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "VarCMP: Adapting Cross-Modal Pre-Training Models for Video Anomaly Retrieval",
+   "authors": "Peng Wu 0015, Wanshun Su, Xiangteng He, Peng Wang 0015, Yanning Zhang 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i8.32909",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Federated Graph Anomaly Detection Through Contrastive Learning with Global Negative Pairs",
+   "authors": "Nannan Wu, Yazheng Zhao, Hongdou Dong, Keao Xi, Wei Yu 0016, Wenjun Wang 0002",
+   "url": "https://doi.org/10.1609/aaai.v39i20.35458",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Promptable Anomaly Segmentation with SAM Through Self-Perception Tuning",
+   "authors": "Hui-Yue Yang, Hui Chen 0013, Ao Wang, Kai Chen, Zijia Lin, Yongliang Tang, Pengcheng Gao, Yuming Quan, Jungong Han, Guiguang Ding",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33420",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "3CAD: A Large-Scale Real-World 3C Product Dataset for Unsupervised Anomaly Detection",
+   "authors": "Enquan Yang, Peng Xing, Hanyang Sun, Wenbo Guo 0017, Yuanwei Ma, Zechao Li, Dan Zeng 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i9.32993",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Co-Progression Knowledge Distillation with Knowledge Prototype for Industrial Anomaly Detection",
+   "authors": "Bokang Yang, Zhe Zhang 0037, Jie Ma 0003",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33419",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "A Generalizable Anomaly Detection Method in Dynamic Graphs",
+   "authors": "Xiao Yang, Xuejiao Zhao, Zhiqi Shen 0001",
+   "url": "https://doi.org/10.1609/aaai.v39i20.35508",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Disentangling Tabular Data Towards Better One-Class Anomaly Detection",
+   "authors": "Jianan Ye, Zhaorui Tan, Yijie Hu, Xi Yang 0008, Guangliang Cheng, Kaizhu Huang",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33425",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Rethinking Cancer Gene Identification Through Graph Anomaly Analysis",
+   "authors": "Yilong Zang, Lingfei Ren, Yue Li 0038, Zhikang Wang, David Antony Selby, Zheng Wang 0007, Sebastian Josef Vollmer, Hongzhi Yin, Jiangning Song, Junhang Wu",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33436",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "DZAD: Diffusion-based Zero-shot Anomaly Detection",
+   "authors": "Tianrui Zhang, Liang Gao 0001, Xinyu Li 0001, Yiping Gao",
+   "url": "https://doi.org/10.1609/aaai.v39i10.33099",
+   "venue": "AAAI",
+   "year": 2025
+  },
+  {
+   "title": "Dynamic Spectral Graph Anomaly Detection",
+   "authors": "Jianbo Zheng, Chao Yang 0015, Tairui Zhang, Longbing Cao, Bin Jiang 0006, Xuhui Fan 0001, Xiao-Ming Wu 0002, Xianxun Zhu",
+   "url": "https://doi.org/10.1609/aaai.v39i12.33464",
+   "venue": "AAAI",
+   "year": 2025
+  }
+ ],
+ "AAAI2026": [
+  {
+   "title": "AnomalyMoE: Towards a Language-free Generalist Model for Unified Visual Anomaly Detection",
+   "authors": "Zhaopeng Gu, Bingke Zhu, Guibo Zhu, Yingying Chen 0003, Wei Ge, Ming Tang 0001, Jinqiao Wang",
+   "url": "https://doi.org/10.1609/aaai.v40i6.42432",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "HeadHunt-VAD: Hunting Robust Anomaly-Sensitive Heads in MLLM for Tuning-Free Video Anomaly Detection",
+   "authors": "Zhaolin Cai, Fan Li 0003, Ziwei Zheng, Haixia Bi, Lijun He 0001",
+   "url": "https://doi.org/10.1609/aaai.v40i24.39066",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "AnomalyPainter: Vision-Language-Diffusion Synergy for Realistic and Diverse Unseen Industrial Anomaly Synthesis",
+   "authors": "Zhangyu Lai, Yilin Lu, Xinyang Li, Jianghang Lin, Yansong Qu, Ming Li 0010, Liujuan Cao",
+   "url": "https://doi.org/10.1609/aaai.v40i7.37501",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "CADiff: Context-Aware Diffusion for Controllable Anomaly Generation in Anomaly Detection",
+   "authors": "Xuan Tong, Yuxuan Lin 0001, Junxiong Lin, Xinji Mai, Haoran Wang 0006, Zeng Tao, Yang Yao, Ruofan Wang, Wenqiang Zhang",
+   "url": "https://doi.org/10.1609/aaai.v40i12.37917",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "MAU-GPT: Enhancing Multi-type Industrial Anomaly Understanding via Anomaly-aware and Generalist Experts Adaptation",
+   "authors": "Zhuonan Wang, Zhenxuan Fan, Siwen Tan, Yu Zhong, Yuqian Yuan, Haoyuan Li 0002, Hao Jiang 0014, Wenqiao Zhang, Feifei Shao, Hongwei Wang, Jun Xiao 0001",
+   "url": "https://doi.org/10.1609/aaai.v40i31.39889",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "InTimeAD: Interactive Time Series Anomaly Detection",
+   "authors": "Louis Carpentier, Wannes Meert, Mathias Verbeke",
+   "url": "https://doi.org/10.1609/aaai.v40i48.42336",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Towards Multiple Missing Values-resistant Unsupervised Graph Anomaly Detection",
+   "authors": "Jiazhen Chen, Xiuqin Liang, Sichao Fu, Zheng Ma 0011, Weihua Ou",
+   "url": "https://doi.org/10.1609/aaai.v40i24.39096",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Unsupervised Multi-View Visual Anomaly Detection via Progressive Homography-Guided Alignment",
+   "authors": "Xintao Chen, Xiaohao Xu, Bozhong Zheng, Yun Liu, Yingna Wu",
+   "url": "https://doi.org/10.1609/aaai.v40i4.37299",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Towards High-Resolution 3D Anomaly Detection: A Scalable Dataset and Real-Time Framework for Subtle Industrial Defects",
+   "authors": "Yuqi Cheng, Yihan Sun 0007, Hui Zhang 0023, Weiming Shen 0001, Yunkang Cao",
+   "url": "https://doi.org/10.1609/aaai.v40i5.37328",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Resilience in Ambient Multi-Agent LLMs via Decentralized Bio-Autonomic Control and Immune-Inspired Anomaly Detection",
+   "authors": "Nastaran Darabi, Devashri Naik, Sina Tayebati, Dinithi Jayasuriya, Amit Ranjan Trivedi",
+   "url": "https://doi.org/10.1609/aaai.v40i44.41065",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Learning Whom to Align With: Progressive Anomaly Combination Detection for Partially View-Aligned Clustering",
+   "authors": "Hang Gao, Zuosong Cai, Yuze Li, Cheng Liu, Gaoyang Li, Ying Li 0004, Wei Du 0002, You Zhou 0008",
+   "url": "https://doi.org/10.1609/aaai.v40i25.39261",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "VAGU &amp; GtS: LLM-Based Benchmark and Framework for Joint Video Anomaly Grounding and Understanding",
+   "authors": "Shibo Gao, Peipei Yang, Yangyang Liu, Yi Chen 0027, Han Zhu, Xu-Yao Zhang, Linlin Huang",
+   "url": "https://doi.org/10.1609/aaai.v40i6.42412",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "AdaptCLIP: Adapting CLIP for Universal Visual Anomaly Detection",
+   "authors": "Bin-Bin Gao, Yue Zhou, Jiangtao Yan, Yuezhi Cai, Weixi Zhang, Meng Wang, Jun Liu 0116, Yong Liu 0032, Lei Wang, Chengjie Wang 0001",
+   "url": "https://doi.org/10.1609/aaai.v40i6.42404",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "AquaSentinel: Next-Generation AI System Integrating Sensor Networks for Urban Underground Water Pipeline Anomaly Detection via Collaborative MoE-LLM Agent Architecture",
+   "authors": "Qiming Guo, Bishal Khatri, Wenbo Sun, Jinwen Tang, Hua Zhang 0021, Wenlu Wang",
+   "url": "https://doi.org/10.1609/aaai.v40i47.41464",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Harnessing Vision-Language Models for Time Series Anomaly Detection",
+   "authors": "Zelin He, Sarah Alnegheimish, Matthew Reimherr",
+   "url": "https://doi.org/10.1609/aaai.v40i26.39319",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Time-Series Anomaly Detection with Graph-Based Self-Supervised Learning and Foundation Models: Towards Real-World Applications",
+   "authors": "Thi Kieu Khanh Ho",
+   "url": "https://doi.org/10.1609/aaai.v40i48.42153",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "BAG: Benchmarking Anomaly Detection on Dynamic Graphs",
+   "authors": "Fengrui Hua, Yiyan Qi, Zikai Wei, Yuxing Tian, Chengjin Xu, Xiaojun Wu, Jia Li, Jian Guo 0016",
+   "url": "https://doi.org/10.1609/aaai.v40i17.38510",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Anomagic: Crossmodal Prompt-driven Zero-shot Anomaly Generation",
+   "authors": "Yuxin Jiang, Wei Luo, Hui Zhang 0023, Qiyu Chen 0002, Haiming Yao, Weiming Shen 0001, Yunkang Cao",
+   "url": "https://doi.org/10.1609/aaai.v40i7.37466",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "CANDI: Curated Test-Time Adaptation for Multivariate Time-Series Anomaly Detection Under Distribution Shift",
+   "authors": "HyunGi Kim, Jisoo Mok, Hyungyu Lee, Juhyeon Shin, Sungroh Yoon",
+   "url": "https://doi.org/10.1609/aaai.v40i17.38524",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "AEGIS: Toward Expert-in-the-loop Industrial Anomaly Detection",
+   "authors": "Dongmin Kim, Ye Seul Sim, Suhee Yoon, Sanghyu Yoon, Seungdong Yoa, Soonyoung Lee, Woohyung Lim",
+   "url": "https://doi.org/10.1609/aaai.v40i48.42359",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection",
+   "authors": "Junhee Lee, ChaeBeen Bang, MyoungChul Kim, MyeongAh Cho",
+   "url": "https://doi.org/10.1609/aaai.v40i7.37512",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "CHIMERA: Controllable High-quality Image-Mask Extraction for Reliable Diffusion-based Anomaly Synthesis",
+   "authors": "JoungBin Lee, Hyunkoo Lee, Jini Yang, Chaehyun Kim, Jung Yi, Seok Hwangbo, Hyeoncheol Lee, Minho Chun, Eunjo Jeong, Seungryong Kim",
+   "url": "https://doi.org/10.1609/aaai.v40i7.37511",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "IAD-R1: Reinforcing Consistent Reasoning in Industrial Anomaly Detection",
+   "authors": "Yanhui Li, Yunkang Cao, Chengliang Liu 0003, Yuan Xiong, Xinghui Dong, Chao Huang 0008",
+   "url": "https://doi.org/10.1609/aaai.v40i8.37588",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "FreqTAD: Multi-scale Frequency Encoding and Time-Frequency Attention for Anomaly Detection in Dynamic Graphs",
+   "authors": "Chao Li 0022, Runshuo Liu, Zhongying Zhao 0001, Hui Zhou, Qingtian Zeng",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38529",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Towards Automated Self-Supervised Learning for Truly Unsupervised Graph Anomaly Detection (Abstract Reprint)",
+   "authors": "Zhong Li 0002, Yuhang Wang, Matthijs van Leeuwen",
+   "url": "https://doi.org/10.1609/aaai.v40i47.41387",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Exploring Domain Generalization and Subpopulation Shift for Generalizable Graph-Level Anomaly Detection",
+   "authors": "Xiaoxiang Li, Xihe Xie, Hai Wan, Xibin Zhao",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38538",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "FDP: A Frequency-Decomposition Preprocessing Pipeline for Unsupervised Anomaly Detection in Brain MRI",
+   "authors": "Hao Li, Zhenfeng Zhuang, Jingyu Lin, Yu Liu, Yifei Chen, Qiong Peng, Lequan Yu, Liansheng Wang 0002",
+   "url": "https://doi.org/10.1609/aaai.v40i8.37536",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Beyond Local Patterns: Multiscale Inconsistency Learning for Graph Anomaly Detection",
+   "authors": "Jie Lian 0006, Zhihao Wu 0003, Jielong Lu, Jiajun Yu, Qianqian Shen, Haishuai Wang",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38546",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "AD-FM: Multimodal LLMs for Anomaly Detection via Multi-Stage Reasoning and Fine-Grained Reward Optimization",
+   "authors": "Jingyi Liao, Yongyi Su, Rong-Cheng Tu, Zhao Jin, Wenhao Sun, Yiting Li, Xun Xu 0002, Dacheng Tao, Xulei Yang",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38548",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Commonality in Few: Few-Shot Multimodal Anomaly Detection via Hypergraph-Enhanced Memory",
+   "authors": "Yuxuan Lin 0001, Hanjing Yan, Xuan Tong, Yang Chang, Huanzhen Wang, Ziheng Zhou 0005, Shuyong Gao, Yan Wang 0068, Wenqiang Zhang",
+   "url": "https://doi.org/10.1609/aaai.v40i9.37636",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Multi-dimensional Adaptive Mix-hop Contextual Learning Framework for Universal Graph Anomaly Detection",
+   "authors": "Zhaowei Liu 0001, Leilei Jiang, Haitao Yang",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38568",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "MaskAD: Parallel Masked Autoencoder for Multi-class Unsupervised Anomaly Detection",
+   "authors": "Ruiying Lu, Gang Liu, Kang Li, Long Tian, Junwei Zhang",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38573",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Disentangled Generation-Based Prototypical Alignment for Few-Shot Unsupervised Domain Adaptation in Graph-Level Anomaly Detection",
+   "authors": "Zhibin Ni, Chenghao Zhang 0006, Hai Wan, Xibin Zhao",
+   "url": "https://doi.org/10.1609/aaai.v40i29.39639",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Correcting False Alarms from Unseen: Adapting Graph Anomaly Detectors at Test Time",
+   "authors": "Junjun Pan, Yixin Liu 0001, Chuan Zhou 0001, Fei Xiong, Alan Wee-Chung Liew, Shirui Pan",
+   "url": "https://doi.org/10.1609/aaai.v40i29.39654",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "FineVAU: A Novel Human-Aligned Benchmark for Fine-Grained Video Anomaly Understanding",
+   "authors": "João Alexandre Cardeira Pereira, Vasco Lopes, João Neves 0006, David Semedo",
+   "url": "https://doi.org/10.1609/aaai.v40i10.37790",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Quality-Aware Language-Conditioned Local Auto-Regressive Anomaly Synthesis and Detection",
+   "authors": "Long Qian, Bingke Zhu, Yingying Chen 0003, Ming Tang 0001, Jinqiao Wang",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38592",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "PromptMoE: Generalizable Zero-Shot Anomaly Detection via Visually-Guided Prompt Mixtures",
+   "authors": "Yuheng Shao, Lizhang Wang, Changhao Li, Peixian Chen, Qinyuan Liu",
+   "url": "https://doi.org/10.1609/aaai.v40i11.37842",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "AnoStyler: Text-Driven Localized Anomaly Generation via Lightweight Style Transfer",
+   "authors": "Yulim So, Seokho Kang 0001",
+   "url": "https://doi.org/10.1609/aaai.v40i18.38604",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "State-Derivative-Aware Neural Controlled Differential Equations for Multivariate Time Series Anomaly Detection and Diagnosis",
+   "authors": "Xin Sun 0018, Heng Zhou, Yuhao Wu, Chao Li 0062",
+   "url": "https://doi.org/10.1609/aaai.v40i30.39770",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Exploring High-order-aware Prompt Learning for Zero-shot Anomaly Detection",
+   "authors": "Shun Wei, Jielin Jiang, Xiaolong Xu 0001",
+   "url": "https://doi.org/10.1609/aaai.v40i13.38029",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "ICAD-LLM: One-for-All Anomaly Detection via In-Context Learning with Large Language Models",
+   "authors": "Zhongyuan Wu, Jingyuan Wang, Zexuan Cheng, Yilong Zhou, Weizhi Wang, Juhua Pu, Chao Li, Changqing Ma",
+   "url": "https://doi.org/10.1609/aaai.v40i19.38632",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "RcAE: Recursive Reconstruction Framework for Unsupervised Industrial Anomaly Detection",
+   "authors": "Rongcheng Wu, Hao Zhu, Shiying Zhang, Mingzhe Wang, Zhidong Li, Hui Li, Jianlong Zhou, Jiangtao Cui, Fang Chen 0001, Pingyang Sun, Qiyu Liao, Ye Lin",
+   "url": "https://doi.org/10.1609/aaai.v40i13.38048",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "DoKnowAD: Calibrating Normal Representations with Refined Domain Knowledge to Enhance Time Series Anomaly Detection",
+   "authors": "Shiwang Xing, Jianwei Niu 0002, Tao Ren 0001",
+   "url": "https://doi.org/10.1609/aaai.v40i32.39927",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "IDK-S: Incremental Distributional Kernel for Streaming Anomaly Detection",
+   "authors": "Yang Xu, Yixiao Ma, Kaifeng Zhang, Zuliang Yang, Kai Ming Ting",
+   "url": "https://doi.org/10.1609/aaai.v40i19.38642",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "SCoNE: Spherical Consistent Neighborhoods Ensemble for Effective and Efficient Multi-View Anomaly Detection",
+   "authors": "Yang Xu, Hang Zhang 0003, Yixiao Ma, Ye Zhu 0002, Kai Ming Ting",
+   "url": "https://doi.org/10.1609/aaai.v40i19.38643",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Learning to Tell Apart: Weakly Supervised Video Anomaly Detection via Disentangled Semantic Alignment",
+   "authors": "Wenti Yin, Huaxin Zhang, Xiang Wang 0012, Yuqing Lu, Yicheng Zhang, Bingquan Gong, Jialong Zuo, Li Yu 0003, Changxin Gao, Nong Sang",
+   "url": "https://doi.org/10.1609/aaai.v40i14.38191",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "CASL: Curvature-Augmented Self-supervised Learning for 3D Anomaly Detection",
+   "authors": "Yaohua Zha, Xue Yuerong, Chunlin Fan, Yuansong Wang, Tao Dai 0001, Ke Chen 0004, Shu-Tao Xia",
+   "url": "https://doi.org/10.1609/aaai.v40i15.38226",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "SFGA: Similarity-Constrained Fusion Learning for Unsupervised Anomaly Detection in Multiplex Graphs",
+   "authors": "Huiliang Zhai, Xiangyi Teng, Jing Liu 0006",
+   "url": "https://doi.org/10.1609/aaai.v40i33.40040",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "RPE-PAD: Relative Pose Estimation for Pose-agnostic Anomaly Detection",
+   "authors": "Zhipeng Zhang, Mengzan Qi, Rongkang Ma, Yingying Fang, Guixu Zhang, Tieyong Zeng, Zhi Li 0080",
+   "url": "https://doi.org/10.1609/aaai.v40i15.38304",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "Binary Message Passing for Generalizable Semi-Supervised Graph Anomaly Detection",
+   "authors": "Jingyuan Zhang, Xin Wang, Lei Yu, Li Yang 0015, Fengjun Zhang",
+   "url": "https://doi.org/10.1609/aaai.v40i19.38671",
+   "venue": "AAAI",
+   "year": 2026
+  },
+  {
+   "title": "TargetVAU: Multimodal Anomaly-Aware Reasoning for Target Behavior Understanding in Videos",
+   "authors": "Lingru Zhou, Peng Wu 0015, Manqing Zhang, Qingsheng Wang, Guansong Pang, Peng Wang 0015",
+   "url": "https://doi.org/10.1609/aaai.v40i16.38378",
+   "venue": "AAAI",
+   "year": 2026
+  }
+ ],
+ "NeurIPS2024": [
+  {
+   "title": "One-to-Normal: Anomaly Personalization for Few-shot Anomaly Detection",
+   "authors": "Yiyue Li, Shaoting Zhang 0001, Kang Li 0004, Qicheng Lao",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/8f4477b086a9c97e30d1a0621ea6b2f5-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "ARC: A Generalist Graph Anomaly Detector with In-Context Learning",
+   "authors": "Yixin Liu 0001, Shiyuan Li 0001, Yu Zheng 0013, Qingfeng Chen, Chengqi Zhang, Shirui Pan",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/5acb720a361eecb34ee62d356859d246-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "CableInspect-AD: An Expert-Annotated Anomaly Detection Dataset",
+   "authors": "Akshatha Arodi, Margaux Luck, Jean-Luc Bedwani, Aldo Zaimi, Ge Li, Nicolas Pouliot, Julien Beaudry, Gaétan Marceau-Caron",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/76d9dd096d9469d6b7e732f0cddb51b3-Abstract-Datasets_and_Benchmarks_Track.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "Towards Multi-Domain Learning for Generalizable Video Anomaly Detection",
+   "authors": "MyeongAh Cho, Taeoh Kim, Minho Shim, Dongyoon Wee, Sangyoun Lee",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/59eb2d8ce0e4830f80780f7f78c67dec-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "SARAD: Spatial Association-Aware Anomaly Detection and Diagnosis for Multivariate Time Series",
+   "authors": "Zhihao Dai, Ligang He, Shuanghua Yang, Matthew Leeke",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/56ad264ac7448239145606cf4106042f-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "MetaUAS: Universal Anomaly Segmentation with One-Prompt Meta-Learning",
+   "authors": "Bin-Bin Gao",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/463a91da3c832bd28912cd0d1b8d9974-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "MambaAD: Exploring State Space Models for Multi-class Unsupervised Anomaly Detection",
+   "authors": "Haoyang He, Yuhu Bai, Jiangning Zhang, Qingdong He, Hongxu Chen, Zhenye Gan, Chengjie Wang 0001, Xiangtai Li, Guanzhong Tian, Lei Xie 0007",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/833b21da1956c6b92f6df253bf655cf5-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "AR-Pro: Counterfactual Explanations for Anomaly Repair with Formal Properties",
+   "authors": "Xiayan Ji, Anton Xue, Eric Wong 0001, Oleg Sokolsky, Insup Lee 0001",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/1d3591b6746204b332acb464b775d38d-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "Rethinking Reconstruction-based Graph-Level Anomaly Detection: Limitations and a Simple Remedy",
+   "authors": "Sunwoo Kim 0006, Soo Yong Lee, Fanchen Bu, Shinhwan Kang, Kyungho Kim, Jaemin Yoo, Kijung Shin",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/ae03bdef276132fae089692445725635-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "UniGAD: Unifying Multi-level Graph Anomaly Detection",
+   "authors": "Yiqing Lin, Jianheng Tang, Chenyi Zi, H. Vicky Zhao, Yuan Yao, Jia Li 0009",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/f57de20ab7bb1540bcac55266ebb5401-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "The Elephant in the Room: Towards A Reliable Time-Series Anomaly Detection Benchmark",
+   "authors": "Qinghua Liu, John Paparrizos",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/c3f3c690b7a99fba16d0efd35cb83b2c-Abstract-Datasets_and_Benchmarks_Track.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "Generative Semi-supervised Graph Anomaly Detection",
+   "authors": "Hezhe Qiao, Qingsong Wen, Xiaoli Li 0001, Ee-Peng Lim, Guansong Pang",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/085b4b5d1f81ad9e057ad2b3de922ad4-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "Unsupervised Anomaly Detection in The Presence of Missing Values",
+   "authors": "Feng Xiao, Jicong Fan 0001",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/f99f7b22ad47fa6ce151730cf8d17911-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "ResAD: A Simple Framework for Class Generalizable Anomaly Detection",
+   "authors": "Xincheng Yao, Zixin Chen, Chao Gao, Guangtao Zhai, Chongyang Zhang",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/e2ba11d128034f0c544693374c59e49a-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "Dissect Black Box: Interpreting for Rule-Based Explanations in Unsupervised Anomaly Detection",
+   "authors": "Yu Zhang, Ruoyu Li 0003, Nengwu Wu, Qing Li 0006, Xinhan Lin, Yang Hu, Tao Li, Yong Jiang 0001",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/99261adc8a6356b38bcf999bba9a26dc-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "PointAD: Comprehending 3D Anomalies from Points and Pixels for Zero-shot 3D Anomaly Detection",
+   "authors": "Qihang Zhou, Jiangtao Yan, Shibo He, Wenchao Meng, Jiming Chen 0001",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/9a263e235f6d1521d13a8531c7974951-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "Advancing Video Anomaly Detection: A Concise Review and a New Dataset",
+   "authors": "Liyun Zhu, Lei Wang 0108, Arjun Raj, Tom Gedeon, Chen Chen 0001",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/a3c5af1f56fc73eef1ba0f442739f5ca-Abstract-Datasets_and_Benchmarks_Track.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  },
+  {
+   "title": "Beyond Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection",
+   "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen 0001, Xinbo Gao 0001",
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/1f471322127d6347e5ae09a14b1e5cf7-Abstract-Conference.html",
+   "venue": "NeurIPS",
+   "year": 2024
+  }
+ ],
+ "NeurIPS2025": [],
+ "ICLR2025": [
+  {
+   "title": "Open-Set Graph Anomaly Detection via Normal Structure Regularisation",
+   "authors": "Qizhou Wang 0001, Guansong Pang, Mahsa Salehi, Xiaokun Xia, Christopher Leckie",
+   "url": "https://openreview.net/forum?id=kSvoX0xdlO",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "SpaceGNN: Multi-Space Graph Neural Network for Node Anomaly Detection with Extremely Limited Labels",
+   "authors": "Xiangyu Dong 0002, Xingyi Zhang 0003, Lei Chen 0031, Mingxuan Yuan, Sibo Wang 0001",
+   "url": "https://openreview.net/forum?id=Syt4fWwVm1",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Unifying Unsupervised Graph-Level Anomaly Detection and Out-of-Distribution Detection: A Benchmark",
+   "authors": "Yili Wang 0004, Yixin Liu 0001, Xu Shen 0002, Chenyu Li, Rui Miao 0003, Kaize Ding, Ying Wang 0009, Shirui Pan, Xin Wang 0035",
+   "url": "https://openreview.net/forum?id=g90RNzs8wX",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "MMAD: A Comprehensive Benchmark for Multimodal Large Language Models in Industrial Anomaly Detection",
+   "authors": "Xi Jiang 0009, Jian Li 0062, Hanqiu Deng, Yong Liu 0032, Bin-Bin Gao, Yifeng Zhou, Jialin Li, Chengjie Wang 0001, Feng Zheng 0001",
+   "url": "https://openreview.net/forum?id=JDiER86r8v",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "AutoUAD: Hyper-parameter Optimization for Unsupervised Anomaly Detection",
+   "authors": "Wei Dai, Jicong Fan 0001",
+   "url": "https://openreview.net/forum?id=ErQPdaD5wJ",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Swift Hydra: Self-Reinforcing Generative Framework for Anomaly Detection with Multiple Mamba Models",
+   "authors": "Nguyen Hoang Khoi Do, Truc Nguyen, Malik Hassanaly, Raed Alharbi, Jung Taek Seo, My T. Thai",
+   "url": "https://openreview.net/forum?id=P7t2niLbvw",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "DiffGAD: A Diffusion-based Unsupervised Graph Anomaly Detector",
+   "authors": "Jinghan Li, Yuan Gao, Jinda Lu, Junfeng Fang, Congcong Wen, Hui Lin, Xiang Wang 0010",
+   "url": "https://openreview.net/forum?id=AhcYq4CnfF",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Scale-Aware Contrastive Reverse Distillation for Unsupervised Medical Anomaly Detection",
+   "authors": "Chunlei Li, Yilei Shi, Jingliang Hu, Xiao Xiang Zhu 0001, Lichao Mou",
+   "url": "https://openreview.net/forum?id=HNOo4UNPBF",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "One-for-All Few-Shot Anomaly Detection via Instance-Induced Prompt Learning",
+   "authors": "Wenxi Lv, Qinliang Su, Wenchao Xu 0001",
+   "url": "https://openreview.net/forum?id=Zzs3JwknAY",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Adversarially Robust Anomaly Detection through Spurious Negative Pair Mitigation",
+   "authors": "Hossein Mirzaei, Mojtaba Nafez, Jafar Habibi, Mohammad Sabokrou, Mohammad Hossein Rohban",
+   "url": "https://openreview.net/forum?id=t8fu5m8R5m",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Learn hybrid prototypes for multivariate time series anomaly detection",
+   "authors": "Ke-Yuan Shen",
+   "url": "https://openreview.net/forum?id=8TBGdH3t6a",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Towards a General Time Series Anomaly Detector with Adaptive Bottlenecks and Dual Adversarial Decoders",
+   "authors": "Qichao Shentu, Beibu Li, Kai Zhao 0009, Yang Shu 0001, Zhongwen Rao, Lujia Pan, Bin Yang 0002, Chenjuan Guo",
+   "url": "https://openreview.net/forum?id=aKcd7ImG5e",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "AnoLLM: Large Language Models for Tabular Anomaly Detection",
+   "authors": "Che-Ping Tsai, Ganyu Teng, Phillip Wallis, Wei Ding",
+   "url": "https://openreview.net/forum?id=7VkHffT5X2",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "CATCH: Channel-Aware Multivariate Time Series Anomaly Detection via Frequency Patching",
+   "authors": "Xingjian Wu, Xiangfei Qiu, Zhengyu Li, Yihang Wang 0004, Jilin Hu, Chenjuan Guo, Hui Xiong 0001, Bin Yang 0002",
+   "url": "https://openreview.net/forum?id=m08aK3xxdJ",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "DRL: Decomposed Representation Learning for Tabular Anomaly Detection",
+   "authors": "Hangting Ye, He Zhao 0001, Wei Fan 0010, Mingyuan Zhou, Dandan Guo, Yi Chang 0001",
+   "url": "https://openreview.net/forum?id=CJnceDksRd",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Language-Assisted Feature Transformation for Anomaly Detection",
+   "authors": "EungGu Yun 0001, Heonjin Ha, Yeongwoo Nam, Bryan Dongik Lee",
+   "url": "https://openreview.net/forum?id=2p03KljxE9",
+   "venue": "ICLR",
+   "year": 2025
+  },
+  {
+   "title": "Multi-Resolution Decomposable Diffusion Model for Non-Stationary Time Series Anomaly Detection",
+   "authors": "Guojin Zhong, Pan Wang 0011, Jin Yuan 0002, Zhiyong Li 0001, Long Chen 0016",
+   "url": "https://openreview.net/forum?id=eWocmTQn7H",
+   "venue": "ICLR",
+   "year": 2025
+  }
+ ],
+ "ICLR2026": [],
+ "ICML2025": [
+  {
+   "title": "Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models",
+   "authors": "Chao Huang 0008, Yushu Shi, Jie Wen 0001, Wei Wang 0169, Yong Xu 0001, Xiaochun Cao",
+   "url": "https://proceedings.mlr.press/v267/huang25ad.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "Learning Event Completeness for Weakly Supervised Video Anomaly Detection",
+   "authors": "Yu Wang 0174, Shiwei Chen",
+   "url": "https://proceedings.mlr.press/v267/wang25l.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "Leveraging Diffusion Model as Pseudo-Anomalous Graph Generator for Graph-Level Anomaly Detection",
+   "authors": "Jinyu Cai, Yunhe Zhang 0001, Fusheng Liu, See-Kiong Ng",
+   "url": "https://proceedings.mlr.press/v267/cai25l.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "Weakly Supervised Anomaly Detection via Dual-Tailed Kernel",
+   "authors": "Walid Durani, Tobias Nitzl, Claudia Plant, Christian Böhm 0001",
+   "url": "https://proceedings.mlr.press/v267/durani25a.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "Towards a Unified Framework of Clustering-based Anomaly Detection",
+   "authors": "Zeyu Fang, Ming Gu 0014, Sheng Zhou 0004, Jiawei Chen 0007, Qiaoyu Tan, Haishuai Wang, Jiajun Bu",
+   "url": "https://proceedings.mlr.press/v267/fang25d.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "Demeaned Sparse: Efficient Anomaly Detection by Residual Estimate",
+   "authors": "Yifan Fang, Yifei Fang, Ruizhe Chen, Haote Xu, Xinghao Ding, Yue Huang 0001",
+   "url": "https://proceedings.mlr.press/v267/fang25b.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "OmiAD: One-Step Adaptive Masked Diffusion Model for Multi-class Anomaly Detection via Adversarial Distillation",
+   "authors": "Yaoxuan Feng, Wenchao Chen, Yuxin Li 0003, Bo Chen 0001, Yubiao Wang, Zixuan Zhao, Hongwei Liu 0001, Mingyuan Zhou",
+   "url": "https://proceedings.mlr.press/v267/feng25b.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "CurvGAD: Leveraging Curvature for Enhanced Graph Anomaly Detection",
+   "authors": "Karish Grover, Geoffrey J. Gordon, Christos Faloutsos",
+   "url": "https://proceedings.mlr.press/v267/grover25a.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "Causality-Aware Contrastive Learning for Robust Multivariate Time-Series Anomaly Detection",
+   "authors": "HyunGi Kim, Jisoo Mok, Dongjun Lee, Jaihyun Lew, Sungjae Kim, Sungroh Yoon",
+   "url": "https://proceedings.mlr.press/v267/kim25aa.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "When Will It Fail?: Anomaly to Prompt for Forecasting Future Anomalies in Time Series",
+   "authors": "Min-Yeong Park, Won-Jeong Lee, Seong Tae Kim 0001, Gyeong-Moon Park",
+   "url": "https://proceedings.mlr.press/v267/park25e.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "SEAD: Unsupervised Ensemble of Streaming Anomaly Detectors",
+   "authors": "Saumya Gaurang Shah, Abishek Sankararaman, Balakrishnan Narayanaswamy, Vikramank Y. Singh",
+   "url": "https://proceedings.mlr.press/v267/shah25c.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "When Every Millisecond Counts: Real-Time Anomaly Detection via the Multimodal Asynchronous Hybrid Network",
+   "authors": "Dong Xiao, Guangyao Chen, Peixi Peng, Yangru Huang, Yifan Zhao 0002, Yongxing Dai, Yonghong Tian 0001",
+   "url": "https://proceedings.mlr.press/v267/xiao25a.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "Conformal Anomaly Detection in Event Sequences",
+   "authors": "Shuai Zhang 0007, Chuan Zhou 0001, Yang Liu 0320, Peng Zhang 0001, Xixun Lin, Shirui Pan",
+   "url": "https://proceedings.mlr.press/v267/zhang25dn.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "CostFilter-AD: Enhancing Anomaly Detection through Matching Cost Filtering",
+   "authors": "Zhe Zhang, Mingxiu Cai, Hanxiao Wang, Gaochang Wu, Tianyou Chai, Xiatian Zhu",
+   "url": "https://proceedings.mlr.press/v267/zhang25e.html",
+   "venue": "ICML",
+   "year": 2025
+  },
+  {
+   "title": "KAN-AD: Time Series Anomaly Detection with Kolmogorov-Arnold Networks",
+   "authors": "Quan Zhou, Changhua Pei, Fei Sun 0001, Jing Han, Zhengwei Gao, Haiming Zhang 0002, Gaogang Xie, Dan Pei, Jianhui Li",
+   "url": "https://proceedings.mlr.press/v267/zhou25u.html",
+   "venue": "ICML",
+   "year": 2025
+  }
+ ],
+ "ICML2026": [],
+ "TPAMI2025": [
+  {
+   "title": "Scene-Dependent Prediction in Latent Space for Video Anomaly Detection and Anticipation",
+   "authors": "Congqi Cao, Hanwen Zhang 0017, Yue Lu 0008, Peng Wang 0015, Yanning Zhang 0001",
+   "url": "https://doi.org/10.1109/TPAMI.2024.3461718",
+   "venue": "TPAMI",
+   "year": 2025
+  },
+  {
+   "title": "Graph Anomaly Detection in Time Series: A Survey",
+   "authors": "Thi Kieu Khanh Ho, Ali Karami, Narges Armanfard",
+   "url": "https://doi.org/10.1109/TPAMI.2025.3566620",
+   "venue": "TPAMI",
+   "year": 2025
+  },
+  {
+   "title": "Self-Supervised Anomaly Detection With Neural Transformations",
+   "authors": "Chen Qiu 0001, Marius Kloft, Stephan Mandt, Maja Rudolph",
+   "url": "https://doi.org/10.1109/TPAMI.2024.3519543",
+   "venue": "TPAMI",
+   "year": 2025
+  },
+  {
+   "title": "M3DM-NR: RGB-3D Noisy-Resistant Industrial Anomaly Detection via Multimodal Denoising",
+   "authors": "Chengjie Wang 0001, Haokun Zhu, Jinlong Peng, Yue Wang 0020, Ran Yi 0002, Yunsheng Wu, Lizhuang Ma, Jiangning Zhang",
+   "url": "https://doi.org/10.1109/TPAMI.2025.3592089",
+   "venue": "TPAMI",
+   "year": 2025
+  },
+  {
+   "title": "Multilingual-Prompt-Guided Directional Feature Learning for Weakly Supervised Video Anomaly Detection",
+   "authors": "Chizhuo Xiao, Yang Xiao 0007, Joey Tianyi Zhou, Zhiwen Fang",
+   "url": "https://doi.org/10.1109/TPAMI.2025.3590242",
+   "venue": "TPAMI",
+   "year": 2025
+  },
+  {
+   "title": "DiffusionAD: Norm-Guided One-Step Denoising Diffusion for Anomaly Detection",
+   "authors": "Hui Zhang 0090, Zheng Wang 0059, Dan Zeng 0001, Zuxuan Wu, Yu-Gang Jiang 0001",
+   "url": "https://doi.org/10.1109/TPAMI.2025.3570494",
+   "venue": "TPAMI",
+   "year": 2025
+  }
+ ],
+ "TPAMI2026": [
+  {
+   "title": "MoEGAD: A Mixture-of-Experts Framework With Pseudo-Anomaly Generation for Graph-Level Anomaly Detection",
+   "authors": "Jinyu Cai, Yunhe Zhang 0001, Pengyang Wang, See-Kiong Ng",
+   "url": "https://doi.org/10.1109/TPAMI.2025.3646069",
+   "venue": "TPAMI",
+   "year": 2026
+  },
+  {
+   "title": "ZUMA: Training-Free Zero-Shot Unified Multimodal Anomaly Detection",
+   "authors": "Yunfeng Ma, Min Liu 0008, Shuai Jiang, Jingyu Zhou, Yuan Bian 0002, Xueping Wang, Yaonan Wang 0001",
+   "url": "https://doi.org/10.1109/TPAMI.2026.3658856",
+   "venue": "TPAMI",
+   "year": 2026
+  },
+  {
+   "title": "PiercingEye: Dual-Space Video Violence Detection With Hyperbolic Vision-Language Guidance",
+   "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Mengjingcheng Mo, Jiankang Zheng, Qingqing Li, Ji Gan, Xinbo Gao 0001",
+   "url": "https://doi.org/10.1109/TPAMI.2025.3617460",
+   "venue": "TPAMI",
+   "year": 2026
+  }
+ ],
+ "TIP2025": [
+  {
+   "title": "A Multi-Category Anomaly Editing Network With Correlation Exploration and Voxel-Level Attention for Unsupervised Surface Anomaly Detection",
+   "authors": "Ruifan Zhang, Hai-Miao Hu",
+   "url": "https://doi.org/10.1109/TIP.2025.3607638",
+   "venue": "TIP",
+   "year": 2025
+  },
+  {
+   "title": "Where and What: Contextual Dynamics-Aware Anomaly Detection in Surveillance Videos",
+   "authors": "Deok-Hyun Ahn, Yong-Jin Jo, Dong-Bum Kim, Gi Pyo Nam, Jae-Ho Han, Haksub Kim",
+   "url": "https://doi.org/10.1109/TIP.2025.3623392",
+   "venue": "TIP",
+   "year": 2025
+  },
+  {
+   "title": "Bi-Grid Reconstruction for Image Anomaly Detection",
+   "authors": "Aimin Feng, Huichuan Huang, Guangyu Wei, Wenlong Sun",
+   "url": "https://doi.org/10.1109/TIP.2025.3644787",
+   "venue": "TIP",
+   "year": 2025
+  },
+  {
+   "title": "Dual-Space Normalizing Flow for Unsupervised Video Anomaly Detection",
+   "authors": "Jiaxu Leng, Yumeng Zhang, Mingpi Tan, Changjiang Kuang, Zhanjie Wu, Ji Gan, Xinbo Gao 0001",
+   "url": "https://doi.org/10.1109/TIP.2025.3614006",
+   "venue": "TIP",
+   "year": 2025
+  },
+  {
+   "title": "CRCL: Causal Representation Consistency Learning for Anomaly Detection in Surveillance Videos",
+   "authors": "Yang Liu 0246, Hongjin Wang, Zepu Wang, Xiaoguang Zhu, Jing Liu 0050, Peng Sun 0007, Rui Tang, Jianwei Du, Victor C. M. Leung, Liang Song",
+   "url": "https://doi.org/10.1109/TIP.2025.3558089",
+   "venue": "TIP",
+   "year": 2025
+  },
+  {
+   "title": "Self-Supervised Masked Graph Autoencoder for Hyperspectral Anomaly Detection",
+   "authors": "Bing Tu, Baoliang He, Yan He, Tao Zhou, Bo Liu 0020, Jun Li 0009, Antonio Plaza",
+   "url": "https://doi.org/10.1109/TIP.2025.3620091",
+   "venue": "TIP",
+   "year": 2025
+  },
+  {
+   "title": "Multi-Scale Autoencoder Suppression Strategy for Hyperspectral Image Anomaly Detection",
+   "authors": "Bing Tu, Tao Zhou, Bo Liu 0020, Yan He, Jun Li 0009, Antonio Plaza",
+   "url": "https://doi.org/10.1109/TIP.2025.3595408",
+   "venue": "TIP",
+   "year": 2025
+  },
+  {
+   "title": "A Generalized Non-Convex Surrogated Framework for Anomaly Detection on Blurred Hyperspectral Images",
+   "authors": "Yinjian Wang, Wei Li 0032, Yuanyuan Gui, Haijun Xie, Lianbo Zhang",
+   "url": "https://doi.org/10.1109/TIP.2025.3568745",
+   "venue": "TIP",
+   "year": 2025
+  }
+ ],
+ "TIP2026": [
+  {
+   "title": "&quot;Stones From Other Hills Can Polish Jade&quot;: Zero-Shot Anomaly Synthesis via Cross-Domain Anomaly Injection",
+   "authors": "Siqi Wang 0001, Yuanze Hu, Xinwang Liu 0002, Siwei Wang 0001, Guangpu Wang, Chuanfu Xu, Jie Liu 0002, Ping Chen 0004",
+   "url": "https://doi.org/10.1109/TIP.2026.3675432",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "FocusPatch AD: Few-Shot Multi-Class Anomaly Detection With Unified Keywords Patch Prompts",
+   "authors": "Xicheng Ding, Xiaofan Li 0008, Mingang Chen, Jingyu Gong, Yuan Xie 0006",
+   "url": "https://doi.org/10.1109/TIP.2025.3646861",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "Dual-Masked and Discriminative Reconstruction for Unified Vision Anomaly Detection",
+   "authors": "Bin-Bin Gao",
+   "url": "https://doi.org/10.1109/TIP.2026.3687095",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "Unified Anomaly Detection via Multi-Scale Contrasted Memory",
+   "authors": "Loïc Jézéquel, Jean Beaudet, Aymeric Histace, Ngoc-Son Vu",
+   "url": "https://doi.org/10.1109/TIP.2026.3663923",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "Accurate Industrial Anomaly Detection and Localization Using Weakly-Supervised Residual Transformers",
+   "authors": "Hanxi Li, Jingqi Wu, Deyin Liu, Lin Yuanbo Wu, Hao Chen 0041, Chunhua Shen",
+   "url": "https://doi.org/10.1109/TIP.2026.3659337",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "Adapting Domain-Aware Knowledge to Vision-Language Model for Zero-Shot Anomaly Detection",
+   "authors": "Zeqi Ma, Xiaozhao Fang, Yue Huang, Jie Wen 0001, Guoxu Zhou, Shengli Xie 0001",
+   "url": "https://doi.org/10.1109/TIP.2026.3671665",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "Advancing Pre-Trained Teacher: Towards Robust Feature Discrepancy for Anomaly Detection",
+   "authors": "Canhui Tang, Sanping Zhou, Yizhe Li, Yonghao Dong, Le Wang 0003",
+   "url": "https://doi.org/10.1109/TIP.2026.3683277",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "Open-Set Anomaly Segmentation in Complex Scenarios",
+   "authors": "Song Xia, Yi Yu 0011, Henghui Ding, Wenhan Yang, Shifei Liu, Alex C. Kot, Xudong Jiang 0001",
+   "url": "https://doi.org/10.1109/TIP.2026.3693134",
+   "venue": "TIP",
+   "year": 2026
+  },
+  {
+   "title": "Improving Unsupervised Ultrasonic Image Anomaly Detection via Frequency-Spatial Feature Filtering and Gaussian Mixture Modeling",
+   "authors": "Wenjing Zhang, Ke Lu 0002, Jinbao Wang, Hao Liang, Can Gao, Jian Xue 0002",
+   "url": "https://doi.org/10.1109/TIP.2026.3659292",
+   "venue": "TIP",
+   "year": 2026
+  }
+ ]
+}

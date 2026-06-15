@@ -3,14 +3,23 @@
  "field_key": "vad",
  "tagline": "VAD / VAU — anomalous event detection & understanding in video",
  "venues": [
+  "AAAI",
+  "BMVC",
   "CVPR",
-  "ICCV"
+  "ECCV",
+  "ICCV",
+  "ICLR",
+  "ICML",
+  "NeurIPS",
+  "TIP",
+  "TPAMI"
  ],
  "years": [
+  2024,
   2025,
   2026
  ],
- "total": 20,
+ "total": 47,
  "trend": [
   {
    "venue": "CVPR",
@@ -21,7 +30,7 @@
   {
    "venue": "CVPR",
    "year": 2026,
-   "count": 9,
+   "count": 8,
    "total": 4068
   },
   {
@@ -29,28 +38,98 @@
    "year": 2025,
    "count": 4,
    "total": 2701
+  },
+  {
+   "venue": "ECCV",
+   "year": 2024,
+   "count": 5,
+   "total": null
+  },
+  {
+   "venue": "BMVC",
+   "year": 2024,
+   "count": 2,
+   "total": null
+  },
+  {
+   "venue": "AAAI",
+   "year": 2025,
+   "count": 5,
+   "total": null
+  },
+  {
+   "venue": "AAAI",
+   "year": 2026,
+   "count": 5,
+   "total": null
+  },
+  {
+   "venue": "NeurIPS",
+   "year": 2024,
+   "count": 3,
+   "total": null
+  },
+  {
+   "venue": "ICLR",
+   "year": 2025,
+   "count": 0,
+   "total": null
+  },
+  {
+   "venue": "ICML",
+   "year": 2025,
+   "count": 2,
+   "total": null
+  },
+  {
+   "venue": "TPAMI",
+   "year": 2025,
+   "count": 2,
+   "total": null
+  },
+  {
+   "venue": "TPAMI",
+   "year": 2026,
+   "count": 1,
+   "total": null
+  },
+  {
+   "venue": "TIP",
+   "year": 2025,
+   "count": 3,
+   "total": null
+  },
+  {
+   "venue": "TIP",
+   "year": 2026,
+   "count": 0,
+   "total": null
   }
  ],
  "subtopics": [
   {
-   "name": "VLM / LLM",
-   "count": 7
-  },
-  {
-   "name": "Multimodal / Audio",
-   "count": 6
-  },
-  {
    "name": "Weakly-supervised",
-   "count": 6
+   "count": 17
+  },
+  {
+   "name": "VLM / LLM",
+   "count": 15
   },
   {
    "name": "Reconstruction / Prediction",
-   "count": 4
+   "count": 10
+  },
+  {
+   "name": "Multimodal / Audio",
+   "count": 9
   },
   {
    "name": "Traffic / Driving",
-   "count": 3
+   "count": 6
+  },
+  {
+   "name": "Diffusion / Flow",
+   "count": 4
   },
   {
    "name": "Zero-/Open-vocab",
@@ -59,13 +138,69 @@
   {
    "name": "Skeleton / Pose",
    "count": 1
-  },
-  {
-   "name": "Diffusion / Flow",
-   "count": 1
   }
  ],
  "papers": [
+  {
+   "title": "RefineVAD: Semantic-Guided Feature Recalibration for Weakly Supervised Video Anomaly Detection",
+   "authors": "Junhee Lee, ChaeBeen Bang, MyoungChul Kim, MyeongAh Cho",
+   "venue": "AAAI",
+   "year": 2026,
+   "url": "https://doi.org/10.1609/aaai.v40i7.37512",
+   "arxiv": "2511.13204",
+   "citations": 1,
+   "subtopics": [
+    "Weakly-supervised"
+   ]
+  },
+  {
+   "title": "Learning to Tell Apart: Weakly Supervised Video Anomaly Detection via Disentangled Semantic Alignment",
+   "authors": "Wenti Yin, Huaxin Zhang, Xiang Wang 0012, Yuqing Lu, Yicheng Zhang, Bingquan Gong, Jialong Zuo, Li Yu 0003, Changxin Gao, Nong Sang",
+   "venue": "AAAI",
+   "year": 2026,
+   "url": "https://doi.org/10.1609/aaai.v40i14.38191",
+   "arxiv": "2511.10334",
+   "citations": 1,
+   "subtopics": [
+    "Weakly-supervised",
+    "Reconstruction / Prediction",
+    "Multimodal / Audio"
+   ]
+  },
+  {
+   "title": "HeadHunt-VAD: Hunting Robust Anomaly-Sensitive Heads in MLLM for Tuning-Free Video Anomaly Detection",
+   "authors": "Zhaolin Cai, Fan Li 0003, Ziwei Zheng, Haixia Bi, Lijun He 0001",
+   "venue": "AAAI",
+   "year": 2026,
+   "url": "https://doi.org/10.1609/aaai.v40i24.39066",
+   "arxiv": "",
+   "citations": 0,
+   "subtopics": [
+    "VLM / LLM"
+   ]
+  },
+  {
+   "title": "VAGU &amp; GtS: LLM-Based Benchmark and Framework for Joint Video Anomaly Grounding and Understanding",
+   "authors": "Shibo Gao, Peipei Yang, Yangyang Liu, Yi Chen 0027, Han Zhu, Xu-Yao Zhang, Linlin Huang",
+   "venue": "AAAI",
+   "year": 2026,
+   "url": "https://doi.org/10.1609/aaai.v40i6.42412",
+   "arxiv": "",
+   "citations": 0,
+   "subtopics": [
+    "VLM / LLM"
+   ]
+  },
+  {
+   "title": "FineVAU: A Novel Human-Aligned Benchmark for Fine-Grained Video Anomaly Understanding",
+   "authors": "João Alexandre Cardeira Pereira, Vasco Lopes, João Neves 0006, David Semedo",
+   "venue": "AAAI",
+   "year": 2026,
+   "url": "https://doi.org/10.1609/aaai.v40i10.37790",
+   "arxiv": "",
+   "citations": 0,
+   "subtopics": []
+  },
   {
    "title": "No Need For Real Anomaly: MLLM Empowered Zero-Shot Video Anomaly Detection",
    "authors": "Zunkai Dai, Ke Li, Jiajia Liu, Jie Yang, Yuanyuan Qiao",
@@ -74,7 +209,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Dai_No_Need_For_Real_Anomaly_MLLM_Empowered_Zero-Shot_Video_Anomaly_CVPR_2026_paper.html",
    "arxiv": "2602.19248",
    "citations": 2,
-   "abstract": "The collection and detection of video anomaly data has long been a challenging problem due to its rare occurrence and spatio-temporal scarcity. Existing video anomaly detection (VAD) methods under perform in open-world scenarios. Key contributing factors include limited dataset diversity, and inadequate understanding of context-dependent anomalous semantics. To address these issues, i) we propose LAVIDA, an end-to-end zero-shot video anomaly detection framework. ii) LAVIDA employs an Anomaly Exposure Sampler that transforms segmented objects into pseudo-anomalies to enhance model adaptability ",
    "subtopics": [
     "VLM / LLM",
     "Zero-/Open-vocab",
@@ -89,7 +223,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Weakly_Supervised_Video_Anomaly_Detection_with_Anomaly-Connected_Components_and_Intention_CVPR_2026_paper.html",
    "arxiv": "2603.00550",
    "citations": 1,
-   "abstract": "Weakly supervised video anomaly detection (WS-VAD) involves identifying the temporal intervals that contain anomalous events in untrimmed videos, where only video-level annotations are provided as supervisory signals. However, a key limitation persists in WS-VAD, as dense frame-level annotations are absent, which often leaves existing methods struggling to learn anomaly semantics effectively. To address this issue, we propose a novel framework named LAS-VAD, short for Learning Anomaly Semantics for WS-VAD, which integrates anomaly-connected component mechanism and intention awareness mechanism",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -102,7 +235,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Fine-VAD_Towards_Fine-Grained_Video_Anomaly_Detection_via_Progressive_Cross-Granularity_Learning_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
-   "abstract": "",
    "subtopics": []
   },
   {
@@ -113,7 +245,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
-   "abstract": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -126,22 +257,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xu_TLMA_Mitigating_the_Impact_of_Weakly_Labeled_Information_for_Video_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
-   "abstract": "",
    "subtopics": []
-  },
-  {
-   "title": "Reasoning-Driven Anomaly Detection and Localization with Image-Level Supervision",
-   "authors": "Yizhou Jin, Yuezhu Feng, Jinjin Zhang, Peng Wang, Qingjie Liu, Yunhong Wang",
-   "venue": "CVPR",
-   "year": 2026,
-   "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Jin_Reasoning-Driven_Anomaly_Detection_and_Localization_with_Image-Level_Supervision_CVPR_2026_paper.html",
-   "arxiv": "2603.27179",
-   "citations": 0,
-   "abstract": "Multimodal large language models (MLLMs) have recently demonstrated remarkable reasoning and perceptual abilities for anomaly detection. However, most approaches remain confined to image-level anomaly detection and textual reasoning, while pixel-level localization still relies on external vision modules and dense annotations. In this work, we activate the intrinsic reasoning potential of MLLMs to perform anomaly detection, pixel-level localization, and interpretable reasoning solely from image-level supervision, without any auxiliary components or pixel-wise labels. Specifically, we propose Re",
-   "subtopics": [
-    "VLM / LLM",
-    "Multimodal / Audio"
-   ]
   },
   {
    "title": "The Road Less Seen: Segment Exploration for Weakly Supervised Video Anomaly Detection",
@@ -151,7 +267,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Acharya_The_Road_Less_Seen_Segment_Exploration_for_Weakly_Supervised_Video_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
-   "abstract": "",
    "subtopics": [
     "Weakly-supervised",
     "Traffic / Driving"
@@ -165,7 +280,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sun_Joint_Learning_of_General_and_Diverse_Patterns_with_Mixture_of_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
-   "abstract": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -178,8 +292,83 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_Alert-CLIP_Abnormality-aware_Latent-Enhanced_Representation_Tuning_of_CLIP_for_Video_Anomaly_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
-   "abstract": "",
    "subtopics": []
+  },
+  {
+   "title": "PiercingEye: Dual-Space Video Violence Detection With Hyperbolic Vision-Language Guidance",
+   "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Mengjingcheng Mo, Jiankang Zheng, Qingqing Li, Ji Gan, Xinbo Gao 0001",
+   "venue": "TPAMI",
+   "year": 2026,
+   "url": "https://doi.org/10.1109/TPAMI.2025.3617460",
+   "arxiv": "",
+   "citations": 0,
+   "subtopics": [
+    "VLM / LLM"
+   ]
+  },
+  {
+   "title": "Federated Weakly Supervised Video Anomaly Detection with Multimodal Prompt",
+   "authors": "Benfeng Wang, Chao Huang 0008, Jie Wen 0001, Wei Wang 0169, Yabo Liu, Yong Xu 0001",
+   "venue": "AAAI",
+   "year": 2025,
+   "url": "https://doi.org/10.1609/aaai.v39i20.35398",
+   "arxiv": "",
+   "citations": 25,
+   "subtopics": [
+    "Weakly-supervised",
+    "VLM / LLM",
+    "Multimodal / Audio"
+   ]
+  },
+  {
+   "title": "Video Anomaly Detection with Motion and Appearance Guided Patch Diffusion Model",
+   "authors": "Hang Zhou 0010, Jiale Cai, Yuteng Ye, Yonghui Feng, Chenxing Gao, Junqing Yu, Zikai Song, Wei Yang 0034",
+   "venue": "AAAI",
+   "year": 2025,
+   "url": "https://doi.org/10.1609/aaai.v39i10.33169",
+   "arxiv": "2412.09026",
+   "citations": 24,
+   "subtopics": [
+    "Reconstruction / Prediction",
+    "Diffusion / Flow"
+   ]
+  },
+  {
+   "title": "UCF-Crime-DVS: A Novel Event-Based Dataset for Video Anomaly Detection with Spiking Neural Networks",
+   "authors": "Yuanbin Qian, Shuhan Ye, Chong Wang 0001, Xiaojie Cai, Jiangbo Qian, Jiafei Wu",
+   "venue": "AAAI",
+   "year": 2025,
+   "url": "https://doi.org/10.1609/aaai.v39i6.32705",
+   "arxiv": "2503.12905",
+   "citations": 22,
+   "subtopics": [
+    "Weakly-supervised"
+   ]
+  },
+  {
+   "title": "Dual Conditioned Motion Diffusion for Pose-Based Video Anomaly Detection",
+   "authors": "Hongsong Wang 0001, Andi Xu, Pinle Ding, Jie Gui",
+   "venue": "AAAI",
+   "year": 2025,
+   "url": "https://doi.org/10.1609/aaai.v39i7.32829",
+   "arxiv": "2412.17210",
+   "citations": 8,
+   "subtopics": [
+    "Reconstruction / Prediction",
+    "Diffusion / Flow"
+   ]
+  },
+  {
+   "title": "VarCMP: Adapting Cross-Modal Pre-Training Models for Video Anomaly Retrieval",
+   "authors": "Peng Wu 0015, Wanshun Su, Xiangteng He, Peng Wang 0015, Yanning Zhang 0001",
+   "venue": "AAAI",
+   "year": 2025,
+   "url": "https://doi.org/10.1609/aaai.v39i8.32909",
+   "arxiv": "",
+   "citations": 7,
+   "subtopics": [
+    "Multimodal / Audio"
+   ]
   },
   {
    "title": "Holmes-VAU: Towards Long-term Video Anomaly Understanding at Any Granularity",
@@ -189,7 +378,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Holmes-VAU_Towards_Long-term_Video_Anomaly_Understanding_at_Any_Granularity_CVPR_2025_paper.html",
    "arxiv": "2412.06171",
    "citations": 61,
-   "abstract": "How can we enable models to comprehend video anomalies occurring over varying temporal scales and contexts? Traditional Video Anomaly Understanding (VAU) methods focus on frame-level anomaly prediction, often missing the interpretability of complex and diverse real-world anomalies. Recent multimodal approaches leverage visual and textual data but lack hierarchical annotations that capture both short-term and long-term anomalies. To address this challenge, we introduce HIVAU-70k, a large-scale benchmark for hierarchical video anomaly understanding across any granularity. We develop a semi-autom",
    "subtopics": [
     "VLM / LLM",
     "Reconstruction / Prediction",
@@ -204,7 +392,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Ye_VERA_Explainable_Video_Anomaly_Detection_via_Verbalized_Learning_of_Vision-Language_CVPR_2025_paper.html",
    "arxiv": "2412.01095",
    "citations": 19,
-   "abstract": "The rapid advancement of vision-language models (VLMs) has established a new paradigm in video anomaly detection (VAD): leveraging VLMs to simultaneously detect anomalies and provide comprehendible explanations for the decisions. Existing work in this direction often assumes the complex reasoning required for VAD exceeds the capabilities of pretrained VLMs. Consequently, these approaches either incorporate specialized reasoning modules during inference or rely on instruction tuning datasets through additional training to adapt VLMs for VAD. However, such strategies often incur substantial comp",
    "subtopics": [
     "VLM / LLM"
    ]
@@ -217,7 +404,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_Anomize_Better_Open_Vocabulary_Video_Anomaly_Detection_CVPR_2025_paper.html",
    "arxiv": "2503.18094",
    "citations": 17,
-   "abstract": "Open Vocabulary Video Anomaly Detection (OVVAD) seeks to detect and classify both base and novel anomalies. However, existing methods face two specific challenges related to novel anomalies. The first challenge is detection ambiguity, where the model struggles to assign accurate anomaly scores to unfamiliar anomalies. The second challenge is categorization confusion, where novel anomalies are often misclassified as visually similar base instances. To address these challenges, we explore supplementary information from multiple sources to mitigate detection ambiguity by leveraging multiple level",
    "subtopics": [
     "Zero-/Open-vocab"
    ]
@@ -230,7 +416,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Hu_Noise-Resistant_Video_Anomaly_Detection_via_RGB_Error-Guided_Multiscale_Predictive_Coding_CVPR_2025_paper.html",
    "arxiv": "",
    "citations": 10,
-   "abstract": "Due to the interference of background noise, existing video anomaly detection methods are prone to detect some normal events in complex scenes as anomalies. Meanwhile, we note that the diversity of normal patterns has not been adequately considered, i.e., the normal events that are worthy of reference in the test data have not been properly utilized, which raises the risk of missed and false detections. In this work, we combine the tasks of next-frame prediction and predicted-frame reconstruction to propose a noise-resistant video anomaly detection method. For the prediction task, we develop a",
    "subtopics": [
     "Reconstruction / Prediction"
    ]
@@ -243,7 +428,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Xing_EchoTraffic_Enhancing_Traffic_Anomaly_Understanding_with_Audio-Visual_Insights_CVPR_2025_paper.html",
    "arxiv": "",
    "citations": 9,
-   "abstract": "Traffic Anomaly Understanding (TAU) is essential for improving public safety and transportation efficiency by enabling timely detection and response to incidents. Beyond existing methods, which rely largely on visual data, we propose to consider audio cues, a valuable source that offers strong hints to anomaly scenarios such as crashes and honking. Our contributions are twofold. First, we compile AV-TAU, the first large-scale audio-visual dataset for TAU, providing 29,865 traffic anomaly videos and 149,325 Q&A pairs, while supporting five essential TAU tasks. Second, we develop EchoTraffic, a ",
    "subtopics": [
     "VLM / LLM",
     "Multimodal / Audio",
@@ -258,7 +442,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Huang_Track_Any_Anomalous_ObjectA_Granular_Video_Anomaly_Detection_Pipeline_CVPR_2025_paper.html",
    "arxiv": "2506.05175",
    "citations": 5,
-   "abstract": "Video anomaly detection (VAD) is crucial in scenarios such as surveillance and autonomous driving, where timely detection of unexpected activities is essential. Albeit existing methods have primarily focused on detecting anomalous objects in videos—either by identifying anomalous frames or objects—they often neglect finer-grained analysis, such as anomalous pixels, which limits their ability to capture a broader range of anomalies. To address this challenge, we propose an innovative VAD framework called Track Any Anomalous Object (TAO), which introduces a Granular Video Anomaly Detection Frame",
    "subtopics": [
     "Traffic / Driving"
    ]
@@ -271,7 +454,6 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Majhi_Just_Dance_with_pi_A_Poly-modal_Inductor_for_Weakly-supervised_Video_CVPR_2025_paper.html",
    "arxiv": "2505.13123",
    "citations": 3,
-   "abstract": "Weakly-supervised methods for video anomaly detection (VAD) are conventionally based merely on RGB spatio-temporal features, which continues to limit their reliability in real-world scenarios. This is due to the fact that RGB-features are not sufficiently distinctive in setting apart categories such as shoplifting from visually similar events. Therefore, towards robust complex real-world VAD, it is essential to augment RGB spatio-temporal features by additional modalities. Motivated by this, we introduce the Poly-modal Induced framework for VAD: \"PI-VAD\" (or π-VAD), a novel approach that augme",
    "subtopics": [
     "Weakly-supervised",
     "VLM / LLM",
@@ -286,7 +468,6 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Amicantonio_Mixture_of_Experts_Guided_by_Gaussian_Splatters_Matters_A_new_ICCV_2025_paper.html",
    "arxiv": "2508.06318",
    "citations": 9,
-   "abstract": "Video Anomaly Detection (VAD) is a challenging task due to the variability of anomalous events and the limited availability of labeled data. Under the Weakly-Supervised VAD (WSVAD) paradigm, only video-level labels are provided during training, while predictions are made at the frame level. Although state-of-the-art models perform well on simple anomalies (e.g., explosions), they struggle with complex real-world events (e.g., shoplifting). This difficulty stems from two key issues: (1) the inability of current models to address the diversity of anomaly types, as they process all categories wit",
    "subtopics": [
     "Weakly-supervised",
     "Reconstruction / Prediction"
@@ -300,7 +481,6 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Delic_Sequential_keypoint_density_estimator_an_overlooked_baseline_of_skeleton-based_video_ICCV_2025_paper.html",
    "arxiv": "2506.18368",
    "citations": 5,
-   "abstract": "Detecting anomalous human behaviour is an important visual task in safety-critical applications such as healthcare monitoring, workplace safety, or public surveillance. In these contexts, abnormalities are often reflected with unusual human poses. Thus, we propose SeeKer, a method for detecting anomalies in sequences of human skeletons. Our method formulates the skeleton sequence density through autoregressive factorization at the keypoint level. The corresponding conditional distributions represent probable keypoint locations given prior skeletal motion. We formulate the joint distribution of",
    "subtopics": [
     "Skeleton / Pose",
     "Reconstruction / Prediction"
@@ -314,7 +494,6 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Chen_Aligning_Effective_Tokens_with_Video_Anomaly_in_Large_Language_Models_ICCV_2025_paper.html",
    "arxiv": "2508.06350",
    "citations": 5,
-   "abstract": "Understanding abnormal events in videos is a vital and challenging task that has garnered significant attention in a wide range of applications. Although current video understanding Multi-modal Large Language Models (MLLMs) are capable of analyzing general videos, they often struggle to handle anomalies due to the spatial and temporal sparsity of abnormal events, where the redundant information always leads to suboptimal outcomes. To address these challenges, exploiting the representation and generalization capabilities of Vison Language Models (VLMs) and Large Language Models (LLMs), we propo",
    "subtopics": [
     "VLM / LLM",
     "Multimodal / Audio"
@@ -328,14 +507,218 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Autoregressive_Denoising_Score_Matching_is_a_Good_Video_Anomaly_Detector_ICCV_2025_paper.html",
    "arxiv": "2506.23282",
    "citations": 4,
-   "abstract": "Video anomaly detection (VAD) is an important computer vision problem. Thanks to the mode coverage capabilities of generative models, the likelihood-based paradigm is catching growing interest, as it can model normal distribution and detect out-of-distribution anomalies. However, these likelihood-based methods are blind to the anomalies located in local modes near the learned distribution. To handle these “unseen” anomalies, we dive into three gaps uniquely existing in VAD regarding scene, motion and appearance. Specifically, we first build a noise-conditioned score transformer for denoising s",
    "subtopics": [
     "Diffusion / Flow"
+   ]
+  },
+  {
+   "title": "Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models",
+   "authors": "Chao Huang 0008, Yushu Shi, Jie Wen 0001, Wei Wang 0169, Yong Xu 0001, Xiaochun Cao",
+   "venue": "ICML",
+   "year": 2025,
+   "url": "https://proceedings.mlr.press/v267/huang25ad.html",
+   "arxiv": "",
+   "citations": 0,
+   "subtopics": [
+    "VLM / LLM"
+   ]
+  },
+  {
+   "title": "Learning Event Completeness for Weakly Supervised Video Anomaly Detection",
+   "authors": "Yu Wang 0174, Shiwei Chen",
+   "venue": "ICML",
+   "year": 2025,
+   "url": "https://proceedings.mlr.press/v267/wang25l.html",
+   "arxiv": "",
+   "citations": 0,
+   "subtopics": [
+    "Weakly-supervised"
+   ]
+  },
+  {
+   "title": "CRCL: Causal Representation Consistency Learning for Anomaly Detection in Surveillance Videos",
+   "authors": "Yang Liu 0246, Hongjin Wang, Zepu Wang, Xiaoguang Zhu, Jing Liu 0050, Peng Sun 0007, Rui Tang, Jianwei Du, Victor C. M. Leung, Liang Song",
+   "venue": "TIP",
+   "year": 2025,
+   "url": "https://doi.org/10.1109/TIP.2025.3558089",
+   "arxiv": "",
+   "citations": 26,
+   "subtopics": []
+  },
+  {
+   "title": "Dual-Space Normalizing Flow for Unsupervised Video Anomaly Detection",
+   "authors": "Jiaxu Leng, Yumeng Zhang, Mingpi Tan, Changjiang Kuang, Zhanjie Wu, Ji Gan, Xinbo Gao 0001",
+   "venue": "TIP",
+   "year": 2025,
+   "url": "https://doi.org/10.1109/TIP.2025.3614006",
+   "arxiv": "",
+   "citations": 4,
+   "subtopics": [
+    "Reconstruction / Prediction"
+   ]
+  },
+  {
+   "title": "Where and What: Contextual Dynamics-Aware Anomaly Detection in Surveillance Videos",
+   "authors": "Deok-Hyun Ahn, Yong-Jin Jo, Dong-Bum Kim, Gi Pyo Nam, Jae-Ho Han, Haksub Kim",
+   "venue": "TIP",
+   "year": 2025,
+   "url": "https://doi.org/10.1109/TIP.2025.3623392",
+   "arxiv": "",
+   "citations": 2,
+   "subtopics": [
+    "Weakly-supervised",
+    "VLM / LLM",
+    "Multimodal / Audio"
+   ]
+  },
+  {
+   "title": "Scene-Dependent Prediction in Latent Space for Video Anomaly Detection and Anticipation",
+   "authors": "Congqi Cao, Hanwen Zhang 0017, Yue Lu 0008, Peng Wang 0015, Yanning Zhang 0001",
+   "venue": "TPAMI",
+   "year": 2025,
+   "url": "https://doi.org/10.1109/TPAMI.2024.3461718",
+   "arxiv": "",
+   "citations": 32,
+   "subtopics": [
+    "Reconstruction / Prediction",
+    "Diffusion / Flow"
+   ]
+  },
+  {
+   "title": "Multilingual-Prompt-Guided Directional Feature Learning for Weakly Supervised Video Anomaly Detection",
+   "authors": "Chizhuo Xiao, Yang Xiao 0007, Joey Tianyi Zhou, Zhiwen Fang",
+   "venue": "TPAMI",
+   "year": 2025,
+   "url": "https://doi.org/10.1109/TPAMI.2025.3590242",
+   "arxiv": "",
+   "citations": 6,
+   "subtopics": [
+    "Weakly-supervised",
+    "VLM / LLM"
+   ]
+  },
+  {
+   "title": "Hybrid Video Anomaly Detection for Autonomous Driving",
+   "authors": "Daniel Bogdoll, Jan Imhof, Tim Joseph, Svetlana Pavlitska, J. Marius Zöllner",
+   "venue": "BMVC",
+   "year": 2024,
+   "url": "https://bmva-archive.org.uk/bmvc/2024/workshops/RROW/04_Hybrid_Video_Anomaly_Detecti.pdf",
+   "arxiv": "2406.06423",
+   "citations": 3,
+   "subtopics": [
+    "Traffic / Driving"
+   ]
+  },
+  {
+   "title": "VLAVAD: Vision-Language Models Assisted Unsupervised Video Anomaly Detection",
+   "authors": "Changkang Li, Yalong Jiang",
+   "venue": "BMVC",
+   "year": 2024,
+   "url": "https://bmvc2024.org/proceedings/599/",
+   "arxiv": "",
+   "citations": 2,
+   "subtopics": [
+    "VLM / LLM"
+   ]
+  },
+  {
+   "title": "Follow the Rules: Reasoning for Video Anomaly Detection with Large Language Models",
+   "authors": "Yuchen Yang 0001, Kwonjoon Lee, Behzad Dariush, Yinzhi Cao, Shao-Yuan Lo",
+   "venue": "ECCV",
+   "year": 2024,
+   "url": "https://doi.org/10.1007/978-3-031-73004-7_18",
+   "arxiv": "2407.10299",
+   "citations": 84,
+   "subtopics": [
+    "VLM / LLM",
+    "Traffic / Driving"
+   ]
+  },
+  {
+   "title": "Cross-Domain Learning for Video Anomaly Detection with Limited Supervision",
+   "authors": "Yashika Jain, Ali Dabouei, Min Xu",
+   "venue": "ECCV",
+   "year": 2024,
+   "url": "https://doi.org/10.1007/978-3-031-73404-5_27",
+   "arxiv": "2408.05191",
+   "citations": 8,
+   "subtopics": [
+    "Weakly-supervised",
+    "Reconstruction / Prediction"
+   ]
+  },
+  {
+   "title": "Interleaving One-Class and Weakly-Supervised Models with Adaptive Thresholding for Unsupervised Video Anomaly Detection",
+   "authors": "Yongwei Nie, Hao Huang, Chengjiang Long, Qing Zhang 0006, Pradipta Maji, Hongmin Cai",
+   "venue": "ECCV",
+   "year": 2024,
+   "url": "https://doi.org/10.1007/978-3-031-73404-5_26",
+   "arxiv": "2401.13551",
+   "citations": 8,
+   "subtopics": [
+    "Weakly-supervised"
+   ]
+  },
+  {
+   "title": "Learning Anomalies with Normality Prior for Unsupervised Video Anomaly Detection",
+   "authors": "Haoyue Shi 0002, Le Wang 0003, Sanping Zhou, Gang Hua 0001, Wei Tang 0016",
+   "venue": "ECCV",
+   "year": 2024,
+   "url": "https://doi.org/10.1007/978-3-031-72658-3_10",
+   "arxiv": "",
+   "citations": 7,
+   "subtopics": []
+  },
+  {
+   "title": "FedVAD: Enhancing Federated Video Anomaly Detection with GPT-Driven Semantic Distillation",
+   "authors": "Fan Qi, Ruijie Pan, Huaiwen Zhang, Changsheng Xu",
+   "venue": "ECCV",
+   "year": 2024,
+   "url": "https://doi.org/10.1007/978-3-031-73668-1_14",
+   "arxiv": "",
+   "citations": 5,
+   "subtopics": []
+  },
+  {
+   "title": "Advancing Video Anomaly Detection: A Concise Review and a New Dataset",
+   "authors": "Liyun Zhu, Lei Wang 0108, Arjun Raj, Tom Gedeon, Chen Chen 0001",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/a3c5af1f56fc73eef1ba0f442739f5ca-Abstract-Datasets_and_Benchmarks_Track.html",
+   "arxiv": "2402.04857",
+   "citations": 57,
+   "subtopics": [
+    "Traffic / Driving"
+   ]
+  },
+  {
+   "title": "Beyond Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection",
+   "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen 0001, Xinbo Gao 0001",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/1f471322127d6347e5ae09a14b1e5cf7-Abstract-Conference.html",
+   "arxiv": "2409.19252",
+   "citations": 14,
+   "subtopics": [
+    "Weakly-supervised"
+   ]
+  },
+  {
+   "title": "Towards Multi-Domain Learning for Generalizable Video Anomaly Detection",
+   "authors": "MyeongAh Cho, Taeoh Kim, Minho Shim, Dongyoon Wee, Sangyoun Lee",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/59eb2d8ce0e4830f80780f7f78c67dec-Abstract-Conference.html",
+   "arxiv": "",
+   "citations": 9,
+   "subtopics": [
+    "Weakly-supervised"
    ]
   }
  ],
  "sources": [
   "CVF Open Access",
+  "DBLP",
   "Semantic Scholar"
  ]
 }

@@ -11,18 +11,18 @@ FIELD = {
     "key": "vad",
     "name": "Video Anomaly Detection",
     "tagline": "VAD / VAU — anomalous event detection & understanding in video",
-    # tightened include patterns (genuine video-anomaly signal)
+    # strong include patterns — unambiguously *video* anomaly
     "include": re.compile(
         r"video anomal|anomal\w* (event|action|behavio|video)|"
-        r"(weakly|semi|self)[- ]?supervised[- \w]*anomal|anomal[- \w]*supervis|"
         r"violen\w* (detection|recognition|anticipation|localiz)|"
         r"abnormal\w* (event|behavio|action|activit)|unusual event|"
         r"traffic anomal|skeleton[- \w]*anomal|anomal[- \w]*skeleton", re.I),
     "ctx": re.compile(r"(video|surveillance|crowd|cctv|pedestrian|traffic)", re.I),
     "anom": re.compile(r"anomal", re.I),
-    # off-topic signatures (image/industrial anomaly, forgery) — drop unless clearly video-anomaly
+    # off-topic signatures — graph/time-series/tabular/industrial/image/forgery anomaly
     "neg": re.compile(r"\b(industrial|mvtec|visa\b|texture defect|medical image|wafer|manufactur|"
-                      r"forgery|deepfake|face[- ]swap|multi[- ]class)\b", re.I),
+                      r"forgery|deepfake|face[- ]swap|multi[- ]class|graph|time[- ]?series|tabular|"
+                      r"hyperspectral|node[- ]level|log anomal|intrusion|sensor network|point cloud)\b", re.I),
     "subtopics": [
         ("Weakly-supervised", r"weakly[- ]?supervised|weak label|video[- ]level label|\bmil\b|multiple instance"),
         ("VLM / LLM", r"\b(vlm|llm|mllm)\b|vision[- ]language|language model|\bprompt|verbaliz|explainable"),
@@ -59,8 +59,18 @@ def parse(path, slug, ptag):
         out.append({"title":title,"stub":stub,"authors":authors,"slug":slug,"ptag":ptag})
     return out
 
+S2CACHE_PATH="data/s2_cache.json"
+try: S2CACHE=json.load(open(S2CACHE_PATH))
+except Exception: S2CACHE={}
+
 def s2(title):
-    """Semantic Scholar best-match for a title → abstract, citations, year, venue."""
+    """Semantic Scholar best-match for a title → abstract, citations, arxiv (cached on disk)."""
+    if title in S2CACHE: return S2CACHE[title]
+    r=_s2_fetch(title); time.sleep(1.1)
+    S2CACHE[title]=r; json.dump(S2CACHE,open(S2CACHE_PATH,"w"),ensure_ascii=False)
+    return r
+
+def _s2_fetch(title):
     try:
         url="https://api.semanticscholar.org/graph/v1/paper/search/match?"+urllib.parse.urlencode(
             {"query":title,"fields":"title,abstract,citationCount,year,venue,externalIds"})
@@ -69,11 +79,9 @@ def s2(title):
             d=json.load(r)
         m=(d.get("data") or [None])[0]
         if not m: return {}
-        # require a reasonable title overlap to avoid wrong matches
         return {"abstract":m.get("abstract") or "","citations":m.get("citationCount") or 0,
-                "s2year":m.get("year"),"s2venue":m.get("venue") or "",
                 "arxiv":(m.get("externalIds") or {}).get("ArXiv","")}
-    except Exception as e:
+    except Exception:
         return {}
 
 def confirm(p):
@@ -97,47 +105,68 @@ def subtopics(p):
 
 def main():
     cand=[]
-    totals={}
+    totals={}                                  # (venue,year) -> total papers (CVF only; DBLP unknown=None)
+    editions=[]                                # ordered (venue,year) we cover
+    # --- CVF Open Access sources (complete title lists) ---
     for venue,year,path,slug,ptag in VENUES:
+        if not os.path.exists(path): continue
         papers=parse(path,slug,ptag)
-        totals[(venue,year)]=len(papers)
+        totals[(venue,int(year))]=len(papers); editions.append((venue,int(year)))
         for p in papers:
             mt=is_field(p["title"])
             if mt:
-                p["venue"]=venue; p["year"]=int(year); p["_match"]=mt; cand.append(p)
-    print(f"candidates: {len(cand)}", file=sys.stderr)
+                p["venue"]=venue; p["year"]=int(year); p["_match"]=mt
+                p["url"]=CVF.format(slug=p["slug"],stub=p["stub"],ptag=p["ptag"]); cand.append(p)
+    # --- DBLP sources (keyword-collected candidates) ---
+    if os.path.exists("data/dblp_raw.json"):
+        raw=json.load(open("data/dblp_raw.json"))
+        for ed, rows in raw.items():
+            for p in rows:
+                v,y=p["venue"],int(p["year"]); ed_key=(v,y)
+                if ed_key not in totals: totals[ed_key]=None
+                if ed_key not in editions: editions.append(ed_key)
+                mt=is_field(p["title"])
+                if mt:
+                    q=dict(p); q["year"]=y; q["_match"]=mt; cand.append(q)
+    print(f"candidates: {len(cand)} across {len(editions)} editions", file=sys.stderr)
+
     kept=[]
     for p in cand:
-        info=s2(p["title"]); p.update(info); time.sleep(1.1)
+        p.update(s2(p["title"]))
         if confirm(p):
-            p["subtopics"]=subtopics(p)
-            p["url"]=CVF.format(slug=p["slug"],stub=p["stub"],ptag=p["ptag"])
-            kept.append(p)
-            print(f"  KEEP {p['venue']}{p['year']} [{p.get('citations',0)}c] {p['title'][:60]}", file=sys.stderr)
+            p["subtopics"]=subtopics(p); kept.append(p)
+            print(f"  KEEP {p['venue']}{p['year']} [{p.get('citations',0)}c] {p['title'][:58]}", file=sys.stderr)
         else:
-            print(f"  drop {p['venue']}{p['year']} {p['title'][:60]}", file=sys.stderr)
+            print(f"  drop {p['venue']}{p['year']} {p['title'][:58]}", file=sys.stderr)
 
-    # aggregate
-    trend=[{"venue":v,"year":int(y),"count":sum(1 for p in kept if p["venue"]==v and p["year"]==int(y)),
-            "total":totals[(v,y)]} for v,y,_,_,_ in VENUES]
+    # de-dupe (a paper can appear in both CVF and DBLP, or via multiple keyword queries)
+    uniq={}
+    for p in kept:
+        k=re.sub(r"[^a-z0-9]","",p["title"].lower())
+        if k not in uniq or len(p.get("url",""))>len(uniq[k].get("url","")):
+            uniq[k]=p
+    kept=list(uniq.values())
+
     from collections import Counter
+    trend=[{"venue":v,"year":y,
+            "count":sum(1 for p in kept if p["venue"]==v and p["year"]==y),
+            "total":totals.get((v,y))} for v,y in editions]
     sc=Counter(s for p in kept for s in p["subtopics"])
     subs=[{"name":n,"count":c} for n,c in sorted(sc.items(),key=lambda x:-x[1])]
     data={
         "field":FIELD["name"],"field_key":FIELD["key"],"tagline":FIELD["tagline"],
-        "venues":sorted(set(v for v,_,_,_,_ in VENUES)),
-        "years":sorted(set(int(y) for _,y,_,_,_ in VENUES)),
+        "venues":sorted(set(v for v,_ in editions)),
+        "years":sorted(set(y for _,y in editions)),
         "total":len(kept),
         "trend":trend,"subtopics":subs,
         "papers":[{"title":p["title"],"authors":p["authors"],"venue":p["venue"],"year":p["year"],
-                   "url":p["url"],"arxiv":p.get("arxiv",""),"citations":p.get("citations",0),
-                   "abstract":(p.get("abstract") or "")[:600],"subtopics":p["subtopics"]}
+                   "url":p.get("url",""),"arxiv":p.get("arxiv",""),"citations":p.get("citations",0),
+                   "subtopics":p["subtopics"]}
                   for p in sorted(kept,key=lambda p:(-p["year"],p["venue"],-p.get("citations",0)))],
-        "sources":["CVF Open Access","Semantic Scholar"],
+        "sources":["CVF Open Access","DBLP","Semantic Scholar"],
     }
-    pass
     json.dump(data,open("data.json","w"),ensure_ascii=False,indent=1)
-    print(f"\nwrote data.json — {len(kept)} papers, {len(subs)} subtopics",file=sys.stderr)
+    print(f"\nwrote data.json — {len(kept)} papers, {len(editions)} editions, {len(subs)} subtopics",file=sys.stderr)
 
 if __name__=="__main__":
     main()

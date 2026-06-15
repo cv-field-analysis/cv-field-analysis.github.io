@@ -4,7 +4,9 @@ A 2-year analysis of specific computer-vision research fields across the top ven
 
 **Live → https://cv-field-analysis.github.io/**
 
-The first field is **Video Anomaly Detection (VAD / VAU)** across **CVPR & ICCV 2025–2026**. The page shows the publication trend, the sub-topic distribution (weakly-supervised, VLM/LLM-based, reconstruction, …), and the full paper list with citation counts — and exports the whole thing as a PDF report.
+The first field is **Video Anomaly Detection (VAD / VAU)** across **CVPR · ICCV · ECCV · BMVC · AAAI · NeurIPS · ICLR · ICML · TPAMI · TIP (2024–2026)**. The page shows the publication trend as a venue × year matrix, the sub-topic distribution (weakly-supervised, VLM/LLM-based, reconstruction, …), and the full paper list with citation counts — and exports the whole thing as a PDF report.
+
+Data sources are hybrid: CVF Open Access for the complete CVPR/ICCV title lists, DBLP for the other conferences and journals (no IEEE access needed; workshop tracks are labelled separately and excluded), and Semantic Scholar for abstracts + citations.
 
 ## How it works
 
