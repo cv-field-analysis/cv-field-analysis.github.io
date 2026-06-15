@@ -117,12 +117,26 @@ def main():
             if mt:
                 p["venue"]=venue; p["year"]=int(year); p["_match"]=mt
                 p["url"]=CVF.format(slug=p["slug"],stub=p["stub"],ptag=p["ptag"]); cand.append(p)
-    # --- DBLP sources (keyword-collected candidates) ---
+    # --- Paper Copilot sources (complete OpenReview-venue lists + review links) ---
+    PC_VENUES=set()
+    if os.path.exists("data/papercopilot_raw.json"):
+        pcv=json.load(open("data/papercopilot_verify.json")) if os.path.exists("data/papercopilot_verify.json") else {}
+        raw=json.load(open("data/papercopilot_raw.json"))
+        for ed, rows in raw.items():
+            for p in rows:
+                v,y=p["venue"],int(p["year"]); ed_key=(v,y); PC_VENUES.add(v)
+                totals[ed_key]=(pcv.get(ed,{}) or {}).get("accepted")
+                if ed_key not in editions: editions.append(ed_key)
+                mt=is_field(p["title"])
+                if mt:
+                    q=dict(p); q["year"]=y; q["_match"]=mt; q["_src"]="pc"; cand.append(q)
+    # --- DBLP sources (skip venues now covered by Paper Copilot) ---
     if os.path.exists("data/dblp_raw.json"):
         raw=json.load(open("data/dblp_raw.json"))
         for ed, rows in raw.items():
             for p in rows:
                 v,y=p["venue"],int(p["year"]); ed_key=(v,y)
+                if v in PC_VENUES: continue
                 if ed_key not in totals: totals[ed_key]=None
                 if ed_key not in editions: editions.append(ed_key)
                 mt=is_field(p["title"])
@@ -132,7 +146,8 @@ def main():
 
     kept=[]
     for p in cand:
-        p.update(s2(p["title"]))
+        if p.get("_src")!="pc":          # Paper Copilot rows already carry abstract + citations
+            p.update(s2(p["title"]))
         if confirm(p):
             p["subtopics"]=subtopics(p); kept.append(p)
             print(f"  KEEP {p['venue']}{p['year']} [{p.get('citations',0)}c] {p['title'][:58]}", file=sys.stderr)
@@ -160,10 +175,10 @@ def main():
         "total":len(kept),
         "trend":trend,"subtopics":subs,
         "papers":[{"title":p["title"],"authors":p["authors"],"venue":p["venue"],"year":p["year"],
-                   "url":p.get("url",""),"arxiv":p.get("arxiv",""),"citations":p.get("citations",0),
-                   "subtopics":p["subtopics"]}
-                  for p in sorted(kept,key=lambda p:(-p["year"],p["venue"],-p.get("citations",0)))],
-        "sources":["CVF Open Access","DBLP","Semantic Scholar"],
+                   "url":p.get("url",""),"arxiv":p.get("arxiv",""),"citations":max(0,int(p.get("citations") or 0)),
+                   "review_url":p.get("review_url",""),"subtopics":p["subtopics"]}
+                  for p in sorted(kept,key=lambda p:(-p["year"],p["venue"],-max(0,int(p.get("citations") or 0))))],
+        "sources":["CVF Open Access","Paper Copilot","DBLP","Semantic Scholar"],
     }
     json.dump(data,open("data.json","w"),ensure_ascii=False,indent=1)
     print(f"\nwrote data.json — {len(kept)} papers, {len(editions)} editions, {len(subs)} subtopics",file=sys.stderr)

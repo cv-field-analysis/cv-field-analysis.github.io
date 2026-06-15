@@ -19,7 +19,7 @@
   2025,
   2026
  ],
- "total": 47,
+ "total": 59,
  "trend": [
   {
    "venue": "CVPR",
@@ -38,6 +38,36 @@
    "year": 2025,
    "count": 4,
    "total": 2701
+  },
+  {
+   "venue": "NeurIPS",
+   "year": 2024,
+   "count": 5,
+   "total": 4518
+  },
+  {
+   "venue": "NeurIPS",
+   "year": 2025,
+   "count": 8,
+   "total": 5812
+  },
+  {
+   "venue": "ICLR",
+   "year": 2025,
+   "count": 0,
+   "total": 3704
+  },
+  {
+   "venue": "ICLR",
+   "year": 2026,
+   "count": 2,
+   "total": 5358
+  },
+  {
+   "venue": "ICML",
+   "year": 2025,
+   "count": 2,
+   "total": 3342
   },
   {
    "venue": "ECCV",
@@ -61,24 +91,6 @@
    "venue": "AAAI",
    "year": 2026,
    "count": 5,
-   "total": null
-  },
-  {
-   "venue": "NeurIPS",
-   "year": 2024,
-   "count": 3,
-   "total": null
-  },
-  {
-   "venue": "ICLR",
-   "year": 2025,
-   "count": 0,
-   "total": null
-  },
-  {
-   "venue": "ICML",
-   "year": 2025,
-   "count": 2,
    "total": null
   },
   {
@@ -108,32 +120,32 @@
  ],
  "subtopics": [
   {
-   "name": "Weakly-supervised",
-   "count": 17
-  },
-  {
    "name": "VLM / LLM",
-   "count": 15
+   "count": 21
   },
   {
-   "name": "Reconstruction / Prediction",
-   "count": 10
+   "name": "Weakly-supervised",
+   "count": 18
   },
   {
    "name": "Multimodal / Audio",
-   "count": 9
+   "count": 12
+  },
+  {
+   "name": "Reconstruction / Prediction",
+   "count": 11
   },
   {
    "name": "Traffic / Driving",
+   "count": 7
+  },
+  {
+   "name": "Zero-/Open-vocab",
    "count": 6
   },
   {
    "name": "Diffusion / Flow",
    "count": 4
-  },
-  {
-   "name": "Zero-/Open-vocab",
-   "count": 2
   },
   {
    "name": "Skeleton / Pose",
@@ -149,6 +161,7 @@
    "url": "https://doi.org/10.1609/aaai.v40i7.37512",
    "arxiv": "2511.13204",
    "citations": 1,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -161,6 +174,7 @@
    "url": "https://doi.org/10.1609/aaai.v40i14.38191",
    "arxiv": "2511.10334",
    "citations": 1,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "Reconstruction / Prediction",
@@ -175,6 +189,7 @@
    "url": "https://doi.org/10.1609/aaai.v40i24.39066",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM"
    ]
@@ -187,6 +202,7 @@
    "url": "https://doi.org/10.1609/aaai.v40i6.42412",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM"
    ]
@@ -199,6 +215,7 @@
    "url": "https://doi.org/10.1609/aaai.v40i10.37790",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": []
   },
   {
@@ -209,6 +226,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Dai_No_Need_For_Real_Anomaly_MLLM_Empowered_Zero-Shot_Video_Anomaly_CVPR_2026_paper.html",
    "arxiv": "2602.19248",
    "citations": 2,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM",
     "Zero-/Open-vocab",
@@ -223,6 +241,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Weakly_Supervised_Video_Anomaly_Detection_with_Anomaly-Connected_Components_and_Intention_CVPR_2026_paper.html",
    "arxiv": "2603.00550",
    "citations": 1,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -235,6 +254,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Fine-VAD_Towards_Fine-Grained_Video_Anomaly_Detection_via_Progressive_Cross-Granularity_Learning_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": []
   },
   {
@@ -245,6 +265,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhao_Learning_from_Noisy_Supervision_A_Denoising-Debiasing_Framework_for_Weakly_Supervised_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -257,6 +278,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Xu_TLMA_Mitigating_the_Impact_of_Weakly_Labeled_Information_for_Video_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": []
   },
   {
@@ -267,6 +289,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Acharya_The_Road_Less_Seen_Segment_Exploration_for_Weakly_Supervised_Video_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "Traffic / Driving"
@@ -280,6 +303,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Sun_Joint_Learning_of_General_and_Diverse_Patterns_with_Mixture_of_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -292,7 +316,35 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhu_Alert-CLIP_Abnormality-aware_Latent-Enhanced_Representation_Tuning_of_CLIP_for_Video_Anomaly_CVPR_2026_paper.html",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": []
+  },
+  {
+   "title": "Language-guided Open-world Video Anomaly Detection under Weak Supervision",
+   "authors": "",
+   "venue": "ICLR",
+   "year": 2026,
+   "url": "https://openreview.net/forum?id=70lFIQG5OB",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=70lFIQG5OB",
+   "subtopics": [
+    "Zero-/Open-vocab"
+   ]
+  },
+  {
+   "title": "Steering and Rectifying Latent representation manifolds in Frozen Multi-modal LLMs for Video Anomaly Detection",
+   "authors": "",
+   "venue": "ICLR",
+   "year": 2026,
+   "url": "https://openreview.net/forum?id=ol78tbpqyu",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=ol78tbpqyu",
+   "subtopics": [
+    "VLM / LLM",
+    "Multimodal / Audio"
+   ]
   },
   {
    "title": "PiercingEye: Dual-Space Video Violence Detection With Hyperbolic Vision-Language Guidance",
@@ -302,6 +354,7 @@
    "url": "https://doi.org/10.1109/TPAMI.2025.3617460",
    "arxiv": "",
    "citations": 0,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM"
    ]
@@ -314,6 +367,7 @@
    "url": "https://doi.org/10.1609/aaai.v39i20.35398",
    "arxiv": "",
    "citations": 25,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "VLM / LLM",
@@ -328,6 +382,7 @@
    "url": "https://doi.org/10.1609/aaai.v39i10.33169",
    "arxiv": "2412.09026",
    "citations": 24,
+   "review_url": "",
    "subtopics": [
     "Reconstruction / Prediction",
     "Diffusion / Flow"
@@ -341,6 +396,7 @@
    "url": "https://doi.org/10.1609/aaai.v39i6.32705",
    "arxiv": "2503.12905",
    "citations": 22,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -353,6 +409,7 @@
    "url": "https://doi.org/10.1609/aaai.v39i7.32829",
    "arxiv": "2412.17210",
    "citations": 8,
+   "review_url": "",
    "subtopics": [
     "Reconstruction / Prediction",
     "Diffusion / Flow"
@@ -366,6 +423,7 @@
    "url": "https://doi.org/10.1609/aaai.v39i8.32909",
    "arxiv": "",
    "citations": 7,
+   "review_url": "",
    "subtopics": [
     "Multimodal / Audio"
    ]
@@ -378,6 +436,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_Holmes-VAU_Towards_Long-term_Video_Anomaly_Understanding_at_Any_Granularity_CVPR_2025_paper.html",
    "arxiv": "2412.06171",
    "citations": 61,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM",
     "Reconstruction / Prediction",
@@ -392,6 +451,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Ye_VERA_Explainable_Video_Anomaly_Detection_via_Verbalized_Learning_of_Vision-Language_CVPR_2025_paper.html",
    "arxiv": "2412.01095",
    "citations": 19,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM"
    ]
@@ -404,6 +464,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Li_Anomize_Better_Open_Vocabulary_Video_Anomaly_Detection_CVPR_2025_paper.html",
    "arxiv": "2503.18094",
    "citations": 17,
+   "review_url": "",
    "subtopics": [
     "Zero-/Open-vocab"
    ]
@@ -416,6 +477,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Hu_Noise-Resistant_Video_Anomaly_Detection_via_RGB_Error-Guided_Multiscale_Predictive_Coding_CVPR_2025_paper.html",
    "arxiv": "",
    "citations": 10,
+   "review_url": "",
    "subtopics": [
     "Reconstruction / Prediction"
    ]
@@ -428,6 +490,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Xing_EchoTraffic_Enhancing_Traffic_Anomaly_Understanding_with_Audio-Visual_Insights_CVPR_2025_paper.html",
    "arxiv": "",
    "citations": 9,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM",
     "Multimodal / Audio",
@@ -442,6 +505,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Huang_Track_Any_Anomalous_ObjectA_Granular_Video_Anomaly_Detection_Pipeline_CVPR_2025_paper.html",
    "arxiv": "2506.05175",
    "citations": 5,
+   "review_url": "",
    "subtopics": [
     "Traffic / Driving"
    ]
@@ -454,6 +518,7 @@
    "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Majhi_Just_Dance_with_pi_A_Poly-modal_Inductor_for_Weakly-supervised_Video_CVPR_2025_paper.html",
    "arxiv": "2505.13123",
    "citations": 3,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "VLM / LLM",
@@ -468,6 +533,7 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Amicantonio_Mixture_of_Experts_Guided_by_Gaussian_Splatters_Matters_A_new_ICCV_2025_paper.html",
    "arxiv": "2508.06318",
    "citations": 9,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "Reconstruction / Prediction"
@@ -481,6 +547,7 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Delic_Sequential_keypoint_density_estimator_an_overlooked_baseline_of_skeleton-based_video_ICCV_2025_paper.html",
    "arxiv": "2506.18368",
    "citations": 5,
+   "review_url": "",
    "subtopics": [
     "Skeleton / Pose",
     "Reconstruction / Prediction"
@@ -494,6 +561,7 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Chen_Aligning_Effective_Tokens_with_Video_Anomaly_in_Large_Language_Models_ICCV_2025_paper.html",
    "arxiv": "2508.06350",
    "citations": 5,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM",
     "Multimodal / Audio"
@@ -507,33 +575,142 @@
    "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Zhang_Autoregressive_Denoising_Score_Matching_is_a_Good_Video_Anomaly_Detector_ICCV_2025_paper.html",
    "arxiv": "2506.23282",
    "citations": 4,
+   "review_url": "",
    "subtopics": [
     "Diffusion / Flow"
    ]
   },
   {
-   "title": "Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models",
-   "authors": "Chao Huang 0008, Yushu Shi, Jie Wen 0001, Wei Wang 0169, Yong Xu 0001, Xiaochun Cao",
+   "title": "Learning Event Completeness for Weakly Supervised Video Anomaly Detection",
+   "authors": "Yu Wang, Shiwei Chen",
    "venue": "ICML",
    "year": 2025,
-   "url": "https://proceedings.mlr.press/v267/huang25ad.html",
+   "url": "https://icml.cc/virtual/2025/poster/45685",
    "arxiv": "",
    "citations": 0,
+   "review_url": "https://icml.cc/virtual/2025/poster/45685",
+   "subtopics": [
+    "Weakly-supervised"
+   ]
+  },
+  {
+   "title": "Ex-VAD: Explainable Fine-grained Video Anomaly Detection Based on Visual-Language Models",
+   "authors": "Chao Huang, Yushu Shi, Jie Wen, Wei Wang, Yong Xu, Xiaochun Cao",
+   "venue": "ICML",
+   "year": 2025,
+   "url": "https://icml.cc/virtual/2025/poster/43589",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://icml.cc/virtual/2025/poster/43589",
    "subtopics": [
     "VLM / LLM"
    ]
   },
   {
-   "title": "Learning Event Completeness for Weakly Supervised Video Anomaly Detection",
-   "authors": "Yu Wang 0174, Shiwei Chen",
-   "venue": "ICML",
+   "title": "MoniTor: Exploiting Large Language Models with Instruction for Online Video Anomaly Detection",
+   "authors": "Shengtian Yang, Yue Feng, Yingshi Liu, Jingrou Zhang, Jie Qin",
+   "venue": "NeurIPS",
    "year": 2025,
-   "url": "https://proceedings.mlr.press/v267/wang25l.html",
+   "url": "https://openreview.net/forum?id=6Had86RHix",
    "arxiv": "",
    "citations": 0,
+   "review_url": "https://openreview.net/forum?id=6Had86RHix",
+   "subtopics": [
+    "VLM / LLM"
+   ]
+  },
+  {
+   "title": "Vad-R1: Towards Video Anomaly Reasoning via Perception-to-Cognition Chain-of-Thought",
+   "authors": "Chao Huang, Benfeng Wang, Wei Wang, Jie Wen, Chengliang Liu, Li Shen, Xiaochun Cao",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "url": "https://openreview.net/forum?id=6eLlczxbrp",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=6eLlczxbrp",
+   "subtopics": [
+    "VLM / LLM",
+    "Multimodal / Audio"
+   ]
+  },
+  {
+   "title": "FrameShield: Adversarially Robust Video Anomaly Detection",
+   "authors": "Mojtaba Nafez, Mobina Poulaei, Nikan Vasei, Bardia soltani moakhar, Mohammad Sabokrou, Mohammad Hossein Rohban",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "url": "https://openreview.net/forum?id=7FLKzOqsKd",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=7FLKzOqsKd",
+   "subtopics": [
+    "Weakly-supervised",
+    "Reconstruction / Prediction"
+   ]
+  },
+  {
+   "title": "A Unified Reasoning Framework for Holistic Zero-Shot Video Anomaly Analysis",
+   "authors": "Dongheng Lin, Mengxue Qu, Kunyang Han, Jianbo Jiao, Xiaojie Jin, Yunchao Wei",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "url": "https://openreview.net/forum?id=Qla5PqFL0s",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=Qla5PqFL0s",
+   "subtopics": [
+    "Zero-/Open-vocab"
+   ]
+  },
+  {
+   "title": "Do LVLMs Truly Understand Video Anomalies? Revealing Hallucination via Co-Occurrence Patterns",
+   "authors": "Menghao Zhang, Huazheng Wang, Pengfei Ren, Kangheng Lin, Qi Qi, Haifeng Sun, Zirui Zhuang, Lei Zhang, Jianxin Liao, Jingyu Wang",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "url": "https://openreview.net/forum?id=crPlJvwHhS",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=crPlJvwHhS",
+   "subtopics": [
+    "VLM / LLM",
+    "Multimodal / Audio"
+   ]
+  },
+  {
+   "title": "VADTree: Explainable Training-Free Video Anomaly Detection via Hierarchical Granularity-Aware Tree",
+   "authors": "Wenlong Li, Yifei Xu, Yuan Rao, Zhenhua Wang, Shuiguang Deng",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "url": "https://openreview.net/forum?id=fVgnP5WHXX",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=fVgnP5WHXX",
+   "subtopics": [
+    "VLM / LLM",
+    "Zero-/Open-vocab"
+   ]
+  },
+  {
+   "title": "Generalizing Single-Frame Supervision to Event-Level Understanding for Video Anomaly Detection",
+   "authors": "Junxi Chen, Liang Li, Yunbin Tu, Li Su, Zhe Xue, Qingming Huang",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "url": "https://openreview.net/forum?id=oPRNsj8AMk",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=oPRNsj8AMk",
    "subtopics": [
     "Weakly-supervised"
    ]
+  },
+  {
+   "title": "PANDA: Towards Generalist Video Anomaly Detection via Agentic AI Engineer",
+   "authors": "Zhiwei Yang, Chen Gao, Mike Zheng Shou",
+   "venue": "NeurIPS",
+   "year": 2025,
+   "url": "https://openreview.net/forum?id=qE3knKF1rz",
+   "arxiv": "",
+   "citations": 0,
+   "review_url": "https://openreview.net/forum?id=qE3knKF1rz",
+   "subtopics": []
   },
   {
    "title": "CRCL: Causal Representation Consistency Learning for Anomaly Detection in Surveillance Videos",
@@ -543,6 +720,7 @@
    "url": "https://doi.org/10.1109/TIP.2025.3558089",
    "arxiv": "",
    "citations": 26,
+   "review_url": "",
    "subtopics": []
   },
   {
@@ -553,6 +731,7 @@
    "url": "https://doi.org/10.1109/TIP.2025.3614006",
    "arxiv": "",
    "citations": 4,
+   "review_url": "",
    "subtopics": [
     "Reconstruction / Prediction"
    ]
@@ -565,6 +744,7 @@
    "url": "https://doi.org/10.1109/TIP.2025.3623392",
    "arxiv": "",
    "citations": 2,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "VLM / LLM",
@@ -579,6 +759,7 @@
    "url": "https://doi.org/10.1109/TPAMI.2024.3461718",
    "arxiv": "",
    "citations": 32,
+   "review_url": "",
    "subtopics": [
     "Reconstruction / Prediction",
     "Diffusion / Flow"
@@ -592,6 +773,7 @@
    "url": "https://doi.org/10.1109/TPAMI.2025.3590242",
    "arxiv": "",
    "citations": 6,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "VLM / LLM"
@@ -605,6 +787,7 @@
    "url": "https://bmva-archive.org.uk/bmvc/2024/workshops/RROW/04_Hybrid_Video_Anomaly_Detecti.pdf",
    "arxiv": "2406.06423",
    "citations": 3,
+   "review_url": "",
    "subtopics": [
     "Traffic / Driving"
    ]
@@ -617,6 +800,7 @@
    "url": "https://bmvc2024.org/proceedings/599/",
    "arxiv": "",
    "citations": 2,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM"
    ]
@@ -629,6 +813,7 @@
    "url": "https://doi.org/10.1007/978-3-031-73004-7_18",
    "arxiv": "2407.10299",
    "citations": 84,
+   "review_url": "",
    "subtopics": [
     "VLM / LLM",
     "Traffic / Driving"
@@ -642,6 +827,7 @@
    "url": "https://doi.org/10.1007/978-3-031-73404-5_27",
    "arxiv": "2408.05191",
    "citations": 8,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised",
     "Reconstruction / Prediction"
@@ -655,6 +841,7 @@
    "url": "https://doi.org/10.1007/978-3-031-73404-5_26",
    "arxiv": "2401.13551",
    "citations": 8,
+   "review_url": "",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -667,6 +854,7 @@
    "url": "https://doi.org/10.1007/978-3-031-72658-3_10",
    "arxiv": "",
    "citations": 7,
+   "review_url": "",
    "subtopics": []
   },
   {
@@ -677,28 +865,58 @@
    "url": "https://doi.org/10.1007/978-3-031-73668-1_14",
    "arxiv": "",
    "citations": 5,
+   "review_url": "",
    "subtopics": []
   },
   {
    "title": "Advancing Video Anomaly Detection: A Concise Review and a New Dataset",
-   "authors": "Liyun Zhu, Lei Wang 0108, Arjun Raj, Tom Gedeon, Chen Chen 0001",
+   "authors": "Liyun Zhu, Lei Wang, Arjun Raj, Tom Gedeon, Chen Chen",
    "venue": "NeurIPS",
    "year": 2024,
-   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/a3c5af1f56fc73eef1ba0f442739f5ca-Abstract-Datasets_and_Benchmarks_Track.html",
-   "arxiv": "2402.04857",
-   "citations": 57,
+   "url": "https://neurips.cc/virtual/2024/poster/97585",
+   "arxiv": "",
+   "citations": 14,
+   "review_url": "https://neurips.cc/virtual/2024/poster/97585",
+   "subtopics": [
+    "Traffic / Driving"
+   ]
+  },
+  {
+   "title": "HAWK: Learning to Understand Open-World Video Anomalies",
+   "authors": "Jiaqi Tang, Hao LU, RUIZHENG WU, Xiaogang Xu, Ke Ma, Cheng Fang, Bin Guo, Jiangbo Lu, Qifeng Chen, Ying-Cong Chen",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "url": "https://neurips.cc/virtual/2024/poster/93219",
+   "arxiv": "",
+   "citations": 11,
+   "review_url": "https://neurips.cc/virtual/2024/poster/93219",
+   "subtopics": [
+    "VLM / LLM",
+    "Zero-/Open-vocab"
+   ]
+  },
+  {
+   "title": "FT-AED: Benchmark Dataset for Early Freeway Traffic Anomalous Event Detection",
+   "authors": "Austin Coursey, JUNYI JI, Marcos Quinones Grueiro, William Barbour, Yuhang Zhang, Tyler Derr, Gautam Biswas, Daniel Work",
+   "venue": "NeurIPS",
+   "year": 2024,
+   "url": "https://neurips.cc/virtual/2024/poster/97562",
+   "arxiv": "",
+   "citations": 5,
+   "review_url": "https://neurips.cc/virtual/2024/poster/97562",
    "subtopics": [
     "Traffic / Driving"
    ]
   },
   {
    "title": "Beyond Euclidean: Dual-Space Representation Learning for Weakly Supervised Video Violence Detection",
-   "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen 0001, Xinbo Gao 0001",
+   "authors": "Jiaxu Leng, Zhanjie Wu, Mingpi Tan, Yiran Liu, Ji Gan, Haosheng Chen, Xinbo Gao",
    "venue": "NeurIPS",
    "year": 2024,
-   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/1f471322127d6347e5ae09a14b1e5cf7-Abstract-Conference.html",
-   "arxiv": "2409.19252",
-   "citations": 14,
+   "url": "https://neurips.cc/virtual/2024/poster/95026",
+   "arxiv": "",
+   "citations": 3,
+   "review_url": "https://neurips.cc/virtual/2024/poster/95026",
    "subtopics": [
     "Weakly-supervised"
    ]
@@ -708,16 +926,16 @@
    "authors": "MyeongAh Cho, Taeoh Kim, Minho Shim, Dongyoon Wee, Sangyoun Lee",
    "venue": "NeurIPS",
    "year": 2024,
-   "url": "http://papers.nips.cc/paper_files/paper/2024/hash/59eb2d8ce0e4830f80780f7f78c67dec-Abstract-Conference.html",
+   "url": "https://neurips.cc/virtual/2024/poster/92985",
    "arxiv": "",
-   "citations": 9,
-   "subtopics": [
-    "Weakly-supervised"
-   ]
+   "citations": 1,
+   "review_url": "https://neurips.cc/virtual/2024/poster/92985",
+   "subtopics": []
   }
  ],
  "sources": [
   "CVF Open Access",
+  "Paper Copilot",
   "DBLP",
   "Semantic Scholar"
  ]

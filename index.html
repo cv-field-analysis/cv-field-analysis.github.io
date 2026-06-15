@@ -99,6 +99,8 @@ section{padding:36px 0}
 .pc .lnk{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
   text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:4px 8px;transition:.15s}
 .pc .lnk:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
+.pc .lnk.rev{color:var(--c1);border-color:color-mix(in srgb,var(--c1) 40%,transparent)}
+.pc .lnk.rev:hover{background:color-mix(in srgb,var(--c1) 12%,transparent);color:var(--c1)}
 
 /* download + footer */
 .dl{position:fixed;right:24px;bottom:24px;z-index:20;font-family:inherit;font-size:11px;letter-spacing:.12em;
@@ -240,11 +242,16 @@ fetch("data.json").then(r=>r.json()).then(D=>{
       const vc=VENUE_C[p.venue]||"#ff8a5b";
       const tags=p.subtopics.map(s=>`<span class="tg" style="color:${SC[s]};border-color:${SC[s]}55">${esc(s)}</span>`).join("");
       const ax=p.arxiv?`<a class="lnk" href="https://arxiv.org/abs/${p.arxiv}" target="_blank" rel="noopener">arXiv</a>`:"";
+      const isOR=(p.url||"").includes("openreview.net");
+      const main=isOR?`<a class="lnk" href="${esc(p.url)}" target="_blank" rel="noopener">paper</a>`
+                     :`<a class="lnk" href="${esc(p.url)}" target="_blank" rel="noopener">CVF</a>`;
+      const rev=(p.review_url&&p.review_url.includes("openreview"))
+        ?`<a class="lnk rev" href="${esc(p.review_url)}" target="_blank" rel="noopener" title="Read the OpenReview peer reviews">reviews ↗</a>`:"";
       return `<div class="pc"><div class="yr"><div class="vn" style="color:${vc}">${p.venue}</div><div class="yy">${String(p.year).slice(2)}</div></div>
         <div class="body"><div class="ti"><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)}</a></div>
         <div class="au">${esc(p.authors)}</div>${tags?`<div class="tags">${tags}</div>`:""}</div>
         <div class="meta"><div class="cit">${p.citations}<small>citations</small></div>
-        <a class="lnk" href="${esc(p.url)}" target="_blank" rel="noopener">CVF</a>${ax}</div></div>`;
+        ${main}${ax}${rev}</div></div>`;
     }).join("");
   }
   render(null);

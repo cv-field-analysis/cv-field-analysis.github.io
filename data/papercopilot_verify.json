@@ -1,0 +1,22 @@
+{
+ "NeurIPS2024": {
+  "total_rows": 4830,
+  "accepted": 4518
+ },
+ "NeurIPS2025": {
+  "total_rows": 6212,
+  "accepted": 5812
+ },
+ "ICLR2025": {
+  "total_rows": 11677,
+  "accepted": 3704
+ },
+ "ICLR2026": {
+  "total_rows": 19814,
+  "accepted": 5358
+ },
+ "ICML2025": {
+  "total_rows": 3527,
+  "accepted": 3342
+ }
+}

@@ -6,7 +6,13 @@ A 2-year analysis of specific computer-vision research fields across the top ven
 
 The first field is **Video Anomaly Detection (VAD / VAU)** across **CVPR · ICCV · ECCV · BMVC · AAAI · NeurIPS · ICLR · ICML · TPAMI · TIP (2024–2026)**. The page shows the publication trend as a venue × year matrix, the sub-topic distribution (weakly-supervised, VLM/LLM-based, reconstruction, …), and the full paper list with citation counts — and exports the whole thing as a PDF report.
 
-Data sources are hybrid: CVF Open Access for the complete CVPR/ICCV title lists, DBLP for the other conferences and journals (no IEEE access needed; workshop tracks are labelled separately and excluded), and Semantic Scholar for abstracts + citations.
+Data sources are hybrid:
+- **CVF Open Access** — complete CVPR/ICCV title lists.
+- **Paper Copilot** ([open data](https://github.com/papercopilot/paperlists)) — complete accepted-paper lists for the OpenReview venues (NeurIPS, ICLR, ICML), which fills DBLP's indexing lag and provides **OpenReview review links** (the *reviews ↗* button on each such paper).
+- **DBLP** — the remaining conferences/journals (ECCV, BMVC, AAAI, TPAMI, TIP); no IEEE access needed, workshop tracks excluded by venue label.
+- **Semantic Scholar** — abstracts + citations for the CVF/DBLP papers.
+
+Counts are cross-checked against Paper Copilot's accepted-paper totals (e.g. NeurIPS 2025 = 5,812 accepted).
 
 ## How it works
 
