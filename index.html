@@ -15,6 +15,7 @@
   --task:#ff8a5b; --supervision:#52d3c3; --model:#ad8cff; --modality:#5fb8ff; --domain:#c2e06a; --method:#8c93a4;
   --c0:#ff8a5b; --c1:#52d3c3; --c2:#ffd166; --c3:#ad8cff; --c4:#5fb8ff; --c5:#c2e06a; --c6:#f78fb3; --c7:#7ee0b8;
   --amber:#ffd166;
+  --legend:#ffffff; --up:#7ee0b8; --down:#ff8a8a;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink);
@@ -49,7 +50,7 @@ section{padding:34px 0}
 
 /* trend matrix */
 .matrix{display:grid;gap:5px;align-items:stretch}
-.mx-h{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);
+.mx-h{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--legend);
   display:flex;align-items:center;justify-content:center;padding-bottom:4px}
 .mx-h.vh{justify-content:flex-start}
 .mx-v{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--ink);letter-spacing:.01em}
@@ -64,7 +65,7 @@ section{padding:34px 0}
 .mx-c.pending{color:var(--dim);border-style:dotted}
 .mx-c.tot{background:none;border:none;color:var(--muted);font-size:19px}
 .mx-c.tot b{color:var(--ink)}
-.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:10px;color:var(--dim);letter-spacing:.04em}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:10px;color:var(--legend);letter-spacing:.04em}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:18px;height:11px;border-radius:3px;display:inline-block}
 
@@ -83,9 +84,31 @@ section{padding:34px 0}
 .tby-bar{display:flex;height:26px;border-radius:6px;overflow:hidden;background:rgba(255,255,255,.03);border:1px solid var(--line)}
 .tby-seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;color:#0a0c12;
   font-weight:600;min-width:0;transition:flex-basis .8s cubic-bezier(.2,.8,.2,1);overflow:hidden;white-space:nowrap}
-.tby-legend{display:flex;flex-wrap:wrap;gap:13px;margin-top:14px;font-size:10.5px;color:var(--muted)}
+.tby-legend{display:flex;flex-wrap:wrap;gap:13px;margin-top:14px;font-size:10.5px;color:var(--legend)}
 .tby-legend span{display:inline-flex;align-items:center;gap:6px}
 .tby-legend i{width:10px;height:10px;border-radius:3px}
+
+/* histogram — grouped vertical bars by year + YoY delta */
+.hg{margin-top:6px}
+.hg-plot{display:flex;gap:30px;align-items:flex-end;padding:26px 4px 0;overflow-x:auto}
+.hg-group{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1 1 0;min-width:96px}
+.hg-bars{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:172px;width:100%}
+.hg-bw{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;flex:1 1 0;min-width:13px;max-width:54px}
+.hg-bar{width:100%;height:0;min-height:2px;border-radius:4px 4px 0 0;transition:height .9s cubic-bezier(.2,.8,.2,1)}
+.hg-lab{font-size:8px;line-height:1.25;text-align:center;margin-bottom:3px;white-space:nowrap}
+.hg-n{color:var(--legend);font-weight:500}
+.hg-d{font-weight:600;letter-spacing:.01em}
+.hg-d.up{color:var(--up)} .hg-d.dn{color:var(--down)} .hg-d.fl{color:var(--dim)}
+.hg-year{font-family:"Fraunces",serif;font-size:19px;color:var(--legend)}
+.hg-legend{display:flex;flex-wrap:wrap;gap:13px;margin-top:16px;font-size:10.5px;color:var(--legend)}
+.hg-legend span{display:inline-flex;align-items:center;gap:6px}
+.hg-legend i{width:10px;height:10px;border-radius:3px}
+.hg.cmp .hg-plot{gap:14px;padding-top:20px}
+.hg.cmp .hg-bars{height:120px;gap:4px}
+.hg.cmp .hg-group{min-width:70px;gap:7px}
+.hg.cmp .hg-year{font-size:15px}
+.hg.cmp .hg-bw{min-width:10px;max-width:40px}
+.hg.cmp .hg-legend{margin-top:12px;font-size:9.5px;gap:10px}
 
 /* axis taxonomy cards */
 .axgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
@@ -95,10 +118,10 @@ section{padding:34px 0}
 .axcard h3 i{width:9px;height:9px;border-radius:2px}
 .bars{display:flex;flex-direction:column;gap:8px}
 .bar{display:grid;grid-template-columns:118px 1fr 26px;align-items:center;gap:11px}
-.bar .bn{font-size:11px;color:var(--ink);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .bn{font-size:11px;color:var(--legend);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bar .track{height:11px;background:rgba(255,255,255,.04);border-radius:6px;overflow:hidden}
 .bar .fill{height:100%;border-radius:6px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
-.bar .bc{font-size:11px;color:var(--muted);font-family:"Fraunces",serif;text-align:right}
+.bar .bc{font-size:11px;color:var(--legend);font-family:"Fraunces",serif;text-align:right}
 
 /* impact ranking */
 .rank{display:flex;flex-direction:column;gap:9px}
@@ -118,7 +141,7 @@ section{padding:34px 0}
 .heat{overflow-x:auto}
 .heat h3{margin:0 0 12px;font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 table.hm{border-collapse:collapse;font-size:10.5px}
-table.hm th{font-weight:400;color:var(--dim);padding:5px 7px;text-align:left;letter-spacing:.02em;white-space:nowrap}
+table.hm th{font-weight:400;color:var(--legend);padding:5px 7px;text-align:left;letter-spacing:.02em;white-space:nowrap}
 table.hm th.col{writing-mode:vertical-rl;transform:rotate(180deg);text-align:right;height:74px;vertical-align:bottom}
 table.hm td{width:30px;height:30px;text-align:center;border-radius:5px;font-family:"Fraunces",serif;font-size:13px;
   color:var(--ink);border:1px solid rgba(255,255,255,.05)}
@@ -195,6 +218,9 @@ table.hm td.zero{color:var(--dim);opacity:.4}
   .tagline,.au,.foot,.sec-note,.muted,.rk .rm{color:#555!important}
   .mx-c,.bar .fill,.tby-seg,.pc .tg,table.hm td,.heat{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   .mx-c{border-color:#ddd}.mx-v,.mx-c.tot b{color:#111!important}.mx-h{color:#555!important}
+  .legend,.tby-legend,.hg-legend,.hg-year,.hg-n,.bar .bc,.bar .bn,table.hm th{color:#222!important}
+  .hg-d.up{color:#1a7f5a!important}.hg-d.dn{color:#b2304a!important}.hg-d.fl{color:#888!important}
+  .hg-bar{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   section{padding:16px 0;break-inside:avoid}
   h1{font-size:38px}
 }
@@ -212,21 +238,26 @@ table.hm td.zero{color:var(--dim);opacity:.4}
   <section>
     <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Publication trend</span>
       <span class="sec-note">Accepted main-conference &amp; journal papers (workshops/findings excluded). <b style="color:var(--c4)">soon</b> = venue runs in 2026 but the list isn't released yet; <b>pending</b> = released, awaiting collection. Blank = not held (ICCV odd years · ECCV biennial).</span></div>
+    <div class="seg" id="trend-view"></div>
     <div class="matrix" id="trend"></div>
     <div class="legend" id="trend-legend"></div>
+    <div class="hg" id="trend-hg" style="display:none"></div>
   </section>
 
   <section>
     <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Task evolution &amp; topic-by-year</span>
       <span class="sec-note">Abstract-based tags per year. The field is shifting from anomaly <em>detection</em> toward <em>grounding</em>, <em>understanding</em> and <em>reasoning</em>. 2026 is partial (only released venues).</span></div>
     <div class="seg" id="axis-seg"></div>
+    <div class="seg" id="tby-view"></div>
     <div class="tby" id="tby"></div>
     <div class="tby-legend" id="tby-legend"></div>
+    <div class="hg" id="tby-hg" style="display:none"></div>
   </section>
 
   <section>
     <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Multi-axis taxonomy</span>
       <span class="sec-note">Each paper is tagged on six independent axes from its title + abstract. A paper can carry several labels per axis.</span></div>
+    <div class="seg" id="ax-view"></div>
     <div class="axgrid" id="axgrid"></div>
   </section>
 
@@ -265,6 +296,34 @@ const VENUE_C={CVPR:"#ff8a5b",ICCV:"#5fb8ff",ECCV:"#ad8cff",WACV:"#c2e06a",BMVC:
 const AXIS_C={task:"#ff8a5b",supervision:"#52d3c3",model_family:"#ad8cff",modality:"#5fb8ff",domain:"#c2e06a",method:"#8c93a4"};
 const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const mix=(c,p)=>`color-mix(in srgb, ${c} ${p}%, transparent)`;
+
+/* ---- grouped vertical histogram (years on x, one colored bar per category, YoY Δ on each bar) ---- */
+const deltaSpan=d=> d>0?`<span class="hg-d up">▲+${d}</span>`:d<0?`<span class="hg-d dn">▼${d}</span>`:`<span class="hg-d fl">·0</span>`;
+function histPlot(years,cats,valueFn,opts){
+  opts=opts||{}; const showVal=opts.showValue;
+  let smax=1; years.forEach(y=>cats.forEach(c=>{const v=valueFn(y,c.name)||0; if(v>smax)smax=v;}));
+  const groups=years.map((y,yi)=>{
+    let bars=cats.map(c=>{
+      const v=valueFn(y,c.name)||0;
+      if(!v && !showVal) return "";
+      const prev=yi>0?(valueFn(years[yi-1],c.name)||0):null;
+      const lab= showVal ? `<span class="hg-n">${v}</span>${prev!==null?' '+deltaSpan(v-prev):''}`
+                         : (yi===0?`<span class="hg-n">${v}</span>`:deltaSpan(v-prev));
+      const tip=`${esc(c.name)} · ${y}: ${v}${prev!==null?` (${v-prev>=0?'+':''}${v-prev} vs ${years[yi-1]})`:''}`;
+      return `<div class="hg-bw" title="${tip}"><div class="hg-lab">${lab}</div><div class="hg-bar" data-h="${(v/smax*100).toFixed(1)}" style="background:${c.color}"></div></div>`;
+    }).join("");
+    if(!bars) bars=`<div class="hg-bw"></div>`;
+    return `<div class="hg-group"><div class="hg-bars">${bars}</div><div class="hg-year">${y}</div></div>`;
+  }).join("");
+  return `<div class="hg-plot">${groups}</div>`;
+}
+const histLegend=(cats,note)=>cats.map(c=>`<span><i style="background:${c.color}"></i>${esc(c.name)}</span>`).join("")+(note?`<span style="color:var(--dim)">${esc(note)}</span>`:"");
+const animH=el=>requestAnimationFrame(()=>el.querySelectorAll(".hg-bar[data-h]").forEach(b=>b.style.height=b.dataset.h+"%"));
+function viewSeg(el,label,opts,getCur,onPick){
+  const paint=()=>{el.innerHTML=`<span class="seg-label">${label}</span>`+opts.map(([k,l])=>`<button data-v="${k}" class="${k===getCur()?'on':''}" style="${k===getCur()?'background:var(--c2);border-color:var(--c2)':''}">${l}</button>`).join("");};
+  el.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;onPick(b.dataset.v);paint();});
+  paint();
+}
 
 fetch("data.json").then(r=>r.json()).then(D=>{
   const yspan=`${D.years[0]}–${D.years[D.years.length-1]}`;
@@ -311,6 +370,24 @@ fetch("data.json").then(r=>r.json()).then(D=>{
     `<span><i style="border:1px dotted var(--dim);background:none"></i>n/c — awaiting collection</span>`+
     `<span><i style="background:none"></i>· not held that year</span>`;
 
+  /* 01 histogram view — total papers per year + YoY Δ */
+  const trendYearTot=y=>D.trend.filter(t=>t.status==="ok"&&t.year===y).reduce((s,t)=>s+(t.count||0),0);
+  function renderTrendHist(){
+    const cats=[{name:"papers",color:"var(--c0)"}];
+    const el=document.getElementById("trend-hg");
+    el.innerHTML=histPlot(years,cats,y=>trendYearTot(y),{showValue:true})
+      +`<div class="hg-legend">${histLegend(cats)}<span style="color:var(--dim)">▲/▼ = change vs previous year</span></div>`;
+    animH(el);
+  }
+  let trendView="matrix";
+  viewSeg(document.getElementById("trend-view"),"View",[["matrix","Matrix"],["hist","Histogram"]],()=>trendView,v=>{
+    trendView=v; const hist=v==="hist";
+    document.getElementById("trend").style.display=hist?"none":"";
+    document.getElementById("trend-legend").style.display=hist?"none":"";
+    document.getElementById("trend-hg").style.display=hist?"":"none";
+    if(hist) renderTrendHist();
+  });
+
   /* ---- 02 task evolution / topic-by-year ---- */
   const AX=D.axis_order;
   const labelColor={}; // axisKey -> {label:color}
@@ -333,21 +410,53 @@ fetch("data.json").then(r=>r.json()).then(D=>{
     document.getElementById("tby-legend").innerHTML=order.map(l=>
       `<span><i style="background:${labelColor[curAxis][l]}"></i>${esc(l)}</span>`).join("");
   }
+  let tbyView="stacked";
+  function renderTBYhist(){
+    const all=D.axes[curAxis]||[], cats=all.slice(0,8).map(d=>({name:d.name,color:labelColor[curAxis][d.name]}));
+    const note=all.length>cats.length?`+${all.length-cats.length} more`:"";
+    const el=document.getElementById("tby-hg");
+    el.innerHTML=histPlot(years,cats,(y,n)=>(D.by_year[curAxis][y]||{})[n]||0,{})
+      +`<div class="hg-legend">${histLegend(cats,note)}<span style="color:var(--dim)">▲/▼ vs prev year</span></div>`;
+    animH(el);
+  }
+  function renderAxisView(){
+    const hist=tbyView==="hist";
+    document.getElementById("tby").style.display=hist?"none":"";
+    document.getElementById("tby-legend").style.display=hist?"none":"";
+    document.getElementById("tby-hg").style.display=hist?"":"none";
+    if(hist) renderTBYhist(); else renderTBY();
+  }
+  viewSeg(document.getElementById("tby-view"),"View",[["stacked","Stacked"],["hist","Histogram"]],()=>tbyView,v=>{tbyView=v;renderAxisView();});
   seg.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;curAxis=b.dataset.k;
     seg.querySelectorAll("button").forEach(x=>{const on=x===b;x.classList.toggle("on",on);
       x.style.background=on?AXIS_C[curAxis]:'';x.style.borderColor=on?AXIS_C[curAxis]:'';});
-    renderTBY();});
-  renderTBY();
+    renderAxisView();});
+  renderAxisView();
 
   /* ---- 03 multi-axis taxonomy ---- */
-  document.getElementById("axgrid").innerHTML=AX.filter(a=>a.key!=="method").map(a=>{
-    const col=AXIS_C[a.key], items=D.axes[a.key]||[], mx2=Math.max(...items.map(d=>d.count),1);
-    const bars=items.map(d=>`<div class="bar"><div class="bn">${esc(d.name)}</div>
-      <div class="track"><div class="fill" data-w="${d.count/mx2*100}" style="background:${col}"></div></div>
-      <div class="bc">${d.count}</div></div>`).join("");
-    return `<div class="axcard"><h3><i style="background:${col}"></i>${a.label}</h3><div class="bars">${bars}</div></div>`;
-  }).join("");
-  requestAnimationFrame(()=>document.querySelectorAll(".axcard .fill").forEach(f=>f.style.width=f.dataset.w+"%"));
+  let axView="totals";
+  function renderAxgrid(){
+    const hist=axView==="year";
+    document.getElementById("axgrid").innerHTML=AX.filter(a=>a.key!=="method").map(a=>{
+      const col=AXIS_C[a.key], items=D.axes[a.key]||[];
+      if(hist){
+        const cats=items.slice(0,6).map(d=>({name:d.name,color:labelColor[a.key][d.name]}));
+        const note=items.length>cats.length?`+${items.length-cats.length} more`:"";
+        return `<div class="axcard"><h3><i style="background:${col}"></i>${a.label}</h3>
+          <div class="hg cmp">${histPlot(years,cats,(y,n)=>(D.by_year[a.key][y]||{})[n]||0,{})}
+          <div class="hg-legend">${histLegend(cats,note)}</div></div></div>`;
+      }
+      const mx2=Math.max(...items.map(d=>d.count),1);
+      const bars=items.map(d=>`<div class="bar"><div class="bn">${esc(d.name)}</div>
+        <div class="track"><div class="fill" data-w="${d.count/mx2*100}" style="background:${col}"></div></div>
+        <div class="bc">${d.count}</div></div>`).join("");
+      return `<div class="axcard"><h3><i style="background:${col}"></i>${a.label}</h3><div class="bars">${bars}</div></div>`;
+    }).join("");
+    if(hist) animH(document.getElementById("axgrid"));
+    else requestAnimationFrame(()=>document.querySelectorAll(".axcard .fill").forEach(f=>f.style.width=f.dataset.w+"%"));
+  }
+  viewSeg(document.getElementById("ax-view"),"View",[["totals","Totals"],["year","By year"]],()=>axView,v=>{axView=v;renderAxgrid();});
+  renderAxgrid();
 
   /* ---- 04 normalized impact ---- */
   const top=D.papers.slice().sort((a,b)=>b.cit_per_month-a.cit_per_month).slice(0,12);
