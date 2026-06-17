@@ -106,10 +106,12 @@ table.hm td.zero{color:var(--dim);opacity:.4}
 .hg-plot{display:flex;gap:30px;align-items:flex-end;padding:26px 4px 0;overflow-x:auto}
 .hg-group{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1 1 0;min-width:80px}
 .hg-bars{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:172px;width:100%}
-.hg-bw{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;flex:1 1 0;min-width:30px;max-width:70px}
+.hg-bw{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;flex:1 1 0;min-width:30px;max-width:120px}
 .hg-bar{width:100%;height:0;min-height:2px;border-radius:4px 4px 0 0;transition:height .9s cubic-bezier(.2,.8,.2,1)}
-.hg-lab{font-size:9.5px;line-height:1.25;text-align:center;margin-bottom:4px;white-space:nowrap}
+.hg-lab{font-size:9.5px;line-height:1.25;text-align:center;margin-bottom:6px;white-space:nowrap}
 .hg-n{color:var(--legend);font-weight:500}
+.rate-line{margin-top:3px}
+.rate-n{color:var(--c4);font-weight:700}
 .hg-d{font-weight:600;letter-spacing:.01em}
 .hg-d.up{color:var(--up)} .hg-d.dn{color:var(--down)} .hg-d.fl{color:var(--dim)}
 .hg-year{font-family:"Fraunces",serif;font-size:19px;color:var(--legend)}
@@ -156,10 +158,7 @@ table.hm td.zero{color:var(--dim);opacity:.4}
   <section>
     <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Acceptance · last 3 years</span>
       <span class="sec-note">Official CVPR program-committee figures. 2026 jumped to 4,090 accepted (25.4%) from a record 16,092 submissions.</span></div>
-    <div class="heatwrap">
-      <div class="heat"><h3>Accepted papers / year</h3><div class="hg" id="acc-count"></div></div>
-      <div class="heat"><h3>Acceptance rate / year</h3><div class="hg" id="acc-rate"></div></div>
-    </div>
+    <div class="hg" id="acc-combo"></div>
   </section>
 
   <section>
@@ -237,15 +236,36 @@ function heat(elId,ids,M,baseCol){
   document.getElementById(elId).innerHTML=t+`</table>`;
 }
 
-/* ---- 01 acceptance (3-year) ---- */
-const yrs=ACC.map(a=>a.year), accAt=y=>ACC.find(a=>a.year===y);
-document.getElementById("acc-count").innerHTML=
-  histPlot(yrs,[{name:"accepted",color:"var(--c0)"}],y=>accAt(y).acc,{showValue:true,fmt:x=>x.toLocaleString(),dfmt:x=>x.toLocaleString()})
-  +`<div class="hg-legend"><span><i style="background:var(--c0)"></i>accepted papers</span><span style="color:var(--dim)">▲/▼ = vs previous year</span></div>`;
-document.getElementById("acc-rate").innerHTML=
-  histPlot(yrs,[{name:"accept rate",color:"var(--c4)"}],y=>accAt(y).rate,{showValue:true,fmt:x=>x+"%",dfmt:x=>x+"pp"})
-  +`<div class="hg-legend"><span><i style="background:var(--c4)"></i>acceptance rate</span><span style="color:var(--dim)">submissions 11.5k → 13.0k → 16.1k</span></div>`;
-animH(document.getElementById("acc-count")); animH(document.getElementById("acc-rate"));
+/* ---- 01 acceptance (3-year): count bars + rate + curved YoY growth arrows, merged into one SVG ---- */
+(function(){
+  const W=760,H=350,BASE=290,AREA=200,margin=46, C0="#ff8a5b",UP="#7ee0b8",C4="#5fb8ff";
+  const N=ACC.length, span=(W-2*margin)/N, bw=Math.min(104,span*0.55);
+  const maxAcc=Math.max(...ACC.map(a=>a.acc));
+  const cx=ACC.map((a,i)=>margin+span*(i+0.5));
+  const topY=ACC.map(a=>BASE-(a.acc/maxAcc)*AREA);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="max-width:760px;display:block;margin:0 auto">`
+    +`<defs><marker id="gah" markerWidth="9" markerHeight="9" refX="5.5" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="${UP}"/></marker></defs>`
+    +`<line x1="${margin-10}" y1="${BASE}" x2="${W-margin+10}" y2="${BASE}" stroke="rgba(255,255,255,.12)"/>`;
+  ACC.forEach((a,i)=>{
+    const x=cx[i]-bw/2, y=topY[i], h=BASE-y;
+    s+=`<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" rx="4" fill="${C0}"/>`;
+    s+=`<text x="${cx[i].toFixed(1)}" y="${(y-12).toFixed(1)}" text-anchor="middle" font-size="17" font-weight="700" fill="#fff" font-family="Fraunces,serif">${a.acc.toLocaleString()}</text>`;
+    s+=`<text x="${cx[i].toFixed(1)}" y="${BASE+26}" text-anchor="middle" font-size="16" fill="#fff" font-family="Fraunces,serif">${a.year}</text>`;
+    s+=`<text x="${cx[i].toFixed(1)}" y="${BASE+44}" text-anchor="middle" font-size="12" font-weight="700" fill="${C4}" font-family="JetBrains Mono,monospace">${a.rate}%</text>`;
+  });
+  for(let i=0;i<N-1;i++){
+    const x1=cx[i]+bw/2-4, y1=topY[i]-7, x2=cx[i+1]-bw/2+4, y2=topY[i+1]-7;
+    const mx=(x1+x2)/2, my=Math.min(y1,y2)-30, g=ACC[i+1].acc-ACC[i].acc;
+    s+=`<path d="M ${x1.toFixed(1)} ${y1.toFixed(1)} Q ${mx.toFixed(1)} ${my.toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}" fill="none" stroke="${UP}" stroke-width="2.2" marker-end="url(#gah)"/>`;
+    s+=`<text x="${mx.toFixed(1)}" y="${(my-5).toFixed(1)}" text-anchor="middle" font-size="13.5" font-weight="700" fill="${UP}" font-family="JetBrains Mono,monospace">+${g.toLocaleString()}</text>`;
+  }
+  s+=`</svg>`;
+  document.getElementById("acc-combo").innerHTML=s
+    +`<div class="hg-legend" style="justify-content:center"><span><i style="background:${C0}"></i>accepted papers</span>`
+    +`<span><i style="background:${UP}"></i>YoY growth (curved arrow)</span>`
+    +`<span><i style="background:${C4}"></i>acceptance rate</span>`
+    +`<span style="color:var(--dim)">submissions 11.5k → 13.0k → 16.1k</span></div>`;
+})();
 
 /* ---- graph-driven sections ---- */
 fetch("data/cvpr2026_graph.json").then(r=>r.json()).then(G=>{
