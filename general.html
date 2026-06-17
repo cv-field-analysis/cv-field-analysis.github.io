@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CVPR 2026 — Field Landscape</title>
+<meta name="description" content="CVPR 2026 field landscape: 3-year accepted-paper & acceptance-rate trend, topic volume across 89 keyword-topics, 6 research communities, and keyword co-occurrence — from the CVPR program."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#080a11; --panel:#0e121c; --ink:#eceadf; --muted:#8c93a4; --dim:#565d70;
+  --line:rgba(255,255,255,.10); --accent:#ff8a5b;
+  --c0:#ff8a5b; --c1:#52d3c3; --c2:#ffd166; --c3:#ad8cff; --c4:#5fb8ff; --c5:#c2e06a; --c6:#f78fb3; --c7:#7ee0b8;
+  --amber:#ffd166; --legend:#ffffff; --up:#7ee0b8; --down:#ff8a8a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"JetBrains Mono",ui-monospace,monospace;-webkit-font-smoothing:antialiased}
+body{background:
+  radial-gradient(1100px 700px at 12% -5%, rgba(255,138,91,.10), transparent 60%),
+  radial-gradient(1000px 720px at 100% 0%, rgba(95,184,255,.08), transparent 55%),
+  var(--bg);min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto;padding:0 26px}
+a{color:inherit}
+
+/* top tab nav */
+.topnav{display:flex;gap:8px;flex-wrap:wrap;padding:20px 0 0}
+.topnav a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;
+  border:1px solid var(--line);border-radius:18px;padding:7px 15px;transition:.15s}
+.topnav a:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
+.topnav a.on{color:var(--bg);background:var(--c2);border-color:var(--c2);font-weight:600}
+
+/* hero */
+.hero{padding:30px 0 28px}
+.eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--c2);
+  display:flex;align-items:center;gap:12px;margin:0 0 18px}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--c2);opacity:.8}
+h1{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(32px,6vw,60px);line-height:.98;
+  margin:0;letter-spacing:-.02em;font-variation-settings:"opsz" 120,"WONK" 1}
+h1 em{font-style:italic;font-weight:300;color:var(--c1)}
+.tagline{margin:16px 0 0;color:var(--muted);font-size:13.5px;letter-spacing:.01em;max-width:64ch;line-height:1.6}
+.statrow{display:flex;flex-wrap:wrap;gap:28px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.stat .v{font-family:"Fraunces",serif;font-size:32px;line-height:1;font-variation-settings:"opsz" 60}
+.stat .l{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:7px}
+.stat .v.accent{color:var(--c0)}
+
+/* sections */
+section{padding:34px 0}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin:0 0 20px}
+.sec-num{font-size:11px;color:var(--dim);letter-spacing:.2em}
+.sec-title{font-family:"Fraunces",serif;font-size:24px;font-weight:400;font-variation-settings:"opsz" 50,"WONK" 1}
+.sec-note{margin-left:auto;font-size:10.5px;color:var(--dim);letter-spacing:.04em;text-align:right;max-width:46ch;line-height:1.5}
+
+/* segmented control */
+.seg{display:inline-flex;flex-wrap:wrap;gap:6px;margin:0 0 18px}
+.seg .seg-label{align-self:center;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-right:2px}
+.seg button{cursor:pointer;font-family:inherit;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:18px;padding:6px 13px;transition:.15s}
+.seg button:hover{color:var(--ink);border-color:rgba(255,255,255,.28)}
+.seg button.on{color:var(--bg);font-weight:600}
+
+/* bars (topic ranking + community cards) */
+.axgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.axcard{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--panel)}
+.axcard h3{margin:0 0 13px;font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.axcard h3 i{width:9px;height:9px;border-radius:2px;flex:0 0 auto}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:150px 1fr 34px;align-items:center;gap:11px}
+.bar .bn{font-size:11px;color:var(--legend);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .track{height:11px;background:rgba(255,255,255,.04);border-radius:6px;overflow:hidden}
+.bar .fill{height:100%;border-radius:6px;width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.bar .bc{font-size:11px;color:var(--legend);font-family:"Fraunces",serif;text-align:right}
+.axcard .bar{grid-template-columns:118px 1fr 30px}
+
+/* heatmap + two-column */
+.heatwrap{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.heat{overflow-x:auto}
+.heat h3{margin:0 0 12px;font-family:"JetBrains Mono";font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+table.hm{border-collapse:collapse;font-size:10.5px}
+table.hm th{font-weight:400;color:var(--legend);padding:5px 7px;text-align:left;letter-spacing:.02em;white-space:nowrap}
+table.hm th.col{writing-mode:vertical-rl;transform:rotate(180deg);text-align:right;height:104px;vertical-align:bottom}
+table.hm td{width:30px;height:30px;text-align:center;border-radius:5px;font-family:"Fraunces",serif;font-size:13px;
+  color:var(--ink);border:1px solid rgba(255,255,255,.05)}
+table.hm td.zero{color:var(--dim);opacity:.4}
+
+/* ranked pairs */
+.rank{display:flex;flex-direction:column;gap:9px}
+.rk{display:grid;grid-template-columns:30px 1fr auto;align-items:center;gap:14px;
+  border:1px solid var(--line);border-radius:8px;padding:10px 15px;background:var(--panel)}
+.rk .ri{font-family:"Fraunces",serif;font-size:18px;color:var(--dim);text-align:center}
+.rk .rt{font-size:12.5px;line-height:1.35;min-width:0}
+.rk .rv{text-align:right;flex:0 0 auto}
+.rk .rv .pm{font-family:"Fraunces",serif;font-size:19px;color:var(--c0)}
+.rk .rv .pmL{font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+
+/* legend */
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;font-size:10.5px;color:var(--legend);letter-spacing:.04em}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px}
+
+/* histogram — grouped vertical bars by year + YoY delta */
+.hg{margin-top:6px}
+.hg-plot{display:flex;gap:30px;align-items:flex-end;padding:26px 4px 0;overflow-x:auto}
+.hg-group{display:flex;flex-direction:column;align-items:center;gap:10px;flex:1 1 0;min-width:80px}
+.hg-bars{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:172px;width:100%}
+.hg-bw{display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;flex:1 1 0;min-width:30px;max-width:70px}
+.hg-bar{width:100%;height:0;min-height:2px;border-radius:4px 4px 0 0;transition:height .9s cubic-bezier(.2,.8,.2,1)}
+.hg-lab{font-size:9.5px;line-height:1.25;text-align:center;margin-bottom:4px;white-space:nowrap}
+.hg-n{color:var(--legend);font-weight:500}
+.hg-d{font-weight:600;letter-spacing:.01em}
+.hg-d.up{color:var(--up)} .hg-d.dn{color:var(--down)} .hg-d.fl{color:var(--dim)}
+.hg-year{font-family:"Fraunces",serif;font-size:19px;color:var(--legend)}
+.hg-legend{display:flex;flex-wrap:wrap;gap:13px;margin-top:16px;font-size:10.5px;color:var(--legend)}
+.hg-legend span{display:inline-flex;align-items:center;gap:6px}
+.hg-legend i{width:10px;height:10px;border-radius:3px}
+
+/* footer */
+.foot{padding:38px 0 60px;border-top:1px solid var(--line);margin-top:22px;
+  font-size:10.5px;color:var(--dim);letter-spacing:.03em;line-height:1.85}
+.foot a{color:var(--muted);text-decoration:none}.foot a:hover{color:var(--ink)}
+.foot .un{border-bottom:1px dotted var(--dim);cursor:help}
+
+@media(max-width:760px){ .axgrid,.heatwrap{grid-template-columns:1fr} .sec-note{display:none} }
+@media print{
+  @page{margin:13mm}
+  body{background:#fff;color:#111}
+  .topnav,.seg{display:none}
+  .wrap{max-width:none;padding:0}
+  .axcard,.rk{background:#fff;border-color:#ddd;break-inside:avoid}
+  .sec-title,h1,.stat .v,.axcard h3,table.hm td,.rk .rt{color:#111!important}
+  .tagline,.sec-note,.foot{color:#555!important}
+  .legend,.hg-legend,.hg-year,.hg-n,.bar .bc,.bar .bn,table.hm th{color:#222!important}
+  .hg-d.up{color:#1a7f5a!important}.hg-d.dn{color:#b2304a!important}
+  .fill,.hg-bar,.mx-c,table.hm td{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{padding:16px 0;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav">
+    <a href="index.html">VAD · Field analysis</a>
+    <a href="general.html" class="on">CVPR 2026 · General</a>
+  </nav>
+
+  <header class="hero">
+    <p class="eyebrow">CVPR 2026 · Field landscape</p>
+    <h1>CVPR 2026 — <em>Field Landscape</em></h1>
+    <p class="tagline">A general view of CVPR 2026: how accepted-paper volume and acceptance rate moved over three years, and where the ~4,000 accepted papers sit across 89 keyword-topics and 6 research communities — by paper count and keyword co-occurrence.</p>
+    <div class="statrow" id="statrow"></div>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Acceptance · last 3 years</span>
+      <span class="sec-note">Official CVPR program-committee figures. 2026 jumped to 4,090 accepted (25.4%) from a record 16,092 submissions.</span></div>
+    <div class="heatwrap">
+      <div class="heat"><h3>Accepted papers / year</h3><div class="hg" id="acc-count"></div></div>
+      <div class="heat"><h3>Acceptance rate / year</h3><div class="hg" id="acc-rate"></div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Topic landscape</span>
+      <span class="sec-note">CVPR 2026 papers per keyword-topic (a paper can carry several). Generation · Video · 3D · Diffusion · Multimodal lead. Bars colored by community.</span></div>
+    <div class="seg" id="topic-seg"></div>
+    <div class="bars" id="topics"></div>
+    <div class="legend" id="comm-legend"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Research communities</span>
+      <span class="sec-note">6 clusters detected from keyword co-occurrence. Each card = a theme group and its topics by paper count.</span></div>
+    <div class="axgrid" id="comms"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Keyword co-occurrence</span>
+      <span class="sec-note">How the top topics pair up within papers. Generation×Video (132) is by far the strongest link → generative video is the field's center of gravity.</span></div>
+    <div class="heatwrap">
+      <div class="heat"><h3>Top-16 co-occurrence (papers sharing both)</h3><div id="cooc"></div></div>
+      <div class="heat"><h3>Strongest topic pairs</h3><div class="rank" id="pairs"></div></div>
+    </div>
+  </section>
+
+  <footer class="foot" id="foot"></footer>
+</div>
+
+<script>
+const esc=s=>(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const mix=(c,p)=>`color-mix(in srgb, ${c} ${p}%, transparent)`;
+const COMM=["#ff8a5b","#52d3c3","#ffd166","#ad8cff","#5fb8ff","#c2e06a"];
+
+/* official CVPR program-committee figures (submissions counted at review) */
+const ACC=[
+  {year:2024, sub:11532, acc:2719, rate:23.6},
+  {year:2025, sub:13008, acc:2878, rate:22.1},
+  {year:2026, sub:16092, acc:4090, rate:25.42},
+];
+
+/* grouped vertical-bar chart by year + YoY delta */
+function deltaSpan(d,dfmt){
+  const a=dfmt?dfmt(Math.abs(d)):Math.abs(d);
+  if(d>0) return `<span class="hg-d up">▲+${a}</span>`;
+  if(d<0) return `<span class="hg-d dn">▼-${a}</span>`;
+  return `<span class="hg-d fl">·0</span>`;
+}
+function histPlot(years,cats,valueFn,opts){
+  opts=opts||{}; const showVal=opts.showValue, fmt=opts.fmt||(x=>x), dfmt=opts.dfmt;
+  let smax=1; years.forEach(y=>cats.forEach(c=>{const v=+valueFn(y,c.name)||0; if(v>smax)smax=v;}));
+  const groups=years.map((y,yi)=>{
+    let bars=cats.map(c=>{
+      const v=+valueFn(y,c.name)||0;
+      if(!v && !showVal) return "";
+      const prev=yi>0?(+valueFn(years[yi-1],c.name)||0):null;
+      const lab= showVal ? `<span class="hg-n">${fmt(v)}</span>${prev!==null?' '+deltaSpan(+(v-prev).toFixed(2),dfmt):''}`
+                         : (yi===0?`<span class="hg-n">${fmt(v)}</span>`:deltaSpan(+(v-prev).toFixed(2),dfmt));
+      const tip=`${c.name} · ${y}: ${fmt(v)}`;
+      return `<div class="hg-bw" title="${tip}"><div class="hg-lab">${lab}</div><div class="hg-bar" data-h="${(v/smax*100).toFixed(1)}" style="background:${c.color}"></div></div>`;
+    }).join("");
+    if(!bars) bars=`<div class="hg-bw"></div>`;
+    return `<div class="hg-group"><div class="hg-bars">${bars}</div><div class="hg-year">${y}</div></div>`;
+  }).join("");
+  return `<div class="hg-plot">${groups}</div>`;
+}
+const animH=el=>requestAnimationFrame(()=>el.querySelectorAll(".hg-bar[data-h]").forEach(b=>b.style.height=b.dataset.h+"%"));
+
+function heat(elId,ids,M,baseCol){
+  const flat=M.flat(), hi=Math.max(...flat,1);
+  let t=`<table class="hm"><tr><th></th>${ids.map(c=>`<th class="col">${esc(c)}</th>`).join("")}</tr>`;
+  ids.forEach((r,ri)=>{
+    t+=`<tr><th>${esc(r)}</th>`+ids.map((c,ci)=>{const v=M[ri][ci];
+      return `<td class="${v?'':'zero'}" style="background:${v?mix(baseCol,Math.round(12+v/hi*78)):'transparent'}" title="${esc(r)} × ${esc(c)}: ${v}">${v||'·'}</td>`;}).join("")+`</tr>`;
+  });
+  document.getElementById(elId).innerHTML=t+`</table>`;
+}
+
+/* ---- 01 acceptance (3-year) ---- */
+const yrs=ACC.map(a=>a.year), accAt=y=>ACC.find(a=>a.year===y);
+document.getElementById("acc-count").innerHTML=
+  histPlot(yrs,[{name:"accepted",color:"var(--c0)"}],y=>accAt(y).acc,{showValue:true,fmt:x=>x.toLocaleString(),dfmt:x=>x.toLocaleString()})
+  +`<div class="hg-legend"><span><i style="background:var(--c0)"></i>accepted papers</span><span style="color:var(--dim)">▲/▼ = vs previous year</span></div>`;
+document.getElementById("acc-rate").innerHTML=
+  histPlot(yrs,[{name:"accept rate",color:"var(--c4)"}],y=>accAt(y).rate,{showValue:true,fmt:x=>x+"%",dfmt:x=>x+"pp"})
+  +`<div class="hg-legend"><span><i style="background:var(--c4)"></i>acceptance rate</span><span style="color:var(--dim)">submissions 11.5k → 13.0k → 16.1k</span></div>`;
+animH(document.getElementById("acc-count")); animH(document.getElementById("acc-rate"));
+
+/* ---- graph-driven sections ---- */
+fetch("data/cvpr2026_graph.json").then(r=>r.json()).then(G=>{
+  const nodesSorted=G.nodes.slice().sort((a,b)=>b.count-a.count||a.id.localeCompare(b.id));
+
+  /* stat row */
+  const stats=[["v accent",G.meta.papers.toLocaleString(),"papers analysed"],
+    ["v","4,090","accepted · 2026"],["v","25.4%","accept rate · 2026"],
+    ["v",G.meta.keywords,"keyword topics"],["v",G.meta.communities,"communities"]];
+  document.getElementById("statrow").innerHTML=stats.map(([c,v,l])=>
+    `<div class="stat"><div class="${c}">${v}</div><div class="l">${l}</div></div>`).join("");
+
+  /* 02 topic ranking */
+  let topMode="top";
+  const seg=document.getElementById("topic-seg");
+  const mxAll=Math.max(...nodesSorted.map(n=>n.count),1);
+  function renderTopics(){
+    const list=topMode==="top"?nodesSorted.slice(0,40):nodesSorted;
+    document.getElementById("topics").innerHTML=list.map(n=>{
+      const col=COMM[n.community%COMM.length];
+      return `<div class="bar"><div class="bn" title="${esc(n.id)}">${esc(n.id)}</div>
+        <div class="track"><div class="fill" data-w="${(n.count/mxAll*100).toFixed(1)}" style="background:${col}"></div></div>
+        <div class="bc">${n.count}</div></div>`;
+    }).join("");
+    requestAnimationFrame(()=>document.querySelectorAll("#topics .fill").forEach(f=>f.style.width=f.dataset.w+"%"));
+  }
+  function paintSeg(){ seg.innerHTML=`<span class="seg-label">Show</span>`+
+    [["top","Top 40"],["all","All "+G.meta.keywords]].map(([k,l])=>
+      `<button data-v="${k}" class="${k===topMode?'on':''}" style="${k===topMode?'background:var(--c2);border-color:var(--c2)':''}">${l}</button>`).join(""); }
+  seg.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;topMode=b.dataset.v;paintSeg();renderTopics();});
+  paintSeg(); renderTopics();
+
+  const lg={}; G.legend.forEach(l=>lg[l.community]=l);
+  document.getElementById("comm-legend").innerHTML=G.legend.map(l=>
+    `<span><i style="background:${COMM[l.community%COMM.length]}"></i>${esc(l.top.slice(0,2).join(" · "))}</span>`).join("");
+
+  /* 03 communities */
+  const byComm={}; G.nodes.forEach(n=>{(byComm[n.community]=byComm[n.community]||[]).push(n);});
+  document.getElementById("comms").innerHTML=Object.keys(byComm).sort((a,b)=>a-b).map(cid=>{
+    const ns=byComm[cid].slice().sort((a,b)=>b.count-a.count), col=COMM[cid%COMM.length];
+    const total=ns.reduce((s,n)=>s+n.count,0), mx=Math.max(...ns.map(n=>n.count),1);
+    const title=(lg[cid]?lg[cid].top:ns.slice(0,2).map(n=>n.id)).slice(0,2).join(" · ");
+    const bars=ns.slice(0,12).map(n=>`<div class="bar"><div class="bn" title="${esc(n.id)}">${esc(n.id)}</div>
+      <div class="track"><div class="fill" data-w="${(n.count/mx*100).toFixed(1)}" style="background:${col}"></div></div>
+      <div class="bc">${n.count}</div></div>`).join("");
+    const more=ns.length>12?`<div class="bn" style="opacity:.5;font-size:10px;margin-top:6px;text-align:left">+${ns.length-12} more topics</div>`:"";
+    return `<div class="axcard"><h3><i style="background:${col}"></i>${esc(title)}
+      <span style="color:var(--dim);font-weight:400;margin-left:auto">${ns.length} topics · ${total.toLocaleString()} mentions</span></h3>
+      <div class="bars">${bars}${more}</div></div>`;
+  }).join("");
+  requestAnimationFrame(()=>document.querySelectorAll("#comms .fill").forEach(f=>f.style.width=f.dataset.w+"%"));
+
+  /* 04 co-occurrence heatmap + strongest pairs */
+  const topIds=nodesSorted.slice(0,16).map(n=>n.id);
+  const idx=new Map(topIds.map((id,i)=>[id,i]));
+  const M=topIds.map(()=>topIds.map(()=>0));
+  G.links.forEach(l=>{ if(idx.has(l.source)&&idx.has(l.target)){
+    const i=idx.get(l.source),j=idx.get(l.target); M[i][j]=l.weight; M[j][i]=l.weight; }});
+  heat("cooc",topIds,M,"#ad8cff");
+  const pairs=G.links.slice().sort((a,b)=>b.weight-a.weight).slice(0,20);
+  document.getElementById("pairs").innerHTML=pairs.map((l,i)=>
+    `<div class="rk"><div class="ri">${i+1}</div>
+      <div class="rt">${esc(l.source)} <span style="color:var(--dim)">×</span> ${esc(l.target)}</div>
+      <div class="rv"><div class="pm">${l.weight}</div><div class="pmL">co-occur</div></div></div>`).join("");
+
+  /* footer */
+  document.getElementById("foot").innerHTML=
+    `Topic counts, keyword communities & co-occurrence from the <a href="https://cvpr-constellation.github.io" target="_blank" rel="noopener">CVPR 2026 Research Constellation</a> (CVF Open Access, ${G.meta.papers.toLocaleString()} listed papers · ${G.meta.keywords} keyword-topics). `+
+    `Acceptance figures — official CVPR program-committee announcements: 2024 2,719/11,532 (23.6%), 2025 2,878/13,008 (22.1%), 2026 4,090/16,092 (25.4%).<br>`+
+    `This is an <span class="un" title="Not affiliated with or endorsed by CVPR or CVF.">unofficial</span> analysis · built by `+
+    `<a href="https://deo-ahn.github.io" target="_blank" rel="noopener">Deokhyun Ahn</a> · `+
+    `<a href="https://github.com/cv-field-analysis/cv-field-analysis.github.io" target="_blank" rel="noopener">GitHub</a>`;
+}).catch(e=>{document.getElementById("statrow").innerHTML="<div class='stat'><div class='v'>Failed to load CVPR data.</div></div>";console.error(e);});
+</script>
+</body>
+</html>

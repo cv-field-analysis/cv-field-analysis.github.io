@@ -27,8 +27,15 @@ body{background:
 .wrap{max-width:1080px;margin:0 auto;padding:0 26px}
 a{color:inherit}
 
+/* top tab nav */
+.topnav{display:flex;gap:8px;flex-wrap:wrap;padding:20px 0 0}
+.topnav a{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;
+  border:1px solid var(--line);border-radius:18px;padding:7px 15px;transition:.15s}
+.topnav a:hover{color:var(--ink);border-color:rgba(255,255,255,.3)}
+.topnav a.on{color:var(--bg);background:var(--c2);border-color:var(--c2);font-weight:600}
+
 /* hero */
-.hero{padding:60px 0 28px}
+.hero{padding:30px 0 28px}
 .eyebrow{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--c2);
   display:flex;align-items:center;gap:12px;margin:0 0 18px}
 .eyebrow::before{content:"";width:30px;height:1px;background:var(--c2);opacity:.8}
@@ -212,7 +219,7 @@ table.hm td.zero{color:var(--dim);opacity:.4}
 @media print{
   @page{margin:13mm}
   body{background:#fff;color:#111}
-  .dl,.chips,.seg{display:none}
+  .dl,.chips,.seg,.topnav{display:none}
   .wrap{max-width:none;padding:0}
   .axcard,.pc,.rk,.tby-bar{background:#fff;border-color:#ddd;break-inside:avoid}
   .pc .ti a,.pc .yr,.sec-title,h1,.stat .v,.rk .rt a,.axcard h3,table.hm td{color:#111!important}
@@ -229,6 +236,10 @@ table.hm td.zero{color:var(--dim);opacity:.4}
 </head>
 <body>
 <div class="wrap">
+  <nav class="topnav">
+    <a href="index.html" class="on">VAD · Field analysis</a>
+    <a href="general.html">CVPR 2026 · General</a>
+  </nav>
   <header class="hero">
     <p class="eyebrow" id="eyebrow">Field Analysis</p>
     <h1 id="title">—</h1>
