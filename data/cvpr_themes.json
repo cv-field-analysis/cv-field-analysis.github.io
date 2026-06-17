@@ -1,0 +1,40 @@
+{
+ "method": "Each accepted paper assigned to one theme = first-matching keyword group in its TITLE (priority order). Title-only, approximate. Source: CVF Open Access listings.",
+ "themes": [
+  "Multimodal · LLM/VLM",
+  "3D · Geometry · Avatars",
+  "Generative · Diffusion",
+  "Video · Motion",
+  "Detection · Segmentation",
+  "Efficiency · Learning · Robust",
+  "Other"
+ ],
+ "years": [
+  {
+   "year": 2025,
+   "total": 2871,
+   "count": {
+    "Multimodal · LLM/VLM": 457,
+    "3D · Geometry · Avatars": 691,
+    "Generative · Diffusion": 592,
+    "Video · Motion": 247,
+    "Detection · Segmentation": 245,
+    "Efficiency · Learning · Robust": 225,
+    "Other": 414
+   }
+  },
+  {
+   "year": 2026,
+   "total": 4068,
+   "count": {
+    "Multimodal · LLM/VLM": 971,
+    "3D · Geometry · Avatars": 809,
+    "Generative · Diffusion": 794,
+    "Video · Motion": 358,
+    "Detection · Segmentation": 291,
+    "Efficiency · Learning · Robust": 248,
+    "Other": 597
+   }
+  }
+ ]
+}

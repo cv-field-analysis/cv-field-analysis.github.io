@@ -162,7 +162,14 @@ table.hm td.zero{color:var(--dim);opacity:.4}
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Topic landscape</span>
+    <div class="sec-head"><span class="sec-num">02</span><span class="sec-title">Theme share by year</span>
+      <span class="sec-note" id="theme-note">Each accepted paper mapped to one theme by title keyword (approximate). Share of papers per theme, year over year.</span></div>
+    <div id="theme-chart"></div>
+    <div class="legend" id="theme-legend"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Topic landscape</span>
       <span class="sec-note">CVPR 2026 papers per keyword-topic (a paper can carry several). Generation · Video · 3D · Diffusion · Multimodal lead. Bars colored by community.</span></div>
     <div class="seg" id="topic-seg"></div>
     <div class="bars" id="topics"></div>
@@ -170,13 +177,13 @@ table.hm td.zero{color:var(--dim);opacity:.4}
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">03</span><span class="sec-title">Research communities</span>
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Research communities</span>
       <span class="sec-note">6 clusters detected from keyword co-occurrence. Each card = a theme group and its topics by paper count.</span></div>
     <div class="axgrid" id="comms"></div>
   </section>
 
   <section>
-    <div class="sec-head"><span class="sec-num">04</span><span class="sec-title">Keyword co-occurrence</span>
+    <div class="sec-head"><span class="sec-num">05</span><span class="sec-title">Keyword co-occurrence</span>
       <span class="sec-note">How the top topics pair up within papers. Generation×Video (132) is by far the strongest link → generative video is the field's center of gravity.</span></div>
     <div class="heatwrap">
       <div class="heat"><h3>Top-16 co-occurrence (papers sharing both)</h3><div id="cooc"></div></div>
@@ -266,6 +273,44 @@ function heat(elId,ids,M,baseCol){
     +`<span><i style="background:${C4}"></i>acceptance rate</span>`
     +`<span style="color:var(--dim)">submissions 11.5k → 13.0k → 16.1k</span></div>`;
 })();
+
+/* ---- 02 theme share by year (100% stacked, YoY) ---- */
+fetch("data/cvpr_themes.json").then(r=>r.json()).then(T=>{
+  const TC={"Multimodal · LLM/VLM":"#5fb8ff","3D · Geometry · Avatars":"#52d3c3","Generative · Diffusion":"#c2e06a",
+    "Video · Motion":"#f78fb3","Detection · Segmentation":"#ad8cff","Efficiency · Learning · Robust":"#ffd166","Other":"#565d70"};
+  const themes=T.themes, years=T.years, share=(y,t)=>100*y.count[t]/y.total;
+  const W=760,H=360,X0=64,X1=732,TOP=44,BASE=300,PH=BASE-TOP,plotW=X1-X0,N=years.length,slot=plotW/N,bw=Math.min(120,slot*0.5);
+  let s=`<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;max-width:760px;margin:0 auto">`;
+  [0,25,50,75,100].forEach(p=>{const y=(BASE-p/100*PH).toFixed(1);
+    s+=`<line x1="${X0}" y1="${y}" x2="${X1}" y2="${y}" stroke="rgba(255,255,255,.07)"/>`
+      +`<text x="${X0-8}" y="${+y+3}" text-anchor="end" font-size="10" fill="#8c93a4" font-family="JetBrains Mono,monospace">${p}%</text>`;});
+  years.forEach((y,yi)=>{
+    const cx=X0+slot*(yi+0.5);
+    s+=`<text x="${cx.toFixed(1)}" y="${TOP-13}" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" font-family="Fraunces,serif">${y.total.toLocaleString()}</text>`;
+    let cum=0;
+    themes.forEach(t=>{
+      const sh=share(y,t); if(sh<=0)return;
+      const h=sh/100*PH, yTop=BASE-(cum+sh)/100*PH;
+      const prev=yi>0?share(years[yi-1],t):null, dp=prev!=null?(sh-prev):null;
+      const tip=`${t} · ${y.year}: ${sh.toFixed(1)}%${dp!=null?` (${dp>=0?'+':''}${dp.toFixed(1)}pp vs ${years[yi-1].year})`:''}`;
+      s+=`<rect x="${(cx-bw/2).toFixed(1)}" y="${yTop.toFixed(1)}" width="${bw.toFixed(1)}" height="${h.toFixed(1)}" fill="${TC[t]||'#888'}"><title>${esc(tip)}</title></rect>`;
+      if(sh>=6) s+=`<text x="${cx.toFixed(1)}" y="${(yTop+h/2+3).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="700" fill="${t==='Other'?'#cfd3dd':'#0a0c12'}">${sh.toFixed(0)}%</text>`;
+      cum+=sh;
+    });
+    s+=`<text x="${cx.toFixed(1)}" y="${BASE+22}" text-anchor="middle" font-size="16" fill="#fff" font-family="Fraunces,serif">${y.year}</text>`;
+  });
+  s+=`</svg>`;
+  document.getElementById("theme-chart").innerHTML=s;
+  document.getElementById("theme-legend").innerHTML=themes.map(t=>`<span><i style="background:${TC[t]||'#888'}"></i>${esc(t)}</span>`).join("");
+  if(years.length>=2){
+    const a=years[years.length-2], b=years[years.length-1];
+    const mv=themes.filter(t=>t!=="Other").map(t=>({t,d:share(b,t)-share(a,t)})).sort((x,z)=>Math.abs(z.d)-Math.abs(x.d));
+    const up=mv.find(m=>m.d>0)||mv[0], dn=mv.slice().reverse().find(m=>m.d<0)||mv[mv.length-1];
+    document.getElementById("theme-note").innerHTML=
+      `${a.year}→${b.year}: <b style="color:${TC[up.t]}">${esc(up.t.split(" · ")[0])} +${up.d.toFixed(1)}pp</b> · `
+      +`<b style="color:${TC[dn.t]}">${esc(dn.t.split(" · ")[0])} ${dn.d.toFixed(1)}pp</b>. Title-keyword based · one theme per paper.`;
+  }
+}).catch(e=>{document.getElementById("theme-note").textContent="theme data unavailable.";console.error("themes",e);});
 
 /* ---- graph-driven sections ---- */
 fetch("data/cvpr2026_graph.json").then(r=>r.json()).then(G=>{
