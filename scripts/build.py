@@ -56,8 +56,8 @@ CALENDAR = [
     ("NeurIPS",2024,"ok"),("NeurIPS",2025,"ok"),("NeurIPS",2026,"soon"),
     ("ICLR",2024,"ok"),   ("ICLR",2025,"ok"),   ("ICLR",2026,"ok"),
     ("ICML",2024,"ok"),   ("ICML",2025,"ok"),   ("ICML",2026,"soon"),
-    ("TPAMI",2024,"pending"),("TPAMI",2025,"ok"),("TPAMI",2026,"ok"),
-    ("TIP",2024,"pending"),("TIP",2025,"ok"),  ("TIP",2026,"ok"),
+    ("TPAMI",2024,"ok"),  ("TPAMI",2025,"ok"),("TPAMI",2026,"ok"),
+    ("TIP",2024,"ok"),    ("TIP",2025,"ok"),  ("TIP",2026,"ok"),
 ]
 STATUS = {(v,y):s for v,y,s in CALENDAR}
 # typical publication month per venue — for the citations/month age estimate
@@ -227,7 +227,7 @@ def main():
                 v,y=p["venue"],int(p["year"]); key=(v,y)
                 if key in have: continue
                 dblp_eds.add(key); totals.setdefault(key,None)
-                mt=is_field(p["title"])
+                mt=is_field(p["title"]+" "+(p.get("abstract") or ""))  # abstract-aware when a row carries one (e.g. web-collected)
                 if mt:
                     q=dict(p); q["year"]=y; q["_match"]=mt; cand.append(q)
         have|=dblp_eds                          # editions we now hold data for

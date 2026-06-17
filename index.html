@@ -58,7 +58,8 @@ section{padding:34px 0}
 .mx-c{display:flex;align-items:center;justify-content:center;border-radius:6px;min-height:38px;
   font-family:"Fraunces",serif;font-size:18px;position:relative;
   background:rgba(255,255,255,.03);border:1px solid var(--line);transition:.6s}
-.mx-c.na{color:var(--dim);font-family:"JetBrains Mono";font-size:12px;opacity:.35}
+.mx-c.na{color:var(--muted);font-family:"JetBrains Mono";font-size:13px;opacity:.9;
+  background:repeating-linear-gradient(135deg,rgba(255,255,255,.07) 0 5px,rgba(255,255,255,0) 5px 10px)}
 .mx-c.z{color:var(--dim)}
 .mx-c.soon,.mx-c.pending{font-family:"JetBrains Mono";font-size:9px;letter-spacing:.08em;text-transform:uppercase}
 .mx-c.soon{color:var(--c4);border-style:dashed;border-color:color-mix(in srgb,var(--c4) 35%,transparent)}
@@ -237,7 +238,7 @@ table.hm td.zero{color:var(--dim);opacity:.4}
 
   <section>
     <div class="sec-head"><span class="sec-num">01</span><span class="sec-title">Publication trend</span>
-      <span class="sec-note">Accepted main-conference &amp; journal papers (workshops/findings excluded). <b style="color:var(--c4)">soon</b> = venue runs in 2026 but the list isn't released yet; <b>pending</b> = released, awaiting collection. Blank = not held (ICCV odd years · ECCV biennial).</span></div>
+      <span class="sec-note">Accepted main-conference &amp; journal papers (workshops/findings excluded). <b style="color:var(--c4)">soon</b> = venue runs in 2026 but the list isn't released yet; <b>pending</b> = released, awaiting collection. Hatched <b>—</b> = not held (ICCV odd years · ECCV biennial).</span></div>
     <div class="seg" id="trend-view"></div>
     <div class="matrix" id="trend"></div>
     <div class="legend" id="trend-legend"></div>
@@ -352,7 +353,7 @@ fetch("data.json").then(r=>r.json()).then(D=>{
     let vt=0,seen=false;
     years.forEach(y=>{
       const c=at(v,y);
-      if(!c){h+=`<div class="mx-c na" title="${v} ${y}: not held">·</div>`;return;}
+      if(!c){h+=`<div class="mx-c na" title="${v} ${y}: not held (venue not run that year)">—</div>`;return;}
       if(c.status==="soon"){h+=`<div class="mx-c soon" title="${v} ${y}: not released yet (as of ${D.build_date})">soon</div>`;return;}
       if(c.status==="pending"){h+=`<div class="mx-c pending" title="${v} ${y}: released, awaiting DBLP collection">n/c</div>`;return;}
       seen=true;vt+=c.count;
@@ -368,7 +369,7 @@ fetch("data.json").then(r=>r.json()).then(D=>{
     `<span><i style="background:${mix('#ff8a5b',70)}"></i>papers (heat ∝ count)</span>`+
     `<span><i style="border:1px dashed ${mix('#5fb8ff',50)};background:none"></i>soon — not released yet</span>`+
     `<span><i style="border:1px dotted var(--dim);background:none"></i>n/c — awaiting collection</span>`+
-    `<span><i style="background:none"></i>· not held that year</span>`;
+    `<span><i style="background:repeating-linear-gradient(135deg,rgba(255,255,255,.55) 0 3px,transparent 3px 6px);border:1px solid var(--line)"></i>— not held (ICCV odd yrs · ECCV biennial)</span>`;
 
   /* 01 histogram view — total papers per year + YoY Δ */
   const trendYearTot=y=>D.trend.filter(t=>t.status==="ok"&&t.year===y).reduce((s,t)=>s+(t.count||0),0);

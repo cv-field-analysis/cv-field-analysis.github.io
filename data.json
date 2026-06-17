@@ -20,7 +20,7 @@
   2025,
   2026
  ],
- "total": 68,
+ "total": 70,
  "axis_order": [
   {
    "key": "task",
@@ -100,8 +100,8 @@
   {
    "venue": "BMVC",
    "year": 2025,
-   "status": "pending",
-   "count": null,
+   "status": "ok",
+   "count": 2,
    "total": null
   },
   {
@@ -198,8 +198,8 @@
   {
    "venue": "TPAMI",
    "year": 2024,
-   "status": "pending",
-   "count": null,
+   "status": "ok",
+   "count": 0,
    "total": null
   },
   {
@@ -219,8 +219,8 @@
   {
    "venue": "TIP",
    "year": 2024,
-   "status": "pending",
-   "count": null,
+   "status": "ok",
+   "count": 0,
    "total": null
   },
   {
@@ -242,7 +242,7 @@
   "task": [
    {
     "name": "Detection",
-    "count": 60
+    "count": 62
    },
    {
     "name": "Understanding",
@@ -280,7 +280,7 @@
    },
    {
     "name": "Zero-shot",
-    "count": 7
+    "count": 8
    },
    {
     "name": "Open-vocab",
@@ -348,11 +348,11 @@
   "modality": [
    {
     "name": "RGB",
-    "count": 64
+    "count": 65
    },
    {
     "name": "Text",
-    "count": 33
+    "count": 34
    },
    {
     "name": "Optical-flow",
@@ -378,7 +378,7 @@
   "domain": [
    {
     "name": "Surveillance",
-    "count": 64
+    "count": 66
    },
    {
     "name": "Violence",
@@ -682,7 +682,7 @@
   "contribution": [
    {
     "name": "method",
-    "count": 54
+    "count": 56
    },
    {
     "name": "benchmark",
@@ -712,7 +712,7 @@
     "Retrieval/QA": 1
    },
    "2025": {
-    "Detection": 27,
+    "Detection": 29,
     "Retrieval/QA": 2,
     "Understanding": 10,
     "Localization/Grounding": 5,
@@ -739,9 +739,9 @@
     "Weakly-sup": 8,
     "Federated": 1,
     "Unsupervised": 7,
+    "Zero-shot": 4,
     "Training-free": 5,
     "Open-vocab": 1,
-    "Zero-shot": 3,
     "Single-frame": 1,
     "Semi-supervised": 1
    },
@@ -790,8 +790,8 @@
     "Optical-flow": 2
    },
    "2025": {
-    "RGB": 27,
-    "Text": 17,
+    "RGB": 28,
+    "Text": 18,
     "Optical-flow": 2,
     "Event": 1,
     "Pose/Skeleton": 4,
@@ -810,7 +810,7 @@
     "Traffic/Driving": 2
    },
    "2025": {
-    "Surveillance": 30,
+    "Surveillance": 32,
     "Violence": 8,
     "Traffic/Driving": 2
    },
@@ -967,7 +967,7 @@
     0
    ],
    [
-    2,
+    4,
     0,
     1,
     0,
@@ -1859,6 +1859,66 @@
    "confidence": 0.85,
    "needs_review": false,
    "evidence": "VarCMP: video anomaly retrieval via cross-modal pretraining; text-video & audio-video (UCFCrime-AR, XDViolence-AR)"
+  },
+  {
+   "id": "bmvc2025-alfred-an-active-learning-framework-for-real-w",
+   "title": "ALFred: An Active Learning Framework for Real-world Semi-supervised Anomaly Detection with Adaptive Thresholds",
+   "authors": "Shanle Yao, Ghazal Alinezhad Noghre, Armin Danesh Pazho, Hamed Tabkhi",
+   "venue": "BMVC",
+   "year": 2025,
+   "url": "https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_1127/paper.pdf",
+   "arxiv": "2508.09058",
+   "review_url": "",
+   "citations": 4,
+   "months": 7,
+   "cit_per_month": 0.57,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [],
+   "model_family": [],
+   "modality": [
+    "RGB"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [],
+   "contribution": "method",
+   "confidence": 0.3,
+   "needs_review": true,
+   "evidence": ""
+  },
+  {
+   "id": "bmvc2025-language-guided-decision-override-for-adaptive",
+   "title": "Language-Guided Decision Override for Adaptive and Retraining-Free Video Anomaly Detection",
+   "authors": "Ryo Moriyama, Shin Suzuki, Naoshi Kaneko, Kazuhiko Sumi",
+   "venue": "BMVC",
+   "year": 2025,
+   "url": "https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_1030/paper.pdf",
+   "arxiv": "",
+   "review_url": "",
+   "citations": 0,
+   "months": 7,
+   "cit_per_month": 0.0,
+   "task": [
+    "Detection"
+   ],
+   "supervision": [
+    "Zero-shot"
+   ],
+   "model_family": [],
+   "modality": [
+    "Text"
+   ],
+   "domain": [
+    "Surveillance"
+   ],
+   "method": [],
+   "contribution": "method",
+   "confidence": 0.3,
+   "needs_review": true,
+   "evidence": ""
   },
   {
    "id": "cvpr2025-holmes-vau-towards-long-term-video-anomaly-und",
